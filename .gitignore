@@ -1,0 +1,41 @@
+# Large data files (>100MB) — excluded from version control
+data/WAYB_WAYC_proteome_raw_train_val.csv
+data/WAYB_WAYC_proteome_raw_test.csv
+prediction.csv
+
+# Generated files
+初赛方案文档.docx
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+*.egg
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Cache
+.cache/
+*.log
