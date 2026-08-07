@@ -24,7 +24,7 @@ warnings.filterwarnings("ignore")
 from baseline.data import (
     load_raw_data, preprocess, get_split_masks, identify_controls,
 )
-from baseline.features import build_condition_features
+from baseline.features import build_condition_features, fit_feature_encoders
 from baseline.model import ConditionMLP
 from baseline.training import prepare_training_data, train
 from baseline.evaluation import (
@@ -98,13 +98,18 @@ def main():
     print(f"设备: {DEVICE}")
 
     # 4a. 特征工程
-    # 数据纪律：编码器（类别映射表 + time_max）仅在训练集上拟合
-    _, encoders = build_condition_features(meta.loc[train_mask])
-    # 用训练集拟合的编码器 transform 全部数据（val/test 中的 unseen 类别 → fillna(0)）
+    # 数据纪律：类别映射、统计锚点、PCA 和最终 256 维投影均仅在 train 上拟合。
+    encoders = fit_feature_encoders(
+        meta.loc[train_mask],
+        y_log2.loc[train_mask],
+        mask_matrix.loc[train_mask],
+    )
+    # 用训练集拟合的编码器 transform 全部数据；unseen 类别使用统计 fallback、
+    # all-zero categorical one-hot 和 deterministic hash，而不是映射到第一个已知类别。
     X_all = build_condition_features(meta, encoders=encoders)
     DIM_IN = X_all.shape[1]
     N_PROTEINS = len(protein_names)
-    print(f"条件特征维度: {DIM_IN}")
+    print(f"条件特征维度: {DIM_IN} (raw={encoders['raw_dim']})")
     for name in ["strains", "chemicals", "media", "instruments"]:
         print(f"  {name.capitalize()}: {len(encoders[name])} 类")
 
