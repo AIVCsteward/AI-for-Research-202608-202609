@@ -3,7 +3,7 @@
 import numpy as np
 import pandas as pd
 
-from baseline.entity_representations import HashEncoder
+from baseline.entity_representations import ChemicalAnchorEncoder, HashEncoder
 from baseline.features import (
     build_condition_features,
     build_raw_condition_features,
@@ -90,6 +90,17 @@ class FeaturePipelineTest(unittest.TestCase):
         first = encoder.transform(["new-chemical", "new-plate"])
         second = encoder.transform(["new-chemical", "new-plate"])
         np.testing.assert_array_equal(first, second)
+
+    def test_chemical_anchor_matches_manual_control_delta(self):
+        meta, y = make_fixture()
+        train_meta = meta.loc[meta["split_final"] == "train"]
+        encoder = ChemicalAnchorEncoder(n_components=3).fit(
+            train_meta, y.loc[train_meta.index]
+        )
+        np.testing.assert_allclose(encoder.lookup_["Water"], np.zeros(3))
+        np.testing.assert_allclose(encoder.lookup_["DrugX"], np.full(3, 2.0))
+        np.testing.assert_allclose(encoder.fallback_, np.full(3, 2.0))
+        self.assertEqual(encoder.matched_samples_, 4)
 
     def test_statistical_encoders_are_train_only(self):
         meta, y = make_fixture()

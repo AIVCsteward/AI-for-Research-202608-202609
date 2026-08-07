@@ -25,3 +25,7 @@ python -m experiments.run_encoder_ablation --epochs 40 --output-dir experiments/
 - 两个 `*_proteome_raw_*.csv` 已在根目录 `.gitignore` 中忽略，不能 `git add -f`。
 - 所有统计表征、PCA、标准化和 256 维投影只用 `split_final == "train"` 拟合。
 - 生成结果不要提交，提交代码、manifest 格式和文档即可。
+
+## 已完成结果
+
+2026-08-07 的 40 epoch 单 seed 消融结果与结论见 `experiments/encoder_ablation_report.md`。

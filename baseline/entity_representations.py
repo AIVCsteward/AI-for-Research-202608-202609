@@ -188,39 +188,65 @@ class ChemicalAnchorEncoder:
         if missing_keys:
             raise KeyError(f"Missing matched-control columns: {missing_keys}")
         self.n_proteins_ = y.shape[1]
+        self.lookup_ = {}
+        self.matched_samples_ = 0
 
-        is_control = self._is_control(meta[self.chemical_column])
-        control_lookup: Dict[tuple, list] = {}
-        for sid, row in meta.loc[is_control].iterrows():
-            control_lookup.setdefault(self._key(row, self.match_keys), []).append(sid)
+        # Factorize the full matched-control key once.  The previous row-wise
+        # implementation repeatedly asked pandas to average thousands of
+        # protein columns for every treatment sample, which made a single fit
+        # take about ten minutes on the competition data.  Computing each
+        # control profile once preserves the same means while reducing the fit
+        # to a few vectorized passes over the matrix.
+        key_index = pd.MultiIndex.from_frame(meta[self.match_keys])
+        group_ids, _ = pd.factorize(key_index, sort=False)
+        is_control = self._is_control(meta[self.chemical_column]).to_numpy(dtype=bool)
+        y_values = y.to_numpy(dtype=np.float64, copy=False)
 
-        deltas_by_chemical: Dict[str, list] = {}
-        all_deltas = []
-        for sid, row in meta.loc[~is_control].iterrows():
-            key = self._key(row, self.match_keys)
-            control_ids = control_lookup.get(key, [])
-            if not control_ids:
+        control_means: Dict[int, np.ndarray] = {}
+        for group_id in np.unique(group_ids[is_control]):
+            if group_id < 0:
                 continue
-            target = y.loc[sid].to_numpy(dtype=np.float64)
-            control = y.loc[control_ids].mean(axis=0, skipna=True).to_numpy(dtype=np.float64)
-            delta = target - control
-            if not np.isfinite(delta).any():
-                continue
-            deltas_by_chemical.setdefault(str(row[self.chemical_column]), []).append(delta)
-            all_deltas.append(delta)
-            self.matched_samples_ += 1
-
-        if all_deltas:
-            stacked = np.vstack(all_deltas)
-            valid_count = np.isfinite(stacked).sum(axis=0)
-            global_delta = np.divide(
-                np.nansum(stacked, axis=0),
+            rows = is_control & (group_ids == group_id)
+            block = y_values[rows]
+            valid_count = np.isfinite(block).sum(axis=0)
+            control_means[int(group_id)] = np.divide(
+                np.nansum(block, axis=0),
                 valid_count,
-                out=np.zeros(self.n_proteins_, dtype=np.float64),
+                out=np.full(self.n_proteins_, np.nan, dtype=np.float64),
                 where=valid_count > 0,
             )
-        else:
-            global_delta = np.zeros(self.n_proteins_, dtype=np.float64)
+
+        global_sum = np.zeros(self.n_proteins_, dtype=np.float64)
+        global_count = np.zeros(self.n_proteins_, dtype=np.int64)
+        chemical_sums: Dict[str, np.ndarray] = {}
+        chemical_counts: Dict[str, np.ndarray] = {}
+        chemical_values = meta[self.chemical_column].astype(str).to_numpy()
+
+        for row_pos in np.flatnonzero(~is_control):
+            control = control_means.get(int(group_ids[row_pos]))
+            if control is None:
+                continue
+            delta = y_values[row_pos] - control
+            valid = np.isfinite(delta)
+            if not valid.any():
+                continue
+
+            chemical = chemical_values[row_pos]
+            if chemical not in chemical_sums:
+                chemical_sums[chemical] = np.zeros(self.n_proteins_, dtype=np.float64)
+                chemical_counts[chemical] = np.zeros(self.n_proteins_, dtype=np.int64)
+            global_sum[valid] += delta[valid]
+            global_count[valid] += 1
+            chemical_sums[chemical][valid] += delta[valid]
+            chemical_counts[chemical][valid] += 1
+            self.matched_samples_ += 1
+
+        global_delta = np.divide(
+            global_sum,
+            global_count,
+            out=np.zeros(self.n_proteins_, dtype=np.float64),
+            where=global_count > 0,
+        )
         global_delta = np.nan_to_num(global_delta, nan=0.0)
         self.fallback_ = global_delta
 
@@ -229,14 +255,12 @@ class ChemicalAnchorEncoder:
         for chemical in chemicals:
             if chemical.lower() in CONTROL_NAMES:
                 vector = np.zeros(self.n_proteins_, dtype=np.float64)
-            elif chemical in deltas_by_chemical:
-                stacked = np.vstack(deltas_by_chemical[chemical])
-                valid_count = np.isfinite(stacked).sum(axis=0)
+            elif chemical in chemical_sums:
                 vector = np.divide(
-                    np.nansum(stacked, axis=0),
-                    valid_count,
+                    chemical_sums[chemical],
+                    chemical_counts[chemical],
                     out=global_delta.copy(),
-                    where=valid_count > 0,
+                    where=chemical_counts[chemical] > 0,
                 )
             else:
                 vector = global_delta
