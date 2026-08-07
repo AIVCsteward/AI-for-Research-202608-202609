@@ -53,3 +53,27 @@ Key baseline techniques from the doc:
 4. **Calibration**: Subtract control mean bias, add global mean (`pred_calibrated = pred - control_mean + global_mean`)
 
 5. **Advanced** (stretch): Conditional VAE, Flow Matching, Diffusion for generative protein expression prediction
+## Person A Feature Pipeline (Stage 2-3)
+
+The current input-side implementation is split across:
+
+- `baseline/entity_representations.py`: train-only strain prior, chemical anchor, deterministic hash, and cross-feature encoders.
+- `baseline/features.py`: fits all encoders and projects the concatenated raw features to a fixed 256-dimensional embedding.
+- `baseline/config.py`: shared encoder/decoder/GNN/loss/training configuration contract.
+- `experiments/ablation_encoder.py`: prepares full/no-strain-prior/no-chem-anchor/no-hash/no-cross-feature inputs for ablation experiments.
+
+Fit representations only on `meta["split_final"] == "train"`:
+
+```python
+from baseline.features import fit_feature_encoders, build_condition_features
+
+train_mask = meta["split_final"].eq("train")
+encoders = fit_feature_encoders(
+    meta.loc[train_mask],
+    y_log2.loc[train_mask],
+    mask_matrix.loc[train_mask],
+)
+X_all = build_condition_features(meta, encoders=encoders)  # (N, 256)
+```
+
+Unseen categorical values are encoded as all-zero one-hot rows, while strain and chemical representations use train-derived fallback vectors; hash features remain available for unseen entities.

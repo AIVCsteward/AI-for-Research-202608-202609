@@ -45,3 +45,5 @@ Thumbs.db
 # Cache
 .cache/
 *.log
+# Generated encoder-ablation arrays and manifests are local experiment artifacts.
+outputs/
