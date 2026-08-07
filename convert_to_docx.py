@@ -1,9 +1,10 @@
 """
 将初赛方案文档.md 转换为 .docx Word 文档
 - 全文字体：宋体（标题加粗，无斜体）
-- 表格文字居中对齐
-- 列表去符号（改缩进段落）
-- Mermaid 图表 → 通过 mermaid.ink 导出 PNG 嵌入
+- 全文正文居中
+- 列表去符号
+- LaTeX 公式 → Unicode 可读文本
+- Mermaid 图表 → PNG 嵌入
 """
 import re, zlib, base64, json, io
 from docx import Document
@@ -42,26 +43,75 @@ for section in doc.sections:
 
 
 # ══════════════════════════════════════════════════════════════
+# LaTeX → Unicode
+# ══════════════════════════════════════════════════════════════
+
+LATEX_REPLACEMENTS = [
+    # 希腊字母
+    (r"\\alpha", "α"), (r"\\beta", "β"), (r"\\gamma", "γ"),
+    (r"\\delta", "δ"), (r"\\Delta", "Δ"), (r"\\epsilon", "ε"),
+    (r"\\mu", "μ"), (r"\\sigma", "σ"), (r"\\Sigma", "Σ"),
+    # 数学符号
+    (r"\\in\b", "∈"), (r"\\notin", "∉"),
+    (r"\\mathbb\{R\}", "ℝ"), (r"\\mathbb\{N\}", "ℕ"),
+    (r"\\mathbb\{P\}", "ℙ"),
+    (r"\\times", "×"), (r"\\cdot", "·"),
+    (r"\\approx", "≈"), (r"\\propto", "∝"),
+    (r"\\sum", "Σ"), (r"\\prod", "Π"),
+    (r"\\infty", "∞"), (r"\\to", "→"), (r"\\mapsto", "↦"),
+    (r"\\pm", "±"), (r"\\leq", "≤"), (r"\\geq", "≥"),
+    (r"\\neq", "≠"), (r"\\equiv", "≡"),
+    (r"\\subset", "⊂"), (r"\\subseteq", "⊆"),
+    # 花括号（先处理，避免被其他规则误匹配）
+    (r"\\\{", "{"), (r"\\\}", "}"),
+    # 上标下标
+    (r"\^\{([^}]+)\}", r"^\1"),  # ^{P} → ^P
+    (r"_\{([^}]+)\}", r"_\1"),   # _{treat} → _treat
+    # hat
+    (r"\\hat\{([^}]+)\}", r"\1̂"),  # \hat{y} → ŷ
+    # text
+    (r"\\text\{([^}]+)\}", r"\1"),  # \text{strain} → strain
+    # mathbb (bare)
+    (r"\\mathbb\{R\}", "ℝ"),
+    # 剩余花括号（math grouping, 去掉）
+    (r"\{", ""), (r"\}", ""),
+]
+
+
+def clean_latex(text: str) -> str:
+    """将 LaTeX 数学公式转为可读文本"""
+    # Step 1：找到所有 $...$ 段（不在代码块内的 inline math）
+    result = []
+    segs = re.split(r"(\$[^$]+\$)", text)
+    for seg in segs:
+        if seg.startswith("$") and seg.endswith("$"):
+            inner = seg[1:-1]  # 去掉 $ $
+            # 应用 LaTeX 替换
+            for pattern, replacement in LATEX_REPLACEMENTS:
+                inner = re.sub(pattern, replacement, inner)
+            # 清理残留的反斜杠命令
+            inner = re.sub(r"\\[a-zA-Z]+\b", "", inner)
+            # 清理多余空格
+            inner = inner.strip()
+            result.append(inner)
+        else:
+            result.append(seg)
+    return "".join(result)
+
+
+# ══════════════════════════════════════════════════════════════
 # Mermaid → PNG
 # ══════════════════════════════════════════════════════════════
 
 def encode_mermaid_pako(code: str) -> str:
-    """
-    将 mermaid 代码编码为 mermaid.ink 可用的 pako URL。
-    返回完整 PNG URL。
-    """
-    # 构造 JSON payload
     payload = json.dumps({"code": code, "mermaid": {"theme": "default"}},
                          ensure_ascii=False)
-    # pako deflate = zlib compress (raw deflate)
     compressed = zlib.compress(payload.encode("utf-8"), level=9)
-    # base64url encode
     b64 = base64.urlsafe_b64encode(compressed).decode("utf-8").rstrip("=")
     return f"https://mermaid.ink/img/pako:{b64}?type=png"
 
 
 def fetch_mermaid_image(code: str):
-    """从 mermaid.ink 获取 PNG 图片，返回 BytesIO，失败返回 None"""
     url = encode_mermaid_pako(code)
     try:
         req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
@@ -88,27 +138,36 @@ def set_run_font(run, font_name=FONT_CN, size=None, bold=False, color=None):
 
 
 def parse_inline(text):
-    """解析行内 markdown → [(text, bold, code), ...]"""
+    """解析行内 markdown → [(text, bold, code), ...]，同时处理 LaTeX"""
     parts = []
+    # 先处理行内代码 `...`
     segs = re.split(r"(`[^`]+`)", text)
     for seg in segs:
         if seg.startswith("`") and seg.endswith("`"):
             parts.append((seg[1:-1], False, True))
         else:
+            # 处理 **bold**
             sub_segs = re.split(r"(\*\*[^*]+\*\*)", seg)
             for ss in sub_segs:
                 if ss.startswith("**") and ss.endswith("**"):
-                    parts.append((ss[2:-2], True, False))
+                    # 加粗段内也做 LaTeX 清理
+                    cleaned = clean_latex(ss[2:-2])
+                    parts.append((cleaned, True, False))
                 else:
+                    # *italic* → 去斜体，转普通文本
                     ss = re.sub(r"\*([^*]+)\*", r"\1", ss)
+                    # 剥离 markdown 链接
                     ss = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", ss)
+                    # LaTeX $...$ → 可读文本
+                    ss = clean_latex(ss)
                     if ss:
                         parts.append((ss, False, False))
     return parts
 
 
 def add_rich_paragraph(inline_parts, indent=None, spacing_after=None,
-                       alignment=None):
+                       alignment=WD_ALIGN_PARAGRAPH.CENTER):
+    """添加富文本段落，默认居中"""
     p = doc.add_paragraph()
     for text, bold, code in inline_parts:
         run = p.add_run(text)
@@ -127,6 +186,7 @@ def add_rich_paragraph(inline_parts, indent=None, spacing_after=None,
 
 
 def add_heading_styled(text, level):
+    """标题：宋体加粗（标题不居中，保持默认左对齐）"""
     h = doc.add_heading(text, level=level)
     for run in h.runs:
         set_run_font(run, FONT_CN, HEADING_SIZES.get(level, Pt(11)), bold=True)
@@ -134,6 +194,7 @@ def add_heading_styled(text, level):
 
 
 def add_code_block(code_lines):
+    """代码块：灰底 Consolas，不居中（代码需左对齐保持缩进）"""
     for line in code_lines:
         p = doc.add_paragraph()
         run = p.add_run(line if line else " ")
@@ -150,7 +211,7 @@ def add_code_block(code_lines):
 
 
 def add_table_from_rows(rows):
-    """表格：文字居中，表头加粗灰底"""
+    """表格：文字水平+垂直居中，表头加粗灰底"""
     ncols = max(len(r) for r in rows)
     norm_rows = []
     for r in rows:
@@ -169,8 +230,6 @@ def add_table_from_rows(rows):
         for j, cell_text in enumerate(row_data):
             cell = row.cells[j]
             cell.paragraphs[0].clear()
-
-            # 垂直居中
             cell.vertical_alignment = WD_ALIGN_VERTICAL.CENTER
 
             parts = parse_inline(cell_text)
@@ -183,7 +242,6 @@ def add_table_from_rows(rows):
                 for text, bold, code in parts:
                     p = cell.paragraphs[0] if first else cell.add_paragraph()
                     first = False
-                    # 水平居中
                     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
                     run = p.add_run(text)
                     if code:
@@ -228,7 +286,7 @@ mermaid_count = 0
 while i < len(lines):
     line = lines[i]
 
-    # ── Mermaid 代码块 → 导出 PNG 嵌入 ──
+    # ── Mermaid 代码块 → PNG ──
     if line.strip().startswith("```mermaid"):
         in_mermaid = True
         mermaid_buffer = []
@@ -244,7 +302,6 @@ while i < len(lines):
             if img_data:
                 try:
                     doc.add_picture(img_data, width=Inches(5.5))
-                    # 图片居中
                     last_p = doc.paragraphs[-1]
                     last_p.alignment = WD_ALIGN_PARAGRAPH.CENTER
                     last_p.paragraph_format.space_after = Pt(6)
@@ -319,7 +376,8 @@ while i < len(lines):
 
     # ── 水平线 ──
     if line.strip() in ("---", "***", "___"):
-        doc.add_paragraph("─" * 60)
+        p = doc.add_paragraph("─" * 60)
+        p.alignment = WD_ALIGN_PARAGRAPH.CENTER
         i += 1
         continue
 
@@ -328,7 +386,7 @@ while i < len(lines):
         i += 1
         continue
 
-    # ── 标题 ──
+    # ── 标题（不居中，保持默认）──
     if line.startswith("# "):
         add_heading_styled(line[2:].strip(), 1)
         i += 1
@@ -346,16 +404,15 @@ while i < len(lines):
         i += 1
         continue
 
-    # ── 无序列表 → 去符号，改为缩进段落 ──
+    # ── 无序列表 → 去符号，缩进段落，居中 ──
     if re.match(r"^[\-\*]\s+", line):
         text = re.sub(r"^[\-\*]\s+", "", line.strip())
         parts = parse_inline(text)
-        # 使用缩进段落代替 Word List Bullet 样式
         add_rich_paragraph(parts, indent=Cm(0.75), spacing_after=Pt(2))
         i += 1
         continue
 
-    # ── 有序列表 ──
+    # ── 有序列表 → 保留序号，缩进段落，居中 ──
     if re.match(r"^\d+\.\s+", line):
         text = re.sub(r"^\d+\.\s+", "", line.strip())
         parts = parse_inline(text)
@@ -363,7 +420,7 @@ while i < len(lines):
         i += 1
         continue
 
-    # ── 普通段落 ──
+    # ── 普通段落（居中）──
     parts = parse_inline(line.strip())
     if parts:
         add_rich_paragraph(parts)
