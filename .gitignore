@@ -6,6 +6,9 @@ prediction.csv
 # Generated files
 初赛方案文档.docx
 
+# Model files (too large for GitHub)
+baseline_models.zip
+
 # Python
 __pycache__/
 *.py[cod]
@@ -31,6 +34,9 @@ env/
 # OS
 Thumbs.db
 .DS_Store
+
+# Office temp files
+~$*
 
 # Jupyter
 .ipynb_checkpoints/
