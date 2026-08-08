@@ -349,3 +349,163 @@ def print_diagnostics():
   - 真正的区分度在 Per-Protein R²、fold change、残差类指标
   - Matched Control 是「不建模」情况下的最强 baseline
 """)
+
+
+# ============================================================================
+# Person C: Fold Change 标签构造（数据纪律：仅从 train 计算）
+# ============================================================================
+
+def _resolve_train_mask(meta, train_mask=None):
+    """返回与 meta index 对齐的 train-only boolean mask。"""
+    if train_mask is None:
+        if "split_final" not in meta.columns:
+            raise ValueError("train_mask is required when split_final is unavailable")
+        train_mask = meta["split_final"].astype(str).eq("train")
+    elif isinstance(train_mask, pd.Series):
+        train_mask = train_mask.reindex(meta.index)
+        if train_mask.isna().any():
+            raise ValueError("train_mask is not aligned with metadata index")
+    else:
+        train_mask = pd.Series(train_mask, index=meta.index)
+    return train_mask.astype(bool)
+
+
+def build_matched_control_pairs(meta, train_mask=None, match_keys=MATCH_KEYS):
+    """构建精确 treatment-control 配对（仅使用训练集行）。
+
+    只有当每个匹配键上都有 Water/DMSO 对照存在时，才保留 treatment。
+    不使用全局对照回退，避免将估计基线变成伪造的 FC 标签。
+
+    返回 DataFrame，每行一个 matched treatment，包含所有匹配的对照样本 ID 列表。
+    """
+    if not meta.index.is_unique:
+        raise ValueError("metadata index must contain unique sample_ID values")
+    missing_columns = [column for column in match_keys if column not in meta.columns]
+    if missing_columns:
+        raise KeyError(f"Missing matched-control columns: {missing_columns}")
+    if "perturbation_no_concentration" not in meta.columns:
+        raise KeyError("Missing perturbation_no_concentration column")
+
+    train_only = _resolve_train_mask(meta, train_mask)
+    perturbation = meta["perturbation_no_concentration"].astype(str).str.strip().str.lower()
+    is_control = perturbation.isin(["water", "dmso"])
+    is_qc = perturbation.str.contains("quality|qc", regex=True, na=False)
+
+    control_lookup = {}
+    for sample_id, row in meta.loc[train_only & is_control].iterrows():
+        key = tuple(row[column] for column in match_keys)
+        control_lookup.setdefault(key, []).append(sample_id)
+
+    records = []
+    for treatment_id, row in meta.loc[train_only & ~is_control & ~is_qc].iterrows():
+        key = tuple(row[column] for column in match_keys)
+        control_ids = tuple(control_lookup.get(key, ()))
+        if not control_ids:
+            continue
+        records.append(
+            {
+                "treatment_sample_ID": treatment_id,
+                "control_sample_ids": control_ids,
+                "n_controls": len(control_ids),
+            }
+        )
+
+    columns = ["treatment_sample_ID", "control_sample_ids", "n_controls"]
+    return pd.DataFrame.from_records(records, columns=columns)
+
+
+def compute_fold_change(
+    meta,
+    y_log2,
+    mask_matrix,
+    train_mask=None,
+    pairs=None,
+    match_keys=MATCH_KEYS,
+):
+    """计算仅训练集的 treatment-minus-matched-control FC 目标。
+
+    多个匹配对照按蛋白逐列平均（仅使用有观测值的对照）。
+    只有当 treatment 和至少一个匹配对照都有观测值时，该蛋白才进入 ``fc_mask``。
+
+    返回字典：``pairs``, ``fc_true``, ``fc_mask``。
+    ``fc_true`` 在无效位置填 NaN，方便检测误用。
+    """
+    if not y_log2.index.is_unique or not mask_matrix.index.is_unique:
+        raise ValueError("target and mask indices must contain unique sample_ID values")
+    if not y_log2.columns.equals(mask_matrix.columns):
+        raise ValueError("y_log2 and mask_matrix protein columns must match exactly")
+    missing_target_ids = meta.index.difference(y_log2.index)
+    missing_mask_ids = meta.index.difference(mask_matrix.index)
+    if len(missing_target_ids) or len(missing_mask_ids):
+        raise ValueError("metadata, targets and mask must contain the same sample_ID values")
+
+    train_only = _resolve_train_mask(meta, train_mask)
+    if pairs is None:
+        pairs = build_matched_control_pairs(meta, train_only, match_keys)
+    else:
+        pairs = pairs.copy()
+
+    treatment_ids = pairs["treatment_sample_ID"].tolist()
+    fc_values = np.full((len(treatment_ids), y_log2.shape[1]), np.nan, dtype=np.float32)
+    fc_mask = np.zeros_like(fc_values, dtype=bool)
+
+    aligned_y = y_log2.loc[meta.index].to_numpy(dtype=np.float32, copy=False)
+    aligned_mask = mask_matrix.loc[meta.index].to_numpy(dtype=bool, copy=False)
+    position_by_id = {sample_id: position for position, sample_id in enumerate(meta.index)}
+    train_values = train_only.to_numpy(dtype=bool)
+
+    treatment_positions = [position_by_id.get(sample_id) for sample_id in treatment_ids]
+    if any(position is None for position in treatment_positions):
+        raise ValueError("A treatment in pairs is missing from metadata")
+    if any(not train_values[position] for position in treatment_positions):
+        raise ValueError("Non-training treatment found in pairs")
+
+    all_control_ids = {
+        control_id
+        for control_ids in pairs["control_sample_ids"]
+        for control_id in control_ids
+    }
+    control_positions_by_id = {
+        control_id: position_by_id.get(control_id) for control_id in all_control_ids
+    }
+    if any(position is None for position in control_positions_by_id.values()):
+        raise ValueError("A control in pairs is missing from metadata")
+    if any(not train_values[position] for position in control_positions_by_id.values()):
+        raise ValueError("Non-training control found in pairs")
+
+    pairs_with_position = pairs.copy()
+    pairs_with_position["_output_position"] = np.arange(len(pairs_with_position))
+    for control_id_tuple, group in pairs_with_position.groupby("control_sample_ids", sort=False):
+        control_positions = [control_positions_by_id[control_id] for control_id in control_id_tuple]
+        group_treatment_positions = [
+            position_by_id[sample_id] for sample_id in group["treatment_sample_ID"]
+        ]
+        output_positions = group["_output_position"].to_numpy(dtype=int)
+
+        controls = aligned_y[control_positions]
+        controls_observed = aligned_mask[control_positions] & np.isfinite(controls)
+        control_counts = controls_observed.sum(axis=0)
+        control_sums = np.where(controls_observed, controls, 0.0).sum(axis=0)
+        control_mean = np.divide(
+            control_sums,
+            control_counts,
+            out=np.full(y_log2.shape[1], np.nan, dtype=np.float32),
+            where=control_counts > 0,
+        )
+
+        treatments = aligned_y[group_treatment_positions]
+        treatments_observed = aligned_mask[group_treatment_positions] & np.isfinite(treatments)
+        valid = (
+            treatments_observed
+            & (control_counts > 0)[None, :]
+            & np.isfinite(control_mean)[None, :]
+        )
+        group_fc = treatments - control_mean[None, :]
+        fc_values[output_positions] = np.where(valid, group_fc, np.nan)
+        fc_mask[output_positions] = valid
+
+    fc_true_df = pd.DataFrame(fc_values, index=treatment_ids, columns=y_log2.columns)
+    fc_true_df.index.name = "sample_ID"
+    fc_mask_df = pd.DataFrame(fc_mask, index=treatment_ids, columns=y_log2.columns)
+    fc_mask_df.index.name = "sample_ID"
+    return {"pairs": pairs, "fc_true": fc_true_df, "fc_mask": fc_mask_df}
