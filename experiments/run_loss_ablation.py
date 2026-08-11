@@ -16,7 +16,7 @@ import numpy as np
 import pandas as pd
 import torch
 
-from baseline.config import get_experiment_config
+from aivc.config import get_experiment_config
 from baseline.data import get_split_masks, preprocess
 from baseline.evaluation import (
     TEST_SPLITS,
@@ -27,9 +27,9 @@ from baseline.evaluation import (
     matched_control_predict,
 )
 from baseline.features import build_condition_features, fit_feature_encoders
-from baseline.losses import compute_target_edge_corr
-from baseline.model import AIVCModel
-from baseline.training import prepare_fold_change_index, prepare_training_data, train
+from aivc.losses import compute_target_edge_corr
+from aivc.model import AIVCModel
+from aivc.training import prepare_fold_change_index, prepare_training_data, train
 from experiments.ablation_loss import (
     build_experiment_plan,
     evaluate_prediction_metrics,
@@ -186,7 +186,7 @@ def prepare_c5_context(data_dir, device, config):
 
 def prepare_correlation_bundle(context, config):
     """Consume B4's final graph and produce C3 targets in identical edge order."""
-    from baseline.protein_graph import build_protein_graph
+    from aivc.protein_graph import build_protein_graph
 
     edge_index = build_protein_graph(
         context["y_log2"].loc[context["train_mask"]],

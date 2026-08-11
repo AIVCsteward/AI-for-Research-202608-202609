@@ -10,8 +10,8 @@ Phase 1: 条件编码 MLP → mask-aware 训练 → 多方案对比
 模块结构:
   baseline/data.py       — 数据加载 & 预处理
   baseline/features.py   — 特征工程
-  baseline/model.py      — 模型定义
-  baseline/training.py   — 训练循环 & 损失函数
+  baseline/model.py      — 模型定义 (ConditionMLP)
+  aivc/training.py      — 训练循环 & 损失函数
   baseline/evaluation.py — 指标、基线评估、提交生成
 ================================================================================
 """
@@ -26,7 +26,7 @@ from baseline.data import (
 )
 from baseline.features import build_condition_features, fit_feature_encoders
 from baseline.model import ConditionMLP
-from baseline.training import prepare_training_data, train
+from aivc.training import prepare_training_data, train
 from baseline.evaluation import (
     compute_protein_mean,
     evaluate_protein_mean_baseline,

@@ -5,7 +5,7 @@ import pandas as pd
 import torch
 
 from baseline.evaluation import build_matched_control_pairs, compute_fold_change
-from baseline.losses import (
+from aivc.losses import (
     compute_target_edge_corr,
     correlation_consistency_loss,
     fc_pearson_loss,

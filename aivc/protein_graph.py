@@ -96,7 +96,7 @@ def build_protein_graph(y_train_log2, mask_train, k=5, threshold=0.7):
 # ══════════════════════════════════════════════════════════════════════════════
 
 if __name__ == "__main__":
-    from baseline.data import load_raw_data, preprocess
+    from baseline.data import load_raw_data, preprocess  # shared data layer
 
     print("=" * 54)
     print("B4: build_protein_graph 自检")

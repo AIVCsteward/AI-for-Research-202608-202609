@@ -8,12 +8,12 @@ import numpy as np
 import pandas as pd
 import torch
 
-from baseline.config import get_experiment_config
+from aivc.config import get_experiment_config
 from baseline.data import get_split_masks, preprocess
 from baseline.evaluation import VAL_SPLITS, build_matched_control_pairs
 from baseline.features import build_condition_features, fit_feature_encoders
-from baseline.model import AIVCModel
-from baseline.training import prepare_fold_change_index, train
+from aivc.model import AIVCModel
+from aivc.training import prepare_fold_change_index, train
 
 
 def load_train_val(data_dir):

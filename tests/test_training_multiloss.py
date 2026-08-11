@@ -5,7 +5,7 @@ import pandas as pd
 import torch
 from torch import nn
 
-from baseline.training import (
+from aivc.training import (
     compute_multitask_batch_loss,
     masked_per_protein_r2_median,
     prepare_fold_change_index,
@@ -221,7 +221,7 @@ class FoldChangeTrainingTests(unittest.TestCase):
 
         one_epoch_model = TinyResidualModel()
         with patch(
-            "baseline.training.masked_per_protein_r2_median",
+            "aivc.training.masked_per_protein_r2_median",
             return_value=torch.tensor(0.5),
         ):
             one_epoch_model, _ = train(
@@ -241,7 +241,7 @@ class FoldChangeTrainingTests(unittest.TestCase):
         stopped_model = TinyResidualModel()
         monitor_values = [torch.tensor(0.5), torch.tensor(0.4), torch.tensor(0.3)]
         with patch(
-            "baseline.training.masked_per_protein_r2_median",
+            "aivc.training.masked_per_protein_r2_median",
             side_effect=monitor_values,
         ):
             stopped_model, history = train(

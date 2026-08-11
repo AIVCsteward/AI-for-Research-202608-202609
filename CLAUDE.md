@@ -53,13 +53,25 @@ Key baseline techniques from the doc:
 4. **Calibration**: Subtract control mean bias, add global mean (`pred_calibrated = pred - control_mean + global_mean`)
 
 5. **Advanced** (stretch): Conditional VAE, Flow Matching, Diffusion for generative protein expression prediction
+
+## Repository Structure
+
+| Directory | Purpose |
+|-----------|---------|
+| `baseline/` | Shared infrastructure: data loading (`data.py`), evaluation (`evaluation.py`), feature pipeline (`features.py`), and the simple `ConditionMLP` baseline (`model.py`). |
+| `aivc/` | Production model: encoder, decoder, GNN, losses, training, entity representations, protein graph, and experiment config. |
+| `experiments/` | Ablation experiment frameworks: encoder ablations, architecture ablations, loss ablations. |
+| `tests/` | Unit and integration tests. |
+| `data/` | WAYB/WAYC CSV files (not tracked). |
+| `scripts/` | Standalone validation scripts. |
+
 ## Person A Feature Pipeline (Stage 2-3)
 
 The current input-side implementation is split across:
 
-- `baseline/entity_representations.py`: train-only strain prior, chemical anchor, deterministic hash, and cross-feature encoders.
+- `aivc/entity_representations.py`: train-only strain prior, chemical anchor, deterministic hash, and cross-feature encoders.
+- `aivc/config.py`: shared encoder/decoder/GNN/loss/training configuration contract.
 - `baseline/features.py`: fits all encoders and projects the concatenated raw features to a fixed 256-dimensional embedding.
-- `baseline/config.py`: shared encoder/decoder/GNN/loss/training configuration contract.
 - `experiments/ablation_encoder.py`: prepares full/no-strain-prior/no-chem-anchor/no-hash/no-cross-feature inputs for ablation experiments.
 
 Fit representations only on `meta["split_final"] == "train"`:

@@ -76,8 +76,8 @@ def build_model(config, dim_in, n_proteins, dim_emb=256):
     返回:
         model: AIVCModel 实例
     """
-    from baseline.model import AIVCModel
-    from baseline.decoder import ResidualDecoder, SimpleDecoder
+    from aivc.model import AIVCModel
+    from aivc.decoder import ResidualDecoder, SimpleDecoder
 
     model = AIVCModel(
         dim_in, n_proteins,
@@ -113,7 +113,7 @@ class _ZeroCalibration(nn.Module):
 
 def train_one_epoch(model, X_train, y_train, mask_train, optimizer, batch_size=256):
     """单 epoch 训练（适配 AIVCModel 的 dict 输出）"""
-    from baseline.training import mask_aware_mse
+    from aivc.training import mask_aware_mse
 
     model.train()
     N = X_train.shape[0]
@@ -137,7 +137,7 @@ def train_one_epoch(model, X_train, y_train, mask_train, optimizer, batch_size=2
 @torch.no_grad()
 def evaluate(model, X_val, y_val, mask_val):
     """验证：返回 mask-aware MSE"""
-    from baseline.training import mask_aware_mse
+    from aivc.training import mask_aware_mse
 
     model.eval()
     out = model(X_val)
@@ -165,7 +165,7 @@ def run_ablation(
     """
     from baseline.data import load_raw_data, preprocess
     from baseline.features import build_condition_features
-    from baseline.training import prepare_training_data, mask_aware_mse
+    from aivc.training import prepare_training_data, mask_aware_mse
 
     if ablation_configs is None:
         ablation_configs = ABLATION_CONFIGS
@@ -220,7 +220,7 @@ def run_ablation(
     # ── GNN 图结构（with_gnn 实验共享）──
     edge_index = None
     if any(cfg.get("gnn") for cfg in ablation_configs):
-        from baseline.protein_graph import build_protein_graph
+        from aivc.protein_graph import build_protein_graph
         print("\n构建蛋白共表达图...")
         edge_index = build_protein_graph(
             y_log2.loc[train_mask],

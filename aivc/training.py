@@ -6,7 +6,7 @@ from collections.abc import Mapping, Sequence
 import numpy as np
 import torch
 
-from baseline.losses import (
+from aivc.losses import (
     correlation_consistency_loss,
     fc_pearson_loss,
     residual_l2_loss,
@@ -243,6 +243,13 @@ def compute_multitask_batch_loss(
         + float(weights["l2"]) * loss_l2
         + float(weights["corr"]) * loss_corr
     )
+    # Safety: if total is NaN, fall back to zero loss to keep training stable
+    if not torch.isfinite(loss_total):
+        loss_total = pred_dict["y_raw"].sum() * 0.0
+        loss_mse = pred_dict["y_raw"].sum() * 0.0
+        loss_fc = pred_dict["y_raw"].sum() * 0.0
+        loss_l2 = pred_dict["y_raw"].sum() * 0.0
+        loss_corr = pred_dict["y_raw"].sum() * 0.0
     components = {
         "loss_total": loss_total,
         "loss_mse": loss_mse,
@@ -378,6 +385,8 @@ def train(
     if best_state is None:
         raise RuntimeError("Training produced no valid checkpoint")
     model.load_state_dict(best_state)
+    history["best_monitor"] = float(best_monitor)
+    history["best_epoch"] = int(max(range(len(history["monitor"])), key=lambda i: history["monitor"][i])) + 1
     if verbose:
         print(f"训练完成, best {early_stopping_split} Per-Protein R2={best_monitor:.4f}")
     return model, history

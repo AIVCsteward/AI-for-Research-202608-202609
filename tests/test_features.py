@@ -3,7 +3,7 @@
 import numpy as np
 import pandas as pd
 
-from baseline.entity_representations import ChemicalAnchorEncoder, HashEncoder
+from aivc.entity_representations import ChemicalAnchorEncoder, HashEncoder
 from baseline.features import (
     build_condition_features,
     build_raw_condition_features,

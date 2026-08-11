@@ -17,8 +17,8 @@ from typing import Dict, Mapping, Optional
 import numpy as np
 import pandas as pd
 
-from baseline.config import EXPERIMENT_CONFIG, get_experiment_config
-from baseline.entity_representations import (
+from aivc.config import EXPERIMENT_CONFIG, get_experiment_config
+from aivc.entity_representations import (
     ChemicalAnchorEncoder,
     CrossFeatureEncoder,
     HashEncoder,

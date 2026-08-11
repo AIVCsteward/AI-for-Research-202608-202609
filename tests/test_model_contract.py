@@ -14,7 +14,7 @@ TORCH_AVAILABLE = importlib.util.find_spec("torch") is not None
 class PersonAtoBContractTest(unittest.TestCase):
     def test_aivc_model_accepts_person_a_256d_features(self):
         import torch
-        from baseline.model import AIVCModel
+        from aivc.model import AIVCModel
 
         rows = []
         values = []

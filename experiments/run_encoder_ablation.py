@@ -101,7 +101,7 @@ def run_ablation(
     import torch
 
     from baseline.model import ConditionMLP
-    from baseline.training import prepare_training_data, train
+    from aivc.training import prepare_training_data, train
 
     split_masks = get_split_masks(meta)
     features = prepare_ablation_features(meta, y_log2, mask_matrix)

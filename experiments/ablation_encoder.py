@@ -16,7 +16,7 @@ from typing import Dict, Optional
 
 import numpy as np
 
-from baseline.config import get_experiment_config
+from aivc.config import get_experiment_config
 from baseline.data import load_raw_data, preprocess
 from baseline.features import build_condition_features, fit_feature_encoders
 

@@ -198,4 +198,8 @@ def correlation_consistency_loss(
 
     if usable_edge_count == 0:
         return pred_values.sum() * 0.0
-    return squared_error_sum / usable_edge_count
+    loss = squared_error_sum / usable_edge_count
+    # Guard against NaN/Inf from numerical instability with near-zero variance
+    if not torch.isfinite(loss):
+        return pred_values.sum() * 0.0
+    return loss

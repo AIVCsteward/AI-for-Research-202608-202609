@@ -15,7 +15,7 @@ from pathlib import Path
 import numpy as np
 import torch
 
-from baseline.config import get_experiment_config
+from aivc.config import get_experiment_config
 from baseline.evaluation import TEST_SPLITS, VAL_SPLITS
 
 
