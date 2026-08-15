@@ -1,0 +1,120 @@
+{
+  "schema_version": "1.0.0",
+  "status": "blocked_pending_organizer_confirmation",
+  "sample_key": "sample_ID",
+  "treatment_name_field": "perturbation_no_concentration",
+  "mapping_key": "pert_id",
+  "control_names": [
+    "Water",
+    "DMSO"
+  ],
+  "excluded_treatment_names": [
+    "Quality Control"
+  ],
+  "exact_match_keys": [
+    "data_source",
+    "Strains",
+    "Medium",
+    "Temperature",
+    "pert_time",
+    "pert_time_unit",
+    "instrument",
+    "Yeast_cell_plate"
+  ],
+  "confirmed_control_mapping": {},
+  "missing_mapping_policy": "fail_closed",
+  "missing_exact_control_policy": "fail_closed",
+  "multiple_control_replicates": "protein_wise_mean_over_observed_controls",
+  "forbidden_fallbacks": [
+    "the_other_solvent",
+    "first_available_water_or_dmso",
+    "global_control_mean",
+    "looser_context_key"
+  ],
+  "fc_true": "y_treatment_observed - y_control_observed",
+  "fc_pred_official": "y_treatment_predicted - y_control_observed",
+  "fc_mask": "treatment_obs_mask AND control_obs_mask AND finite(y_treatment_observed) AND finite(y_treatment_predicted) AND finite(y_control_observed)",
+  "candidate_mapping_not_for_official_fc": {
+    "status": "observed_plate_layout_hypothesis",
+    "rule": "for numeric pert_id #1..#47, odd -> Water and even -> DMSO",
+    "evidence": "#1 is Water; #2 and #12 are DMSO; plate rows alternate odd/even treatment positions around these controls",
+    "limitation": "does not exactly reproduce all tutorial matched-control counts and is not explicitly published as the organizer mapping"
+  },
+  "inferred_mapping_for_experimental_fc_loss": {
+    "name": "pert_id_parity_v1",
+    "status": "inferred_mapping",
+    "official": false,
+    "scope": "experimental FC loss on split_final=train only",
+    "selection_basis": "frozen from train metadata and plate-layout evidence without validation or test scores",
+    "rule": "pert_id #1..#47: odd -> Water, even -> DMSO; #48 -> Quality Control",
+    "mapping": {
+      "#1": "Water",
+      "#2": "DMSO",
+      "#3": "Water",
+      "#4": "DMSO",
+      "#5": "Water",
+      "#6": "DMSO",
+      "#7": "Water",
+      "#8": "DMSO",
+      "#9": "Water",
+      "#10": "DMSO",
+      "#11": "Water",
+      "#12": "DMSO",
+      "#13": "Water",
+      "#14": "DMSO",
+      "#15": "Water",
+      "#16": "DMSO",
+      "#17": "Water",
+      "#18": "DMSO",
+      "#19": "Water",
+      "#20": "DMSO",
+      "#21": "Water",
+      "#22": "DMSO",
+      "#23": "Water",
+      "#24": "DMSO",
+      "#25": "Water",
+      "#26": "DMSO",
+      "#27": "Water",
+      "#28": "DMSO",
+      "#29": "Water",
+      "#30": "DMSO",
+      "#31": "Water",
+      "#32": "DMSO",
+      "#33": "Water",
+      "#34": "DMSO",
+      "#35": "Water",
+      "#36": "DMSO",
+      "#37": "Water",
+      "#38": "DMSO",
+      "#39": "Water",
+      "#40": "DMSO",
+      "#41": "Water",
+      "#42": "DMSO",
+      "#43": "Water",
+      "#44": "DMSO",
+      "#45": "Water",
+      "#46": "DMSO",
+      "#47": "Water"
+    },
+    "quality_control": {
+      "#48": "Quality Control"
+    },
+    "not_permitted": [
+      "official FC scoring",
+      "validation-score rule selection",
+      "test-score rule selection"
+    ]
+  },
+  "sensitivity_comparator": {
+    "name": "pooled_water_dmso_exact_context_v1",
+    "status": "diagnostic_only",
+    "official": false,
+    "rule": "within the same exact context, protein-wise mean over all observed Water and DMSO controls",
+    "allowed_use": "train-only mapping sensitivity comparison"
+  },
+  "organizer_confirmation_required": [
+    "authoritative pert_id-to-solvent mapping",
+    "whether any sample-level QC beyond exact context and solvent matching is applied",
+    "handling of duplicate matched controls"
+  ]
+}

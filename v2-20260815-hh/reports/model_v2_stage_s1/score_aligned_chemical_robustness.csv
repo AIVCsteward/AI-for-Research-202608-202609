@@ -1,0 +1,25 @@
+model,scenario,chemical_mode,absolute_rmse,raw_fc_global_pcc,raw_fc_rmse
+S1 B anchor Morgan Huber,val_chem_only,correct,0.5964546799659729,0.30423851917476213,0.5964546799659729
+S1 B anchor Morgan Huber,val_chem_only,shuffle,0.5649580955505371,0.314873945806891,0.5649580955505371
+S1 B anchor Morgan Huber,val_chem_only,zero,0.5756272077560425,0.30471465061716513,0.5756272077560425
+S1 C anchor Morgan Huber plus experimental FC,val_chem_only,correct,0.614058256149292,0.31063161903515923,0.614058256149292
+S1 C anchor Morgan Huber plus experimental FC,val_chem_only,shuffle,0.5742326378822327,0.324632684565496,0.5742326378822327
+S1 C anchor Morgan Huber plus experimental FC,val_chem_only,zero,0.559194803237915,0.3223183857061713,0.559194803237915
+S1 B anchor Morgan Huber,val_strain_only,correct,0.727517306804657,0.2492046745912214,0.727517306804657
+S1 B anchor Morgan Huber,val_strain_only,shuffle,0.7827117443084717,0.22989382023695928,0.7827117443084717
+S1 B anchor Morgan Huber,val_strain_only,zero,0.796328067779541,0.2125149838999455,0.796328067779541
+S1 C anchor Morgan Huber plus experimental FC,val_strain_only,correct,0.7180272936820984,0.26147486258809427,0.7180272936820984
+S1 C anchor Morgan Huber plus experimental FC,val_strain_only,shuffle,0.7701379060745239,0.23490706494763558,0.7701379060745239
+S1 C anchor Morgan Huber plus experimental FC,val_strain_only,zero,0.7693530917167664,0.22833629220912105,0.7693530917167664
+S1 B anchor Morgan Huber,val_both,correct,0.798532247543335,0.22238270008702196,0.798532247543335
+S1 B anchor Morgan Huber,val_both,shuffle,0.7782238721847534,0.22195304762803725,0.7782238721847534
+S1 B anchor Morgan Huber,val_both,zero,0.782647430896759,0.21470747672787016,0.782647430896759
+S1 C anchor Morgan Huber plus experimental FC,val_both,correct,0.8054149746894836,0.23064762775323963,0.8054149746894836
+S1 C anchor Morgan Huber plus experimental FC,val_both,shuffle,0.7770406007766724,0.23348096961821674,0.7770406007766724
+S1 C anchor Morgan Huber plus experimental FC,val_both,zero,0.7626586556434631,0.23094002700851704,0.7626586556434631
+S1 B anchor Morgan Huber,val_time,correct,0.5546213984489441,0.3213951339713685,0.5546213984489441
+S1 B anchor Morgan Huber,val_time,shuffle,0.626329243183136,0.280198145738403,0.626329243183136
+S1 B anchor Morgan Huber,val_time,zero,0.6550859808921814,0.2542726648331056,0.6550859808921814
+S1 C anchor Morgan Huber plus experimental FC,val_time,correct,0.540155827999115,0.3492874941241026,0.540155827999115
+S1 C anchor Morgan Huber plus experimental FC,val_time,shuffle,0.6088147163391113,0.2945184200717114,0.6088147163391113
+S1 C anchor Morgan Huber plus experimental FC,val_time,zero,0.6287659406661987,0.26825395719853157,0.6287659406661987

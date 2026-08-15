@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.0",
+  "task": "Stage S2A hierarchical batch calibration",
+  "planning_proxy": true,
+  "official_score": false,
+  "engineering_threshold_not_official": true,
+  "seed": 20260814,
+  "stage_b_trained": false,
+  "chemical_response_trained": false,
+  "public_metadata_new_batch_present": false,
+  "public_metadata_explanation": "train, validation, and test metadata use the same 4 sources, 7 instruments, and 144 complete tuples; all validation/test unseen counts versus train are zero",
+  "plate_holdout": {
+    "hierarchical_mean_rmse": 0.6609315156936646,
+    "flat_mean_rmse": 0.7276308178901673,
+    "no_batch_mean_rmse": 0.9198460459709168,
+    "hierarchical_wins_vs_flat_folds": 5,
+    "hierarchical_wins_vs_no_batch_folds": 5
+  },
+  "instrument_holdout": {
+    "hierarchical_mean_rmse": 0.8011287331581116,
+    "flat_mean_rmse": 0.8709147810935974,
+    "hierarchical_wins_vs_flat_folds": 5,
+    "max_fold_rmse_ratio_vs_flat": 0.9501027772702357
+  },
+  "validation_control": {
+    "no_batch": {
+      "n_samples": 205,
+      "rmse": 1.0294920206069946,
+      "mae": 0.7762744426727295,
+      "global_r2": 0.8634887933731079,
+      "sample_pcc_median": 0.9444526433944702,
+      "protein_pcc_median": 0.1817577481269836
+    },
+    "flat_batch": {
+      "n_samples": 205,
+      "rmse": 0.7947514653205872,
+      "mae": 0.5531646013259888,
+      "global_r2": 0.9186448454856871,
+      "sample_pcc_median": 0.9608049392700196,
+      "protein_pcc_median": 0.7832090854644775
+    },
+    "hierarchical_batch": {
+      "n_samples": 205,
+      "rmse": 0.7665912508964539,
+      "mae": 0.5280575156211853,
+      "global_r2": 0.9243080019950868,
+      "sample_pcc_median": 0.9635121822357178,
+      "protein_pcc_median": 0.8088440895080566
+    }
+  },
+  "validation_hierarchical_to_flat_rmse_ratio": 0.9645672695768179,
+  "hierarchical_validation_layer_norms": {
+    "source": {
+      "rms": 0.5206343808290133,
+      "max_abs": 1.051267147064209
+    },
+    "instrument": {
+      "rms": 0.1862724912940223,
+      "max_abs": 0.5882687568664551
+    },
+    "plate": {
+      "rms": 0.044592295949607,
+      "max_abs": 0.2861925959587097
+    },
+    "batch": {
+      "rms": 0.6507221414068585,
+      "max_abs": 1.7857710123062134
+    }
+  },
+  "plate_energy_fraction_of_layer_energy": 0.0064614077532490185,
+  "oov_checks": {
+    "oov_plate_source_unchanged_max_abs": 0.0,
+    "oov_plate_instrument_unchanged_max_abs": 0.0,
+    "oov_plate_delta_plate_max_abs": 0.0,
+    "oov_instrument_source_unchanged_max_abs": 0.0,
+    "oov_instrument_delta_instrument_max_abs": 0.0,
+    "oov_instrument_delta_plate_max_abs": 0.0,
+    "all_oov_delta_batch_max_abs": 0.0
+  },
+  "gates": {
+    "gate_1_plate_holdout_rmse_better_than_flat_and_no_batch": true,
+    "gate_2_instrument_holdout_no_collapse": true,
+    "gate_3_majority_fold_direction_consistent": true,
+    "gate_4_validation_control_rmse_ratio_le_1_03": true,
+    "gate_5_oov_partial_fallback_exact": true,
+    "gate_6_plate_residual_not_dominant": true,
+    "gate_7_no_validation_or_test_label_fit": true
+  },
+  "eligible_for_stage_s2b": true,
+  "run": {
+    "elapsed_seconds": 273.0021899000276,
+    "device": "cuda",
+    "peak_gpu_memory_allocated_bytes": 44473344,
+    "peak_gpu_memory_reserved_bytes": 65011712,
+    "n_train_controls": 751,
+    "n_validation_controls": 205,
+    "artifact_hashes": {
+      "feature_contract_sha256": "9ef3685f16796c949a7ec4b7c2b3f4b1c157ce374970ebcbc77f832dcf26f4f8",
+      "chemical_features_sha256": "9b3879ae6f0b20e59028b7a12b464bc4b53a25a2576078453329d7315cf5f702",
+      "chemical_index_sha256": "91d08ce8eea76dd43236fdfb08972393f99ed4901c3b024eebe9c2a5f3691fde",
+      "chemical_schema_sha256": "3bc3eb1266a8b83553cc19bb53a5da163a68c7bcf219ea05d174ec2dab92b25b",
+      "chemical_source_manifest_sha256": "128b63ff38283ecf848ba3875b5f7f2ee19caeb82d260c347cebc21342d768a2",
+      "genome_features_sha256": "11ab741242605577891001dcd931671bd2bebdb0e41098355c76658fee633d42",
+      "genome_index_sha256": "33796bbf4073a690880e17f85f4e0c7bf496ecc7bb6c136f97345b80224f5202",
+      "genome_schema_sha256": "244d2baa4c7b190ba4422155089e76a7655b1e17af6eb11fb5bc38c362d16ea1",
+      "genome_source_manifest_sha256": "703f8289daf0069a6fafba41851bfac4c22be424be2926b9d2536676c692e815",
+      "protein_order_sha256": "f112e7fffae4d3158ec9985a6c9cfa25e1a7dd40f847092561ea023bc1d8a45f",
+      "generation_sha256": "bb4bf51f8b82d6c19ba0ab12b6ce31b809237f08d8655e6e508fe567b1a0d145"
+    },
+    "test_proteome_opened": false,
+    "test_prediction_generated": false
+  },
+  "checkpoint_count": 33,
+  "test_proteome_opened": false,
+  "test_prediction_generated": false,
+  "failures": []
+}

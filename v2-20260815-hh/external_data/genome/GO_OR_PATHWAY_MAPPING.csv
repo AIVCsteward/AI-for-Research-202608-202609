@@ -1,0 +1,2 @@
+mapping_status,database,frozen_version,gene_id,go_slim_id,go_slim_term,reason,source_url
+not_available,SGD Yeast GO Slim,download attempted 2026-08-14; complete snapshot not acquired,,,,"Official download was incomplete and was deleted. The 7,796 pangenome ORF identifiers cannot be reliably joined to SGD systematic genes without a validated crosswalk; no zero-valued GO features were fabricated.",https://downloads.yeastgenome.org/curation/literature/go_slim_mapping.tab

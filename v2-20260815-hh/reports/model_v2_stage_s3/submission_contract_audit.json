@@ -1,0 +1,35 @@
+{
+  "checks": {
+    "row_count_4454": true,
+    "column_count_4423": true,
+    "first_column_sample_ID": true,
+    "sample_ID_no_missing": true,
+    "sample_ID_no_duplicates": true,
+    "sample_ID_set_matches_metadata": true,
+    "row_order_matches_metadata": true,
+    "protein_names_match_contract": true,
+    "protein_order_matches_contract": true,
+    "protein_columns_numeric": true,
+    "no_na": true,
+    "no_inf": true,
+    "all_finite": true,
+    "prediction_scale_log2": true,
+    "not_exponentiated": true,
+    "not_internal_zscore": true,
+    "roundtrip_matches_prewrite": true,
+    "all_samples_routed_exactly_once": true,
+    "control_response_zero": true
+  },
+  "passed": true,
+  "parsed_shape": [
+    4454,
+    4423
+  ],
+  "roundtrip_max_absolute_difference": 1.9018554695549028e-06,
+  "roundtrip_inconsistent_cell_count_float32": 0,
+  "csv_sha256": "9739f087788bfd37f57750564c9d351bbf37bd867ab7e87820294eec52c8dbe9",
+  "all_samples_routed_exactly_once": true,
+  "control_response_zero": true,
+  "formal_prediction_csv_sha256": "9739f087788bfd37f57750564c9d351bbf37bd867ab7e87820294eec52c8dbe9",
+  "formal_equals_audited_pass1": true
+}

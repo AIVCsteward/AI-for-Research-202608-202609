@@ -1,0 +1,107 @@
+{
+  "status": "PASS",
+  "mode": "formal",
+  "config": "D:\\\u865a\u62df\u7ec6\u80de\\baseline\\configs\\model_v2_huber_no_batch.yaml",
+  "device": "cuda",
+  "elapsed_seconds": 46.99862659999053,
+  "peak_gpu_memory_allocated_bytes": 44253184,
+  "peak_gpu_memory_reserved_bytes": 62914560,
+  "resolved_config_path": "D:\\\u865a\u62df\u7ec6\u80de\\reports\\model_v2_stage2\\formal_huber_no_batch_seed_20260814\\resolved_config.json",
+  "stage_a": {
+    "best_epoch": 3,
+    "best_monitor": 0.3833888773670932,
+    "actual_epochs": 10,
+    "stopped_epoch": 9,
+    "stop_reason": "early_stopping_patience_exhausted",
+    "monitor_name": "control_only_validation_huber",
+    "train_control_sample_count": 751,
+    "validation_control_sample_count": 205,
+    "validation_control_scenarios": {
+      "val_strain_only": 190,
+      "val_time": 15
+    }
+  },
+  "stage_b": {
+    "best_epoch": 2,
+    "best_monitor": 0.36834325498374776,
+    "actual_epochs": 15,
+    "stopped_epoch": 14,
+    "stop_reason": "early_stopping_patience_exhausted",
+    "monitor_name": "macro_huber_equal_four_scenarios"
+  },
+  "validation_macro": "equal_weight_mean_of_exact_valid_position_scenario_huber",
+  "final_validation_macro_huber": 0.36834325498374776,
+  "validation_scenario_huber": {
+    "val_chem_only": 0.4539859165702558,
+    "val_strain_only": 0.2918245774388225,
+    "val_both": 0.47375830059514196,
+    "val_time": 0.2538042253307709
+  },
+  "validation_scenarios": {
+    "val_chem_only": {
+      "rmse": 1.0987855195999146,
+      "mae": 0.8200986385345459,
+      "global_r2": 0.8445250988006592,
+      "median_per_sample_pcc": 0.9260077476501465,
+      "median_per_sample_r2": 0.8198089599609375,
+      "median_per_protein_pcc": 0.1939026191830635,
+      "median_per_protein_r2": -0.12423533201217651,
+      "n_valid_positions": 4021051
+    },
+    "val_strain_only": {
+      "rmse": 0.8441515564918518,
+      "mae": 0.6117709279060364,
+      "global_r2": 0.9067608714103699,
+      "median_per_sample_pcc": 0.9668951630592346,
+      "median_per_sample_r2": 0.9268885254859924,
+      "median_per_protein_pcc": 0.41624897718429565,
+      "median_per_protein_r2": 0.017089486122131348,
+      "n_valid_positions": 5902748
+    },
+    "val_both": {
+      "rmse": 1.1200309991836548,
+      "mae": 0.8445231914520264,
+      "global_r2": 0.8386213779449463,
+      "median_per_sample_pcc": 0.9254198670387268,
+      "median_per_sample_r2": 0.8177701830863953,
+      "median_per_protein_pcc": 0.18695028126239777,
+      "median_per_protein_r2": -0.22118937969207764,
+      "n_valid_positions": 1008739
+    },
+    "val_time": {
+      "rmse": 0.7860504388809204,
+      "mae": 0.557659387588501,
+      "global_r2": 0.9199065566062927,
+      "median_per_sample_pcc": 0.9736115336418152,
+      "median_per_sample_r2": 0.9324299097061157,
+      "median_per_protein_pcc": 0.4158290922641754,
+      "median_per_protein_r2": 0.14034852385520935,
+      "n_valid_positions": 589198
+    }
+  },
+  "anchor_source": "train_controls_only",
+  "control_sample_count": 751,
+  "min_observations_per_protein": 94,
+  "n_control": 751,
+  "n_treatment": 5078,
+  "n_validation": {
+    "val_chem_only": 1065,
+    "val_strain_only": 1547,
+    "val_both": 269,
+    "val_time": 157
+  },
+  "n_proteins": 4422,
+  "batch_enabled": false,
+  "effective_batch_reg_weight": 0.0,
+  "fc_loss_enabled": false,
+  "similarity_enabled": false,
+  "experimental_parity": "NOT RUN",
+  "batch_diagnostic_scope": "all_selected_train_treatments",
+  "batch_diagnostic_sample_count": 5078,
+  "training_history_file": "training_history.json",
+  "test_proteome_opened": false,
+  "delta_batch_mean": 0.0,
+  "delta_batch_std": 0.0,
+  "delta_batch_max_abs": 0.0,
+  "delta_batch_to_response_norm": 0.0
+}

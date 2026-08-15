@@ -1,0 +1,65 @@
+{
+  "train_val_metadata_path": "D:\\虚拟细胞\\WAYB_WAYC\\WAYB_WAYC_metadata_train_val(1).csv",
+  "train_val_metadata_sha256": "9414f22d71e925a3b85544b49fde252613c87808d34738a84785003adb8131ef",
+  "test_metadata_path": "D:\\虚拟细胞\\WAYB_WAYC\\WAYB_WAYC_metadata_test(1).csv",
+  "test_metadata_sha256": "42f2df9ea79f28da8344e96b5181edacc215744a858d1a4eaa729c2e1cc69d31",
+  "test_metadata_only": true,
+  "test_proteome_opened": false,
+  "fields": [
+    "data_source",
+    "instrument",
+    "Yeast_cell_plate"
+  ],
+  "tuple_definition": [
+    "data_source",
+    "instrument",
+    "Yeast_cell_plate"
+  ],
+  "splits": {
+    "train": {
+      "n_samples": 5920,
+      "unique_counts": {
+        "data_source": 4,
+        "instrument": 7,
+        "Yeast_cell_plate": 144
+      },
+      "unique_tuple_count": 144,
+      "unseen_vs_train": {
+        "data_source": [],
+        "instrument": [],
+        "Yeast_cell_plate": []
+      },
+      "unseen_tuple_count_vs_train": 0
+    },
+    "validation": {
+      "n_samples": 3038,
+      "unique_counts": {
+        "data_source": 4,
+        "instrument": 7,
+        "Yeast_cell_plate": 144
+      },
+      "unique_tuple_count": 144,
+      "unseen_vs_train": {
+        "data_source": [],
+        "instrument": [],
+        "Yeast_cell_plate": []
+      },
+      "unseen_tuple_count_vs_train": 0
+    },
+    "test": {
+      "n_samples": 4454,
+      "unique_counts": {
+        "data_source": 4,
+        "instrument": 7,
+        "Yeast_cell_plate": 144
+      },
+      "unique_tuple_count": 144,
+      "unseen_vs_train": {
+        "data_source": [],
+        "instrument": [],
+        "Yeast_cell_plate": []
+      },
+      "unseen_tuple_count_vs_train": 0
+    }
+  }
+}

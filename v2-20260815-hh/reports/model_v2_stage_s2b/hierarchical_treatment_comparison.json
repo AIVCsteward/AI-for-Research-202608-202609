@@ -1,0 +1,1248 @@
+{
+  "schema_version": "1.0",
+  "task": "Stage S2B hierarchical treatment",
+  "planning_proxy": true,
+  "official_score": false,
+  "experimental_nonofficial_parity_fc": true,
+  "official_fc_result": false,
+  "seed": 20260814,
+  "stage_a_retrained": false,
+  "stage_a_checkpoint_sha256": "99f997f815eec95bde70f78afcc533f649b7519435f04b8ef207da90c60f7e73",
+  "shared_stage_b_initial_hash": "b1d6d40fc41679e442b887f31e2467591fc80bd17020a68bcb3c0edd16fe00ff",
+  "shared_holdout_sample_ids_sha256": "7cfd2fc2c8877425c98f845ffc9275cd023cee7da31aa677437aaa65ffd11734",
+  "batch_holdout_sample_count": 957,
+  "oov_max_semantic_error": 0.0,
+  "oov_checks": {
+    "S2B D0 hierarchical none Huber|val_chem_only|oov_plate": 0.0,
+    "S2B D0 hierarchical none Huber|val_chem_only|oov_instrument": 0.0,
+    "S2B D0 hierarchical none Huber|val_chem_only|all_oov": 0.0,
+    "S2B D1 hierarchical Morgan Huber|val_chem_only|oov_plate": 0.0,
+    "S2B D1 hierarchical Morgan Huber|val_chem_only|oov_instrument": 0.0,
+    "S2B D1 hierarchical Morgan Huber|val_chem_only|all_oov": 0.0,
+    "S2B D2 hierarchical Morgan experimental FC|val_chem_only|oov_plate": 0.0,
+    "S2B D2 hierarchical Morgan experimental FC|val_chem_only|oov_instrument": 0.0,
+    "S2B D2 hierarchical Morgan experimental FC|val_chem_only|all_oov": 0.0,
+    "S2B D0 hierarchical none Huber|val_strain_only|oov_plate": 0.0,
+    "S2B D0 hierarchical none Huber|val_strain_only|oov_instrument": 0.0,
+    "S2B D0 hierarchical none Huber|val_strain_only|all_oov": 0.0,
+    "S2B D1 hierarchical Morgan Huber|val_strain_only|oov_plate": 0.0,
+    "S2B D1 hierarchical Morgan Huber|val_strain_only|oov_instrument": 0.0,
+    "S2B D1 hierarchical Morgan Huber|val_strain_only|all_oov": 0.0,
+    "S2B D2 hierarchical Morgan experimental FC|val_strain_only|oov_plate": 0.0,
+    "S2B D2 hierarchical Morgan experimental FC|val_strain_only|oov_instrument": 0.0,
+    "S2B D2 hierarchical Morgan experimental FC|val_strain_only|all_oov": 0.0,
+    "S2B D0 hierarchical none Huber|val_both|oov_plate": 0.0,
+    "S2B D0 hierarchical none Huber|val_both|oov_instrument": 0.0,
+    "S2B D0 hierarchical none Huber|val_both|all_oov": 0.0,
+    "S2B D1 hierarchical Morgan Huber|val_both|oov_plate": 0.0,
+    "S2B D1 hierarchical Morgan Huber|val_both|oov_instrument": 0.0,
+    "S2B D1 hierarchical Morgan Huber|val_both|all_oov": 0.0,
+    "S2B D2 hierarchical Morgan experimental FC|val_both|oov_plate": 0.0,
+    "S2B D2 hierarchical Morgan experimental FC|val_both|oov_instrument": 0.0,
+    "S2B D2 hierarchical Morgan experimental FC|val_both|all_oov": 0.0,
+    "S2B D0 hierarchical none Huber|val_time|oov_plate": 0.0,
+    "S2B D0 hierarchical none Huber|val_time|oov_instrument": 0.0,
+    "S2B D0 hierarchical none Huber|val_time|all_oov": 0.0,
+    "S2B D1 hierarchical Morgan Huber|val_time|oov_plate": 0.0,
+    "S2B D1 hierarchical Morgan Huber|val_time|oov_instrument": 0.0,
+    "S2B D1 hierarchical Morgan Huber|val_time|all_oov": 0.0,
+    "S2B D2 hierarchical Morgan experimental FC|val_time|oov_plate": 0.0,
+    "S2B D2 hierarchical Morgan experimental FC|val_time|oov_instrument": 0.0,
+    "S2B D2 hierarchical Morgan experimental FC|val_time|all_oov": 0.0
+  },
+  "decisions": {
+    "S2B D0 hierarchical none Huber": {
+      "corresponding_s1_model": "S1 B anchor Morgan Huber",
+      "mean_absolute_rmse": 0.6677444130182266,
+      "mean_absolute_rmse_change_vs_s1": -0.0015369951725006104,
+      "mean_raw_fc_pcc_gain_vs_s1": -0.005480951339041529,
+      "val_chem_context_residual_pcc_gain_vs_s1": 0.012135501003310678,
+      "val_strain_drug_residual_pcc_gain_vs_s1": -0.021067187448981506,
+      "gate_1_mean_absolute_rmse_not_worse": true,
+      "gate_2_fc_or_weighted_residual_pcc_gain_at_least_0_01": true,
+      "gate_3_val_chem_context_pcc_drop_at_most_0_005": true,
+      "gate_4_val_strain_drug_pcc_drop_at_most_0_005": false,
+      "gate_5_frozen_anchor_exact": true,
+      "gate_6_oov_semantics_exact": true,
+      "gate_7_not_single_scenario_or_few_drug_dominated": false,
+      "eligible_for_multiseed": false
+    },
+    "S2B D1 hierarchical Morgan Huber": {
+      "corresponding_s1_model": "S1 B anchor Morgan Huber",
+      "mean_absolute_rmse": 0.6771520227193832,
+      "mean_absolute_rmse_change_vs_s1": 0.007870614528656006,
+      "mean_raw_fc_pcc_gain_vs_s1": 0.010311827303699117,
+      "val_chem_context_residual_pcc_gain_vs_s1": -0.0028763218600418305,
+      "val_strain_drug_residual_pcc_gain_vs_s1": -0.024406059326888052,
+      "gate_1_mean_absolute_rmse_not_worse": false,
+      "gate_2_fc_or_weighted_residual_pcc_gain_at_least_0_01": true,
+      "gate_3_val_chem_context_pcc_drop_at_most_0_005": true,
+      "gate_4_val_strain_drug_pcc_drop_at_most_0_005": false,
+      "gate_5_frozen_anchor_exact": true,
+      "gate_6_oov_semantics_exact": true,
+      "gate_7_not_single_scenario_or_few_drug_dominated": false,
+      "eligible_for_multiseed": false
+    },
+    "S2B D2 hierarchical Morgan experimental FC": {
+      "corresponding_s1_model": "S1 C anchor Morgan Huber plus experimental FC",
+      "mean_absolute_rmse": 0.6632760316133499,
+      "mean_absolute_rmse_change_vs_s1": -0.006138056516647339,
+      "mean_raw_fc_pcc_gain_vs_s1": 0.009482409102265554,
+      "val_chem_context_residual_pcc_gain_vs_s1": 0.010820977872110837,
+      "val_strain_drug_residual_pcc_gain_vs_s1": -0.03602862511380717,
+      "gate_1_mean_absolute_rmse_not_worse": true,
+      "gate_2_fc_or_weighted_residual_pcc_gain_at_least_0_01": true,
+      "gate_3_val_chem_context_pcc_drop_at_most_0_005": true,
+      "gate_4_val_strain_drug_pcc_drop_at_most_0_005": false,
+      "gate_5_frozen_anchor_exact": true,
+      "gate_6_oov_semantics_exact": true,
+      "gate_7_not_single_scenario_or_few_drug_dominated": false,
+      "eligible_for_multiseed": false
+    }
+  },
+  "chemical_decision": {
+    "S2B D1 hierarchical Morgan Huber": {
+      "correct_strictly_better_absolute_rmse_than_d0_in_val_chem_and_val_both": false,
+      "correct_not_worse_than_shuffle_on_absolute_and_raw_fc_pcc": false,
+      "morgan_contribution_established": false
+    },
+    "S2B D2 hierarchical Morgan experimental FC": {
+      "correct_strictly_better_absolute_rmse_than_d0_in_val_chem_and_val_both": false,
+      "correct_not_worse_than_shuffle_on_absolute_and_raw_fc_pcc": false,
+      "morgan_contribution_established": false
+    }
+  },
+  "per_drug_negative_transfer_concentration": {
+    "S2B D1 hierarchical Morgan Huber": {
+      "positive_gain_drug_count": 44,
+      "total_drug_count": 85,
+      "mean_drug_equal_gain": 0.012073050877627204,
+      "median_drug_equal_gain": 0.0023707151412963867,
+      "negative_transfer_drug_count": 41,
+      "top3_negative_harm_share": 0.3499982485488314
+    },
+    "S2B D2 hierarchical Morgan experimental FC": {
+      "positive_gain_drug_count": 41,
+      "total_drug_count": 85,
+      "mean_drug_equal_gain": 0.013833887436810662,
+      "median_drug_equal_gain": -0.00337904691696167,
+      "negative_transfer_drug_count": 44,
+      "top3_negative_harm_share": 0.2758133032001308
+    }
+  },
+  "training": {
+    "S2B D0 hierarchical none Huber": {
+      "status": "PASS",
+      "mode": "formal",
+      "config": "D:\\虚拟细胞\\baseline\\configs\\model_v2_stage_s2b_d0_hierarchical_none_huber.yaml",
+      "device": "cuda",
+      "elapsed_seconds": 103.67360270000063,
+      "peak_gpu_memory_allocated_bytes": 59959296,
+      "peak_gpu_memory_reserved_bytes": 94371840,
+      "resolved_config_path": "D:\\虚拟细胞\\reports\\model_v2_stage_s2b\\formal_d0_hierarchical_none_huber_seed_20260814\\resolved_config.json",
+      "stage_a": {
+        "best_epoch": 29,
+        "best_monitor": null,
+        "actual_epochs": 0,
+        "stopped_epoch": 29,
+        "stop_reason": "loaded_fixed_stage_a_checkpoint_no_retraining",
+        "monitor_name": "fixed_epochs_all_train_controls_no_validation_selection",
+        "train_control_sample_count": 751,
+        "validation_control_sample_count": 205,
+        "validation_control_scenarios": {
+          "val_strain_only": 190,
+          "val_time": 15
+        },
+        "fixed_checkpoint": {
+          "path": "D:\\虚拟细胞\\reports\\model_v2_stage_s2a\\final\\hierarchical_batch\\stage_a_final.pt",
+          "sha256": "99f997f815eec95bde70f78afcc533f649b7519435f04b8ef207da90c60f7e73",
+          "checkpoint_epoch": 29,
+          "checkpoint_monitor": null,
+          "stage": "S2A_stage_a_only_final",
+          "structure": "hierarchical_batch",
+          "vocabulary_source": "S2A_fold_train_controls_only"
+        }
+      },
+      "stage_b": {
+        "best_epoch": 20,
+        "best_monitor": 0.19474220441921256,
+        "actual_epochs": 33,
+        "stopped_epoch": 32,
+        "stop_reason": "early_stopping_patience_exhausted",
+        "monitor_name": "macro_huber_equal_four_scenarios"
+      },
+      "validation_macro": "equal_weight_mean_of_exact_valid_position_scenario_huber",
+      "final_validation_macro_huber": 0.19474220441921256,
+      "validation_scenario_huber": {
+        "val_chem_only": 0.14149200888254201,
+        "val_strain_only": 0.23809040962410408,
+        "val_both": 0.2588945112368512,
+        "val_time": 0.1404918879333529
+      },
+      "validation_scenarios": {
+        "val_chem_only": {
+          "rmse": 0.5680020451545715,
+          "mae": 0.39786460995674133,
+          "global_r2": 0.9584535360336304,
+          "median_per_sample_pcc": 0.9826174974441528,
+          "median_per_sample_r2": 0.9619492888450623,
+          "median_per_protein_pcc": 0.8396652936935425,
+          "median_per_protein_r2": 0.666735827922821,
+          "n_valid_positions": 4021051
+        },
+        "val_strain_only": {
+          "rmse": 0.7764066457748413,
+          "mae": 0.5364961624145508,
+          "global_r2": 0.9211256504058838,
+          "median_per_sample_pcc": 0.9633268713951111,
+          "median_per_sample_r2": 0.9226653575897217,
+          "median_per_protein_pcc": 0.7662622332572937,
+          "median_per_protein_r2": 0.3494606018066406,
+          "n_valid_positions": 5902748
+        },
+        "val_both": {
+          "rmse": 0.8134928941726685,
+          "mae": 0.5645855665206909,
+          "global_r2": 0.9148678779602051,
+          "median_per_sample_pcc": 0.961201548576355,
+          "median_per_sample_r2": 0.9148842096328735,
+          "median_per_protein_pcc": 0.828931987285614,
+          "median_per_protein_r2": 0.4602871537208557,
+          "n_valid_positions": 1008739
+        },
+        "val_time": {
+          "rmse": 0.5729411840438843,
+          "mae": 0.39277786016464233,
+          "global_r2": 0.9574483633041382,
+          "median_per_sample_pcc": 0.9825034141540527,
+          "median_per_sample_r2": 0.9609906673431396,
+          "median_per_protein_pcc": 0.7692951261997223,
+          "median_per_protein_r2": 0.5670478343963623,
+          "n_valid_positions": 589198
+        }
+      },
+      "validation_component_norms": {
+        "val_chem_only": {
+          "y_baseline": 43550.947278576255,
+          "delta_response": 395.8833803566837,
+          "delta_batch": 1310.58826978973
+        },
+        "val_strain_only": {
+          "y_baseline": 52473.01251641939,
+          "delta_response": 420.02800808395693,
+          "delta_batch": 1451.9186752089615
+        },
+        "val_both": {
+          "y_baseline": 21753.15785869478,
+          "delta_response": 175.15773623391075,
+          "delta_batch": 663.7239997330367
+        },
+        "val_time": {
+          "y_baseline": 16665.781962846882,
+          "delta_response": 143.95369954836232,
+          "delta_batch": 418.5068019771502
+        }
+      },
+      "stage_b_initial_chemical_response_sha256": "b1d6d40fc41679e442b887f31e2467591fc80bd17020a68bcb3c0edd16fe00ff",
+      "chemical_encoder_parameter_change_l2": 2.7511092032401563,
+      "chemical_variant": {
+        "mode": "correct",
+        "seed": 20260814,
+        "n_entities": 57,
+        "fixed_point_count": 57,
+        "permutation_sha256": "43f1a99a51253ac97d3a08db808b056d3f62b42ae4b6b1aa4c7c6ef36a4df3f4",
+        "interface": "scripts/build_chemical_features.py::apply_feature_variant"
+      },
+      "chemical_permutation_file": "chemical_entity_permutation.csv",
+      "chemical_feature_components": "none",
+      "chemical_component_manifest_file": "chemical_component_manifest.json",
+      "anchor_source": "train_controls_only",
+      "control_sample_count": 751,
+      "min_observations_per_protein": 94,
+      "n_control": 751,
+      "n_treatment": 4121,
+      "n_treatment_full": 5078,
+      "train_internal_batch_holdout": {
+        "enabled": true,
+        "train_sample_count": 4121,
+        "holdout_sample_count": 957,
+        "holdout_sample_ids_sha256": "7cfd2fc2c8877425c98f845ffc9275cd023cee7da31aa677437aaa65ffd11734",
+        "group_columns": [
+          "data_source",
+          "instrument",
+          "Yeast_cell_plate"
+        ],
+        "labels_used_for_training_or_early_stopping": false
+      },
+      "n_validation": {
+        "val_chem_only": 1065,
+        "val_strain_only": 1547,
+        "val_both": 269,
+        "val_time": 157
+      },
+      "n_proteins": 4422,
+      "batch_enabled": true,
+      "batch_structure": "hierarchical_batch",
+      "effective_batch_reg_weight": 0.0,
+      "batch_source_reg_weight": 0.0001,
+      "batch_instrument_reg_weight": 0.0005,
+      "batch_plate_reg_weight": 0.002,
+      "fc_loss_enabled": false,
+      "similarity_enabled": false,
+      "experimental_nonofficial_parity_fc": false,
+      "control_mapping": "disabled_for_fc",
+      "official_fc_result": false,
+      "experimental_parity": "NOT RUN",
+      "fc_weight": 0.0,
+      "fc_absolute_weight": 0.0,
+      "response_magnitude_weight": 0.01,
+      "response_gate_enabled": true,
+      "response_rms_cap": 0.75,
+      "batch_field_dropout": 0.0,
+      "planning_proxy": true,
+      "official_score": false,
+      "fc_early_stopping_used": false,
+      "pairing_audit": null,
+      "pairing_file": null,
+      "pairing_audit_file": null,
+      "predicted_fc_identity_audit": null,
+      "stage_b_fc_loss_by_epoch": [
+        {
+          "epoch": 0,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 1,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 2,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 3,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 4,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 5,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 6,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 7,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 8,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 9,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 10,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 11,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 12,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 13,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 14,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 15,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 16,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 17,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 18,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 19,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 20,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 21,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 22,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 23,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 24,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 25,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 26,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 27,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 28,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 29,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 30,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 31,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 32,
+          "loss_fc": 0.0
+        }
+      ],
+      "batch_diagnostic_scope": "all_selected_train_treatments",
+      "batch_diagnostic_sample_count": 5078,
+      "training_history_file": "training_history.json",
+      "stage_b_checkpoint": "D:\\虚拟细胞\\reports\\model_v2_stage_s2b\\formal_d0_hierarchical_none_huber_seed_20260814\\stage_b_best.pt",
+      "stage_b_checkpoint_sha256": "a216cb68a9dc345a6b1a1a9cb03c033d2e1570bb3d4417e36655d798b36fb56b",
+      "stage_b_freeze_audit_file": "stage_b_freeze_audit.json",
+      "stage_b_freeze_audit": {
+        "parameter_hashes_before": {
+          "baseline_branch": "1c2824927390b2574b8cba9245beb41f6c382c4dd78d33571fb4f0a812200f0c",
+          "genome_encoder": "897f96901900f4dec13a110b43628b57517f967ea2b99aa72ee60729fed8712e",
+          "batch_source": "e420b6bf63f8ef430983f7bd3c9988eb5dac75f3053fb12e9ffb660cb53228eb",
+          "batch_instrument": "b62dd8a28dcc3df09e491d5346d2c382dad236cab2f1bec23d533a33efc58339",
+          "batch_plate": "b4c0e36114ce58ade5803ca8206442748b306d05182e93c6424983fb2dc317ef",
+          "batch_all": "c7bf58128a8cc3c7416940db8c8678b44379d79b78ed8e3aa67771fd8435b1a9"
+        },
+        "parameter_hashes_after": {
+          "baseline_branch": "1c2824927390b2574b8cba9245beb41f6c382c4dd78d33571fb4f0a812200f0c",
+          "genome_encoder": "897f96901900f4dec13a110b43628b57517f967ea2b99aa72ee60729fed8712e",
+          "batch_source": "e420b6bf63f8ef430983f7bd3c9988eb5dac75f3053fb12e9ffb660cb53228eb",
+          "batch_instrument": "b62dd8a28dcc3df09e491d5346d2c382dad236cab2f1bec23d533a33efc58339",
+          "batch_plate": "b4c0e36114ce58ade5803ca8206442748b306d05182e93c6424983fb2dc317ef",
+          "batch_all": "c7bf58128a8cc3c7416940db8c8678b44379d79b78ed8e3aa67771fd8435b1a9"
+        },
+        "parameter_hashes_exactly_equal": {
+          "baseline_branch": true,
+          "genome_encoder": true,
+          "batch_source": true,
+          "batch_instrument": true,
+          "batch_plate": true,
+          "batch_all": true
+        },
+        "probe_outputs_bitwise_equal": {
+          "delta_batch": true,
+          "delta_source": true,
+          "delta_instrument": true,
+          "delta_plate": true
+        },
+        "optimizer": {
+          "group_names": [
+            "chemical_encoder",
+            "response_branch"
+          ],
+          "optimizer_parameter_count": 32,
+          "frozen_parameter_overlap_count": 0,
+          "only_chemical_encoder_and_response_branch": true
+        },
+        "status": "PASS"
+      },
+      "test_proteome_opened": false,
+      "delta_batch_mean": 0.07691678141960528,
+      "delta_batch_std": 0.5611205240627389,
+      "delta_batch_max_abs": 1.7857710123062134,
+      "delta_batch_to_response_norm": 2.556010543258799
+    },
+    "S2B D1 hierarchical Morgan Huber": {
+      "status": "PASS",
+      "mode": "formal",
+      "config": "D:\\虚拟细胞\\baseline\\configs\\model_v2_stage_s2b_d1_hierarchical_morgan_huber.yaml",
+      "device": "cuda",
+      "elapsed_seconds": 75.30762130001676,
+      "peak_gpu_memory_allocated_bytes": 59959296,
+      "peak_gpu_memory_reserved_bytes": 94371840,
+      "resolved_config_path": "D:\\虚拟细胞\\reports\\model_v2_stage_s2b\\formal_d1_hierarchical_morgan_huber_seed_20260814\\resolved_config.json",
+      "stage_a": {
+        "best_epoch": 29,
+        "best_monitor": null,
+        "actual_epochs": 0,
+        "stopped_epoch": 29,
+        "stop_reason": "loaded_fixed_stage_a_checkpoint_no_retraining",
+        "monitor_name": "fixed_epochs_all_train_controls_no_validation_selection",
+        "train_control_sample_count": 751,
+        "validation_control_sample_count": 205,
+        "validation_control_scenarios": {
+          "val_strain_only": 190,
+          "val_time": 15
+        },
+        "fixed_checkpoint": {
+          "path": "D:\\虚拟细胞\\reports\\model_v2_stage_s2a\\final\\hierarchical_batch\\stage_a_final.pt",
+          "sha256": "99f997f815eec95bde70f78afcc533f649b7519435f04b8ef207da90c60f7e73",
+          "checkpoint_epoch": 29,
+          "checkpoint_monitor": null,
+          "stage": "S2A_stage_a_only_final",
+          "structure": "hierarchical_batch",
+          "vocabulary_source": "S2A_fold_train_controls_only"
+        }
+      },
+      "stage_b": {
+        "best_epoch": 11,
+        "best_monitor": 0.2011896010573173,
+        "actual_epochs": 24,
+        "stopped_epoch": 23,
+        "stop_reason": "early_stopping_patience_exhausted",
+        "monitor_name": "macro_huber_equal_four_scenarios"
+      },
+      "validation_macro": "equal_weight_mean_of_exact_valid_position_scenario_huber",
+      "final_validation_macro_huber": 0.2011896010573173,
+      "validation_scenario_huber": {
+        "val_chem_only": 0.17067298040374168,
+        "val_strain_only": 0.2304056683480798,
+        "val_both": 0.27869400186244914,
+        "val_time": 0.12498575361499861
+      },
+      "validation_scenarios": {
+        "val_chem_only": {
+          "rmse": 0.6312170624732971,
+          "mae": 0.44186845421791077,
+          "global_r2": 0.948691189289093,
+          "median_per_sample_pcc": 0.9783889055252075,
+          "median_per_sample_r2": 0.950534462928772,
+          "median_per_protein_pcc": 0.8029203414916992,
+          "median_per_protein_r2": 0.6030333638191223,
+          "n_valid_positions": 4021051
+        },
+        "val_strain_only": {
+          "rmse": 0.7617297768592834,
+          "mae": 0.5249897837638855,
+          "global_r2": 0.9240794777870178,
+          "median_per_sample_pcc": 0.964403510093689,
+          "median_per_sample_r2": 0.9263402819633484,
+          "median_per_protein_pcc": 0.7830045819282532,
+          "median_per_protein_r2": 0.40046679973602295,
+          "n_valid_positions": 5902748
+        },
+        "val_both": {
+          "rmse": 0.8453364372253418,
+          "mae": 0.5914772748947144,
+          "global_r2": 0.9080725908279419,
+          "median_per_sample_pcc": 0.9600045084953308,
+          "median_per_sample_r2": 0.9112794399261475,
+          "median_per_protein_pcc": 0.7906016707420349,
+          "median_per_protein_r2": 0.38471871614456177,
+          "n_valid_positions": 1008739
+        },
+        "val_time": {
+          "rmse": 0.5363199710845947,
+          "mae": 0.36738350987434387,
+          "global_r2": 0.9627141356468201,
+          "median_per_sample_pcc": 0.9850279092788696,
+          "median_per_sample_r2": 0.9680691957473755,
+          "median_per_protein_pcc": 0.7986786961555481,
+          "median_per_protein_r2": 0.622718870639801,
+          "n_valid_positions": 589198
+        }
+      },
+      "validation_component_norms": {
+        "val_chem_only": {
+          "y_baseline": 43550.947278576255,
+          "delta_response": 617.0822542042642,
+          "delta_batch": 1310.58826978973
+        },
+        "val_strain_only": {
+          "y_baseline": 52473.01251641939,
+          "delta_response": 691.3961475751847,
+          "delta_batch": 1451.9186752089615
+        },
+        "val_both": {
+          "y_baseline": 21753.15785869478,
+          "delta_response": 278.53434853205096,
+          "delta_batch": 663.7239997330367
+        },
+        "val_time": {
+          "y_baseline": 16665.781962846882,
+          "delta_response": 230.47652124598108,
+          "delta_batch": 418.5068019771502
+        }
+      },
+      "stage_b_initial_chemical_response_sha256": "b1d6d40fc41679e442b887f31e2467591fc80bd17020a68bcb3c0edd16fe00ff",
+      "chemical_encoder_parameter_change_l2": 11.442032314257085,
+      "chemical_variant": {
+        "mode": "correct",
+        "seed": 20260814,
+        "n_entities": 57,
+        "fixed_point_count": 57,
+        "permutation_sha256": "43f1a99a51253ac97d3a08db808b056d3f62b42ae4b6b1aa4c7c6ef36a4df3f4",
+        "interface": "scripts/build_chemical_features.py::apply_feature_variant"
+      },
+      "chemical_permutation_file": "chemical_entity_permutation.csv",
+      "chemical_feature_components": "morgan_only",
+      "chemical_component_manifest_file": "chemical_component_manifest.json",
+      "anchor_source": "train_controls_only",
+      "control_sample_count": 751,
+      "min_observations_per_protein": 94,
+      "n_control": 751,
+      "n_treatment": 4121,
+      "n_treatment_full": 5078,
+      "train_internal_batch_holdout": {
+        "enabled": true,
+        "train_sample_count": 4121,
+        "holdout_sample_count": 957,
+        "holdout_sample_ids_sha256": "7cfd2fc2c8877425c98f845ffc9275cd023cee7da31aa677437aaa65ffd11734",
+        "group_columns": [
+          "data_source",
+          "instrument",
+          "Yeast_cell_plate"
+        ],
+        "labels_used_for_training_or_early_stopping": false
+      },
+      "n_validation": {
+        "val_chem_only": 1065,
+        "val_strain_only": 1547,
+        "val_both": 269,
+        "val_time": 157
+      },
+      "n_proteins": 4422,
+      "batch_enabled": true,
+      "batch_structure": "hierarchical_batch",
+      "effective_batch_reg_weight": 0.0,
+      "batch_source_reg_weight": 0.0001,
+      "batch_instrument_reg_weight": 0.0005,
+      "batch_plate_reg_weight": 0.002,
+      "fc_loss_enabled": false,
+      "similarity_enabled": false,
+      "experimental_nonofficial_parity_fc": false,
+      "control_mapping": "disabled_for_fc",
+      "official_fc_result": false,
+      "experimental_parity": "NOT RUN",
+      "fc_weight": 0.0,
+      "fc_absolute_weight": 0.0,
+      "response_magnitude_weight": 0.01,
+      "response_gate_enabled": true,
+      "response_rms_cap": 0.75,
+      "batch_field_dropout": 0.0,
+      "planning_proxy": true,
+      "official_score": false,
+      "fc_early_stopping_used": false,
+      "pairing_audit": null,
+      "pairing_file": null,
+      "pairing_audit_file": null,
+      "predicted_fc_identity_audit": null,
+      "stage_b_fc_loss_by_epoch": [
+        {
+          "epoch": 0,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 1,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 2,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 3,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 4,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 5,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 6,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 7,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 8,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 9,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 10,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 11,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 12,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 13,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 14,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 15,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 16,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 17,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 18,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 19,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 20,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 21,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 22,
+          "loss_fc": 0.0
+        },
+        {
+          "epoch": 23,
+          "loss_fc": 0.0
+        }
+      ],
+      "batch_diagnostic_scope": "all_selected_train_treatments",
+      "batch_diagnostic_sample_count": 5078,
+      "training_history_file": "training_history.json",
+      "stage_b_checkpoint": "D:\\虚拟细胞\\reports\\model_v2_stage_s2b\\formal_d1_hierarchical_morgan_huber_seed_20260814\\stage_b_best.pt",
+      "stage_b_checkpoint_sha256": "64adc1d07793dadaf8399a9fbfde0dae3157b7356a68914550eb859aff69b1cd",
+      "stage_b_freeze_audit_file": "stage_b_freeze_audit.json",
+      "stage_b_freeze_audit": {
+        "parameter_hashes_before": {
+          "baseline_branch": "1c2824927390b2574b8cba9245beb41f6c382c4dd78d33571fb4f0a812200f0c",
+          "genome_encoder": "897f96901900f4dec13a110b43628b57517f967ea2b99aa72ee60729fed8712e",
+          "batch_source": "e420b6bf63f8ef430983f7bd3c9988eb5dac75f3053fb12e9ffb660cb53228eb",
+          "batch_instrument": "b62dd8a28dcc3df09e491d5346d2c382dad236cab2f1bec23d533a33efc58339",
+          "batch_plate": "b4c0e36114ce58ade5803ca8206442748b306d05182e93c6424983fb2dc317ef",
+          "batch_all": "c7bf58128a8cc3c7416940db8c8678b44379d79b78ed8e3aa67771fd8435b1a9"
+        },
+        "parameter_hashes_after": {
+          "baseline_branch": "1c2824927390b2574b8cba9245beb41f6c382c4dd78d33571fb4f0a812200f0c",
+          "genome_encoder": "897f96901900f4dec13a110b43628b57517f967ea2b99aa72ee60729fed8712e",
+          "batch_source": "e420b6bf63f8ef430983f7bd3c9988eb5dac75f3053fb12e9ffb660cb53228eb",
+          "batch_instrument": "b62dd8a28dcc3df09e491d5346d2c382dad236cab2f1bec23d533a33efc58339",
+          "batch_plate": "b4c0e36114ce58ade5803ca8206442748b306d05182e93c6424983fb2dc317ef",
+          "batch_all": "c7bf58128a8cc3c7416940db8c8678b44379d79b78ed8e3aa67771fd8435b1a9"
+        },
+        "parameter_hashes_exactly_equal": {
+          "baseline_branch": true,
+          "genome_encoder": true,
+          "batch_source": true,
+          "batch_instrument": true,
+          "batch_plate": true,
+          "batch_all": true
+        },
+        "probe_outputs_bitwise_equal": {
+          "delta_batch": true,
+          "delta_source": true,
+          "delta_instrument": true,
+          "delta_plate": true
+        },
+        "optimizer": {
+          "group_names": [
+            "chemical_encoder",
+            "response_branch"
+          ],
+          "optimizer_parameter_count": 32,
+          "frozen_parameter_overlap_count": 0,
+          "only_chemical_encoder_and_response_branch": true
+        },
+        "status": "PASS"
+      },
+      "test_proteome_opened": false,
+      "delta_batch_mean": 0.07691678141960528,
+      "delta_batch_std": 0.5611205240627389,
+      "delta_batch_max_abs": 1.7857710123062134,
+      "delta_batch_to_response_norm": 1.5953774271244
+    },
+    "S2B D2 hierarchical Morgan experimental FC": {
+      "status": "PASS",
+      "mode": "formal",
+      "config": "D:\\虚拟细胞\\baseline\\configs\\model_v2_stage_s2b_d2_hierarchical_morgan_fc.yaml",
+      "device": "cuda",
+      "elapsed_seconds": 99.0270462000044,
+      "peak_gpu_memory_allocated_bytes": 65226240,
+      "peak_gpu_memory_reserved_bytes": 94371840,
+      "resolved_config_path": "D:\\虚拟细胞\\reports\\model_v2_stage_s2b\\formal_d2_hierarchical_morgan_fc_seed_20260814\\resolved_config.json",
+      "stage_a": {
+        "best_epoch": 29,
+        "best_monitor": null,
+        "actual_epochs": 0,
+        "stopped_epoch": 29,
+        "stop_reason": "loaded_fixed_stage_a_checkpoint_no_retraining",
+        "monitor_name": "fixed_epochs_all_train_controls_no_validation_selection",
+        "train_control_sample_count": 751,
+        "validation_control_sample_count": 205,
+        "validation_control_scenarios": {
+          "val_strain_only": 190,
+          "val_time": 15
+        },
+        "fixed_checkpoint": {
+          "path": "D:\\虚拟细胞\\reports\\model_v2_stage_s2a\\final\\hierarchical_batch\\stage_a_final.pt",
+          "sha256": "99f997f815eec95bde70f78afcc533f649b7519435f04b8ef207da90c60f7e73",
+          "checkpoint_epoch": 29,
+          "checkpoint_monitor": null,
+          "stage": "S2A_stage_a_only_final",
+          "structure": "hierarchical_batch",
+          "vocabulary_source": "S2A_fold_train_controls_only"
+        }
+      },
+      "stage_b": {
+        "best_epoch": 12,
+        "best_monitor": 0.19409347416086387,
+        "actual_epochs": 25,
+        "stopped_epoch": 24,
+        "stop_reason": "early_stopping_patience_exhausted",
+        "monitor_name": "macro_huber_equal_four_scenarios"
+      },
+      "validation_macro": "equal_weight_mean_of_exact_valid_position_scenario_huber",
+      "final_validation_macro_huber": 0.19409347416086387,
+      "validation_scenario_huber": {
+        "val_chem_only": 0.1570982057986061,
+        "val_strain_only": 0.23230447553463826,
+        "val_both": 0.2623416513944881,
+        "val_time": 0.12462956391572295
+      },
+      "validation_scenarios": {
+        "val_chem_only": {
+          "rmse": 0.6020456552505493,
+          "mae": 0.4213211238384247,
+          "global_r2": 0.953324019908905,
+          "median_per_sample_pcc": 0.9806310534477234,
+          "median_per_sample_r2": 0.955963671207428,
+          "median_per_protein_pcc": 0.8169694244861603,
+          "median_per_protein_r2": 0.6284507513046265,
+          "n_valid_positions": 4021051
+        },
+        "val_strain_only": {
+          "rmse": 0.764836847782135,
+          "mae": 0.5278321504592896,
+          "global_r2": 0.9234588146209717,
+          "median_per_sample_pcc": 0.9642914533615112,
+          "median_per_sample_r2": 0.9260618686676025,
+          "median_per_protein_pcc": 0.7810256481170654,
+          "median_per_protein_r2": 0.39106935262680054,
+          "n_valid_positions": 5902748
+        },
+        "val_both": {
+          "rmse": 0.8168405294418335,
+          "mae": 0.5693329572677612,
+          "global_r2": 0.914165735244751,
+          "median_per_sample_pcc": 0.9620590806007385,
+          "median_per_sample_r2": 0.9162070751190186,
+          "median_per_protein_pcc": 0.8070763349533081,
+          "median_per_protein_r2": 0.4319812059402466,
+          "n_valid_positions": 1008739
+        },
+        "val_time": {
+          "rmse": 0.5364052057266235,
+          "mae": 0.3661079406738281,
+          "global_r2": 0.9627022743225098,
+          "median_per_sample_pcc": 0.9849468469619751,
+          "median_per_sample_r2": 0.9662857055664062,
+          "median_per_protein_pcc": 0.8026410341262817,
+          "median_per_protein_r2": 0.6284528374671936,
+          "n_valid_positions": 589198
+        }
+      },
+      "validation_component_norms": {
+        "val_chem_only": {
+          "y_baseline": 43550.947278576255,
+          "delta_response": 517.4405120239777,
+          "delta_batch": 1310.58826978973
+        },
+        "val_strain_only": {
+          "y_baseline": 52473.01251641939,
+          "delta_response": 633.9789523168648,
+          "delta_batch": 1451.9186752089615
+        },
+        "val_both": {
+          "y_baseline": 21753.15785869478,
+          "delta_response": 221.63502917007278,
+          "delta_batch": 663.7239997330367
+        },
+        "val_time": {
+          "y_baseline": 16665.781962846882,
+          "delta_response": 208.0827261721033,
+          "delta_batch": 418.5068019771502
+        }
+      },
+      "stage_b_initial_chemical_response_sha256": "b1d6d40fc41679e442b887f31e2467591fc80bd17020a68bcb3c0edd16fe00ff",
+      "chemical_encoder_parameter_change_l2": 13.745176124603136,
+      "chemical_variant": {
+        "mode": "correct",
+        "seed": 20260814,
+        "n_entities": 57,
+        "fixed_point_count": 57,
+        "permutation_sha256": "43f1a99a51253ac97d3a08db808b056d3f62b42ae4b6b1aa4c7c6ef36a4df3f4",
+        "interface": "scripts/build_chemical_features.py::apply_feature_variant"
+      },
+      "chemical_permutation_file": "chemical_entity_permutation.csv",
+      "chemical_feature_components": "morgan_only",
+      "chemical_component_manifest_file": "chemical_component_manifest.json",
+      "anchor_source": "train_controls_only",
+      "control_sample_count": 751,
+      "min_observations_per_protein": 94,
+      "n_control": 751,
+      "n_treatment": 4121,
+      "n_treatment_full": 5078,
+      "train_internal_batch_holdout": {
+        "enabled": true,
+        "train_sample_count": 4121,
+        "holdout_sample_count": 957,
+        "holdout_sample_ids_sha256": "7cfd2fc2c8877425c98f845ffc9275cd023cee7da31aa677437aaa65ffd11734",
+        "group_columns": [
+          "data_source",
+          "instrument",
+          "Yeast_cell_plate"
+        ],
+        "labels_used_for_training_or_early_stopping": false
+      },
+      "n_validation": {
+        "val_chem_only": 1065,
+        "val_strain_only": 1547,
+        "val_both": 269,
+        "val_time": 157
+      },
+      "n_proteins": 4422,
+      "batch_enabled": true,
+      "batch_structure": "hierarchical_batch",
+      "effective_batch_reg_weight": 0.0,
+      "batch_source_reg_weight": 0.0001,
+      "batch_instrument_reg_weight": 0.0005,
+      "batch_plate_reg_weight": 0.002,
+      "fc_loss_enabled": true,
+      "similarity_enabled": false,
+      "experimental_nonofficial_parity_fc": true,
+      "control_mapping": "pert_id_parity_v1",
+      "official_fc_result": false,
+      "experimental_parity": "RUN_NONOFFICIAL_DIAGNOSTIC",
+      "fc_weight": 0.05,
+      "fc_absolute_weight": 0.05,
+      "response_magnitude_weight": 0.01,
+      "response_gate_enabled": true,
+      "response_rms_cap": 0.75,
+      "batch_field_dropout": 0.0,
+      "planning_proxy": true,
+      "official_score": false,
+      "fc_early_stopping_used": false,
+      "pairing_audit": {
+        "experimental_nonofficial_parity_fc": true,
+        "control_mapping": "pert_id_parity_v1",
+        "official_fc_result": false,
+        "fit_scope": "split_final=train only",
+        "train_treatment_total": 4121,
+        "matched_treatment_count": 3912,
+        "matched_coverage": 0.949284154331473,
+        "requested_control_counts": {
+          "Water": 2091,
+          "DMSO": 2030
+        },
+        "matched_treatment_counts_by_control": {
+          "Water": 1948,
+          "DMSO": 1964
+        },
+        "unmatched_reason_counts": {
+          "no_exact_requested_solvent_control": 209
+        },
+        "matched_control_replicate_count_min": 1,
+        "matched_control_replicate_count_median": 1.0,
+        "matched_control_replicate_count_max": 2,
+        "per_protein_fc_valid_count_min": 353,
+        "per_protein_fc_valid_count_median": 3754.5,
+        "per_protein_fc_valid_count_max": 3912,
+        "exact_match_keys": [
+          "data_source",
+          "Strains",
+          "Medium",
+          "Temperature",
+          "pert_time",
+          "pert_time_unit",
+          "instrument",
+          "Yeast_cell_plate"
+        ],
+        "multiple_controls": "protein_wise_mean_over_observed_controls",
+        "fallback_used": false,
+        "control_matching_spec_path": "D:\\虚拟细胞\\project_v2\\data_contract\\control_matching_spec.json",
+        "control_matching_spec_sha256": "8edd8f77971a3eacedca1e36307d4e8f8b1602fc1c2ea7ecbac8b88490a72d16",
+        "test_proteome_opened": false
+      },
+      "pairing_file": "experimental_parity_fc_pairing.csv",
+      "pairing_audit_file": "experimental_parity_fc_pairing_audit.json",
+      "predicted_fc_identity_audit": {
+        "treatment_sample_ID": "B15",
+        "control_sample_ID": "B40",
+        "max_abs_identity_error": 2.7995556592941284e-06,
+        "baseline_max_abs_difference": 0.0,
+        "float_tolerance_atol_rtol": 1e-05,
+        "control_delta_response_max_abs": 0.0,
+        "identity": "predicted_treatment_minus_predicted_control_equals_delta_response_treatment"
+      },
+      "stage_b_fc_loss_by_epoch": [
+        {
+          "epoch": 0,
+          "loss_fc": 0.954186735703395
+        },
+        {
+          "epoch": 1,
+          "loss_fc": 0.9062152935908391
+        },
+        {
+          "epoch": 2,
+          "loss_fc": 0.92117760181427
+        },
+        {
+          "epoch": 3,
+          "loss_fc": 0.9146213458134578
+        },
+        {
+          "epoch": 4,
+          "loss_fc": 0.9044206344164335
+        },
+        {
+          "epoch": 5,
+          "loss_fc": 0.8973297935265762
+        },
+        {
+          "epoch": 6,
+          "loss_fc": 0.8930293303269606
+        },
+        {
+          "epoch": 7,
+          "loss_fc": 0.8875093221664428
+        },
+        {
+          "epoch": 8,
+          "loss_fc": 0.8814878252836374
+        },
+        {
+          "epoch": 9,
+          "loss_fc": 0.87739090185899
+        },
+        {
+          "epoch": 10,
+          "loss_fc": 0.8793561504437373
+        },
+        {
+          "epoch": 11,
+          "loss_fc": 0.8854627948540907
+        },
+        {
+          "epoch": 12,
+          "loss_fc": 0.8838026450230525
+        },
+        {
+          "epoch": 13,
+          "loss_fc": 0.8808184541188754
+        },
+        {
+          "epoch": 14,
+          "loss_fc": 0.8801105728516212
+        },
+        {
+          "epoch": 15,
+          "loss_fc": 0.8835020175346961
+        },
+        {
+          "epoch": 16,
+          "loss_fc": 0.8786923674436716
+        },
+        {
+          "epoch": 17,
+          "loss_fc": 0.8775294716541584
+        },
+        {
+          "epoch": 18,
+          "loss_fc": 0.8773297529954177
+        },
+        {
+          "epoch": 19,
+          "loss_fc": 0.8761076083550087
+        },
+        {
+          "epoch": 20,
+          "loss_fc": 0.875991818538079
+        },
+        {
+          "epoch": 21,
+          "loss_fc": 0.8751248799837552
+        },
+        {
+          "epoch": 22,
+          "loss_fc": 0.87602387208205
+        },
+        {
+          "epoch": 23,
+          "loss_fc": 0.8751249936910775
+        },
+        {
+          "epoch": 24,
+          "loss_fc": 0.8756105817281283
+        }
+      ],
+      "batch_diagnostic_scope": "all_selected_train_treatments",
+      "batch_diagnostic_sample_count": 5078,
+      "training_history_file": "training_history.json",
+      "stage_b_checkpoint": "D:\\虚拟细胞\\reports\\model_v2_stage_s2b\\formal_d2_hierarchical_morgan_fc_seed_20260814\\stage_b_best.pt",
+      "stage_b_checkpoint_sha256": "e2db629ae549769b996d86b55c101d9dd2cd68e7dfb96887a9ad91e737f2b209",
+      "stage_b_freeze_audit_file": "stage_b_freeze_audit.json",
+      "stage_b_freeze_audit": {
+        "parameter_hashes_before": {
+          "baseline_branch": "1c2824927390b2574b8cba9245beb41f6c382c4dd78d33571fb4f0a812200f0c",
+          "genome_encoder": "897f96901900f4dec13a110b43628b57517f967ea2b99aa72ee60729fed8712e",
+          "batch_source": "e420b6bf63f8ef430983f7bd3c9988eb5dac75f3053fb12e9ffb660cb53228eb",
+          "batch_instrument": "b62dd8a28dcc3df09e491d5346d2c382dad236cab2f1bec23d533a33efc58339",
+          "batch_plate": "b4c0e36114ce58ade5803ca8206442748b306d05182e93c6424983fb2dc317ef",
+          "batch_all": "c7bf58128a8cc3c7416940db8c8678b44379d79b78ed8e3aa67771fd8435b1a9"
+        },
+        "parameter_hashes_after": {
+          "baseline_branch": "1c2824927390b2574b8cba9245beb41f6c382c4dd78d33571fb4f0a812200f0c",
+          "genome_encoder": "897f96901900f4dec13a110b43628b57517f967ea2b99aa72ee60729fed8712e",
+          "batch_source": "e420b6bf63f8ef430983f7bd3c9988eb5dac75f3053fb12e9ffb660cb53228eb",
+          "batch_instrument": "b62dd8a28dcc3df09e491d5346d2c382dad236cab2f1bec23d533a33efc58339",
+          "batch_plate": "b4c0e36114ce58ade5803ca8206442748b306d05182e93c6424983fb2dc317ef",
+          "batch_all": "c7bf58128a8cc3c7416940db8c8678b44379d79b78ed8e3aa67771fd8435b1a9"
+        },
+        "parameter_hashes_exactly_equal": {
+          "baseline_branch": true,
+          "genome_encoder": true,
+          "batch_source": true,
+          "batch_instrument": true,
+          "batch_plate": true,
+          "batch_all": true
+        },
+        "probe_outputs_bitwise_equal": {
+          "delta_batch": true,
+          "delta_source": true,
+          "delta_instrument": true,
+          "delta_plate": true
+        },
+        "optimizer": {
+          "group_names": [
+            "chemical_encoder",
+            "response_branch"
+          ],
+          "optimizer_parameter_count": 32,
+          "frozen_parameter_overlap_count": 0,
+          "only_chemical_encoder_and_response_branch": true
+        },
+        "status": "PASS"
+      },
+      "test_proteome_opened": false,
+      "delta_batch_mean": 0.07691678141960528,
+      "delta_batch_std": 0.5611205240627389,
+      "delta_batch_max_abs": 1.7857710123062134,
+      "delta_batch_to_response_norm": 1.7626489191148689
+    }
+  },
+  "training_artifacts": {
+    "S2B D0 hierarchical none Huber": {
+      "directory": "D:\\虚拟细胞\\reports\\model_v2_stage_s2b\\formal_d0_hierarchical_none_huber_seed_20260814",
+      "checkpoint": "D:\\虚拟细胞\\reports\\model_v2_stage_s2b\\formal_d0_hierarchical_none_huber_seed_20260814\\stage_b_best.pt",
+      "checkpoint_sha256": "a216cb68a9dc345a6b1a1a9cb03c033d2e1570bb3d4417e36655d798b36fb56b",
+      "history": "D:\\虚拟细胞\\reports\\model_v2_stage_s2b\\formal_d0_hierarchical_none_huber_seed_20260814\\training_history.json",
+      "config": "D:\\虚拟细胞\\reports\\model_v2_stage_s2b\\formal_d0_hierarchical_none_huber_seed_20260814\\resolved_config.json",
+      "freeze_audit": "D:\\虚拟细胞\\reports\\model_v2_stage_s2b\\formal_d0_hierarchical_none_huber_seed_20260814\\stage_b_freeze_audit.json"
+    },
+    "S2B D1 hierarchical Morgan Huber": {
+      "directory": "D:\\虚拟细胞\\reports\\model_v2_stage_s2b\\formal_d1_hierarchical_morgan_huber_seed_20260814",
+      "checkpoint": "D:\\虚拟细胞\\reports\\model_v2_stage_s2b\\formal_d1_hierarchical_morgan_huber_seed_20260814\\stage_b_best.pt",
+      "checkpoint_sha256": "64adc1d07793dadaf8399a9fbfde0dae3157b7356a68914550eb859aff69b1cd",
+      "history": "D:\\虚拟细胞\\reports\\model_v2_stage_s2b\\formal_d1_hierarchical_morgan_huber_seed_20260814\\training_history.json",
+      "config": "D:\\虚拟细胞\\reports\\model_v2_stage_s2b\\formal_d1_hierarchical_morgan_huber_seed_20260814\\resolved_config.json",
+      "freeze_audit": "D:\\虚拟细胞\\reports\\model_v2_stage_s2b\\formal_d1_hierarchical_morgan_huber_seed_20260814\\stage_b_freeze_audit.json"
+    },
+    "S2B D2 hierarchical Morgan experimental FC": {
+      "directory": "D:\\虚拟细胞\\reports\\model_v2_stage_s2b\\formal_d2_hierarchical_morgan_fc_seed_20260814",
+      "checkpoint": "D:\\虚拟细胞\\reports\\model_v2_stage_s2b\\formal_d2_hierarchical_morgan_fc_seed_20260814\\stage_b_best.pt",
+      "checkpoint_sha256": "e2db629ae549769b996d86b55c101d9dd2cd68e7dfb96887a9ad91e737f2b209",
+      "history": "D:\\虚拟细胞\\reports\\model_v2_stage_s2b\\formal_d2_hierarchical_morgan_fc_seed_20260814\\training_history.json",
+      "config": "D:\\虚拟细胞\\reports\\model_v2_stage_s2b\\formal_d2_hierarchical_morgan_fc_seed_20260814\\resolved_config.json",
+      "freeze_audit": "D:\\虚拟细胞\\reports\\model_v2_stage_s2b\\formal_d2_hierarchical_morgan_fc_seed_20260814\\stage_b_freeze_audit.json"
+    }
+  },
+  "test_proteome_opened": false,
+  "test_prediction_generated": false,
+  "files": {
+    "hierarchical_treatment_absolute_metrics.csv": "D:\\虚拟细胞\\reports\\model_v2_stage_s2b\\hierarchical_treatment_absolute_metrics.csv",
+    "hierarchical_treatment_fc_metrics.csv": "D:\\虚拟细胞\\reports\\model_v2_stage_s2b\\hierarchical_treatment_fc_metrics.csv",
+    "hierarchical_treatment_context_residual_metrics.csv": "D:\\虚拟细胞\\reports\\model_v2_stage_s2b\\hierarchical_treatment_context_residual_metrics.csv",
+    "hierarchical_treatment_drug_residual_metrics.csv": "D:\\虚拟细胞\\reports\\model_v2_stage_s2b\\hierarchical_treatment_drug_residual_metrics.csv",
+    "hierarchical_treatment_high_effect_metrics.csv": "D:\\虚拟细胞\\reports\\model_v2_stage_s2b\\hierarchical_treatment_high_effect_metrics.csv",
+    "hierarchical_treatment_component_norms.csv": "D:\\虚拟细胞\\reports\\model_v2_stage_s2b\\hierarchical_treatment_component_norms.csv",
+    "hierarchical_treatment_oov_metrics.csv": "D:\\虚拟细胞\\reports\\model_v2_stage_s2b\\hierarchical_treatment_oov_metrics.csv",
+    "hierarchical_treatment_holdout_metrics.csv": "D:\\虚拟细胞\\reports\\model_v2_stage_s2b\\hierarchical_treatment_holdout_metrics.csv",
+    "hierarchical_treatment_holdout_ids.csv": "D:\\虚拟细胞\\reports\\model_v2_stage_s2b\\hierarchical_treatment_holdout_ids.csv",
+    "hierarchical_treatment_chemical_robustness.csv": "D:\\虚拟细胞\\reports\\model_v2_stage_s2b\\hierarchical_treatment_chemical_robustness.csv",
+    "hierarchical_treatment_per_drug_metrics.csv": "D:\\虚拟细胞\\reports\\model_v2_stage_s2b\\hierarchical_treatment_per_drug_metrics.csv",
+    "hierarchical_treatment_per_drug_gain.csv": "D:\\虚拟细胞\\reports\\model_v2_stage_s2b\\hierarchical_treatment_per_drug_gain.csv",
+    "hierarchical_treatment_direct_comparison.csv": "D:\\虚拟细胞\\reports\\model_v2_stage_s2b\\hierarchical_treatment_direct_comparison.csv",
+    "hierarchical_treatment_training_audit.csv": "D:\\虚拟细胞\\reports\\model_v2_stage_s2b\\hierarchical_treatment_training_audit.csv"
+  }
+}

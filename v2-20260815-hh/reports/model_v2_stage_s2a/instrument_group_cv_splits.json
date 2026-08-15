@@ -1,0 +1,74 @@
+[
+  {
+    "cv_type": "instrument",
+    "fold": 0,
+    "column": "instrument",
+    "outer_train_ids_sha256": "6de2f3d0db45bf1d3c443ddeb3bdb457d3a4630bb38afcec8eaf58e78bac3f07",
+    "fit_ids_sha256": "651d51478532828c66b60bb11fb52f5efd2912fef2e96184b3961f12e4d75ce1",
+    "inner_ids_sha256": "60e3a52583803375ef551e930f6a8d9cbef11af3b52fa821ba4e934477b3fc20",
+    "holdout_ids_sha256": "47260600fd5c143ac3d45057a9d563abaedd632a0a3bfb650819660d3f460a0a",
+    "holdout_groups": [
+      "O"
+    ],
+    "baseline_genome_initial_sha256": "c1ceb98d08119d3be110ebe1e9a0a1c20940826d318763d668e51d8d76ea0a8b",
+    "group_overlap_count": 0
+  },
+  {
+    "cv_type": "instrument",
+    "fold": 1,
+    "column": "instrument",
+    "outer_train_ids_sha256": "e3998e6a97cec03e3db057227f16deaab2fc9464234cbe31c94ba19351292916",
+    "fit_ids_sha256": "f0dbc2d368d0afc745bcb449e2ef6acf3c5010b6d49e1d7705ea02ea8f6ce1e2",
+    "inner_ids_sha256": "4b85e61cf8658acf007dff257a10081e532f938d8778f02b798650a9f3047c81",
+    "holdout_ids_sha256": "68d88093282126bf50c08efa96f03588ad6b106ad6d94540b345e104df9474e2",
+    "holdout_groups": [
+      "QE2"
+    ],
+    "baseline_genome_initial_sha256": "c1ceb98d08119d3be110ebe1e9a0a1c20940826d318763d668e51d8d76ea0a8b",
+    "group_overlap_count": 0
+  },
+  {
+    "cv_type": "instrument",
+    "fold": 2,
+    "column": "instrument",
+    "outer_train_ids_sha256": "cf2714bfea2a1c5beaf99f605218921db455629df7c69bb9d213494905be10c9",
+    "fit_ids_sha256": "4ab3981a94d6b41703d8bc71bd3bfc8d2e6fded28bc28fc73f3d174c1a3d597a",
+    "inner_ids_sha256": "8f1204da7d1c88ea4ec68410a9cf95e8d5c022066156310c131c7808e77c2727",
+    "holdout_ids_sha256": "3dbb6c9edca12097565fe1ca097ec3f8b1120d276b8a8b8f8425b7c7514eaf79",
+    "holdout_groups": [
+      "CAB"
+    ],
+    "baseline_genome_initial_sha256": "c1ceb98d08119d3be110ebe1e9a0a1c20940826d318763d668e51d8d76ea0a8b",
+    "group_overlap_count": 0
+  },
+  {
+    "cv_type": "instrument",
+    "fold": 3,
+    "column": "instrument",
+    "outer_train_ids_sha256": "92249a40eb783388c2e37dabeb16f545e7433b30dd96944ee0c2f066db230121",
+    "fit_ids_sha256": "1b5d3dc5c20fc8c2f8fbf795677e2d97f8367628bf4939c25aeb7c6660b4267d",
+    "inner_ids_sha256": "4191ba62f25863203f79e23045b3a6cebd4ec552dc6b78172339e68b8d8a7811",
+    "holdout_ids_sha256": "8f71f5d27b89f7d372b44b910e14853dedcb2beb3a631871243ebe1cfb7327b4",
+    "holdout_groups": [
+      "CAA",
+      "QE1"
+    ],
+    "baseline_genome_initial_sha256": "c1ceb98d08119d3be110ebe1e9a0a1c20940826d318763d668e51d8d76ea0a8b",
+    "group_overlap_count": 0
+  },
+  {
+    "cv_type": "instrument",
+    "fold": 4,
+    "column": "instrument",
+    "outer_train_ids_sha256": "bad4f765bfd30815cbdab707108eb5557439e4fe00167a9c05b8f2ec7c4db047",
+    "fit_ids_sha256": "f3a76cce18634203a0dde458c0c5bfe9ca6046f67a6fd238f03a1b912b4d8ae3",
+    "inner_ids_sha256": "1cbd6063a2b67dc3749cac5f346dbc73913f6b09a3e62e5c17d33b3faf49fb96",
+    "holdout_ids_sha256": "71a57c5a25644327ed59e0692221b3d71d861f3b7b45a30bf720f70e0d942838",
+    "holdout_groups": [
+      "CAC",
+      "WAH"
+    ],
+    "baseline_genome_initial_sha256": "c1ceb98d08119d3be110ebe1e9a0a1c20940826d318763d668e51d8d76ea0a8b",
+    "group_overlap_count": 0
+  }
+]

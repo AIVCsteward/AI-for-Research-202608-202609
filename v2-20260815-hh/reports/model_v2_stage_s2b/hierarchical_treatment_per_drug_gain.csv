@@ -1,0 +1,171 @@
+model,scenario,chemical_name,rmse_gain_vs_d0
+S2B D1 hierarchical Morgan Huber,val_both,Amphotericin B,-0.11145877838134766
+S2B D1 hierarchical Morgan Huber,val_both,FCCP,-0.04787015914916992
+S2B D1 hierarchical Morgan Huber,val_both,Hydroxyurea,0.06338173151016235
+S2B D1 hierarchical Morgan Huber,val_both,Pentamidine isethionate,-0.03952699899673462
+S2B D1 hierarchical Morgan Huber,val_both,Raloxifene hydrochloride,-0.019655883312225342
+S2B D1 hierarchical Morgan Huber,val_both,Sulfometuron methyl,-0.009087026119232178
+S2B D1 hierarchical Morgan Huber,val_chem_only,Amphotericin B,-0.17411315441131592
+S2B D1 hierarchical Morgan Huber,val_chem_only,FCCP,-0.06729412078857422
+S2B D1 hierarchical Morgan Huber,val_chem_only,Hydroxyurea,0.05604887008666992
+S2B D1 hierarchical Morgan Huber,val_chem_only,Pentamidine isethionate,-0.12267732620239258
+S2B D1 hierarchical Morgan Huber,val_chem_only,Raloxifene hydrochloride,-0.01507723331451416
+S2B D1 hierarchical Morgan Huber,val_chem_only,Sulfometuron methyl,0.023906946182250977
+S2B D1 hierarchical Morgan Huber,val_strain_only,"(1R, 2S, 5R) - (-) - Menthol",-0.0036603212356567383
+S2B D1 hierarchical Morgan Huber,val_strain_only,1-10 Phenanthroline monohydrate,-0.01005488634109497
+S2B D1 hierarchical Morgan Huber,val_strain_only,4-Hydroxytamoxifen,-0.09654766321182251
+S2B D1 hierarchical Morgan Huber,val_strain_only,Amiodarone hydrochloride,-0.054453134536743164
+S2B D1 hierarchical Morgan Huber,val_strain_only,Anisomycin,-0.005679190158843994
+S2B D1 hierarchical Morgan Huber,val_strain_only,Artemisinin,-0.006463885307312012
+S2B D1 hierarchical Morgan Huber,val_strain_only,Brefeldin A,-0.010524153709411621
+S2B D1 hierarchical Morgan Huber,val_strain_only,CHX,0.06070762872695923
+S2B D1 hierarchical Morgan Huber,val_strain_only,Cisplatin,-0.007532000541687012
+S2B D1 hierarchical Morgan Huber,val_strain_only,Clomiphene citrate,-0.010255634784698486
+S2B D1 hierarchical Morgan Huber,val_strain_only,Clotrimazole,-0.012103557586669922
+S2B D1 hierarchical Morgan Huber,val_strain_only,Cyclopiazonic acid,-0.003156125545501709
+S2B D1 hierarchical Morgan Huber,val_strain_only,Desipramine hydrochloride,-0.010662436485290527
+S2B D1 hierarchical Morgan Huber,val_strain_only,Dyclonine hydrochloride,-0.011203408241271973
+S2B D1 hierarchical Morgan Huber,val_strain_only,EDTA,0.06369596719741821
+S2B D1 hierarchical Morgan Huber,val_strain_only,Emodin,0.0050057172775268555
+S2B D1 hierarchical Morgan Huber,val_strain_only,Geldanamycin,-0.010095477104187012
+S2B D1 hierarchical Morgan Huber,val_strain_only,Haloperidol,-0.008667588233947754
+S2B D1 hierarchical Morgan Huber,val_strain_only,Harmine hydrochloride,-0.009467065334320068
+S2B D1 hierarchical Morgan Huber,val_strain_only,Hoechst 33258,0.008268415927886963
+S2B D1 hierarchical Morgan Huber,val_strain_only,LY 294002 hydrochloride,-0.003324568271636963
+S2B D1 hierarchical Morgan Huber,val_strain_only,NaCl,-0.009253382682800293
+S2B D1 hierarchical Morgan Huber,val_strain_only,Nigericin,0.006162881851196289
+S2B D1 hierarchical Morgan Huber,val_strain_only,Nocodazole,-0.007867515087127686
+S2B D1 hierarchical Morgan Huber,val_strain_only,Nystatin dihydrate,0.013065993785858154
+S2B D1 hierarchical Morgan Huber,val_strain_only,Oligomycin,0.010771572589874268
+S2B D1 hierarchical Morgan Huber,val_strain_only,Parthenolide,0.0023707151412963867
+S2B D1 hierarchical Morgan Huber,val_strain_only,Rapamycin,0.061328113079071045
+S2B D1 hierarchical Morgan Huber,val_strain_only,SDS,0.08506149053573608
+S2B D1 hierarchical Morgan Huber,val_strain_only,Sorbitol,0.05872458219528198
+S2B D1 hierarchical Morgan Huber,val_strain_only,Staurosporine,-0.00980377197265625
+S2B D1 hierarchical Morgan Huber,val_strain_only,Trichostatin A,-0.00522613525390625
+S2B D1 hierarchical Morgan Huber,val_strain_only,Trifluoperazine dihydrochloride,-0.012696385383605957
+S2B D1 hierarchical Morgan Huber,val_strain_only,Tunicamycin,-0.0005384087562561035
+S2B D1 hierarchical Morgan Huber,val_strain_only,U-73122,-0.004817068576812744
+S2B D1 hierarchical Morgan Huber,val_strain_only,Valinomycin,-0.008810102939605713
+S2B D1 hierarchical Morgan Huber,val_strain_only,Wortmannin,0.014523923397064209
+S2B D1 hierarchical Morgan Huber,val_time,"(1R, 2S, 5R) - (-) - Menthol",0.032516807317733765
+S2B D1 hierarchical Morgan Huber,val_time,4-Hydroxytamoxifen,0.28461170196533203
+S2B D1 hierarchical Morgan Huber,val_time,Amiodarone hydrochloride,0.17021667957305908
+S2B D1 hierarchical Morgan Huber,val_time,Anisomycin,0.04761004447937012
+S2B D1 hierarchical Morgan Huber,val_time,Artemisinin,0.030231893062591553
+S2B D1 hierarchical Morgan Huber,val_time,Brefeldin A,0.04186490178108215
+S2B D1 hierarchical Morgan Huber,val_time,CHX,0.0431634783744812
+S2B D1 hierarchical Morgan Huber,val_time,Cisplatin,-0.006171971559524536
+S2B D1 hierarchical Morgan Huber,val_time,Clomiphene citrate,-0.000770270824432373
+S2B D1 hierarchical Morgan Huber,val_time,Clotrimazole,0.06840500235557556
+S2B D1 hierarchical Morgan Huber,val_time,Cyclopiazonic acid,0.07929748296737671
+S2B D1 hierarchical Morgan Huber,val_time,Desipramine hydrochloride,-0.0013035833835601807
+S2B D1 hierarchical Morgan Huber,val_time,Dyclonine hydrochloride,0.011501967906951904
+S2B D1 hierarchical Morgan Huber,val_time,EDTA,0.07090252637863159
+S2B D1 hierarchical Morgan Huber,val_time,Emodin,0.0413508415222168
+S2B D1 hierarchical Morgan Huber,val_time,Geldanamycin,-0.0228307843208313
+S2B D1 hierarchical Morgan Huber,val_time,Haloperidol,-0.10666912794113159
+S2B D1 hierarchical Morgan Huber,val_time,Harmine hydrochloride,0.004652261734008789
+S2B D1 hierarchical Morgan Huber,val_time,Hoechst 33258,0.0428318977355957
+S2B D1 hierarchical Morgan Huber,val_time,LY 294002 hydrochloride,-0.03519338369369507
+S2B D1 hierarchical Morgan Huber,val_time,NaCl,0.0005862116813659668
+S2B D1 hierarchical Morgan Huber,val_time,Nigericin,0.023756206035614014
+S2B D1 hierarchical Morgan Huber,val_time,Nocodazole,0.05936986207962036
+S2B D1 hierarchical Morgan Huber,val_time,Nystatin dihydrate,0.03469747304916382
+S2B D1 hierarchical Morgan Huber,val_time,Oligomycin,-0.053868621587753296
+S2B D1 hierarchical Morgan Huber,val_time,Parthenolide,0.0473482608795166
+S2B D1 hierarchical Morgan Huber,val_time,Rapamycin,0.062386542558670044
+S2B D1 hierarchical Morgan Huber,val_time,SDS,0.08905693888664246
+S2B D1 hierarchical Morgan Huber,val_time,Sorbitol,0.06862777471542358
+S2B D1 hierarchical Morgan Huber,val_time,Staurosporine,0.04627445340156555
+S2B D1 hierarchical Morgan Huber,val_time,Trichostatin A,0.0193098783493042
+S2B D1 hierarchical Morgan Huber,val_time,Trifluoperazine dihydrochloride,0.0412021279335022
+S2B D1 hierarchical Morgan Huber,val_time,Tunicamycin,0.06941205263137817
+S2B D1 hierarchical Morgan Huber,val_time,U-73122,0.04482772946357727
+S2B D1 hierarchical Morgan Huber,val_time,Valinomycin,0.026958614587783813
+S2B D1 hierarchical Morgan Huber,val_time,Wortmannin,0.05664545297622681
+S2B D2 hierarchical Morgan experimental FC,val_both,Amphotericin B,-0.08527487516403198
+S2B D2 hierarchical Morgan experimental FC,val_both,FCCP,0.017118453979492188
+S2B D2 hierarchical Morgan experimental FC,val_both,Hydroxyurea,0.07232993841171265
+S2B D2 hierarchical Morgan experimental FC,val_both,Pentamidine isethionate,-0.008874356746673584
+S2B D2 hierarchical Morgan experimental FC,val_both,Raloxifene hydrochloride,-0.03688657283782959
+S2B D2 hierarchical Morgan experimental FC,val_both,Sulfometuron methyl,-0.018163621425628662
+S2B D2 hierarchical Morgan experimental FC,val_chem_only,Amphotericin B,-0.13393408060073853
+S2B D2 hierarchical Morgan experimental FC,val_chem_only,FCCP,-0.009658753871917725
+S2B D2 hierarchical Morgan experimental FC,val_chem_only,Hydroxyurea,0.05019885301589966
+S2B D2 hierarchical Morgan experimental FC,val_chem_only,Pentamidine isethionate,-0.08267867565155029
+S2B D2 hierarchical Morgan experimental FC,val_chem_only,Raloxifene hydrochloride,-0.005734443664550781
+S2B D2 hierarchical Morgan experimental FC,val_chem_only,Sulfometuron methyl,0.020019471645355225
+S2B D2 hierarchical Morgan experimental FC,val_strain_only,"(1R, 2S, 5R) - (-) - Menthol",-0.02172785997390747
+S2B D2 hierarchical Morgan experimental FC,val_strain_only,1-10 Phenanthroline monohydrate,-0.021425604820251465
+S2B D2 hierarchical Morgan experimental FC,val_strain_only,4-Hydroxytamoxifen,-0.12518703937530518
+S2B D2 hierarchical Morgan experimental FC,val_strain_only,Amiodarone hydrochloride,-0.0921674370765686
+S2B D2 hierarchical Morgan experimental FC,val_strain_only,Anisomycin,-0.01671910285949707
+S2B D2 hierarchical Morgan experimental FC,val_strain_only,Artemisinin,-0.021051347255706787
+S2B D2 hierarchical Morgan experimental FC,val_strain_only,Brefeldin A,-0.022194206714630127
+S2B D2 hierarchical Morgan experimental FC,val_strain_only,CHX,0.06420749425888062
+S2B D2 hierarchical Morgan experimental FC,val_strain_only,Cisplatin,-0.00503915548324585
+S2B D2 hierarchical Morgan experimental FC,val_strain_only,Clomiphene citrate,-0.029104113578796387
+S2B D2 hierarchical Morgan experimental FC,val_strain_only,Clotrimazole,-0.02439093589782715
+S2B D2 hierarchical Morgan experimental FC,val_strain_only,Cyclopiazonic acid,-0.04082459211349487
+S2B D2 hierarchical Morgan experimental FC,val_strain_only,Desipramine hydrochloride,-0.021416783332824707
+S2B D2 hierarchical Morgan experimental FC,val_strain_only,Dyclonine hydrochloride,-0.023339152336120605
+S2B D2 hierarchical Morgan experimental FC,val_strain_only,EDTA,0.06564861536026001
+S2B D2 hierarchical Morgan experimental FC,val_strain_only,Emodin,-0.011174380779266357
+S2B D2 hierarchical Morgan experimental FC,val_strain_only,Geldanamycin,-0.0210840106010437
+S2B D2 hierarchical Morgan experimental FC,val_strain_only,Haloperidol,-0.02110910415649414
+S2B D2 hierarchical Morgan experimental FC,val_strain_only,Harmine hydrochloride,-0.02122098207473755
+S2B D2 hierarchical Morgan experimental FC,val_strain_only,Hoechst 33258,0.04729980230331421
+S2B D2 hierarchical Morgan experimental FC,val_strain_only,LY 294002 hydrochloride,-0.00337904691696167
+S2B D2 hierarchical Morgan experimental FC,val_strain_only,NaCl,-0.0010031461715698242
+S2B D2 hierarchical Morgan experimental FC,val_strain_only,Nigericin,0.04639464616775513
+S2B D2 hierarchical Morgan experimental FC,val_strain_only,Nocodazole,-0.01762545108795166
+S2B D2 hierarchical Morgan experimental FC,val_strain_only,Nystatin dihydrate,0.05386465787887573
+S2B D2 hierarchical Morgan experimental FC,val_strain_only,Oligomycin,-0.013108611106872559
+S2B D2 hierarchical Morgan experimental FC,val_strain_only,Parthenolide,-0.023620903491973877
+S2B D2 hierarchical Morgan experimental FC,val_strain_only,Rapamycin,0.06155133247375488
+S2B D2 hierarchical Morgan experimental FC,val_strain_only,SDS,0.08225053548812866
+S2B D2 hierarchical Morgan experimental FC,val_strain_only,Sorbitol,0.0680503249168396
+S2B D2 hierarchical Morgan experimental FC,val_strain_only,Staurosporine,-0.021658122539520264
+S2B D2 hierarchical Morgan experimental FC,val_strain_only,Trichostatin A,-0.01464688777923584
+S2B D2 hierarchical Morgan experimental FC,val_strain_only,Trifluoperazine dihydrochloride,-0.025497913360595703
+S2B D2 hierarchical Morgan experimental FC,val_strain_only,Tunicamycin,-0.0036193132400512695
+S2B D2 hierarchical Morgan experimental FC,val_strain_only,U-73122,-0.013379335403442383
+S2B D2 hierarchical Morgan experimental FC,val_strain_only,Valinomycin,-0.022656142711639404
+S2B D2 hierarchical Morgan experimental FC,val_strain_only,Wortmannin,0.06755435466766357
+S2B D2 hierarchical Morgan experimental FC,val_time,"(1R, 2S, 5R) - (-) - Menthol",0.029777944087982178
+S2B D2 hierarchical Morgan experimental FC,val_time,4-Hydroxytamoxifen,0.34231799840927124
+S2B D2 hierarchical Morgan experimental FC,val_time,Amiodarone hydrochloride,0.2493288516998291
+S2B D2 hierarchical Morgan experimental FC,val_time,Anisomycin,0.04765957593917847
+S2B D2 hierarchical Morgan experimental FC,val_time,Artemisinin,0.025621354579925537
+S2B D2 hierarchical Morgan experimental FC,val_time,Brefeldin A,0.03018730878829956
+S2B D2 hierarchical Morgan experimental FC,val_time,CHX,0.051381707191467285
+S2B D2 hierarchical Morgan experimental FC,val_time,Cisplatin,-0.006485164165496826
+S2B D2 hierarchical Morgan experimental FC,val_time,Clomiphene citrate,0.004630178213119507
+S2B D2 hierarchical Morgan experimental FC,val_time,Clotrimazole,0.07992491126060486
+S2B D2 hierarchical Morgan experimental FC,val_time,Cyclopiazonic acid,0.1327061653137207
+S2B D2 hierarchical Morgan experimental FC,val_time,Desipramine hydrochloride,-0.01153680682182312
+S2B D2 hierarchical Morgan experimental FC,val_time,Dyclonine hydrochloride,-0.006058633327484131
+S2B D2 hierarchical Morgan experimental FC,val_time,EDTA,0.06167477369308472
+S2B D2 hierarchical Morgan experimental FC,val_time,Emodin,0.03523153066635132
+S2B D2 hierarchical Morgan experimental FC,val_time,Geldanamycin,-0.006649285554885864
+S2B D2 hierarchical Morgan experimental FC,val_time,Haloperidol,-0.09219413995742798
+S2B D2 hierarchical Morgan experimental FC,val_time,Harmine hydrochloride,0.010038197040557861
+S2B D2 hierarchical Morgan experimental FC,val_time,Hoechst 33258,0.038767337799072266
+S2B D2 hierarchical Morgan experimental FC,val_time,LY 294002 hydrochloride,-0.01977217197418213
+S2B D2 hierarchical Morgan experimental FC,val_time,NaCl,-0.005802541971206665
+S2B D2 hierarchical Morgan experimental FC,val_time,Nigericin,0.00986635684967041
+S2B D2 hierarchical Morgan experimental FC,val_time,Nocodazole,0.05118879675865173
+S2B D2 hierarchical Morgan experimental FC,val_time,Nystatin dihydrate,0.03502547740936279
+S2B D2 hierarchical Morgan experimental FC,val_time,Oligomycin,-0.11029484868049622
+S2B D2 hierarchical Morgan experimental FC,val_time,Parthenolide,0.05527091026306152
+S2B D2 hierarchical Morgan experimental FC,val_time,Rapamycin,0.05680587887763977
+S2B D2 hierarchical Morgan experimental FC,val_time,SDS,0.0852845311164856
+S2B D2 hierarchical Morgan experimental FC,val_time,Sorbitol,0.0705314576625824
+S2B D2 hierarchical Morgan experimental FC,val_time,Staurosporine,0.05236905813217163
+S2B D2 hierarchical Morgan experimental FC,val_time,Trichostatin A,0.023734450340270996
+S2B D2 hierarchical Morgan experimental FC,val_time,Trifluoperazine dihydrochloride,0.04140844941139221
+S2B D2 hierarchical Morgan experimental FC,val_time,Tunicamycin,0.0543215274810791
+S2B D2 hierarchical Morgan experimental FC,val_time,U-73122,0.03278908133506775
+S2B D2 hierarchical Morgan experimental FC,val_time,Valinomycin,0.017271697521209717
+S2B D2 hierarchical Morgan experimental FC,val_time,Wortmannin,0.07364609837532043

@@ -1,0 +1,1 @@
+{"http_status":200,"payload":{"InformationList":{"Information":[{"CID":448194,"Synonym":["HOECHST 33258"]}]}},"response_body_sha256":"5b7de9a898c0c81414dbaef1c75e51c452735428675eade557b5159d73318fe6","retrieved_date":"2026-08-13","url":"https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/448194/synonyms/JSON"}

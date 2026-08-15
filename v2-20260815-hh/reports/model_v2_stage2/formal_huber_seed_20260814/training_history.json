@@ -1,0 +1,720 @@
+{
+  "stage_a": [
+    {
+      "epoch": 0,
+      "train_loss": 0.3871731956799825,
+      "monitor_name": "control_only_validation_huber",
+      "monitor": 0.38850117238999643,
+      "monitor_details": {
+        "control_only_validation_huber": 0.38850117238999643,
+        "n_valid_positions": 777388
+      },
+      "bad_epochs": 0,
+      "parameter_group_learning_rates": {
+        "baseline_branch": 0.001,
+        "genome_encoder": 0.0005,
+        "batch_branch": 0.0001
+      }
+    },
+    {
+      "epoch": 1,
+      "train_loss": 0.3848569964369138,
+      "monitor_name": "control_only_validation_huber",
+      "monitor": 0.38648581286159117,
+      "monitor_details": {
+        "control_only_validation_huber": 0.38648581286159117,
+        "n_valid_positions": 777388
+      },
+      "bad_epochs": 0,
+      "parameter_group_learning_rates": {
+        "baseline_branch": 0.001,
+        "genome_encoder": 0.0005,
+        "batch_branch": 0.0001
+      }
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.38240936895211536,
+      "monitor_name": "control_only_validation_huber",
+      "monitor": 0.3839522547514808,
+      "monitor_details": {
+        "control_only_validation_huber": 0.3839522547514808,
+        "n_valid_positions": 777388
+      },
+      "bad_epochs": 0,
+      "parameter_group_learning_rates": {
+        "baseline_branch": 0.001,
+        "genome_encoder": 0.0005,
+        "batch_branch": 0.0001
+      }
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.37845634172360104,
+      "monitor_name": "control_only_validation_huber",
+      "monitor": 0.38105233929583426,
+      "monitor_details": {
+        "control_only_validation_huber": 0.38105233929583426,
+        "n_valid_positions": 777388
+      },
+      "bad_epochs": 0,
+      "parameter_group_learning_rates": {
+        "baseline_branch": 0.001,
+        "genome_encoder": 0.0005,
+        "batch_branch": 0.0001
+      }
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.37102533876895905,
+      "monitor_name": "control_only_validation_huber",
+      "monitor": 0.3807557195977542,
+      "monitor_details": {
+        "control_only_validation_huber": 0.3807557195977542,
+        "n_valid_positions": 777388
+      },
+      "bad_epochs": 0,
+      "parameter_group_learning_rates": {
+        "baseline_branch": 0.001,
+        "genome_encoder": 0.0005,
+        "batch_branch": 0.0001
+      }
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.36283407111962634,
+      "monitor_name": "control_only_validation_huber",
+      "monitor": 0.38115555340586077,
+      "monitor_details": {
+        "control_only_validation_huber": 0.38115555340586077,
+        "n_valid_positions": 777388
+      },
+      "bad_epochs": 1,
+      "parameter_group_learning_rates": {
+        "baseline_branch": 0.001,
+        "genome_encoder": 0.0005,
+        "batch_branch": 0.0001
+      }
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.35516118506590527,
+      "monitor_name": "control_only_validation_huber",
+      "monitor": 0.3811363373809111,
+      "monitor_details": {
+        "control_only_validation_huber": 0.3811363373809111,
+        "n_valid_positions": 777388
+      },
+      "bad_epochs": 2,
+      "parameter_group_learning_rates": {
+        "baseline_branch": 0.001,
+        "genome_encoder": 0.0005,
+        "batch_branch": 0.0001
+      }
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.34851931780576706,
+      "monitor_name": "control_only_validation_huber",
+      "monitor": 0.3735310140911353,
+      "monitor_details": {
+        "control_only_validation_huber": 0.3735310140911353,
+        "n_valid_positions": 777388
+      },
+      "bad_epochs": 0,
+      "parameter_group_learning_rates": {
+        "baseline_branch": 0.001,
+        "genome_encoder": 0.0005,
+        "batch_branch": 0.0001
+      }
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.342481109003226,
+      "monitor_name": "control_only_validation_huber",
+      "monitor": 0.3772402995134341,
+      "monitor_details": {
+        "control_only_validation_huber": 0.3772402995134341,
+        "n_valid_positions": 777388
+      },
+      "bad_epochs": 1,
+      "parameter_group_learning_rates": {
+        "baseline_branch": 0.001,
+        "genome_encoder": 0.0005,
+        "batch_branch": 0.0001
+      }
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.3366995279987653,
+      "monitor_name": "control_only_validation_huber",
+      "monitor": 0.36968054401456923,
+      "monitor_details": {
+        "control_only_validation_huber": 0.36968054401456923,
+        "n_valid_positions": 777388
+      },
+      "bad_epochs": 0,
+      "parameter_group_learning_rates": {
+        "baseline_branch": 0.001,
+        "genome_encoder": 0.0005,
+        "batch_branch": 0.0001
+      }
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.3300088867545128,
+      "monitor_name": "control_only_validation_huber",
+      "monitor": 0.3684088981149937,
+      "monitor_details": {
+        "control_only_validation_huber": 0.3684088981149937,
+        "n_valid_positions": 777388
+      },
+      "bad_epochs": 0,
+      "parameter_group_learning_rates": {
+        "baseline_branch": 0.001,
+        "genome_encoder": 0.0005,
+        "batch_branch": 0.0001
+      }
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.3214165096481641,
+      "monitor_name": "control_only_validation_huber",
+      "monitor": 0.36289007167731535,
+      "monitor_details": {
+        "control_only_validation_huber": 0.36289007167731535,
+        "n_valid_positions": 777388
+      },
+      "bad_epochs": 0,
+      "parameter_group_learning_rates": {
+        "baseline_branch": 0.001,
+        "genome_encoder": 0.0005,
+        "batch_branch": 0.0001
+      }
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.3135308151443799,
+      "monitor_name": "control_only_validation_huber",
+      "monitor": 0.3558355497889479,
+      "monitor_details": {
+        "control_only_validation_huber": 0.3558355497889479,
+        "n_valid_positions": 777388
+      },
+      "bad_epochs": 0,
+      "parameter_group_learning_rates": {
+        "baseline_branch": 0.001,
+        "genome_encoder": 0.0005,
+        "batch_branch": 0.0001
+      }
+    },
+    {
+      "epoch": 13,
+      "train_loss": 0.30288902173439664,
+      "monitor_name": "control_only_validation_huber",
+      "monitor": 0.34411077659490774,
+      "monitor_details": {
+        "control_only_validation_huber": 0.34411077659490774,
+        "n_valid_positions": 777388
+      },
+      "bad_epochs": 0,
+      "parameter_group_learning_rates": {
+        "baseline_branch": 0.001,
+        "genome_encoder": 0.0005,
+        "batch_branch": 0.0001
+      }
+    },
+    {
+      "epoch": 14,
+      "train_loss": 0.2921299835046132,
+      "monitor_name": "control_only_validation_huber",
+      "monitor": 0.33812319411024533,
+      "monitor_details": {
+        "control_only_validation_huber": 0.33812319411024533,
+        "n_valid_positions": 777388
+      },
+      "bad_epochs": 0,
+      "parameter_group_learning_rates": {
+        "baseline_branch": 0.001,
+        "genome_encoder": 0.0005,
+        "batch_branch": 0.0001
+      }
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.2785802036523819,
+      "monitor_name": "control_only_validation_huber",
+      "monitor": 0.33156046038614084,
+      "monitor_details": {
+        "control_only_validation_huber": 0.33156046038614084,
+        "n_valid_positions": 777388
+      },
+      "bad_epochs": 0,
+      "parameter_group_learning_rates": {
+        "baseline_branch": 0.001,
+        "genome_encoder": 0.0005,
+        "batch_branch": 0.0001
+      }
+    },
+    {
+      "epoch": 16,
+      "train_loss": 0.26587705314159393,
+      "monitor_name": "control_only_validation_huber",
+      "monitor": 0.31462684690100223,
+      "monitor_details": {
+        "control_only_validation_huber": 0.31462684690100223,
+        "n_valid_positions": 777388
+      },
+      "bad_epochs": 0,
+      "parameter_group_learning_rates": {
+        "baseline_branch": 0.001,
+        "genome_encoder": 0.0005,
+        "batch_branch": 0.0001
+      }
+    },
+    {
+      "epoch": 17,
+      "train_loss": 0.2516460393865903,
+      "monitor_name": "control_only_validation_huber",
+      "monitor": 0.3074777896988043,
+      "monitor_details": {
+        "control_only_validation_huber": 0.3074777896988043,
+        "n_valid_positions": 777388
+      },
+      "bad_epochs": 0,
+      "parameter_group_learning_rates": {
+        "baseline_branch": 0.001,
+        "genome_encoder": 0.0005,
+        "batch_branch": 0.0001
+      }
+    },
+    {
+      "epoch": 18,
+      "train_loss": 0.23750061417619386,
+      "monitor_name": "control_only_validation_huber",
+      "monitor": 0.2984499041701939,
+      "monitor_details": {
+        "control_only_validation_huber": 0.2984499041701939,
+        "n_valid_positions": 777388
+      },
+      "bad_epochs": 0,
+      "parameter_group_learning_rates": {
+        "baseline_branch": 0.001,
+        "genome_encoder": 0.0005,
+        "batch_branch": 0.0001
+      }
+    },
+    {
+      "epoch": 19,
+      "train_loss": 0.22377745558818182,
+      "monitor_name": "control_only_validation_huber",
+      "monitor": 0.2912880751172181,
+      "monitor_details": {
+        "control_only_validation_huber": 0.2912880751172181,
+        "n_valid_positions": 777388
+      },
+      "bad_epochs": 0,
+      "parameter_group_learning_rates": {
+        "baseline_branch": 0.001,
+        "genome_encoder": 0.0005,
+        "batch_branch": 0.0001
+      }
+    },
+    {
+      "epoch": 20,
+      "train_loss": 0.21203223491708437,
+      "monitor_name": "control_only_validation_huber",
+      "monitor": 0.2779619534150855,
+      "monitor_details": {
+        "control_only_validation_huber": 0.2779619534150855,
+        "n_valid_positions": 777388
+      },
+      "bad_epochs": 0,
+      "parameter_group_learning_rates": {
+        "baseline_branch": 0.001,
+        "genome_encoder": 0.0005,
+        "batch_branch": 0.0001
+      }
+    },
+    {
+      "epoch": 21,
+      "train_loss": 0.20038357997934023,
+      "monitor_name": "control_only_validation_huber",
+      "monitor": 0.2711735214994668,
+      "monitor_details": {
+        "control_only_validation_huber": 0.2711735214994668,
+        "n_valid_positions": 777388
+      },
+      "bad_epochs": 0,
+      "parameter_group_learning_rates": {
+        "baseline_branch": 0.001,
+        "genome_encoder": 0.0005,
+        "batch_branch": 0.0001
+      }
+    },
+    {
+      "epoch": 22,
+      "train_loss": 0.1917185199757417,
+      "monitor_name": "control_only_validation_huber",
+      "monitor": 0.26406008261825265,
+      "monitor_details": {
+        "control_only_validation_huber": 0.26406008261825265,
+        "n_valid_positions": 777388
+      },
+      "bad_epochs": 0,
+      "parameter_group_learning_rates": {
+        "baseline_branch": 0.001,
+        "genome_encoder": 0.0005,
+        "batch_branch": 0.0001
+      }
+    },
+    {
+      "epoch": 23,
+      "train_loss": 0.18254518508911133,
+      "monitor_name": "control_only_validation_huber",
+      "monitor": 0.25652345598550463,
+      "monitor_details": {
+        "control_only_validation_huber": 0.25652345598550463,
+        "n_valid_positions": 777388
+      },
+      "bad_epochs": 0,
+      "parameter_group_learning_rates": {
+        "baseline_branch": 0.001,
+        "genome_encoder": 0.0005,
+        "batch_branch": 0.0001
+      }
+    },
+    {
+      "epoch": 24,
+      "train_loss": 0.1754494123160839,
+      "monitor_name": "control_only_validation_huber",
+      "monitor": 0.25103744049687127,
+      "monitor_details": {
+        "control_only_validation_huber": 0.25103744049687127,
+        "n_valid_positions": 777388
+      },
+      "bad_epochs": 0,
+      "parameter_group_learning_rates": {
+        "baseline_branch": 0.001,
+        "genome_encoder": 0.0005,
+        "batch_branch": 0.0001
+      }
+    },
+    {
+      "epoch": 25,
+      "train_loss": 0.16841551288962364,
+      "monitor_name": "control_only_validation_huber",
+      "monitor": 0.2534527109588354,
+      "monitor_details": {
+        "control_only_validation_huber": 0.2534527109588354,
+        "n_valid_positions": 777388
+      },
+      "bad_epochs": 1,
+      "parameter_group_learning_rates": {
+        "baseline_branch": 0.001,
+        "genome_encoder": 0.0005,
+        "batch_branch": 0.0001
+      }
+    },
+    {
+      "epoch": 26,
+      "train_loss": 0.16361710180838904,
+      "monitor_name": "control_only_validation_huber",
+      "monitor": 0.2500177569683409,
+      "monitor_details": {
+        "control_only_validation_huber": 0.2500177569683409,
+        "n_valid_positions": 777388
+      },
+      "bad_epochs": 0,
+      "parameter_group_learning_rates": {
+        "baseline_branch": 0.001,
+        "genome_encoder": 0.0005,
+        "batch_branch": 0.0001
+      }
+    },
+    {
+      "epoch": 27,
+      "train_loss": 0.15973235542575517,
+      "monitor_name": "control_only_validation_huber",
+      "monitor": 0.2449597127288205,
+      "monitor_details": {
+        "control_only_validation_huber": 0.2449597127288205,
+        "n_valid_positions": 777388
+      },
+      "bad_epochs": 0,
+      "parameter_group_learning_rates": {
+        "baseline_branch": 0.001,
+        "genome_encoder": 0.0005,
+        "batch_branch": 0.0001
+      }
+    },
+    {
+      "epoch": 28,
+      "train_loss": 0.1557955505947272,
+      "monitor_name": "control_only_validation_huber",
+      "monitor": 0.23643987956020235,
+      "monitor_details": {
+        "control_only_validation_huber": 0.23643987956020235,
+        "n_valid_positions": 777388
+      },
+      "bad_epochs": 0,
+      "parameter_group_learning_rates": {
+        "baseline_branch": 0.001,
+        "genome_encoder": 0.0005,
+        "batch_branch": 0.0001
+      }
+    },
+    {
+      "epoch": 29,
+      "train_loss": 0.15200777103503546,
+      "monitor_name": "control_only_validation_huber",
+      "monitor": 0.24772832871804654,
+      "monitor_details": {
+        "control_only_validation_huber": 0.24772832871804654,
+        "n_valid_positions": 777388
+      },
+      "bad_epochs": 1,
+      "parameter_group_learning_rates": {
+        "baseline_branch": 0.001,
+        "genome_encoder": 0.0005,
+        "batch_branch": 0.0001
+      }
+    }
+  ],
+  "stage_b": [
+    {
+      "epoch": 0,
+      "train_loss": 0.16039612805470824,
+      "monitor_name": "macro_huber_equal_four_scenarios",
+      "monitor": 0.20756713284545808,
+      "monitor_details": {
+        "val_chem_only": 0.17906109248117968,
+        "val_strain_only": 0.2278156960535071,
+        "val_both": 0.2813756266912868,
+        "val_time": 0.14201611615585877
+      },
+      "bad_epochs": 0,
+      "parameter_group_learning_rates": {
+        "chemical_encoder": 0.001,
+        "response_branch": 0.001,
+        "batch_branch": 0.0001
+      }
+    },
+    {
+      "epoch": 1,
+      "train_loss": 0.13771079909056425,
+      "monitor_name": "macro_huber_equal_four_scenarios",
+      "monitor": 0.21578796321581908,
+      "monitor_details": {
+        "val_chem_only": 0.20070459480876132,
+        "val_strain_only": 0.22051374272468519,
+        "val_both": 0.3066439918402104,
+        "val_time": 0.13528952348961942
+      },
+      "bad_epochs": 1,
+      "parameter_group_learning_rates": {
+        "chemical_encoder": 0.001,
+        "response_branch": 0.001,
+        "batch_branch": 0.0001
+      }
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.13252592468634247,
+      "monitor_name": "macro_huber_equal_four_scenarios",
+      "monitor": 0.22383699337626783,
+      "monitor_details": {
+        "val_chem_only": 0.2192751464268267,
+        "val_strain_only": 0.21806753120589212,
+        "val_both": 0.3254389354937886,
+        "val_time": 0.1325663603785638
+      },
+      "bad_epochs": 2,
+      "parameter_group_learning_rates": {
+        "chemical_encoder": 0.001,
+        "response_branch": 0.001,
+        "batch_branch": 0.0001
+      }
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.1293222510255873,
+      "monitor_name": "macro_huber_equal_four_scenarios",
+      "monitor": 0.22307216785447864,
+      "monitor_details": {
+        "val_chem_only": 0.22155589602541176,
+        "val_strain_only": 0.21504138054875652,
+        "val_both": 0.32480521971696685,
+        "val_time": 0.13088617512677947
+      },
+      "bad_epochs": 3,
+      "parameter_group_learning_rates": {
+        "chemical_encoder": 0.001,
+        "response_branch": 0.001,
+        "batch_branch": 0.0001
+      }
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.12718452215194703,
+      "monitor_name": "macro_huber_equal_four_scenarios",
+      "monitor": 0.22811447609498897,
+      "monitor_details": {
+        "val_chem_only": 0.23180542445280825,
+        "val_strain_only": 0.2160034045581934,
+        "val_both": 0.3360332163129725,
+        "val_time": 0.12861585905598183
+      },
+      "bad_epochs": 4,
+      "parameter_group_learning_rates": {
+        "chemical_encoder": 0.001,
+        "response_branch": 0.001,
+        "batch_branch": 0.0001
+      }
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.12488690270110965,
+      "monitor_name": "macro_huber_equal_four_scenarios",
+      "monitor": 0.22476173805993094,
+      "monitor_details": {
+        "val_chem_only": 0.22749626664332454,
+        "val_strain_only": 0.21270130687439184,
+        "val_both": 0.332046523114889,
+        "val_time": 0.1268028556071184
+      },
+      "bad_epochs": 5,
+      "parameter_group_learning_rates": {
+        "chemical_encoder": 0.001,
+        "response_branch": 0.001,
+        "batch_branch": 0.0001
+      }
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.12227685088291765,
+      "monitor_name": "macro_huber_equal_four_scenarios",
+      "monitor": 0.2266059140026923,
+      "monitor_details": {
+        "val_chem_only": 0.22812480423985887,
+        "val_strain_only": 0.21564106635368796,
+        "val_both": 0.33858132902161886,
+        "val_time": 0.12407645639560365
+      },
+      "bad_epochs": 6,
+      "parameter_group_learning_rates": {
+        "chemical_encoder": 0.001,
+        "response_branch": 0.001,
+        "batch_branch": 0.0001
+      }
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.11959663182497024,
+      "monitor_name": "macro_huber_equal_four_scenarios",
+      "monitor": 0.22965492366922177,
+      "monitor_details": {
+        "val_chem_only": 0.23301672127915998,
+        "val_strain_only": 0.2182396393217129,
+        "val_both": 0.3459961849236943,
+        "val_time": 0.12136714915231998
+      },
+      "bad_epochs": 7,
+      "parameter_group_learning_rates": {
+        "chemical_encoder": 0.001,
+        "response_branch": 0.001,
+        "batch_branch": 0.0001
+      }
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.11672160802409053,
+      "monitor_name": "macro_huber_equal_four_scenarios",
+      "monitor": 0.2215815306060794,
+      "monitor_details": {
+        "val_chem_only": 0.22354611448070894,
+        "val_strain_only": 0.2142508387556983,
+        "val_both": 0.32936420037576825,
+        "val_time": 0.1191649688121422
+      },
+      "bad_epochs": 8,
+      "parameter_group_learning_rates": {
+        "chemical_encoder": 0.001,
+        "response_branch": 0.001,
+        "batch_branch": 0.0001
+      }
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.11369698550552129,
+      "monitor_name": "macro_huber_equal_four_scenarios",
+      "monitor": 0.22333129689587053,
+      "monitor_details": {
+        "val_chem_only": 0.22906401458987852,
+        "val_strain_only": 0.21541145733164202,
+        "val_both": 0.3336557404432552,
+        "val_time": 0.11519397521870643
+      },
+      "bad_epochs": 9,
+      "parameter_group_learning_rates": {
+        "chemical_encoder": 0.001,
+        "response_branch": 0.001,
+        "batch_branch": 0.0001
+      }
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.11011655135080219,
+      "monitor_name": "macro_huber_equal_four_scenarios",
+      "monitor": 0.22213958170254514,
+      "monitor_details": {
+        "val_chem_only": 0.22628476057737965,
+        "val_strain_only": 0.2122492070052744,
+        "val_both": 0.3383765679942172,
+        "val_time": 0.11164779123330927
+      },
+      "bad_epochs": 10,
+      "parameter_group_learning_rates": {
+        "chemical_encoder": 0.001,
+        "response_branch": 0.001,
+        "batch_branch": 0.0001
+      }
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.10695185670629144,
+      "monitor_name": "macro_huber_equal_four_scenarios",
+      "monitor": 0.22262807088876752,
+      "monitor_details": {
+        "val_chem_only": 0.22867613579066448,
+        "val_strain_only": 0.21031589601682205,
+        "val_both": 0.3438282001720142,
+        "val_time": 0.10769205157556924
+      },
+      "bad_epochs": 11,
+      "parameter_group_learning_rates": {
+        "chemical_encoder": 0.001,
+        "response_branch": 0.001,
+        "batch_branch": 0.0001
+      }
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.10373238446190954,
+      "monitor_name": "macro_huber_equal_four_scenarios",
+      "monitor": 0.22006038614631682,
+      "monitor_details": {
+        "val_chem_only": 0.22350568872195561,
+        "val_strain_only": 0.21061850859655995,
+        "val_both": 0.3410990109093987,
+        "val_time": 0.10501833635735298
+      },
+      "bad_epochs": 12,
+      "parameter_group_learning_rates": {
+        "chemical_encoder": 0.001,
+        "response_branch": 0.001,
+        "batch_branch": 0.0001
+      }
+    }
+  ]
+}

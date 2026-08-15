@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0",
+  "task_stage": "S2A_hierarchical_batch",
+  "experiment_name": "stage_s2a_stage_a_only_batch_structure_seed_20260815",
+  "seed": 20260815,
+  "planning_proxy": true,
+  "official_score": false,
+  "test_proteome_forbidden": true,
+  "model": {
+    "latent_dim": 32, "protein_rank": 16, "dropout": 0.05,
+    "structures": ["no_batch", "flat_batch", "hierarchical_batch"],
+    "hierarchy": ["data_source", "instrument", "Yeast_cell_plate"],
+    "oov_fallback": {"plate": "delta_plate_zero", "instrument": "delta_instrument_and_delta_plate_zero", "all": "delta_batch_zero"}
+  },
+  "training": {
+    "batch_size": 64, "cv_folds": 5, "inner_validation_fraction": 0.1,
+    "cv_epochs": 30, "cv_patience": 5, "final_epochs": 30,
+    "device": "auto", "num_workers": 0, "weight_decay": 0.0001,
+    "learning_rates": {
+      "genome_encoder": 0.0005, "baseline_branch": 0.001, "flat_batch": 0.0001,
+      "hierarchical_source": 0.0001, "hierarchical_instrument": 0.0001, "hierarchical_plate": 0.0001
+    },
+    "smoke": {"folds": 1, "epochs": 2}
+  },
+  "loss": {
+    "absolute": "mask_aware_huber", "absolute_weight": 1.0,
+    "flat_batch_reg_weight": 0.0001, "hierarchical_source_reg_weight": 0.0001,
+    "hierarchical_instrument_reg_weight": 0.0005, "hierarchical_plate_reg_weight": 0.002,
+    "center_strength": 1.0
+  },
+  "advancement_thresholds": {
+    "validation_control_rmse_ratio_vs_flat_max": 1.03,
+    "instrument_holdout_collapse_ratio_vs_flat_max": 1.10,
+    "majority_fold_improvement_min": 3, "plate_energy_fraction_max": 0.5
+  }
+}

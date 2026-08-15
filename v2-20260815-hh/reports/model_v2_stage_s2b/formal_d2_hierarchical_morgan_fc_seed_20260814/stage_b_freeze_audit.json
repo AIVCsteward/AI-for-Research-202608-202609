@@ -1,0 +1,42 @@
+{
+  "parameter_hashes_before": {
+    "baseline_branch": "1c2824927390b2574b8cba9245beb41f6c382c4dd78d33571fb4f0a812200f0c",
+    "genome_encoder": "897f96901900f4dec13a110b43628b57517f967ea2b99aa72ee60729fed8712e",
+    "batch_source": "e420b6bf63f8ef430983f7bd3c9988eb5dac75f3053fb12e9ffb660cb53228eb",
+    "batch_instrument": "b62dd8a28dcc3df09e491d5346d2c382dad236cab2f1bec23d533a33efc58339",
+    "batch_plate": "b4c0e36114ce58ade5803ca8206442748b306d05182e93c6424983fb2dc317ef",
+    "batch_all": "c7bf58128a8cc3c7416940db8c8678b44379d79b78ed8e3aa67771fd8435b1a9"
+  },
+  "parameter_hashes_after": {
+    "baseline_branch": "1c2824927390b2574b8cba9245beb41f6c382c4dd78d33571fb4f0a812200f0c",
+    "genome_encoder": "897f96901900f4dec13a110b43628b57517f967ea2b99aa72ee60729fed8712e",
+    "batch_source": "e420b6bf63f8ef430983f7bd3c9988eb5dac75f3053fb12e9ffb660cb53228eb",
+    "batch_instrument": "b62dd8a28dcc3df09e491d5346d2c382dad236cab2f1bec23d533a33efc58339",
+    "batch_plate": "b4c0e36114ce58ade5803ca8206442748b306d05182e93c6424983fb2dc317ef",
+    "batch_all": "c7bf58128a8cc3c7416940db8c8678b44379d79b78ed8e3aa67771fd8435b1a9"
+  },
+  "parameter_hashes_exactly_equal": {
+    "baseline_branch": true,
+    "genome_encoder": true,
+    "batch_source": true,
+    "batch_instrument": true,
+    "batch_plate": true,
+    "batch_all": true
+  },
+  "probe_outputs_bitwise_equal": {
+    "delta_batch": true,
+    "delta_source": true,
+    "delta_instrument": true,
+    "delta_plate": true
+  },
+  "optimizer": {
+    "group_names": [
+      "chemical_encoder",
+      "response_branch"
+    ],
+    "optimizer_parameter_count": 32,
+    "frozen_parameter_overlap_count": 0,
+    "only_chemical_encoder_and_response_branch": true
+  },
+  "status": "PASS"
+}

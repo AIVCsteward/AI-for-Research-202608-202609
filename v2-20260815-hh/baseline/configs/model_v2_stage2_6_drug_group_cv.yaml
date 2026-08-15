@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "experiment_name": "model_v2_stage2_6_train_drug_grouped_cv_seed_20260814",
+  "status": "stage2_6_authorized_grouped_pseudo_ood_diagnostic",
+  "stage2_6": {
+    "seed": 20260814,
+    "n_outer_folds": 5,
+    "outer_group_key": "chemical_name",
+    "outer_assignment": "sha256_sorted_round_robin_by_chemical_name",
+    "inner_validation_fraction": 0.2,
+    "inner_group_key": "chemical_name",
+    "early_stopping_monitor": "inner_drug_validation_huber",
+    "official_validation_for_checkpoint_selection": false,
+    "component_modes": ["none", "morgan_only"],
+    "fixed_stage_a_checkpoint": {
+      "path": "D:/虚拟细胞/reports/model_v2_stage2/formal_huber_no_batch_seed_20260814/stage_a_best.pt",
+      "sha256": "0a2141098c1a6476673ab83f1790da3bccecaade034bd15d1e7bc87fd9035155"
+    },
+    "model": {
+      "latent_dim": 32,
+      "protein_rank": 16,
+      "dropout": 0.05,
+      "chemical_mode": "correct",
+      "chemical_feature_components": "set_per_run_none_or_morgan_only",
+      "descriptor_enabled": false,
+      "genome_mode": "correct",
+      "batch_enabled": false,
+      "similarity_enabled": false
+    },
+    "loss": {
+      "absolute": "mask_aware_huber",
+      "absolute_weight": 1.0,
+      "fc_weight": 0.0,
+      "dep_weight": 0.0,
+      "pathway_weight": 0.0,
+      "batch_reg_weight": 0.0
+    },
+    "batch_size": 64,
+    "weight_decay": 0.0001,
+    "device": "auto",
+    "num_workers": 0,
+    "stage_b": {
+      "name": "train_drug_grouped_huber_only",
+      "epochs": 100,
+      "patience": 12,
+      "parameter_groups": {
+        "baseline_branch": {"trainable": false, "lr": 0.0},
+        "genome_encoder": {"trainable": false, "lr": 0.0},
+        "chemical_encoder": {"trainable": true, "lr": 0.001},
+        "response_branch": {"trainable": true, "lr": 0.001},
+        "batch_branch": {"trainable": true, "lr": 0.0001}
+      }
+    },
+    "smoke_epochs": 2,
+    "test_proteome_allowed": false
+  }
+}

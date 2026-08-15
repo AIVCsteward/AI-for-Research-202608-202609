@@ -1,0 +1,327 @@
+{
+  "status": "PASS",
+  "mode": "formal",
+  "config": "D:\\\u865a\u62df\u7ec6\u80de\\baseline\\configs\\model_v2_stage_s2d_d0_hierarchical_none_huber_seed_20260815.yaml",
+  "device": "cuda",
+  "elapsed_seconds": 72.26859959997819,
+  "peak_gpu_memory_allocated_bytes": 59981312,
+  "peak_gpu_memory_reserved_bytes": 94371840,
+  "resolved_config_path": "D:\\\u865a\u62df\u7ec6\u80de\\reports\\model_v2_stage_s2d\\formal_d0_hierarchical_none_huber_seed_20260815\\resolved_config.json",
+  "stage_a": {
+    "best_epoch": 29,
+    "best_monitor": null,
+    "actual_epochs": 0,
+    "stopped_epoch": 29,
+    "stop_reason": "loaded_fixed_stage_a_checkpoint_no_retraining",
+    "monitor_name": "fixed_epochs_all_train_controls_no_validation_selection",
+    "train_control_sample_count": 751,
+    "validation_control_sample_count": 205,
+    "validation_control_scenarios": {
+      "val_strain_only": 190,
+      "val_time": 15
+    },
+    "fixed_checkpoint": {
+      "path": "D:\\\u865a\u62df\u7ec6\u80de\\reports\\model_v2_stage_s2d\\stage_a_hierarchical_seed_20260815\\stage_a_final.pt",
+      "sha256": "6e3500d17ae91cd8674ce6629e4dd24bc271c03c5beed1c2b21cc21bac7ba6c7",
+      "checkpoint_epoch": 29,
+      "checkpoint_monitor": null,
+      "stage": "S2A_stage_a_only_final",
+      "structure": "hierarchical_batch",
+      "vocabulary_source": "S2A_fold_train_controls_only"
+    }
+  },
+  "stage_b": {
+    "best_epoch": 10,
+    "best_monitor": 0.19402261130715737,
+    "actual_epochs": 23,
+    "stopped_epoch": 22,
+    "stop_reason": "early_stopping_patience_exhausted",
+    "monitor_name": "macro_huber_equal_four_scenarios"
+  },
+  "validation_macro": "equal_weight_mean_of_exact_valid_position_scenario_huber",
+  "final_validation_macro_huber": 0.19402261130715737,
+  "validation_scenario_huber": {
+    "val_chem_only": 0.15052648051276954,
+    "val_strain_only": 0.2317875024784016,
+    "val_both": 0.24892803808847883,
+    "val_time": 0.14484842414897944
+  },
+  "validation_scenarios": {
+    "val_chem_only": {
+      "rmse": 0.5880076885223389,
+      "mae": 0.412328839302063,
+      "global_r2": 0.955475389957428,
+      "median_per_sample_pcc": 0.9803802967071533,
+      "median_per_sample_r2": 0.9571953415870667,
+      "median_per_protein_pcc": 0.829095721244812,
+      "median_per_protein_r2": 0.6516308188438416,
+      "n_valid_positions": 4021051
+    },
+    "val_strain_only": {
+      "rmse": 0.7608683705329895,
+      "mae": 0.5276435613632202,
+      "global_r2": 0.9242510795593262,
+      "median_per_sample_pcc": 0.9645450711250305,
+      "median_per_sample_r2": 0.9259781241416931,
+      "median_per_protein_pcc": 0.764503538608551,
+      "median_per_protein_r2": 0.3589540719985962,
+      "n_valid_positions": 5902748
+    },
+    "val_both": {
+      "rmse": 0.789999783039093,
+      "mae": 0.5516533255577087,
+      "global_r2": 0.9197139739990234,
+      "median_per_sample_pcc": 0.9624922275543213,
+      "median_per_sample_r2": 0.9197574257850647,
+      "median_per_protein_pcc": 0.8264206051826477,
+      "median_per_protein_r2": 0.4658844470977783,
+      "n_valid_positions": 1008739
+    },
+    "val_time": {
+      "rmse": 0.5823003053665161,
+      "mae": 0.3999912738800049,
+      "global_r2": 0.9560468196868896,
+      "median_per_sample_pcc": 0.9815780520439148,
+      "median_per_sample_r2": 0.9595669507980347,
+      "median_per_protein_pcc": 0.7561207711696625,
+      "median_per_protein_r2": 0.5518489480018616,
+      "n_valid_positions": 589198
+    }
+  },
+  "validation_component_norms": {
+    "val_chem_only": {
+      "y_baseline": 43465.102497410764,
+      "delta_response": 401.2732356370743,
+      "delta_batch": 1287.0455187090542
+    },
+    "val_strain_only": {
+      "y_baseline": 52381.89392210794,
+      "delta_response": 397.4732572293952,
+      "delta_batch": 1426.3563537518278
+    },
+    "val_both": {
+      "y_baseline": 21716.09570800998,
+      "delta_response": 166.5831798408809,
+      "delta_batch": 652.0915773910351
+    },
+    "val_time": {
+      "y_baseline": 16632.044322278198,
+      "delta_response": 147.6309015951726,
+      "delta_batch": 426.6932655839602
+    }
+  },
+  "stage_b_initial_chemical_response_sha256": "ae6cabcfcb83a41d50438d9f928a9e31caac18737d885620f8136a839c63b625",
+  "chemical_encoder_parameter_change_l2": 2.5547301043063246,
+  "chemical_variant": {
+    "mode": "correct",
+    "seed": 20260815,
+    "n_entities": 57,
+    "fixed_point_count": 57,
+    "permutation_sha256": "43f1a99a51253ac97d3a08db808b056d3f62b42ae4b6b1aa4c7c6ef36a4df3f4",
+    "interface": "scripts/build_chemical_features.py::apply_feature_variant"
+  },
+  "chemical_permutation_file": "chemical_entity_permutation.csv",
+  "chemical_feature_components": "none",
+  "chemical_component_manifest_file": "chemical_component_manifest.json",
+  "anchor_source": "train_controls_only",
+  "control_sample_count": 751,
+  "min_observations_per_protein": 94,
+  "n_control": 751,
+  "n_treatment": 4121,
+  "n_treatment_full": 5078,
+  "train_internal_batch_holdout": {
+    "enabled": true,
+    "train_sample_count": 4121,
+    "holdout_sample_count": 957,
+    "holdout_sample_ids_sha256": "7cfd2fc2c8877425c98f845ffc9275cd023cee7da31aa677437aaa65ffd11734",
+    "group_columns": [
+      "data_source",
+      "instrument",
+      "Yeast_cell_plate"
+    ],
+    "labels_used_for_training_or_early_stopping": false,
+    "selection_seed": 20260814
+  },
+  "stage_b_training_ids_sha256": "b7dc844ac46b110eef05b56b5be8002d3a8bd566edf4677d9f2409db6303ee89",
+  "stage_b_full_treatment_ids_sha256": "11ef0420b7f1af6c638edb8fa5bec1491529e659e6db17eabdc6f151e195fb70",
+  "stage_b_dataloader_shuffle_seed": 20260815,
+  "n_validation": {
+    "val_chem_only": 1065,
+    "val_strain_only": 1547,
+    "val_both": 269,
+    "val_time": 157
+  },
+  "n_proteins": 4422,
+  "batch_enabled": true,
+  "batch_structure": "hierarchical_batch",
+  "effective_batch_reg_weight": 0.0,
+  "batch_source_reg_weight": 0.0001,
+  "batch_instrument_reg_weight": 0.0005,
+  "batch_plate_reg_weight": 0.002,
+  "fc_loss_enabled": false,
+  "similarity_enabled": false,
+  "experimental_nonofficial_parity_fc": false,
+  "control_mapping": "disabled_for_fc",
+  "official_fc_result": false,
+  "experimental_parity": "NOT RUN",
+  "fc_weight": 0.0,
+  "fc_absolute_weight": 0.0,
+  "response_magnitude_weight": 0.01,
+  "response_gate_enabled": true,
+  "response_rms_cap": 0.75,
+  "batch_field_dropout": 0.0,
+  "planning_proxy": true,
+  "official_score": false,
+  "fc_early_stopping_used": false,
+  "pairing_audit": null,
+  "pairing_file": null,
+  "pairing_audit_file": null,
+  "predicted_fc_identity_audit": null,
+  "stage_b_fc_loss_by_epoch": [
+    {
+      "epoch": 0,
+      "loss_fc": 0.0
+    },
+    {
+      "epoch": 1,
+      "loss_fc": 0.0
+    },
+    {
+      "epoch": 2,
+      "loss_fc": 0.0
+    },
+    {
+      "epoch": 3,
+      "loss_fc": 0.0
+    },
+    {
+      "epoch": 4,
+      "loss_fc": 0.0
+    },
+    {
+      "epoch": 5,
+      "loss_fc": 0.0
+    },
+    {
+      "epoch": 6,
+      "loss_fc": 0.0
+    },
+    {
+      "epoch": 7,
+      "loss_fc": 0.0
+    },
+    {
+      "epoch": 8,
+      "loss_fc": 0.0
+    },
+    {
+      "epoch": 9,
+      "loss_fc": 0.0
+    },
+    {
+      "epoch": 10,
+      "loss_fc": 0.0
+    },
+    {
+      "epoch": 11,
+      "loss_fc": 0.0
+    },
+    {
+      "epoch": 12,
+      "loss_fc": 0.0
+    },
+    {
+      "epoch": 13,
+      "loss_fc": 0.0
+    },
+    {
+      "epoch": 14,
+      "loss_fc": 0.0
+    },
+    {
+      "epoch": 15,
+      "loss_fc": 0.0
+    },
+    {
+      "epoch": 16,
+      "loss_fc": 0.0
+    },
+    {
+      "epoch": 17,
+      "loss_fc": 0.0
+    },
+    {
+      "epoch": 18,
+      "loss_fc": 0.0
+    },
+    {
+      "epoch": 19,
+      "loss_fc": 0.0
+    },
+    {
+      "epoch": 20,
+      "loss_fc": 0.0
+    },
+    {
+      "epoch": 21,
+      "loss_fc": 0.0
+    },
+    {
+      "epoch": 22,
+      "loss_fc": 0.0
+    }
+  ],
+  "batch_diagnostic_scope": "all_selected_train_treatments",
+  "batch_diagnostic_sample_count": 5078,
+  "training_history_file": "training_history.json",
+  "stage_b_checkpoint": "D:\\\u865a\u62df\u7ec6\u80de\\reports\\model_v2_stage_s2d\\formal_d0_hierarchical_none_huber_seed_20260815\\stage_b_best.pt",
+  "stage_b_checkpoint_sha256": "1b82d4e0c52683b1bef271e22b66035eda17ea64db0843dd8f913216e7d8df14",
+  "stage_b_freeze_audit_file": "stage_b_freeze_audit.json",
+  "stage_b_freeze_audit": {
+    "parameter_hashes_before": {
+      "baseline_branch": "cc27e9bb2c367aac1f05e6bcdbaa6903ba7a68d8389ffec54bf36c08b142803e",
+      "genome_encoder": "6e342ff0c789921ecf37bcd3982b64faca01b90c3786ee9e31227495231e2e2e",
+      "batch_source": "ed24d540fffe4da04da1217920f2eeb7394dd91e168d83dc321e2ef8d17a6883",
+      "batch_instrument": "e247c59fe655c63f8c83fba6331e556e984b0057d9d55c6429dec61642518972",
+      "batch_plate": "c38cb52c92b5a7ffa399b91704438c65863dbe9638749bb178c809b3e2a641cb",
+      "batch_all": "6c3a3f0983fbeaac2a5e6dc67d12be6863605d71701c8664c3c2477fd1dcf9dc"
+    },
+    "parameter_hashes_after": {
+      "baseline_branch": "cc27e9bb2c367aac1f05e6bcdbaa6903ba7a68d8389ffec54bf36c08b142803e",
+      "genome_encoder": "6e342ff0c789921ecf37bcd3982b64faca01b90c3786ee9e31227495231e2e2e",
+      "batch_source": "ed24d540fffe4da04da1217920f2eeb7394dd91e168d83dc321e2ef8d17a6883",
+      "batch_instrument": "e247c59fe655c63f8c83fba6331e556e984b0057d9d55c6429dec61642518972",
+      "batch_plate": "c38cb52c92b5a7ffa399b91704438c65863dbe9638749bb178c809b3e2a641cb",
+      "batch_all": "6c3a3f0983fbeaac2a5e6dc67d12be6863605d71701c8664c3c2477fd1dcf9dc"
+    },
+    "parameter_hashes_exactly_equal": {
+      "baseline_branch": true,
+      "genome_encoder": true,
+      "batch_source": true,
+      "batch_instrument": true,
+      "batch_plate": true,
+      "batch_all": true
+    },
+    "probe_outputs_bitwise_equal": {
+      "delta_batch": true,
+      "delta_source": true,
+      "delta_instrument": true,
+      "delta_plate": true
+    },
+    "optimizer": {
+      "group_names": [
+        "chemical_encoder",
+        "response_branch"
+      ],
+      "optimizer_parameter_count": 32,
+      "frozen_parameter_overlap_count": 0,
+      "only_chemical_encoder_and_response_branch": true
+    },
+    "status": "PASS"
+  },
+  "test_proteome_opened": false,
+  "delta_batch_mean": 0.10485029089074825,
+  "delta_batch_std": 0.5439385322313495,
+  "delta_batch_max_abs": 2.029817819595337,
+  "delta_batch_to_response_norm": 2.5476933938585256
+}

@@ -1,0 +1,322 @@
+{
+  "schema_version": "1.0",
+  "task": "Stage S2C novelty-gated ensemble",
+  "planning_proxy": true,
+  "official_score": false,
+  "experimental_nonofficial_parity_fc": true,
+  "official_fc_result": false,
+  "routing_rule": {
+    "priority": [
+      "control",
+      "unseen_chemical",
+      "unseen_strain",
+      "seen_chemical_and_strain"
+    ],
+    "fit_source": "split_final=train metadata only",
+    "validation_split_used_for_routing": false,
+    "protein_labels_used_for_routing": false,
+    "drug_name_specific_rules": false
+  },
+  "routing_manifest_sha256": "f9b26cd669b13329ce7e86517b950c7289ecebd011f6b11d1f94527dad15b4d4",
+  "validation_expert_counts": {
+    "S2B D0 hierarchical none Huber": 1566,
+    "S1 C anchor Morgan Huber plus experimental FC": 1333,
+    "S2B D2 hierarchical Morgan experimental FC": 139
+  },
+  "validation_reason_counts": {
+    "unseen_chemical": 1334,
+    "seen_chemical_unseen_strain_known_batch_tuple": 1333,
+    "control_priority": 232,
+    "seen_chemical_and_strain": 139
+  },
+  "validation_scenario_expert_counts": {
+    "val_chem_only|S2B D0 hierarchical none Huber": 1065,
+    "val_strain_only|S1 C anchor Morgan Huber plus experimental FC": 1333,
+    "val_strain_only|S2B D0 hierarchical none Huber": 214,
+    "val_both|S2B D0 hierarchical none Huber": 269,
+    "val_time|S2B D2 hierarchical Morgan experimental FC": 139,
+    "val_time|S2B D0 hierarchical none Huber": 18
+  },
+  "scenario_alignment": [
+    {
+      "scenario": "val_chem_only",
+      "n_treatment": 1065,
+      "chemical_seen_expected": false,
+      "strain_seen_expected": true,
+      "chemical_seen_mismatch_count": 0,
+      "strain_seen_mismatch_count": 0,
+      "time_seen_count": 1065,
+      "culture_context_seen_count": 1065,
+      "full_entity_context_seen_count": 0
+    },
+    {
+      "scenario": "val_strain_only",
+      "n_treatment": 1333,
+      "chemical_seen_expected": true,
+      "strain_seen_expected": false,
+      "chemical_seen_mismatch_count": 0,
+      "strain_seen_mismatch_count": 0,
+      "time_seen_count": 1333,
+      "culture_context_seen_count": 1333,
+      "full_entity_context_seen_count": 0
+    },
+    {
+      "scenario": "val_both",
+      "n_treatment": 269,
+      "chemical_seen_expected": false,
+      "strain_seen_expected": false,
+      "chemical_seen_mismatch_count": 0,
+      "strain_seen_mismatch_count": 0,
+      "time_seen_count": 269,
+      "culture_context_seen_count": 269,
+      "full_entity_context_seen_count": 0
+    },
+    {
+      "scenario": "val_time",
+      "n_treatment": 139,
+      "chemical_seen_expected": true,
+      "strain_seen_expected": true,
+      "chemical_seen_mismatch_count": 0,
+      "strain_seen_mismatch_count": 0,
+      "time_seen_count": 139,
+      "culture_context_seen_count": 139,
+      "full_entity_context_seen_count": 52
+    }
+  ],
+  "mean_absolute_rmse": {
+    "Matched Control": 0.40266547352075577,
+    "V2 batch-enabled Huber": 0.6860300153493881,
+    "S1 B anchor Morgan Huber": 0.6692814081907272,
+    "S1 C anchor Morgan Huber plus experimental FC": 0.6694140881299973,
+    "S2B D0 hierarchical none Huber": 0.6677444130182266,
+    "S2B D2 hierarchical Morgan experimental FC": 0.6632760316133499,
+    "S2C novelty-gated ensemble": 0.645839512348175
+  },
+  "mean_raw_fc_pcc": {
+    "Matched Control": null,
+    "V2 batch-enabled Huber": 0.27278414492441966,
+    "S1 B anchor Morgan Huber": 0.2743052569560935,
+    "S1 C anchor Morgan Huber plus experimental FC": 0.2880104008751489,
+    "S2B D0 hierarchical none Huber": 0.2688243056170519,
+    "S2B D2 hierarchical Morgan experimental FC": 0.29749280997741445,
+    "S2C novelty-gated ensemble": 0.29897628595667736
+  },
+  "planning_proxy_summary": {
+    "official_score": false,
+    "planning_proxy": true,
+    "control_mapping": "pert_id_parity_v1",
+    "experimental_nonofficial_parity_fc": true,
+    "official_module_weights_extracted_from": "references/OfficialRules.pdf pages 16-17",
+    "module_weights": {
+      "absolute_fidelity": 0.2,
+      "matched_control_raw_fc": 0.25,
+      "context_mean_residual": 0.2,
+      "drug_mean_residual": 0.2,
+      "double_unknown_time": 0.1,
+      "high_effect_dep": 0.05
+    },
+    "official_internal_aggregation_formula_public": false,
+    "proxy_schemes": [
+      "bounded_quality",
+      "weighted_module_rank",
+      "correlation_priority"
+    ],
+    "scheme_winners": {
+      "bounded_quality": "S2C novelty-gated ensemble",
+      "correlation_priority": "S2C novelty-gated ensemble",
+      "weighted_module_rank": "S2C novelty-gated ensemble"
+    },
+    "winner_stable_across_schemes": true,
+    "module_quality_inputs": {
+      "Matched Control": {
+        "absolute_fidelity": 0.9099369838792039,
+        "matched_control_raw_fc": 0.1426190338840007,
+        "context_mean_residual": 0.6272655296916838,
+        "drug_mean_residual": 0.6049088634761134,
+        "double_unknown_time": 0.35485595120809477,
+        "high_effect_dep": 0.008346713347485442
+      },
+      "V2 batch-enabled Huber": {
+        "absolute_fidelity": 0.8609292620554254,
+        "matched_control_raw_fc": 0.6276812566154785,
+        "context_mean_residual": 0.5910699395409398,
+        "drug_mean_residual": 0.6051882563083022,
+        "double_unknown_time": 0.614593045870405,
+        "high_effect_dep": 0.44284367339554165
+      },
+      "S1 B anchor Morgan Huber": {
+        "absolute_fidelity": 0.8612528928163018,
+        "matched_control_raw_fc": 0.6288336792097533,
+        "context_mean_residual": 0.5983820268570025,
+        "drug_mean_residual": 0.6064922110457235,
+        "double_unknown_time": 0.6177853204631474,
+        "high_effect_dep": 0.44591564784232274
+      },
+      "S1 C anchor Morgan Huber plus experimental FC": {
+        "absolute_fidelity": 0.8625999894176484,
+        "matched_control_raw_fc": 0.6345310751714287,
+        "context_mean_residual": 0.5941408714829209,
+        "drug_mean_residual": 0.6094283572303482,
+        "double_unknown_time": 0.623285447711436,
+        "high_effect_dep": 0.45272474535162455
+      },
+      "S2B D0 hierarchical none Huber": {
+        "absolute_fidelity": 0.8637351922052743,
+        "matched_control_raw_fc": 0.6284589724866809,
+        "context_mean_residual": 0.6071883201800355,
+        "drug_mean_residual": 0.5961352464505711,
+        "double_unknown_time": 0.6150696648753985,
+        "high_effect_dep": 0.4430130549326319
+      },
+      "S2B D2 hierarchical Morgan experimental FC": {
+        "absolute_fidelity": 0.8650041639750558,
+        "matched_control_raw_fc": 0.6379691208294748,
+        "context_mean_residual": 0.6010784616683769,
+        "drug_mean_residual": 0.5957218301985733,
+        "double_unknown_time": 0.6307647919260853,
+        "high_effect_dep": 0.46435610016294193
+      },
+      "S2C novelty-gated ensemble": {
+        "absolute_fidelity": 0.868291621411627,
+        "matched_control_raw_fc": 0.6397242421339697,
+        "context_mean_residual": 0.6071883201800355,
+        "drug_mean_residual": 0.6094283572303482,
+        "double_unknown_time": 0.6297730493714033,
+        "high_effect_dep": 0.46345565787552173
+      }
+    },
+    "correlation_priority_inputs": {
+      "Matched Control": {
+        "absolute_fidelity": 0.9595463319068048,
+        "matched_control_raw_fc": 2.172466162218151e-06,
+        "context_mean_residual": 0.5787973461418041,
+        "drug_mean_residual": 0.5527847597532436,
+        "double_unknown_time": 0.6453726222533374,
+        "high_effect_dep": 0.008346713347485442
+      },
+      "V2 batch-enabled Huber": {
+        "absolute_fidelity": 0.9081147348400256,
+        "matched_control_raw_fc": 0.6357397644770755,
+        "context_mean_residual": 0.5777290883119315,
+        "drug_mean_residual": 0.6198948021121697,
+        "double_unknown_time": 0.8377696189360653,
+        "high_effect_dep": 0.44284367339554165
+      },
+      "S1 B anchor Morgan Huber": {
+        "absolute_fidelity": 0.9104901438704143,
+        "matched_control_raw_fc": 0.6357604907123094,
+        "context_mean_residual": 0.584180332279726,
+        "drug_mean_residual": 0.6203051662605036,
+        "double_unknown_time": 0.835769176525909,
+        "high_effect_dep": 0.44591564784232274
+      },
+      "S1 C anchor Morgan Huber plus experimental FC": {
+        "absolute_fidelity": 0.9120662921098456,
+        "matched_control_raw_fc": 0.6428642512301325,
+        "context_mean_residual": 0.5812693805450895,
+        "drug_mean_residual": 0.6231108488233215,
+        "double_unknown_time": 0.8412620090292746,
+        "high_effect_dep": 0.45272474535162455
+      },
+      "S2B D0 hierarchical none Huber": {
+        "absolute_fidelity": 0.9140840074071768,
+        "matched_control_raw_fc": 0.6348927944925158,
+        "context_mean_residual": 0.587540491759186,
+        "drug_mean_residual": 0.610967366159946,
+        "double_unknown_time": 0.8378077041360683,
+        "high_effect_dep": 0.4430130549326319
+      },
+      "S2B D2 hierarchical Morgan experimental FC": {
+        "absolute_fidelity": 0.9163041689574757,
+        "matched_control_raw_fc": 0.64632279300515,
+        "context_mean_residual": 0.5848817961681325,
+        "drug_mean_residual": 0.6083482363143213,
+        "double_unknown_time": 0.8473533332194644,
+        "high_effect_dep": 0.46435610016294193
+      },
+      "S2C novelty-gated ensemble": {
+        "absolute_fidelity": 0.9195995724560196,
+        "matched_control_raw_fc": 0.6469221930480902,
+        "context_mean_residual": 0.587540491759186,
+        "drug_mean_residual": 0.6231108488233215,
+        "double_unknown_time": 0.8483022116926927,
+        "high_effect_dep": 0.46345565787552173
+      }
+    }
+  },
+  "gates": {
+    "gate_1_composite_planning_proxy_rank_first_all_three_schemes": true,
+    "gate_2_mean_absolute_rmse_better_than_d2": true,
+    "gate_3_mean_raw_fc_pcc_drop_vs_d2_at_most_0_005": true,
+    "gate_4_val_chem_context_residual_pcc_at_least_d0": true,
+    "gate_5_val_strain_drug_residual_pcc_at_least_s1c": true,
+    "gate_6_val_time_raw_fc_pcc_at_least_d2": true,
+    "gate_7_routes_fit_from_train_metadata_only": true,
+    "gate_8_no_drug_specific_rule": true,
+    "gate_9_no_oov_batch_routed_to_flat_model": true
+  },
+  "eligible_for_selected_checkpoint_second_seed_validation": true,
+  "flat_model_oov_batch_route_count": 0,
+  "test_metadata": {
+    "schema_version": "1.0",
+    "routing_source": "train_metadata_sets_only",
+    "n_test_metadata_samples": 4454,
+    "expert_counts": {
+      "S2B D0 hierarchical none Huber": 2997,
+      "S1 C anchor Morgan Huber plus experimental FC": 1322,
+      "S2B D2 hierarchical Morgan experimental FC": 135
+    },
+    "reason_counts": {
+      "unseen_chemical": 2769,
+      "seen_chemical_unseen_strain_known_batch_tuple": 1322,
+      "control_priority": 228,
+      "seen_chemical_and_strain": 135
+    },
+    "oov_batch_tuple_count": 0,
+    "protein_labels_read": false,
+    "prediction_generated": false
+  },
+  "checkpoint_manifest": {
+    "schema_version": "1.0",
+    "stage": "S2C_inference_only",
+    "routing_manifest_sha256": "f9b26cd669b13329ce7e86517b950c7289ecebd011f6b11d1f94527dad15b4d4",
+    "train_seen_set_hashes": {
+      "chemical_seen_set_sha256": "3490b8d0de2e040887277207ad162436412b16af01fbfb0c27e5a4d807a8507c",
+      "strain_seen_set_sha256": "bc4d09d616c3a162c0d4c6528ff0abc94b10d0aa0ad0e7cc9c26f262f3b5d95b",
+      "source_seen_set_sha256": "7be66baba304cc85f8f92bdb7fa571915006d21e459f8d8e52229ab53e23f330",
+      "source_instrument_seen_set_sha256": "3e80b82abf15adcbb2df02619f5ce1cdd43e956b18c478937f0d97588e44900a",
+      "batch_tuple_seen_set_sha256": "f0d4131ae5260f2b78e00110f5298a9f569b9bb14e49027c3e5805a71e636ac1",
+      "time_seen_set_sha256": "da5b74ae6e9431308afe3b948595727f3c62ae130c76c23550ba3447d5ab108e",
+      "culture_context_seen_set_sha256": "3653915ecb1781b19c0e3e8b2225d71002d2b8f93ea8e07d43502e34e9d6a530",
+      "full_context_seen_set_sha256": "271f44b8fe1eb9375642c5a80c7cf9bf5b5b6d7ae91d9c97ebeecb92ffffdb88"
+    },
+    "experts": {
+      "S2B D0 hierarchical none Huber": {
+        "checkpoint": "D:\\虚拟细胞\\reports\\model_v2_stage_s2b\\formal_d0_hierarchical_none_huber_seed_20260814\\stage_b_best.pt",
+        "checkpoint_sha256": "a216cb68a9dc345a6b1a1a9cb03c033d2e1570bb3d4417e36655d798b36fb56b",
+        "resolved_config": "D:\\虚拟细胞\\reports\\model_v2_stage_s2b\\formal_d0_hierarchical_none_huber_seed_20260814\\resolved_config.json",
+        "resolved_config_sha256": "9b54fdbaa5b59c5c1f6909a9c0fe681403784d827f0785b5477e4da516b89836",
+        "seed": 20260814
+      },
+      "S2B D2 hierarchical Morgan experimental FC": {
+        "checkpoint": "D:\\虚拟细胞\\reports\\model_v2_stage_s2b\\formal_d2_hierarchical_morgan_fc_seed_20260814\\stage_b_best.pt",
+        "checkpoint_sha256": "e2db629ae549769b996d86b55c101d9dd2cd68e7dfb96887a9ad91e737f2b209",
+        "resolved_config": "D:\\虚拟细胞\\reports\\model_v2_stage_s2b\\formal_d2_hierarchical_morgan_fc_seed_20260814\\resolved_config.json",
+        "resolved_config_sha256": "85865ded2321855a7ad54e885499cc85485edcfbbf6fea332b98cd040e13f61a",
+        "seed": 20260814
+      },
+      "S1 C anchor Morgan Huber plus experimental FC": {
+        "checkpoint": "D:\\虚拟细胞\\reports\\model_v2_stage_s1\\formal_c_anchor_morgan_fc_seed_20260814\\stage_b_best.pt",
+        "checkpoint_sha256": "8af52cd79dade3464dae8c46710f104b7d7f0731a2a737bb29f306c9fd92ebc7",
+        "resolved_config": "D:\\虚拟细胞\\reports\\model_v2_stage_s1\\formal_c_anchor_morgan_fc_seed_20260814\\resolved_config.json",
+        "resolved_config_sha256": "f37824b92e349aebfcede15a3226b2f5bbafe476b5f1b6ddfa1583318f530176",
+        "seed": 20260814
+      }
+    },
+    "checkpoints_modified": false
+  },
+  "training_performed": false,
+  "checkpoints_modified": false,
+  "test_protein_labels_read": false,
+  "test_prediction_generated": false
+}

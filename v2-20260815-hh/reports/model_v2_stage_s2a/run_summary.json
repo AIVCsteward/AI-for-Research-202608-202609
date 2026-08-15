@@ -1,0 +1,110 @@
+{
+  "status": "PASS",
+  "mode": "formal",
+  "seed": 20260814,
+  "stage_b_trained": false,
+  "chemical_response_trained": false,
+  "fc_loss_enabled": false,
+  "planning_proxy": true,
+  "official_score": false,
+  "device": "cuda",
+  "elapsed_seconds": 273.0021899000276,
+  "peak_gpu_memory_allocated_bytes": 44473344,
+  "peak_gpu_memory_reserved_bytes": 65011712,
+  "n_train_controls": 751,
+  "n_validation_controls": 205,
+  "feature_contract": {
+    "n_proteins": 4422,
+    "protein_order_sha256": "f112e7fffae4d3158ec9985a6c9cfa25e1a7dd40f847092561ea023bc1d8a45f",
+    "generation_sha256": "bb4bf51f8b82d6c19ba0ab12b6ce31b809237f08d8655e6e508fe567b1a0d145"
+  },
+  "artifact_hashes": {
+    "feature_contract_sha256": "9ef3685f16796c949a7ec4b7c2b3f4b1c157ce374970ebcbc77f832dcf26f4f8",
+    "chemical_features_sha256": "9b3879ae6f0b20e59028b7a12b464bc4b53a25a2576078453329d7315cf5f702",
+    "chemical_index_sha256": "91d08ce8eea76dd43236fdfb08972393f99ed4901c3b024eebe9c2a5f3691fde",
+    "chemical_schema_sha256": "3bc3eb1266a8b83553cc19bb53a5da163a68c7bcf219ea05d174ec2dab92b25b",
+    "chemical_source_manifest_sha256": "128b63ff38283ecf848ba3875b5f7f2ee19caeb82d260c347cebc21342d768a2",
+    "genome_features_sha256": "11ab741242605577891001dcd931671bd2bebdb0e41098355c76658fee633d42",
+    "genome_index_sha256": "33796bbf4073a690880e17f85f4e0c7bf496ecc7bb6c136f97345b80224f5202",
+    "genome_schema_sha256": "244d2baa4c7b190ba4422155089e76a7655b1e17af6eb11fb5bc38c362d16ea1",
+    "genome_source_manifest_sha256": "703f8289daf0069a6fafba41851bfac4c22be424be2926b9d2536676c692e815",
+    "protein_order_sha256": "f112e7fffae4d3158ec9985a6c9cfa25e1a7dd40f847092561ea023bc1d8a45f",
+    "generation_sha256": "bb4bf51f8b82d6c19ba0ab12b6ce31b809237f08d8655e6e508fe567b1a0d145"
+  },
+  "metadata_overlap": {
+    "train_val_metadata_path": "D:\\虚拟细胞\\WAYB_WAYC\\WAYB_WAYC_metadata_train_val(1).csv",
+    "train_val_metadata_sha256": "9414f22d71e925a3b85544b49fde252613c87808d34738a84785003adb8131ef",
+    "test_metadata_path": "D:\\虚拟细胞\\WAYB_WAYC\\WAYB_WAYC_metadata_test(1).csv",
+    "test_metadata_sha256": "42f2df9ea79f28da8344e96b5181edacc215744a858d1a4eaa729c2e1cc69d31",
+    "test_metadata_only": true,
+    "test_proteome_opened": false,
+    "fields": [
+      "data_source",
+      "instrument",
+      "Yeast_cell_plate"
+    ],
+    "tuple_definition": [
+      "data_source",
+      "instrument",
+      "Yeast_cell_plate"
+    ],
+    "splits": {
+      "train": {
+        "n_samples": 5920,
+        "unique_counts": {
+          "data_source": 4,
+          "instrument": 7,
+          "Yeast_cell_plate": 144
+        },
+        "unique_tuple_count": 144,
+        "unseen_vs_train": {
+          "data_source": [],
+          "instrument": [],
+          "Yeast_cell_plate": []
+        },
+        "unseen_tuple_count_vs_train": 0
+      },
+      "validation": {
+        "n_samples": 3038,
+        "unique_counts": {
+          "data_source": 4,
+          "instrument": 7,
+          "Yeast_cell_plate": 144
+        },
+        "unique_tuple_count": 144,
+        "unseen_vs_train": {
+          "data_source": [],
+          "instrument": [],
+          "Yeast_cell_plate": []
+        },
+        "unseen_tuple_count_vs_train": 0
+      },
+      "test": {
+        "n_samples": 4454,
+        "unique_counts": {
+          "data_source": 4,
+          "instrument": 7,
+          "Yeast_cell_plate": 144
+        },
+        "unique_tuple_count": 144,
+        "unseen_vs_train": {
+          "data_source": [],
+          "instrument": [],
+          "Yeast_cell_plate": []
+        },
+        "unseen_tuple_count_vs_train": 0
+      }
+    }
+  },
+  "oov_checks": {
+    "oov_plate_source_unchanged_max_abs": 0.0,
+    "oov_plate_instrument_unchanged_max_abs": 0.0,
+    "oov_plate_delta_plate_max_abs": 0.0,
+    "oov_instrument_source_unchanged_max_abs": 0.0,
+    "oov_instrument_delta_instrument_max_abs": 0.0,
+    "oov_instrument_delta_plate_max_abs": 0.0,
+    "all_oov_delta_batch_max_abs": 0.0
+  },
+  "test_proteome_opened": false,
+  "test_prediction_generated": false
+}

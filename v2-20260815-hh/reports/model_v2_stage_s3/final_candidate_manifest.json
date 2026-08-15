@@ -1,0 +1,203 @@
+{
+  "schema_version": "1.0",
+  "status": "PASS",
+  "checks": {
+    "all_checkpoint_hashes_match": true,
+    "all_resolved_config_hashes_match": true,
+    "all_artifact_hashes_match": true,
+    "validation_route_matches_s2c": true,
+    "seen_set_hashes_match_s2c": true,
+    "original_s2d_files_unchanged": true
+  },
+  "experts": {
+    "D0 seed1": {
+      "expert_role": "S2B D0 hierarchical none Huber",
+      "seed": 20260814,
+      "checkpoint": "D:\\虚拟细胞\\reports\\model_v2_stage_s2b\\formal_d0_hierarchical_none_huber_seed_20260814\\stage_b_best.pt",
+      "checkpoint_sha256_expected": "a216cb68a9dc345a6b1a1a9cb03c033d2e1570bb3d4417e36655d798b36fb56b",
+      "checkpoint_sha256_actual": "a216cb68a9dc345a6b1a1a9cb03c033d2e1570bb3d4417e36655d798b36fb56b",
+      "resolved_config": "D:\\虚拟细胞\\reports\\model_v2_stage_s2b\\formal_d0_hierarchical_none_huber_seed_20260814\\resolved_config.json",
+      "resolved_config_sha256_expected": "9b54fdbaa5b59c5c1f6909a9c0fe681403784d827f0785b5477e4da516b89836",
+      "resolved_config_sha256_actual": "9b54fdbaa5b59c5c1f6909a9c0fe681403784d827f0785b5477e4da516b89836",
+      "checkpoint_hash_match": true,
+      "config_hash_match": true
+    },
+    "D2 seed1": {
+      "expert_role": "S2B D2 hierarchical Morgan experimental FC",
+      "seed": 20260814,
+      "checkpoint": "D:\\虚拟细胞\\reports\\model_v2_stage_s2b\\formal_d2_hierarchical_morgan_fc_seed_20260814\\stage_b_best.pt",
+      "checkpoint_sha256_expected": "e2db629ae549769b996d86b55c101d9dd2cd68e7dfb96887a9ad91e737f2b209",
+      "checkpoint_sha256_actual": "e2db629ae549769b996d86b55c101d9dd2cd68e7dfb96887a9ad91e737f2b209",
+      "resolved_config": "D:\\虚拟细胞\\reports\\model_v2_stage_s2b\\formal_d2_hierarchical_morgan_fc_seed_20260814\\resolved_config.json",
+      "resolved_config_sha256_expected": "85865ded2321855a7ad54e885499cc85485edcfbbf6fea332b98cd040e13f61a",
+      "resolved_config_sha256_actual": "85865ded2321855a7ad54e885499cc85485edcfbbf6fea332b98cd040e13f61a",
+      "checkpoint_hash_match": true,
+      "config_hash_match": true
+    },
+    "S1 C seed1": {
+      "expert_role": "S1 C anchor Morgan Huber plus experimental FC",
+      "seed": 20260814,
+      "checkpoint": "D:\\虚拟细胞\\reports\\model_v2_stage_s1\\formal_c_anchor_morgan_fc_seed_20260814\\stage_b_best.pt",
+      "checkpoint_sha256_expected": "8af52cd79dade3464dae8c46710f104b7d7f0731a2a737bb29f306c9fd92ebc7",
+      "checkpoint_sha256_actual": "8af52cd79dade3464dae8c46710f104b7d7f0731a2a737bb29f306c9fd92ebc7",
+      "resolved_config": "D:\\虚拟细胞\\reports\\model_v2_stage_s1\\formal_c_anchor_morgan_fc_seed_20260814\\resolved_config.json",
+      "resolved_config_sha256_expected": "f37824b92e349aebfcede15a3226b2f5bbafe476b5f1b6ddfa1583318f530176",
+      "resolved_config_sha256_actual": "f37824b92e349aebfcede15a3226b2f5bbafe476b5f1b6ddfa1583318f530176",
+      "checkpoint_hash_match": true,
+      "config_hash_match": true
+    },
+    "D0 seed2": {
+      "expert_role": "S2B D0 hierarchical none Huber",
+      "seed": 20260815,
+      "checkpoint": "D:\\虚拟细胞\\reports\\model_v2_stage_s2d\\formal_d0_hierarchical_none_huber_seed_20260815\\stage_b_best.pt",
+      "checkpoint_sha256_expected": "1b82d4e0c52683b1bef271e22b66035eda17ea64db0843dd8f913216e7d8df14",
+      "checkpoint_sha256_actual": "1b82d4e0c52683b1bef271e22b66035eda17ea64db0843dd8f913216e7d8df14",
+      "resolved_config": "D:\\虚拟细胞\\reports\\model_v2_stage_s2d\\formal_d0_hierarchical_none_huber_seed_20260815\\resolved_config.json",
+      "resolved_config_sha256_expected": "d9678d3106d723ce5632d9aac218b84ec5d3edb3e035f3d6c91f444fe4fdbc3a",
+      "resolved_config_sha256_actual": "d9678d3106d723ce5632d9aac218b84ec5d3edb3e035f3d6c91f444fe4fdbc3a",
+      "checkpoint_hash_match": true,
+      "config_hash_match": true
+    },
+    "D2 seed2": {
+      "expert_role": "S2B D2 hierarchical Morgan experimental FC",
+      "seed": 20260815,
+      "checkpoint": "D:\\虚拟细胞\\reports\\model_v2_stage_s2d\\formal_d2_hierarchical_morgan_fc_seed_20260815\\stage_b_best.pt",
+      "checkpoint_sha256_expected": "6d089faa863ef1615d4760cfee4f715a3addec46b317fd5040fddd0019475891",
+      "checkpoint_sha256_actual": "6d089faa863ef1615d4760cfee4f715a3addec46b317fd5040fddd0019475891",
+      "resolved_config": "D:\\虚拟细胞\\reports\\model_v2_stage_s2d\\formal_d2_hierarchical_morgan_fc_seed_20260815\\resolved_config.json",
+      "resolved_config_sha256_expected": "4b64a44d38b5f1bf65f377673b8bd3229fbca18c502c6eae83a0325ddd442c20",
+      "resolved_config_sha256_actual": "4b64a44d38b5f1bf65f377673b8bd3229fbca18c502c6eae83a0325ddd442c20",
+      "checkpoint_hash_match": true,
+      "config_hash_match": true
+    },
+    "S1 C seed2": {
+      "expert_role": "S1 C anchor Morgan Huber plus experimental FC",
+      "seed": 20260815,
+      "checkpoint": "D:\\虚拟细胞\\reports\\model_v2_stage_s2d\\formal_s1c_flat_morgan_fc_seed_20260815\\stage_b_best.pt",
+      "checkpoint_sha256_expected": "1dd79ca80091c5dd3ca20bb78d3e47445e67f710e2a2cb096e27c6f5049f4aa4",
+      "checkpoint_sha256_actual": "1dd79ca80091c5dd3ca20bb78d3e47445e67f710e2a2cb096e27c6f5049f4aa4",
+      "resolved_config": "D:\\虚拟细胞\\reports\\model_v2_stage_s2d\\formal_s1c_flat_morgan_fc_seed_20260815\\resolved_config.json",
+      "resolved_config_sha256_expected": "71f1d5835387957da7e11467cc0aeccbcaf81027ed1da23ba7975025e2400cf5",
+      "resolved_config_sha256_actual": "71f1d5835387957da7e11467cc0aeccbcaf81027ed1da23ba7975025e2400cf5",
+      "checkpoint_hash_match": true,
+      "config_hash_match": true
+    }
+  },
+  "artifacts": {
+    "feature_contract": {
+      "path": "D:\\虚拟细胞\\project_v2\\data_contract\\feature_contract.json",
+      "expected_sha256": "9ef3685f16796c949a7ec4b7c2b3f4b1c157ce374970ebcbc77f832dcf26f4f8",
+      "actual_sha256": "9ef3685f16796c949a7ec4b7c2b3f4b1c157ce374970ebcbc77f832dcf26f4f8",
+      "hash_match": true
+    },
+    "chemical_source_manifest": {
+      "path": "D:\\虚拟细胞\\external_data\\chemistry\\source_manifest.json",
+      "expected_sha256": "128b63ff38283ecf848ba3875b5f7f2ee19caeb82d260c347cebc21342d768a2",
+      "actual_sha256": "128b63ff38283ecf848ba3875b5f7f2ee19caeb82d260c347cebc21342d768a2",
+      "hash_match": true
+    },
+    "genome_source_manifest": {
+      "path": "D:\\虚拟细胞\\external_data\\genome\\source_manifest.json",
+      "expected_sha256": "703f8289daf0069a6fafba41851bfac4c22be424be2926b9d2536676c692e815",
+      "actual_sha256": "703f8289daf0069a6fafba41851bfac4c22be424be2926b9d2536676c692e815",
+      "hash_match": true
+    }
+  },
+  "validation_routing_manifest_sha256": "f9b26cd669b13329ce7e86517b950c7289ecebd011f6b11d1f94527dad15b4d4",
+  "train_seen_set_hashes": {
+    "chemical_seen_set_sha256": "3490b8d0de2e040887277207ad162436412b16af01fbfb0c27e5a4d807a8507c",
+    "strain_seen_set_sha256": "bc4d09d616c3a162c0d4c6528ff0abc94b10d0aa0ad0e7cc9c26f262f3b5d95b",
+    "source_seen_set_sha256": "7be66baba304cc85f8f92bdb7fa571915006d21e459f8d8e52229ab53e23f330",
+    "source_instrument_seen_set_sha256": "3e80b82abf15adcbb2df02619f5ce1cdd43e956b18c478937f0d97588e44900a",
+    "batch_tuple_seen_set_sha256": "f0d4131ae5260f2b78e00110f5298a9f569b9bb14e49027c3e5805a71e636ac1",
+    "time_seen_set_sha256": "da5b74ae6e9431308afe3b948595727f3c62ae130c76c23550ba3447d5ab108e",
+    "culture_context_seen_set_sha256": "3653915ecb1781b19c0e3e8b2225d71002d2b8f93ea8e07d43502e34e9d6a530",
+    "full_context_seen_set_sha256": "271f44b8fe1eb9375642c5a80c7cf9bf5b5b6d7ae91d9c97ebeecb92ffffdb88"
+  },
+  "original_s2d_hash_audit": {
+    "files": {
+      "reports/MODEL_V2_STAGE_S2D_SECOND_SEED_REPORT.md": {
+        "expected_sha256": "bddf613fa57197d44b05fe88f7ade25f97d46c2394fcf2d2e9831a728bfc4e9e",
+        "actual_sha256": "bddf613fa57197d44b05fe88f7ade25f97d46c2394fcf2d2e9831a728bfc4e9e",
+        "unchanged": true
+      },
+      "reports/model_v2_stage_s2d/second_seed_comparison.json": {
+        "expected_sha256": "35170fbca9497c5f151b1b4d68d4a89cfd7f54f88a39dca11dc1cff1b1a09197",
+        "actual_sha256": "35170fbca9497c5f151b1b4d68d4a89cfd7f54f88a39dca11dc1cff1b1a09197",
+        "unchanged": true
+      },
+      "reports/model_v2_stage_s2d/two_seed_ensemble_metrics.json": {
+        "expected_sha256": "06fd9a77369e6df0e94c4f8ae547af09aa85de994f15aca04da0e2e37724d8d5",
+        "actual_sha256": "06fd9a77369e6df0e94c4f8ae547af09aa85de994f15aca04da0e2e37724d8d5",
+        "unchanged": true
+      },
+      "reports/model_v2_stage_s2d/second_seed_absolute_metrics.csv": {
+        "expected_sha256": "7b95d82f4366c35465ec74aebb196e30d2f93a1ac79cc5f857499ba81233776a",
+        "actual_sha256": "7b95d82f4366c35465ec74aebb196e30d2f93a1ac79cc5f857499ba81233776a",
+        "unchanged": true
+      },
+      "reports/model_v2_stage_s2d/second_seed_fc_metrics.csv": {
+        "expected_sha256": "4a0cde6ef273e04dd12c113c5d4cab083f8cc5e25cdc2ead48a9e00fcd378898",
+        "actual_sha256": "4a0cde6ef273e04dd12c113c5d4cab083f8cc5e25cdc2ead48a9e00fcd378898",
+        "unchanged": true
+      },
+      "reports/model_v2_stage_s2d/second_seed_context_metrics.csv": {
+        "expected_sha256": "dbdc0204c3ef28cf87dbeb59a173c3cc6f9498ac62b9468257f41b5a9e654470",
+        "actual_sha256": "dbdc0204c3ef28cf87dbeb59a173c3cc6f9498ac62b9468257f41b5a9e654470",
+        "unchanged": true
+      },
+      "reports/model_v2_stage_s2d/second_seed_drug_metrics.csv": {
+        "expected_sha256": "4e11d1eeabf559cac70347ebb36dc0c471529c987ba78606c2c653e9b879164d",
+        "actual_sha256": "4e11d1eeabf559cac70347ebb36dc0c471529c987ba78606c2c653e9b879164d",
+        "unchanged": true
+      },
+      "reports/model_v2_stage_s2d/second_seed_high_metrics.csv": {
+        "expected_sha256": "e46c2062c57832cb4a5c3858bae8b39c9f19ec7f03e81e217a8b33cf95738bc4",
+        "actual_sha256": "e46c2062c57832cb4a5c3858bae8b39c9f19ec7f03e81e217a8b33cf95738bc4",
+        "unchanged": true
+      },
+      "reports/model_v2_stage_s2d/second_seed_planning_proxy.csv": {
+        "expected_sha256": "0d9637909a00fecb6db511c0596f7fa37fa87fcec1e3111d6a0aa7e69f2b8e48",
+        "actual_sha256": "0d9637909a00fecb6db511c0596f7fa37fa87fcec1e3111d6a0aa7e69f2b8e48",
+        "unchanged": true
+      },
+      "reports/model_v2_stage_s2d/routing_identity_audit.json": {
+        "expected_sha256": "92710e03fe6453d37cb1013a4d752a53aaf4703c4ebbfc772f48e9a000a3a8e2",
+        "actual_sha256": "92710e03fe6453d37cb1013a4d752a53aaf4703c4ebbfc772f48e9a000a3a8e2",
+        "unchanged": true
+      }
+    },
+    "all_unchanged": true
+  },
+  "model_source": "D:\\虚拟细胞\\baseline\\baseline\\model_v2.py",
+  "model_source_sha256": "bf651af752eb9e52309464a2946389ba9218911ad88b0a9ac43a9495aae7c62a",
+  "routing_source": "D:\\虚拟细胞\\baseline\\baseline\\novelty_gated_ensemble_v2.py",
+  "routing_source_sha256": "0d9fe96362eeba38df793cbabf6517de3df4d36cd513acea38c99c33bd3d7c26",
+  "inference_source": "D:\\虚拟细胞\\baseline\\baseline\\final_submission_v2.py",
+  "inference_source_sha256": "77cb4460d9d67a236afde1304ae0d1d2dba1c3eddecfe0bca0a390e3cc000ec1",
+  "prediction_scale": "log2",
+  "planning_proxy": true,
+  "official_score": false,
+  "experimental_nonofficial_parity_fc": true,
+  "official_fc_result": false,
+  "ensemble_weights": {
+    "seed1": 0.5,
+    "seed2": 0.5
+  },
+  "routing_rule": {
+    "seen_sets_source": "split_final=train metadata only",
+    "batch_tuple": [
+      "data_source",
+      "instrument",
+      "Yeast_cell_plate"
+    ],
+    "priority": [
+      "control_or_qc_to_D0_with_zero_response",
+      "unseen_chemical_to_D0",
+      "seen_chemical_unseen_strain_known_batch_to_S1C",
+      "seen_chemical_unseen_strain_oov_batch_to_D2_hierarchical_fallback",
+      "seen_chemical_and_strain_to_D2"
+    ],
+    "drug_name_specific_rules": false
+  }
+}

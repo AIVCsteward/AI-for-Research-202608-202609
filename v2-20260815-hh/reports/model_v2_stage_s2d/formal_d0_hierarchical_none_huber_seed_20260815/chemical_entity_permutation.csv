@@ -1,0 +1,58 @@
+target_row,target_chemical_id,target_raw_name,source_row,source_chemical_id,source_raw_name,is_fixed_point
+0,"(1R, 2S, 5R) - (-) - Menthol","(1R, 2S, 5R) - (-) - Menthol",0,"(1R, 2S, 5R) - (-) - Menthol","(1R, 2S, 5R) - (-) - Menthol",True
+1,(S)-(+)-Camptothecin,(S)-(+)-Camptothecin,1,(S)-(+)-Camptothecin,(S)-(+)-Camptothecin,True
+2,1-10 Phenanthroline monohydrate,1-10 Phenanthroline monohydrate,2,1-10 Phenanthroline monohydrate,1-10 Phenanthroline monohydrate,True
+3,4-Hydroxytamoxifen,4-Hydroxytamoxifen,3,4-Hydroxytamoxifen,4-Hydroxytamoxifen,True
+4,Abietic acid,Abietic acid,4,Abietic acid,Abietic acid,True
+5,Amiodarone hydrochloride,Amiodarone hydrochloride,5,Amiodarone hydrochloride,Amiodarone hydrochloride,True
+6,Amphotericin B,Amphotericin B,6,Amphotericin B,Amphotericin B,True
+7,Anisomycin,Anisomycin,7,Anisomycin,Anisomycin,True
+8,Artemisinin,Artemisinin,8,Artemisinin,Artemisinin,True
+9,Brefeldin A,Brefeldin A,9,Brefeldin A,Brefeldin A,True
+10,CHX,CHX,10,CHX,CHX,True
+11,Cisplatin,Cisplatin,11,Cisplatin,Cisplatin,True
+12,Clomiphene citrate,Clomiphene citrate,12,Clomiphene citrate,Clomiphene citrate,True
+13,Clotrimazole,Clotrimazole,13,Clotrimazole,Clotrimazole,True
+14,Cyclopiazonic acid,Cyclopiazonic acid,14,Cyclopiazonic acid,Cyclopiazonic acid,True
+15,DMSO,DMSO,15,DMSO,DMSO,True
+16,Desipramine hydrochloride,Desipramine hydrochloride,16,Desipramine hydrochloride,Desipramine hydrochloride,True
+17,Doxycycline hyclate,Doxycycline hyclate,17,Doxycycline hyclate,Doxycycline hyclate,True
+18,Dyclonine hydrochloride,Dyclonine hydrochloride,18,Dyclonine hydrochloride,Dyclonine hydrochloride,True
+19,EDTA,EDTA,19,EDTA,EDTA,True
+20,Emodin,Emodin,20,Emodin,Emodin,True
+21,FCCP,FCCP,21,FCCP,FCCP,True
+22,Fluconazole,Fluconazole,22,Fluconazole,Fluconazole,True
+23,G418,G418,23,G418,G418,True
+24,Geldanamycin,Geldanamycin,24,Geldanamycin,Geldanamycin,True
+25,H2O2,H2O2,25,H2O2,H2O2,True
+26,Haloperidol,Haloperidol,26,Haloperidol,Haloperidol,True
+27,Harmine hydrochloride,Harmine hydrochloride,27,Harmine hydrochloride,Harmine hydrochloride,True
+28,Hoechst 33258,Hoechst 33258,28,Hoechst 33258,Hoechst 33258,True
+29,Hydroxyurea,Hydroxyurea,29,Hydroxyurea,Hydroxyurea,True
+30,Hygromycin B,Hygromycin B,30,Hygromycin B,Hygromycin B,True
+31,LY 294002 hydrochloride,LY 294002 hydrochloride,31,LY 294002 hydrochloride,LY 294002 hydrochloride,True
+32,MMS,MMS,32,MMS,MMS,True
+33,NaCl,NaCl,33,NaCl,NaCl,True
+34,Neomycin B,Neomycin B,34,Neomycin B,Neomycin B,True
+35,Nigericin,Nigericin,35,Nigericin,Nigericin,True
+36,Nocodazole,Nocodazole,36,Nocodazole,Nocodazole,True
+37,Nystatin dihydrate,Nystatin dihydrate,37,Nystatin dihydrate,Nystatin dihydrate,True
+38,Oligomycin,Oligomycin,38,Oligomycin,Oligomycin,True
+39,Parthenolide,Parthenolide,39,Parthenolide,Parthenolide,True
+40,Pentamidine isethionate,Pentamidine isethionate,40,Pentamidine isethionate,Pentamidine isethionate,True
+41,Plumbagin,Plumbagin,41,Plumbagin,Plumbagin,True
+42,Quality Control,Quality Control,42,Quality Control,Quality Control,True
+43,Raloxifene hydrochloride,Raloxifene hydrochloride,43,Raloxifene hydrochloride,Raloxifene hydrochloride,True
+44,Rapamycin,Rapamycin,44,Rapamycin,Rapamycin,True
+45,SDS,SDS,45,SDS,SDS,True
+46,Sorbitol,Sorbitol,46,Sorbitol,Sorbitol,True
+47,Staurosporine,Staurosporine,47,Staurosporine,Staurosporine,True
+48,Sulfometuron methyl,Sulfometuron methyl,48,Sulfometuron methyl,Sulfometuron methyl,True
+49,Tamoxifen,Tamoxifen,49,Tamoxifen,Tamoxifen,True
+50,Trichostatin A,Trichostatin A,50,Trichostatin A,Trichostatin A,True
+51,Trifluoperazine dihydrochloride,Trifluoperazine dihydrochloride,51,Trifluoperazine dihydrochloride,Trifluoperazine dihydrochloride,True
+52,Tunicamycin,Tunicamycin,52,Tunicamycin,Tunicamycin,True
+53,U-73122,U-73122,53,U-73122,U-73122,True
+54,Valinomycin,Valinomycin,54,Valinomycin,Valinomycin,True
+55,Water,Water,55,Water,Water,True
+56,Wortmannin,Wortmannin,56,Wortmannin,Wortmannin,True

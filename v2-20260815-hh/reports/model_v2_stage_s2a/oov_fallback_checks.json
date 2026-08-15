@@ -1,0 +1,9 @@
+{
+  "oov_plate_source_unchanged_max_abs": 0.0,
+  "oov_plate_instrument_unchanged_max_abs": 0.0,
+  "oov_plate_delta_plate_max_abs": 0.0,
+  "oov_instrument_source_unchanged_max_abs": 0.0,
+  "oov_instrument_delta_instrument_max_abs": 0.0,
+  "oov_instrument_delta_plate_max_abs": 0.0,
+  "all_oov_delta_batch_max_abs": 0.0
+}

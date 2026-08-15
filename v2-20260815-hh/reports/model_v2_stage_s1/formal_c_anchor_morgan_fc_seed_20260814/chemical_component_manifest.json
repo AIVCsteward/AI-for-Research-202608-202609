@@ -1,0 +1,7 @@
+{
+  "chemical_feature_components": "morgan_only",
+  "morgan_enabled": true,
+  "descriptor_enabled": false,
+  "identity_quality_flags_preserved": true,
+  "protein_label_input_accepted": false
+}

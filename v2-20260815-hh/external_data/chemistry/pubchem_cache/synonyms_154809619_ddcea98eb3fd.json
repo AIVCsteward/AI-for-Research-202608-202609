@@ -1,0 +1,1 @@
+{"http_status":200,"payload":{"InformationList":{"Information":[{"CID":154809619,"Synonym":["Nystatin dihydrate"]}]}},"response_body_sha256":"838b9ddc76719528e13b8d57191d55b7b36c8215501bdc5dd4e3136ae89e275f","retrieved_date":"2026-08-13","url":"https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/154809619/synonyms/JSON"}

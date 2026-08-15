@@ -1,0 +1,22 @@
+scheme,model,planning_proxy,rank,official_score,control_mapping
+bounded_quality,S2C novelty-gated ensemble,0.663062808128811,1,False,pert_id_parity_v1
+bounded_quality,S2B D2 hierarchical Morgan experimental FC,0.6581474555765255,2,False,pert_id_parity_v1
+bounded_quality,S1 C anchor Morgan Huber plus experimental FC,0.6568313944577655,3,False,pert_id_parity_v1
+bounded_quality,S1 B anchor Morgan Huber,0.6545081603846747,4,False,pert_id_parity_v1
+bounded_quality,S2B D0 hierarchical none Huber,0.6541841141230179,5,False,pert_id_parity_v1
+bounded_quality,V2 batch-enabled Huber,0.6519592939916207,6,False,pert_id_parity_v1
+bounded_quality,Matched Control,0.4999799646685842,7,False,pert_id_parity_v1
+correlation_priority,S2C novelty-gated ensemble,0.6957837349327733,1,False,pert_id_parity_v1
+correlation_priority,S2B D2 hierarchical Morgan experimental FC,0.6914406768693669,2,False,pert_id_parity_v1
+correlation_priority,S1 C anchor Morgan Huber plus experimental FC,0.6907678052736931,3,False,pert_id_parity_v1
+correlation_priority,S1 B anchor Morgan Huber,0.6878079512049132,4,False,pert_id_parity_v1
+correlation_priority,S2B D0 hierarchical none Huber,0.6871729948486291,5,False,pert_id_parity_v1
+correlation_priority,V2 batch-enabled Huber,0.6860018117354779,6,False,pert_id_parity_v1
+correlation_priority,Matched Control,0.4831808285696191,7,False,pert_id_parity_v1
+weighted_module_rank,S2C novelty-gated ensemble,0.8416666666666668,1,False,pert_id_parity_v1
+weighted_module_rank,S2B D2 hierarchical Morgan experimental FC,0.5916666666666667,2,False,pert_id_parity_v1
+weighted_module_rank,S1 C anchor Morgan Huber plus experimental FC,0.5666666666666668,3,False,pert_id_parity_v1
+weighted_module_rank,Matched Control,0.4666666666666667,4,False,pert_id_parity_v1
+weighted_module_rank,S1 B anchor Morgan Huber,0.4333333333333334,5,False,pert_id_parity_v1
+weighted_module_rank,S2B D0 hierarchical none Huber,0.43333333333333335,6,False,pert_id_parity_v1
+weighted_module_rank,V2 batch-enabled Huber,0.16666666666666666,7,False,pert_id_parity_v1

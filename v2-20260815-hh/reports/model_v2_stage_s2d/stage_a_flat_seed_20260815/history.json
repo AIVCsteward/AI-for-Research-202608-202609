@@ -1,0 +1,299 @@
+[
+  {
+    "epoch": 0,
+    "train_loss": 0.38765862584114075,
+    "train_loss_components": {
+      "loss_total": 0.38765862584114075,
+      "loss_absolute": 0.38765862584114075,
+      "loss_fc_absolute": 0.0,
+      "loss_fc": 0.0,
+      "loss_response_magnitude": 0.0,
+      "loss_batch_reg": 1.2432626602295234e-06,
+      "loss_batch_source_reg": 0.0,
+      "loss_batch_instrument_reg": 0.0,
+      "loss_batch_plate_reg": 0.0
+    },
+    "monitor_name": "control_only_validation_huber",
+    "monitor": 0.3890304415068819,
+    "monitor_details": {
+      "control_only_validation_huber": 0.3890304415068819,
+      "n_valid_positions": 777388
+    },
+    "bad_epochs": 0,
+    "parameter_group_learning_rates": {
+      "baseline_branch": 0.001,
+      "genome_encoder": 0.0005,
+      "batch_branch": 0.0001
+    }
+  },
+  {
+    "epoch": 1,
+    "train_loss": 0.38492972900470096,
+    "train_loss_components": {
+      "loss_total": 0.38492972900470096,
+      "loss_absolute": 0.38492972900470096,
+      "loss_fc_absolute": 0.0,
+      "loss_fc": 0.0,
+      "loss_response_magnitude": 0.0,
+      "loss_batch_reg": 9.134241395258869e-06,
+      "loss_batch_source_reg": 0.0,
+      "loss_batch_instrument_reg": 0.0,
+      "loss_batch_plate_reg": 0.0
+    },
+    "monitor_name": "control_only_validation_huber",
+    "monitor": 0.38703338400051834,
+    "monitor_details": {
+      "control_only_validation_huber": 0.38703338400051834,
+      "n_valid_positions": 777388
+    },
+    "bad_epochs": 0,
+    "parameter_group_learning_rates": {
+      "baseline_branch": 0.001,
+      "genome_encoder": 0.0005,
+      "batch_branch": 0.0001
+    }
+  },
+  {
+    "epoch": 2,
+    "train_loss": 0.38195062180360156,
+    "train_loss_components": {
+      "loss_total": 0.38195062180360156,
+      "loss_absolute": 0.38195062180360156,
+      "loss_fc_absolute": 0.0,
+      "loss_fc": 0.0,
+      "loss_response_magnitude": 0.0,
+      "loss_batch_reg": 2.7003724881069502e-05,
+      "loss_batch_source_reg": 0.0,
+      "loss_batch_instrument_reg": 0.0,
+      "loss_batch_plate_reg": 0.0
+    },
+    "monitor_name": "control_only_validation_huber",
+    "monitor": 0.3846161545289202,
+    "monitor_details": {
+      "control_only_validation_huber": 0.3846161545289202,
+      "n_valid_positions": 777388
+    },
+    "bad_epochs": 0,
+    "parameter_group_learning_rates": {
+      "baseline_branch": 0.001,
+      "genome_encoder": 0.0005,
+      "batch_branch": 0.0001
+    }
+  },
+  {
+    "epoch": 3,
+    "train_loss": 0.37631909797588986,
+    "train_loss_components": {
+      "loss_total": 0.37631909797588986,
+      "loss_absolute": 0.37631909797588986,
+      "loss_fc_absolute": 0.0,
+      "loss_fc": 0.0,
+      "loss_response_magnitude": 0.0,
+      "loss_batch_reg": 5.6006876244888794e-05,
+      "loss_batch_source_reg": 0.0,
+      "loss_batch_instrument_reg": 0.0,
+      "loss_batch_plate_reg": 0.0
+    },
+    "monitor_name": "control_only_validation_huber",
+    "monitor": 0.38436409667592075,
+    "monitor_details": {
+      "control_only_validation_huber": 0.38436409667592075,
+      "n_valid_positions": 777388
+    },
+    "bad_epochs": 0,
+    "parameter_group_learning_rates": {
+      "baseline_branch": 0.001,
+      "genome_encoder": 0.0005,
+      "batch_branch": 0.0001
+    }
+  },
+  {
+    "epoch": 4,
+    "train_loss": 0.3688674097259839,
+    "train_loss_components": {
+      "loss_total": 0.3688674097259839,
+      "loss_absolute": 0.3688674097259839,
+      "loss_fc_absolute": 0.0,
+      "loss_fc": 0.0,
+      "loss_response_magnitude": 0.0,
+      "loss_batch_reg": 9.501072963757906e-05,
+      "loss_batch_source_reg": 0.0,
+      "loss_batch_instrument_reg": 0.0,
+      "loss_batch_plate_reg": 0.0
+    },
+    "monitor_name": "control_only_validation_huber",
+    "monitor": 0.3810989888216823,
+    "monitor_details": {
+      "control_only_validation_huber": 0.3810989888216823,
+      "n_valid_positions": 777388
+    },
+    "bad_epochs": 0,
+    "parameter_group_learning_rates": {
+      "baseline_branch": 0.001,
+      "genome_encoder": 0.0005,
+      "batch_branch": 0.0001
+    }
+  },
+  {
+    "epoch": 5,
+    "train_loss": 0.3624693304300308,
+    "train_loss_components": {
+      "loss_total": 0.3624693304300308,
+      "loss_absolute": 0.36246932049592334,
+      "loss_fc_absolute": 0.0,
+      "loss_fc": 0.0,
+      "loss_response_magnitude": 0.0,
+      "loss_batch_reg": 0.00014420352090382949,
+      "loss_batch_source_reg": 0.0,
+      "loss_batch_instrument_reg": 0.0,
+      "loss_batch_plate_reg": 0.0
+    },
+    "monitor_name": "control_only_validation_huber",
+    "monitor": 0.3845010173666223,
+    "monitor_details": {
+      "control_only_validation_huber": 0.3845010173666223,
+      "n_valid_positions": 777388
+    },
+    "bad_epochs": 1,
+    "parameter_group_learning_rates": {
+      "baseline_branch": 0.001,
+      "genome_encoder": 0.0005,
+      "batch_branch": 0.0001
+    }
+  },
+  {
+    "epoch": 6,
+    "train_loss": 0.35622045149405795,
+    "train_loss_components": {
+      "loss_total": 0.35622045149405795,
+      "loss_absolute": 0.35622042169173557,
+      "loss_fc_absolute": 0.0,
+      "loss_fc": 0.0,
+      "loss_response_magnitude": 0.0,
+      "loss_batch_reg": 0.00020899042040885737,
+      "loss_batch_source_reg": 0.0,
+      "loss_batch_instrument_reg": 0.0,
+      "loss_batch_plate_reg": 0.0
+    },
+    "monitor_name": "control_only_validation_huber",
+    "monitor": 0.38860201352772933,
+    "monitor_details": {
+      "control_only_validation_huber": 0.38860201352772933,
+      "n_valid_positions": 777388
+    },
+    "bad_epochs": 2,
+    "parameter_group_learning_rates": {
+      "baseline_branch": 0.001,
+      "genome_encoder": 0.0005,
+      "batch_branch": 0.0001
+    }
+  },
+  {
+    "epoch": 7,
+    "train_loss": 0.35095295558373135,
+    "train_loss_components": {
+      "loss_total": 0.35095295558373135,
+      "loss_absolute": 0.35095292578140896,
+      "loss_fc_absolute": 0.0,
+      "loss_fc": 0.0,
+      "loss_response_magnitude": 0.0,
+      "loss_batch_reg": 0.00029904541103557375,
+      "loss_batch_source_reg": 0.0,
+      "loss_batch_instrument_reg": 0.0,
+      "loss_batch_plate_reg": 0.0
+    },
+    "monitor_name": "control_only_validation_huber",
+    "monitor": 0.3833969500782889,
+    "monitor_details": {
+      "control_only_validation_huber": 0.3833969500782889,
+      "n_valid_positions": 777388
+    },
+    "bad_epochs": 3,
+    "parameter_group_learning_rates": {
+      "baseline_branch": 0.001,
+      "genome_encoder": 0.0005,
+      "batch_branch": 0.0001
+    }
+  },
+  {
+    "epoch": 8,
+    "train_loss": 0.34590480973323184,
+    "train_loss_components": {
+      "loss_total": 0.34590480973323184,
+      "loss_absolute": 0.34590476751327515,
+      "loss_fc_absolute": 0.0,
+      "loss_fc": 0.0,
+      "loss_response_magnitude": 0.0,
+      "loss_batch_reg": 0.0004441778946784325,
+      "loss_batch_source_reg": 0.0,
+      "loss_batch_instrument_reg": 0.0,
+      "loss_batch_plate_reg": 0.0
+    },
+    "monitor_name": "control_only_validation_huber",
+    "monitor": 0.384256922697007,
+    "monitor_details": {
+      "control_only_validation_huber": 0.384256922697007,
+      "n_valid_positions": 777388
+    },
+    "bad_epochs": 4,
+    "parameter_group_learning_rates": {
+      "baseline_branch": 0.001,
+      "genome_encoder": 0.0005,
+      "batch_branch": 0.0001
+    }
+  },
+  {
+    "epoch": 9,
+    "train_loss": 0.3419905851284663,
+    "train_loss_components": {
+      "loss_total": 0.3419905851284663,
+      "loss_absolute": 0.34199051558971405,
+      "loss_fc_absolute": 0.0,
+      "loss_fc": 0.0,
+      "loss_response_magnitude": 0.0,
+      "loss_batch_reg": 0.0006924902506095046,
+      "loss_batch_source_reg": 0.0,
+      "loss_batch_instrument_reg": 0.0,
+      "loss_batch_plate_reg": 0.0
+    },
+    "monitor_name": "control_only_validation_huber",
+    "monitor": 0.38422200749345575,
+    "monitor_details": {
+      "control_only_validation_huber": 0.38422200749345575,
+      "n_valid_positions": 777388
+    },
+    "bad_epochs": 5,
+    "parameter_group_learning_rates": {
+      "baseline_branch": 0.001,
+      "genome_encoder": 0.0005,
+      "batch_branch": 0.0001
+    }
+  },
+  {
+    "epoch": 10,
+    "train_loss": 0.33697305123011273,
+    "train_loss_components": {
+      "loss_total": 0.33697305123011273,
+      "loss_absolute": 0.3369729394714038,
+      "loss_fc_absolute": 0.0,
+      "loss_fc": 0.0,
+      "loss_response_magnitude": 0.0,
+      "loss_batch_reg": 0.0011138367844978347,
+      "loss_batch_source_reg": 0.0,
+      "loss_batch_instrument_reg": 0.0,
+      "loss_batch_plate_reg": 0.0
+    },
+    "monitor_name": "control_only_validation_huber",
+    "monitor": 0.3812040662289841,
+    "monitor_details": {
+      "control_only_validation_huber": 0.3812040662289841,
+      "n_valid_positions": 777388
+    },
+    "bad_epochs": 6,
+    "parameter_group_learning_rates": {
+      "baseline_branch": 0.001,
+      "genome_encoder": 0.0005,
+      "batch_branch": 0.0001
+    }
+  }
+]

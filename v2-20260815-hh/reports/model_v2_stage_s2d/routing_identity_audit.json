@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "routing_source": "train_metadata_sets_only",
+  "seed1_manifest_sha256": "f9b26cd669b13329ce7e86517b950c7289ecebd011f6b11d1f94527dad15b4d4",
+  "seed2_manifest_sha256": "f9b26cd669b13329ce7e86517b950c7289ecebd011f6b11d1f94527dad15b4d4",
+  "rowwise_identical": true,
+  "test_metadata_counts_identical": true,
+  "validation_sample_count": 3038,
+  "test_metadata": {
+    "n_test_metadata_samples": 4454,
+    "expert_counts": {
+      "S2B D0 hierarchical none Huber": 2997,
+      "S1 C anchor Morgan Huber plus experimental FC": 1322,
+      "S2B D2 hierarchical Morgan experimental FC": 135
+    },
+    "reason_counts": {
+      "unseen_chemical": 2769,
+      "seen_chemical_unseen_strain_known_batch_tuple": 1322,
+      "control_priority": 228,
+      "seen_chemical_and_strain": 135
+    },
+    "oov_batch_tuple_count": 0,
+    "protein_labels_read": false,
+    "prediction_generated": false
+  },
+  "drug_name_specific_rules": false,
+  "validation_or_test_labels_used_for_routing": false
+}

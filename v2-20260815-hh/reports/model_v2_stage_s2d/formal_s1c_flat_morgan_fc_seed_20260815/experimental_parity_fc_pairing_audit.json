@@ -1,0 +1,41 @@
+{
+  "experimental_nonofficial_parity_fc": true,
+  "control_mapping": "pert_id_parity_v1",
+  "official_fc_result": false,
+  "fit_scope": "split_final=train only",
+  "train_treatment_total": 4121,
+  "matched_treatment_count": 3912,
+  "matched_coverage": 0.949284154331473,
+  "requested_control_counts": {
+    "Water": 2091,
+    "DMSO": 2030
+  },
+  "matched_treatment_counts_by_control": {
+    "Water": 1948,
+    "DMSO": 1964
+  },
+  "unmatched_reason_counts": {
+    "no_exact_requested_solvent_control": 209
+  },
+  "matched_control_replicate_count_min": 1,
+  "matched_control_replicate_count_median": 1.0,
+  "matched_control_replicate_count_max": 2,
+  "per_protein_fc_valid_count_min": 353,
+  "per_protein_fc_valid_count_median": 3754.5,
+  "per_protein_fc_valid_count_max": 3912,
+  "exact_match_keys": [
+    "data_source",
+    "Strains",
+    "Medium",
+    "Temperature",
+    "pert_time",
+    "pert_time_unit",
+    "instrument",
+    "Yeast_cell_plate"
+  ],
+  "multiple_controls": "protein_wise_mean_over_observed_controls",
+  "fallback_used": false,
+  "control_matching_spec_path": "D:\\\u865a\u62df\u7ec6\u80de\\project_v2\\data_contract\\control_matching_spec.json",
+  "control_matching_spec_sha256": "8edd8f77971a3eacedca1e36307d4e8f8b1602fc1c2ea7ecbac8b88490a72d16",
+  "test_proteome_opened": false
+}

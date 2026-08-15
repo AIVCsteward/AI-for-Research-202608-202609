@@ -1,0 +1,817 @@
+{
+  "stage_a": [],
+  "stage_b": [
+    {
+      "epoch": 0,
+      "train_loss": 0.2164286916072552,
+      "train_loss_components": {
+        "loss_total": 0.2164286916072552,
+        "loss_absolute": 0.16432367861270905,
+        "loss_fc_absolute": 0.08134269301707928,
+        "loss_fc": 0.9586484496410076,
+        "loss_response_magnitude": 0.0010310246819594446,
+        "loss_batch_reg": 0.34547171409313493,
+        "loss_batch_source_reg": 0.1701489304120724,
+        "loss_batch_instrument_reg": 0.06342050582170486,
+        "loss_batch_plate_reg": 0.023209121393469662
+      },
+      "monitor_name": "macro_huber_equal_four_scenarios",
+      "monitor": 0.19612951105196952,
+      "monitor_details": {
+        "val_chem_only": 0.14277837202260618,
+        "val_strain_only": 0.2401052834967734,
+        "val_both": 0.24328759891016463,
+        "val_time": 0.15834678977833377
+      },
+      "bad_epochs": 0,
+      "parameter_group_learning_rates": {
+        "chemical_encoder": 0.001,
+        "response_branch": 0.001
+      }
+    },
+    {
+      "epoch": 1,
+      "train_loss": 0.2086117577094298,
+      "train_loss_components": {
+        "loss_total": 0.2086117577094298,
+        "loss_absolute": 0.159128259236996,
+        "loss_fc_absolute": 0.08326022109160057,
+        "loss_fc": 0.9020988189257109,
+        "loss_response_magnitude": 0.012077776228006069,
+        "loss_batch_reg": 0.34481717485647934,
+        "loss_batch_source_reg": 0.17053442196204113,
+        "loss_batch_instrument_reg": 0.06293309565920097,
+        "loss_batch_plate_reg": 0.02312466040826761
+      },
+      "monitor_name": "macro_huber_equal_four_scenarios",
+      "monitor": 0.1943859048875138,
+      "monitor_details": {
+        "val_chem_only": 0.15274389239008423,
+        "val_strain_only": 0.23063405919014654,
+        "val_both": 0.2481005739452719,
+        "val_time": 0.14606509402455262
+      },
+      "bad_epochs": 0,
+      "parameter_group_learning_rates": {
+        "chemical_encoder": 0.001,
+        "response_branch": 0.001
+      }
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.19897297506148998,
+      "train_loss_components": {
+        "loss_total": 0.19897297506148998,
+        "loss_absolute": 0.14804257314938765,
+        "loss_fc_absolute": 0.0928188199034104,
+        "loss_fc": 0.915390853698437,
+        "loss_response_magnitude": 0.04255741838491164,
+        "loss_batch_reg": 0.34370241577808675,
+        "loss_batch_source_reg": 0.17037154825834128,
+        "loss_batch_instrument_reg": 0.06237375621612255,
+        "loss_batch_plate_reg": 0.023058094499775996
+      },
+      "monitor_name": "macro_huber_equal_four_scenarios",
+      "monitor": 0.19917495598849877,
+      "monitor_details": {
+        "val_chem_only": 0.16750655125309222,
+        "val_strain_only": 0.2295270034854756,
+        "val_both": 0.2603182772330505,
+        "val_time": 0.13934799198237682
+      },
+      "bad_epochs": 1,
+      "parameter_group_learning_rates": {
+        "chemical_encoder": 0.001,
+        "response_branch": 0.001
+      }
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.19393929128463452,
+      "train_loss_components": {
+        "loss_total": 0.19393929128463452,
+        "loss_absolute": 0.1423375725746155,
+        "loss_fc_absolute": 0.09734645715126625,
+        "loss_fc": 0.9205459897334759,
+        "loss_response_magnitude": 0.061245770752429964,
+        "loss_batch_reg": 0.34398099596683795,
+        "loss_batch_source_reg": 0.1703568302668058,
+        "loss_batch_instrument_reg": 0.06257638931274415,
+        "loss_batch_plate_reg": 0.023157224732522783
+      },
+      "monitor_name": "macro_huber_equal_four_scenarios",
+      "monitor": 0.19992080269626206,
+      "monitor_details": {
+        "val_chem_only": 0.1694806244789108,
+        "val_strain_only": 0.22950351179680503,
+        "val_both": 0.26353330768004646,
+        "val_time": 0.137165766829286
+      },
+      "bad_epochs": 2,
+      "parameter_group_learning_rates": {
+        "chemical_encoder": 0.001,
+        "response_branch": 0.001
+      }
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.19172669855447916,
+      "train_loss_components": {
+        "loss_total": 0.19172669855447916,
+        "loss_absolute": 0.14040504350112035,
+        "loss_fc_absolute": 0.09852057133729641,
+        "loss_fc": 0.9117515738193805,
+        "loss_response_magnitude": 0.07130843114394408,
+        "loss_batch_reg": 0.34365766919576207,
+        "loss_batch_source_reg": 0.16999368254955,
+        "loss_batch_instrument_reg": 0.06296957994882878,
+        "loss_batch_plate_reg": 0.023239213056289232
+      },
+      "monitor_name": "macro_huber_equal_four_scenarios",
+      "monitor": 0.19626644906518845,
+      "monitor_details": {
+        "val_chem_only": 0.158983053155256,
+        "val_strain_only": 0.23007414468800008,
+        "val_both": 0.26000804554830104,
+        "val_time": 0.13600055286919668
+      },
+      "bad_epochs": 3,
+      "parameter_group_learning_rates": {
+        "chemical_encoder": 0.001,
+        "response_branch": 0.001
+      }
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.19014572959679824,
+      "train_loss_components": {
+        "loss_total": 0.19014572959679824,
+        "loss_absolute": 0.13912730698402112,
+        "loss_fc_absolute": 0.0991116226865695,
+        "loss_fc": 0.9038101159609281,
+        "loss_response_magnitude": 0.07778025349745384,
+        "loss_batch_reg": 0.34327008311565105,
+        "loss_batch_source_reg": 0.16991700186179234,
+        "loss_batch_instrument_reg": 0.06242258554467788,
+        "loss_batch_plate_reg": 0.023163414058777
+      },
+      "monitor_name": "macro_huber_equal_four_scenarios",
+      "monitor": 0.201500048523681,
+      "monitor_details": {
+        "val_chem_only": 0.1729834060600947,
+        "val_strain_only": 0.23025351001309358,
+        "val_both": 0.26749756284045023,
+        "val_time": 0.13526571518108554
+      },
+      "bad_epochs": 4,
+      "parameter_group_learning_rates": {
+        "chemical_encoder": 0.001,
+        "response_branch": 0.001
+      }
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.18902821976404924,
+      "train_loss_components": {
+        "loss_total": 0.18902821976404924,
+        "loss_absolute": 0.13834690715257938,
+        "loss_fc_absolute": 0.09939628977041978,
+        "loss_fc": 0.8957822781342727,
+        "loss_response_magnitude": 0.08274657800793647,
+        "loss_batch_reg": 0.34565603503814113,
+        "loss_batch_source_reg": 0.1708739813703757,
+        "loss_batch_instrument_reg": 0.06328077740394152,
+        "loss_batch_plate_reg": 0.023094258915919524
+      },
+      "monitor_name": "macro_huber_equal_four_scenarios",
+      "monitor": 0.19634084623542705,
+      "monitor_details": {
+        "val_chem_only": 0.15742212341837278,
+        "val_strain_only": 0.23473814934961618,
+        "val_both": 0.25831401081146793,
+        "val_time": 0.13488910136225143
+      },
+      "bad_epochs": 5,
+      "parameter_group_learning_rates": {
+        "chemical_encoder": 0.001,
+        "response_branch": 0.001
+      }
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.1886987906235915,
+      "train_loss_components": {
+        "loss_total": 0.1886987906235915,
+        "loss_absolute": 0.1383718245304548,
+        "loss_fc_absolute": 0.0986718666095,
+        "loss_fc": 0.8895419826874367,
+        "loss_response_magnitude": 0.08216592262570675,
+        "loss_batch_reg": 0.34549020803891695,
+        "loss_batch_source_reg": 0.17079126479534001,
+        "loss_batch_instrument_reg": 0.06284866493481855,
+        "loss_batch_plate_reg": 0.023056526439121136
+      },
+      "monitor_name": "macro_huber_equal_four_scenarios",
+      "monitor": 0.20672812163223206,
+      "monitor_details": {
+        "val_chem_only": 0.18325825663357043,
+        "val_strain_only": 0.23161246151315246,
+        "val_both": 0.27840028609107914,
+        "val_time": 0.13364148229112616
+      },
+      "bad_epochs": 6,
+      "parameter_group_learning_rates": {
+        "chemical_encoder": 0.001,
+        "response_branch": 0.001
+      }
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.1864074911062534,
+      "train_loss_components": {
+        "loss_total": 0.1864074911062534,
+        "loss_absolute": 0.13630503232662494,
+        "loss_fc_absolute": 0.09931651456997945,
+        "loss_fc": 0.8831064499341524,
+        "loss_response_magnitude": 0.08871209764709839,
+        "loss_batch_reg": 0.3415526362565848,
+        "loss_batch_source_reg": 0.16892243337172727,
+        "loss_batch_instrument_reg": 0.06227905498101161,
+        "loss_batch_plate_reg": 0.023077709084519973
+      },
+      "monitor_name": "macro_huber_equal_four_scenarios",
+      "monitor": 0.20312085780413067,
+      "monitor_details": {
+        "val_chem_only": 0.17743823508390144,
+        "val_strain_only": 0.22921412921495338,
+        "val_both": 0.27354353121313263,
+        "val_time": 0.13228753570453522
+      },
+      "bad_epochs": 7,
+      "parameter_group_learning_rates": {
+        "chemical_encoder": 0.001,
+        "response_branch": 0.001
+      }
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.18405129978289972,
+      "train_loss_components": {
+        "loss_total": 0.18405129978289972,
+        "loss_absolute": 0.13375170815449494,
+        "loss_fc_absolute": 0.09951337793698678,
+        "loss_fc": 0.8858271507116464,
+        "loss_response_magnitude": 0.09375090736609239,
+        "loss_batch_reg": 0.34593857205831086,
+        "loss_batch_source_reg": 0.17105855872997872,
+        "loss_batch_instrument_reg": 0.06305766976796663,
+        "loss_batch_plate_reg": 0.023209597958395115
+      },
+      "monitor_name": "macro_huber_equal_four_scenarios",
+      "monitor": 0.20494721608235214,
+      "monitor_details": {
+        "val_chem_only": 0.1837541165167077,
+        "val_strain_only": 0.22576478344192832,
+        "val_both": 0.28004909896688196,
+        "val_time": 0.13022086540389063
+      },
+      "bad_epochs": 8,
+      "parameter_group_learning_rates": {
+        "chemical_encoder": 0.001,
+        "response_branch": 0.001
+      }
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.18283961827938372,
+      "train_loss_components": {
+        "loss_total": 0.18283961827938372,
+        "loss_absolute": 0.13245739214695418,
+        "loss_fc_absolute": 0.10020738358681018,
+        "loss_fc": 0.886157619036161,
+        "loss_response_magnitude": 0.0969471434561106,
+        "loss_batch_reg": 0.3451584210762611,
+        "loss_batch_source_reg": 0.1700705131659141,
+        "loss_batch_instrument_reg": 0.06280500820049872,
+        "loss_batch_plate_reg": 0.023047768066708857
+      },
+      "monitor_name": "macro_huber_equal_four_scenarios",
+      "monitor": 0.191904229886176,
+      "monitor_details": {
+        "val_chem_only": 0.1621213072624866,
+        "val_strain_only": 0.22433567217275788,
+        "val_both": 0.2520250833347019,
+        "val_time": 0.1291348567747577
+      },
+      "bad_epochs": 0,
+      "parameter_group_learning_rates": {
+        "chemical_encoder": 0.001,
+        "response_branch": 0.001
+      }
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.18190141709951255,
+      "train_loss_components": {
+        "loss_total": 0.18190141709951255,
+        "loss_absolute": 0.131548494215195,
+        "loss_fc_absolute": 0.10074476095346305,
+        "loss_fc": 0.8843360002224262,
+        "loss_response_magnitude": 0.10042156141537886,
+        "loss_batch_reg": 0.3417954169786893,
+        "loss_batch_source_reg": 0.16939422671611493,
+        "loss_batch_instrument_reg": 0.06232675468692413,
+        "loss_batch_plate_reg": 0.02328179206412572
+      },
+      "monitor_name": "macro_huber_equal_four_scenarios",
+      "monitor": 0.196003093509657,
+      "monitor_details": {
+        "val_chem_only": 0.1648683956471001,
+        "val_strain_only": 0.22547644115292945,
+        "val_both": 0.2647838092359228,
+        "val_time": 0.12888372800267567
+      },
+      "bad_epochs": 1,
+      "parameter_group_learning_rates": {
+        "chemical_encoder": 0.001,
+        "response_branch": 0.001
+      }
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.18027419791771815,
+      "train_loss_components": {
+        "loss_total": 0.18027419791771815,
+        "loss_absolute": 0.12988607665667168,
+        "loss_fc_absolute": 0.10114636788001427,
+        "loss_fc": 0.8842266880548917,
+        "loss_response_magnitude": 0.10244912035190142,
+        "loss_batch_reg": 0.3441163287712978,
+        "loss_batch_source_reg": 0.16979552954435348,
+        "loss_batch_instrument_reg": 0.06333521146040696,
+        "loss_batch_plate_reg": 0.023164072145636264
+      },
+      "monitor_name": "macro_huber_equal_four_scenarios",
+      "monitor": 0.19882590217804738,
+      "monitor_details": {
+        "val_chem_only": 0.17737817718564527,
+        "val_strain_only": 0.2228618478211027,
+        "val_both": 0.2680246127565395,
+        "val_time": 0.12703897094890204
+      },
+      "bad_epochs": 2,
+      "parameter_group_learning_rates": {
+        "chemical_encoder": 0.001,
+        "response_branch": 0.001
+      }
+    },
+    {
+      "epoch": 13,
+      "train_loss": 0.17934971107886388,
+      "train_loss_components": {
+        "loss_total": 0.17934971107886388,
+        "loss_absolute": 0.12885701793890733,
+        "loss_fc_absolute": 0.10213684439659118,
+        "loss_fc": 0.8842977422934312,
+        "loss_response_magnitude": 0.10762467762598625,
+        "loss_batch_reg": 0.34292244131748495,
+        "loss_batch_source_reg": 0.16998036824739896,
+        "loss_batch_instrument_reg": 0.062215416763837524,
+        "loss_batch_plate_reg": 0.023304017747824007
+      },
+      "monitor_name": "macro_huber_equal_four_scenarios",
+      "monitor": 0.20085854436263983,
+      "monitor_details": {
+        "val_chem_only": 0.17538743998926618,
+        "val_strain_only": 0.22915651404218204,
+        "val_both": 0.2732767423606547,
+        "val_time": 0.12561348105845638
+      },
+      "bad_epochs": 3,
+      "parameter_group_learning_rates": {
+        "chemical_encoder": 0.001,
+        "response_branch": 0.001
+      }
+    },
+    {
+      "epoch": 14,
+      "train_loss": 0.17812919685473808,
+      "train_loss_components": {
+        "loss_total": 0.17812919685473808,
+        "loss_absolute": 0.1276374985392277,
+        "loss_fc_absolute": 0.10258868107428917,
+        "loss_fc": 0.8832661848801833,
+        "loss_response_magnitude": 0.11038578645541118,
+        "loss_batch_reg": 0.3456290208376371,
+        "loss_batch_source_reg": 0.17079523389156048,
+        "loss_batch_instrument_reg": 0.06311456228678043,
+        "loss_batch_plate_reg": 0.023230177393326393
+      },
+      "monitor_name": "macro_huber_equal_four_scenarios",
+      "monitor": 0.19907997495768928,
+      "monitor_details": {
+        "val_chem_only": 0.1694385660134079,
+        "val_strain_only": 0.23171955029527957,
+        "val_both": 0.27004840923702994,
+        "val_time": 0.1251133742850398
+      },
+      "bad_epochs": 4,
+      "parameter_group_learning_rates": {
+        "chemical_encoder": 0.001,
+        "response_branch": 0.001
+      }
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.17710850490973545,
+      "train_loss_components": {
+        "loss_total": 0.17710850490973545,
+        "loss_absolute": 0.1265043897124437,
+        "loss_fc_absolute": 0.10333660313716302,
+        "loss_fc": 0.8840918907752404,
+        "loss_response_magnitude": 0.1137626391190749,
+        "loss_batch_reg": 0.3477247852545518,
+        "loss_batch_source_reg": 0.1725416471178715,
+        "loss_batch_instrument_reg": 0.06275437858242255,
+        "loss_batch_plate_reg": 0.02321561285509513
+      },
+      "monitor_name": "macro_huber_equal_four_scenarios",
+      "monitor": 0.1966791830586805,
+      "monitor_details": {
+        "val_chem_only": 0.1713563674402241,
+        "val_strain_only": 0.22614532751256428,
+        "val_both": 0.2644984794436625,
+        "val_time": 0.12471655783827115
+      },
+      "bad_epochs": 5,
+      "parameter_group_learning_rates": {
+        "chemical_encoder": 0.001,
+        "response_branch": 0.001
+      }
+    },
+    {
+      "epoch": 16,
+      "train_loss": 0.17629084426623123,
+      "train_loss_components": {
+        "loss_total": 0.17629084426623123,
+        "loss_absolute": 0.1257526341539163,
+        "loss_fc_absolute": 0.1036408802637687,
+        "loss_fc": 0.8821706817700312,
+        "loss_response_magnitude": 0.11529281150836211,
+        "loss_batch_reg": 0.3479684577538417,
+        "loss_batch_source_reg": 0.1720380275295331,
+        "loss_batch_instrument_reg": 0.06316688381708585,
+        "loss_batch_plate_reg": 0.022956620586606174
+      },
+      "monitor_name": "macro_huber_equal_four_scenarios",
+      "monitor": 0.19129390643016733,
+      "monitor_details": {
+        "val_chem_only": 0.1609051530541041,
+        "val_strain_only": 0.22627123129394666,
+        "val_both": 0.2544504111237382,
+        "val_time": 0.1235488302488804
+      },
+      "bad_epochs": 0,
+      "parameter_group_learning_rates": {
+        "chemical_encoder": 0.001,
+        "response_branch": 0.001
+      }
+    },
+    {
+      "epoch": 17,
+      "train_loss": 0.1755384949537424,
+      "train_loss_components": {
+        "loss_total": 0.1755384949537424,
+        "loss_absolute": 0.1249032410291525,
+        "loss_fc_absolute": 0.10461630626366689,
+        "loss_fc": 0.8826198917168837,
+        "loss_response_magnitude": 0.11793549805879593,
+        "loss_batch_reg": 0.3430840684817387,
+        "loss_batch_source_reg": 0.16935431957244873,
+        "loss_batch_instrument_reg": 0.06253520737473782,
+        "loss_batch_plate_reg": 0.02294116375538019
+      },
+      "monitor_name": "macro_huber_equal_four_scenarios",
+      "monitor": 0.1937968058427832,
+      "monitor_details": {
+        "val_chem_only": 0.1670319110015192,
+        "val_strain_only": 0.2273144158692356,
+        "val_both": 0.2592733327085197,
+        "val_time": 0.12156756379185832
+      },
+      "bad_epochs": 1,
+      "parameter_group_learning_rates": {
+        "chemical_encoder": 0.001,
+        "response_branch": 0.001
+      }
+    },
+    {
+      "epoch": 18,
+      "train_loss": 0.17390293914538163,
+      "train_loss_components": {
+        "loss_total": 0.17390293914538163,
+        "loss_absolute": 0.12319045250232404,
+        "loss_fc_absolute": 0.10554768557731922,
+        "loss_fc": 0.88245912698599,
+        "loss_response_magnitude": 0.12171590007268465,
+        "loss_batch_reg": 0.34748502259071057,
+        "loss_batch_source_reg": 0.17182248395222885,
+        "loss_batch_instrument_reg": 0.0632679347235423,
+        "loss_batch_plate_reg": 0.02308438202509513
+      },
+      "monitor_name": "macro_huber_equal_four_scenarios",
+      "monitor": 0.19419983579267075,
+      "monitor_details": {
+        "val_chem_only": 0.16531330586429033,
+        "val_strain_only": 0.22858580913802368,
+        "val_both": 0.2614255337677863,
+        "val_time": 0.12147469440058262
+      },
+      "bad_epochs": 2,
+      "parameter_group_learning_rates": {
+        "chemical_encoder": 0.001,
+        "response_branch": 0.001
+      }
+    },
+    {
+      "epoch": 19,
+      "train_loss": 0.17308479937223287,
+      "train_loss_components": {
+        "loss_total": 0.17308479937223287,
+        "loss_absolute": 0.12231769172044901,
+        "loss_fc_absolute": 0.10659711796503801,
+        "loss_fc": 0.88171921143165,
+        "loss_response_magnitude": 0.12570133736500375,
+        "loss_batch_reg": 0.34371573237272407,
+        "loss_batch_source_reg": 0.16967740345459717,
+        "loss_batch_instrument_reg": 0.06295200838492467,
+        "loss_batch_plate_reg": 0.022916116135624737
+      },
+      "monitor_name": "macro_huber_equal_four_scenarios",
+      "monitor": 0.1952813200368113,
+      "monitor_details": {
+        "val_chem_only": 0.16784375833532805,
+        "val_strain_only": 0.22745361052590243,
+        "val_both": 0.26500055427819086,
+        "val_time": 0.12082735700782395
+      },
+      "bad_epochs": 3,
+      "parameter_group_learning_rates": {
+        "chemical_encoder": 0.001,
+        "response_branch": 0.001
+      }
+    },
+    {
+      "epoch": 20,
+      "train_loss": 0.1721158687884991,
+      "train_loss_components": {
+        "loss_total": 0.1721158687884991,
+        "loss_absolute": 0.1213494910643651,
+        "loss_fc_absolute": 0.10711776224466471,
+        "loss_fc": 0.8807227914149944,
+        "loss_response_magnitude": 0.12802527294709132,
+        "loss_batch_reg": 0.34344333731211146,
+        "loss_batch_source_reg": 0.16895020810457376,
+        "loss_batch_instrument_reg": 0.06302464014062514,
+        "loss_batch_plate_reg": 0.02284424651700717
+      },
+      "monitor_name": "macro_huber_equal_four_scenarios",
+      "monitor": 0.2009319552181172,
+      "monitor_details": {
+        "val_chem_only": 0.17644099135973007,
+        "val_strain_only": 0.23203076609079884,
+        "val_both": 0.27585273539161215,
+        "val_time": 0.11940332803032776
+      },
+      "bad_epochs": 4,
+      "parameter_group_learning_rates": {
+        "chemical_encoder": 0.001,
+        "response_branch": 0.001
+      }
+    },
+    {
+      "epoch": 21,
+      "train_loss": 0.17075770176373994,
+      "train_loss_components": {
+        "loss_total": 0.17075770176373994,
+        "loss_absolute": 0.11993397382589487,
+        "loss_fc_absolute": 0.10785940839694097,
+        "loss_fc": 0.8804274054674002,
+        "loss_response_magnitude": 0.13151264649171096,
+        "loss_batch_reg": 0.345633804339629,
+        "loss_batch_source_reg": 0.1705102718793429,
+        "loss_batch_instrument_reg": 0.06305314239401083,
+        "loss_batch_plate_reg": 0.022841030760453296
+      },
+      "monitor_name": "macro_huber_equal_four_scenarios",
+      "monitor": 0.1974292730196486,
+      "monitor_details": {
+        "val_chem_only": 0.17063818052161042,
+        "val_strain_only": 0.22951067647570755,
+        "val_both": 0.26977535964189064,
+        "val_time": 0.11979287543938585
+      },
+      "bad_epochs": 5,
+      "parameter_group_learning_rates": {
+        "chemical_encoder": 0.001,
+        "response_branch": 0.001
+      }
+    },
+    {
+      "epoch": 22,
+      "train_loss": 0.17021284859914046,
+      "train_loss_components": {
+        "loss_total": 0.17021284859914046,
+        "loss_absolute": 0.11930836886167526,
+        "loss_fc_absolute": 0.10869108736515046,
+        "loss_fc": 0.8809863686561584,
+        "loss_response_magnitude": 0.13254477920440527,
+        "loss_batch_reg": 0.3456162947874803,
+        "loss_batch_source_reg": 0.17041265609172673,
+        "loss_batch_instrument_reg": 0.06342406416168579,
+        "loss_batch_plate_reg": 0.023202085552307277
+      },
+      "monitor_name": "macro_huber_equal_four_scenarios",
+      "monitor": 0.20185051399416837,
+      "monitor_details": {
+        "val_chem_only": 0.17934382219583983,
+        "val_strain_only": 0.23073500687728982,
+        "val_both": 0.27862317902907924,
+        "val_time": 0.1187000478744646
+      },
+      "bad_epochs": 6,
+      "parameter_group_learning_rates": {
+        "chemical_encoder": 0.001,
+        "response_branch": 0.001
+      }
+    },
+    {
+      "epoch": 23,
+      "train_loss": 0.16932418804902297,
+      "train_loss_components": {
+        "loss_total": 0.16932418804902297,
+        "loss_absolute": 0.1184807708630195,
+        "loss_fc_absolute": 0.10919543241079037,
+        "loss_fc": 0.8786421940876887,
+        "loss_response_magnitude": 0.13572058436962275,
+        "loss_batch_reg": 0.34312464250968056,
+        "loss_batch_source_reg": 0.1691759772025622,
+        "loss_batch_instrument_reg": 0.06281811291208635,
+        "loss_batch_plate_reg": 0.023001597793056414
+      },
+      "monitor_name": "macro_huber_equal_four_scenarios",
+      "monitor": 0.20834840120110074,
+      "monitor_details": {
+        "val_chem_only": 0.1903278061982812,
+        "val_strain_only": 0.23236058375766497,
+        "val_both": 0.29263697127765254,
+        "val_time": 0.11806824357080425
+      },
+      "bad_epochs": 7,
+      "parameter_group_learning_rates": {
+        "chemical_encoder": 0.001,
+        "response_branch": 0.001
+      }
+    },
+    {
+      "epoch": 24,
+      "train_loss": 0.16839905289503243,
+      "train_loss_components": {
+        "loss_total": 0.16839905289503243,
+        "loss_absolute": 0.11747039682590045,
+        "loss_fc_absolute": 0.10991740880104212,
+        "loss_fc": 0.8789870940721952,
+        "loss_response_magnitude": 0.1388823594038303,
+        "loss_batch_reg": 0.3471104690661797,
+        "loss_batch_source_reg": 0.17233158407303004,
+        "loss_batch_instrument_reg": 0.06303255380346225,
+        "loss_batch_plate_reg": 0.022929227581390967
+      },
+      "monitor_name": "macro_huber_equal_four_scenarios",
+      "monitor": 0.199496325265081,
+      "monitor_details": {
+        "val_chem_only": 0.17437857493800946,
+        "val_strain_only": 0.23070148918796715,
+        "val_both": 0.2745677612689046,
+        "val_time": 0.11833747566544267
+      },
+      "bad_epochs": 8,
+      "parameter_group_learning_rates": {
+        "chemical_encoder": 0.001,
+        "response_branch": 0.001
+      }
+    },
+    {
+      "epoch": 25,
+      "train_loss": 0.16749580112787393,
+      "train_loss_components": {
+        "loss_total": 0.16749580112787393,
+        "loss_absolute": 0.11659829593621768,
+        "loss_fc_absolute": 0.11011770356159944,
+        "loss_fc": 0.8779193071218637,
+        "loss_response_magnitude": 0.1401229256620774,
+        "loss_batch_reg": 0.34273942296321575,
+        "loss_batch_source_reg": 0.1702205648789039,
+        "loss_batch_instrument_reg": 0.06220376050243011,
+        "loss_batch_plate_reg": 0.023150995201789416
+      },
+      "monitor_name": "macro_huber_equal_four_scenarios",
+      "monitor": 0.20146963078423702,
+      "monitor_details": {
+        "val_chem_only": 0.17642725646145235,
+        "val_strain_only": 0.23281103297770078,
+        "val_both": 0.2795221153282737,
+        "val_time": 0.11711811836952125
+      },
+      "bad_epochs": 9,
+      "parameter_group_learning_rates": {
+        "chemical_encoder": 0.001,
+        "response_branch": 0.001
+      }
+    },
+    {
+      "epoch": 26,
+      "train_loss": 0.16717968766505903,
+      "train_loss_components": {
+        "loss_total": 0.16717968766505903,
+        "loss_absolute": 0.11620803257593741,
+        "loss_fc_absolute": 0.11108666234291517,
+        "loss_fc": 0.8778133410673875,
+        "loss_response_magnitude": 0.14321726342806448,
+        "loss_batch_reg": 0.3421293336611528,
+        "loss_batch_source_reg": 0.1694672780541273,
+        "loss_batch_instrument_reg": 0.062475498765707016,
+        "loss_batch_plate_reg": 0.0231487585661503
+      },
+      "monitor_name": "macro_huber_equal_four_scenarios",
+      "monitor": 0.20319847775704677,
+      "monitor_details": {
+        "val_chem_only": 0.18270599142336894,
+        "val_strain_only": 0.23140930437154378,
+        "val_both": 0.2825332664789501,
+        "val_time": 0.11614534875432435
+      },
+      "bad_epochs": 10,
+      "parameter_group_learning_rates": {
+        "chemical_encoder": 0.001,
+        "response_branch": 0.001
+      }
+    },
+    {
+      "epoch": 27,
+      "train_loss": 0.1664999879323519,
+      "train_loss_components": {
+        "loss_total": 0.1664999879323519,
+        "loss_absolute": 0.1154568034868974,
+        "loss_fc_absolute": 0.11143653220855272,
+        "loss_fc": 0.8784612554770249,
+        "loss_response_magnitude": 0.1453387385377517,
+        "loss_batch_reg": 0.3453813135623932,
+        "loss_batch_source_reg": 0.1705100900851763,
+        "loss_batch_instrument_reg": 0.06312518297479702,
+        "loss_batch_plate_reg": 0.02314691053560147
+      },
+      "monitor_name": "macro_huber_equal_four_scenarios",
+      "monitor": 0.20526078870393355,
+      "monitor_details": {
+        "val_chem_only": 0.18491108930102573,
+        "val_strain_only": 0.23289359640544044,
+        "val_both": 0.28773915162297964,
+        "val_time": 0.1154993174862884
+      },
+      "bad_epochs": 11,
+      "parameter_group_learning_rates": {
+        "chemical_encoder": 0.001,
+        "response_branch": 0.001
+      }
+    },
+    {
+      "epoch": 28,
+      "train_loss": 0.17051483117617094,
+      "train_loss_components": {
+        "loss_total": 0.17051483117617094,
+        "loss_absolute": 0.11929266315240127,
+        "loss_fc_absolute": 0.10986693879732719,
+        "loss_fc": 0.8856809130081764,
+        "loss_response_magnitude": 0.1350182069035677,
+        "loss_batch_reg": 0.34190906790586617,
+        "loss_batch_source_reg": 0.1689538475412589,
+        "loss_batch_instrument_reg": 0.0624636591053926,
+        "loss_batch_plate_reg": 0.023232490583681143
+      },
+      "monitor_name": "macro_huber_equal_four_scenarios",
+      "monitor": 0.19293661098348855,
+      "monitor_details": {
+        "val_chem_only": 0.15943722738336963,
+        "val_strain_only": 0.2310361386918827,
+        "val_both": 0.2653505612238181,
+        "val_time": 0.1159225166348837
+      },
+      "bad_epochs": 12,
+      "parameter_group_learning_rates": {
+        "chemical_encoder": 0.001,
+        "response_branch": 0.001
+      }
+    }
+  ]
+}

@@ -1,0 +1,225 @@
+{
+  "files": {
+    "metadata_train_val": {
+      "filename": "WAYB_WAYC_metadata_train_val(1).csv",
+      "bytes": 904646,
+      "sha256": "9414f22d71e925a3b85544b49fde252613c87808d34738a84785003adb8131ef"
+    },
+    "proteome_train_val": {
+      "filename": "WAYB_WAYC_proteome_raw_train_val.csv",
+      "bytes": 289769736,
+      "sha256": "a15d9a40a6ad4e8e84a4ce4ed08644fce78780d31ace5561928517c4a5fa7ccb"
+    },
+    "metadata_test": {
+      "filename": "WAYB_WAYC_metadata_test(1).csv",
+      "bytes": 461272,
+      "sha256": "42f2df9ea79f28da8344e96b5181edacc215744a858d1a4eaa729c2e1cc69d31"
+    },
+    "proteome_test": {
+      "filename": "WAYB_WAYC_proteome_raw_test.csv",
+      "bytes": 143352203,
+      "sha256": null,
+      "sha256_status": "deliberately_not_computed_to_avoid_reading_test_truth_bytes"
+    }
+  },
+  "split_counts": {
+    "test_both": 1129,
+    "test_chem_only": 1640,
+    "test_strain_only": 1534,
+    "test_time": 151,
+    "train": 5920,
+    "val_both": 269,
+    "val_chem_only": 1065,
+    "val_strain_only": 1547,
+    "val_time": 157
+  },
+  "alignment": {
+    "train_val_rows": 8958,
+    "test_rows": 4454,
+    "sample_id_sets_equal": true,
+    "source_row_order_equal": true,
+    "validation_protein_cells_materialized": false
+  },
+  "feature_audit": {
+    "raw_proteins": 5243,
+    "fit_split": "train",
+    "fit_samples": 5920,
+    "missing_threshold": 0.8,
+    "keep_condition": "invalid_rate < 0.80",
+    "kept_proteins": 4422,
+    "removed_proteins": 821,
+    "nan_values_train": 8590321,
+    "zero_values_train": 0,
+    "negative_values_train": 0,
+    "positive_inf_values_train": 0,
+    "negative_inf_values_train": 0,
+    "exactly_80_percent_invalid_columns": 0
+  },
+  "control_audit": {
+    "official_mapping_status": "blocked_pending_organizer_confirmation",
+    "official_mapping": {},
+    "parity_candidate_mapping": {
+      "#9": "Water",
+      "#1": "Water",
+      "#2": "DMSO",
+      "#10": "DMSO",
+      "#11": "Water",
+      "#12": "DMSO",
+      "#5": "Water",
+      "#13": "Water",
+      "#6": "DMSO",
+      "#14": "DMSO",
+      "#15": "Water",
+      "#7": "Water",
+      "#16": "DMSO",
+      "#17": "Water",
+      "#25": "Water",
+      "#41": "Water",
+      "#18": "DMSO",
+      "#42": "DMSO",
+      "#27": "Water",
+      "#35": "Water",
+      "#43": "Water",
+      "#4": "DMSO",
+      "#20": "DMSO",
+      "#28": "DMSO",
+      "#36": "DMSO",
+      "#44": "DMSO",
+      "#21": "Water",
+      "#29": "Water",
+      "#45": "Water",
+      "#22": "DMSO",
+      "#30": "DMSO",
+      "#38": "DMSO",
+      "#46": "DMSO",
+      "#23": "Water",
+      "#31": "Water",
+      "#39": "Water",
+      "#8": "DMSO",
+      "#32": "DMSO",
+      "#40": "DMSO",
+      "#34": "DMSO",
+      "#3": "Water",
+      "#33": "Water",
+      "#26": "DMSO",
+      "#19": "Water",
+      "#37": "Water",
+      "#47": "Water",
+      "#24": "DMSO"
+    },
+    "parity_candidate_coverage": {
+      "train": {
+        "all_samples": 5920,
+        "matched_treatments": 4951,
+        "sample_is_control": 751,
+        "no_exact_expected_control": 127,
+        "quality_control_excluded": 91
+      },
+      "val_chem_only": {
+        "all_samples": 1065,
+        "matched_treatments": 1007,
+        "no_exact_expected_control": 58
+      },
+      "val_strain_only": {
+        "all_samples": 1547,
+        "matched_treatments": 1313,
+        "sample_is_control": 190,
+        "quality_control_excluded": 24,
+        "no_exact_expected_control": 20
+      },
+      "val_both": {
+        "all_samples": 269,
+        "matched_treatments": 266,
+        "no_exact_expected_control": 3
+      },
+      "val_time": {
+        "all_samples": 157,
+        "matched_treatments": 135,
+        "sample_is_control": 15,
+        "no_exact_expected_control": 4,
+        "quality_control_excluded": 3
+      },
+      "test_chem_only": {
+        "all_samples": 1640,
+        "matched_treatments": 1602,
+        "no_exact_expected_control": 38
+      },
+      "test_strain_only": {
+        "all_samples": 1534,
+        "matched_treatments": 1322,
+        "sample_is_control": 188,
+        "quality_control_excluded": 24
+      },
+      "test_both": {
+        "all_samples": 1129,
+        "matched_treatments": 1125,
+        "no_exact_expected_control": 4
+      },
+      "test_time": {
+        "all_samples": 151,
+        "matched_treatments": 131,
+        "sample_is_control": 14,
+        "no_exact_expected_control": 4,
+        "quality_control_excluded": 2
+      }
+    },
+    "no_mapping_fail_closed_coverage": {
+      "train": {
+        "all_samples": 5920,
+        "matched_treatments": 0,
+        "unconfirmed_control_mapping": 5078,
+        "sample_is_control": 751,
+        "quality_control_excluded": 91
+      },
+      "val_chem_only": {
+        "all_samples": 1065,
+        "matched_treatments": 0,
+        "unconfirmed_control_mapping": 1065
+      },
+      "val_strain_only": {
+        "all_samples": 1547,
+        "matched_treatments": 0,
+        "unconfirmed_control_mapping": 1333,
+        "sample_is_control": 190,
+        "quality_control_excluded": 24
+      },
+      "val_both": {
+        "all_samples": 269,
+        "matched_treatments": 0,
+        "unconfirmed_control_mapping": 269
+      },
+      "val_time": {
+        "all_samples": 157,
+        "matched_treatments": 0,
+        "unconfirmed_control_mapping": 139,
+        "sample_is_control": 15,
+        "quality_control_excluded": 3
+      },
+      "test_chem_only": {
+        "all_samples": 1640,
+        "matched_treatments": 0,
+        "unconfirmed_control_mapping": 1640
+      },
+      "test_strain_only": {
+        "all_samples": 1534,
+        "matched_treatments": 0,
+        "unconfirmed_control_mapping": 1322,
+        "sample_is_control": 188,
+        "quality_control_excluded": 24
+      },
+      "test_both": {
+        "all_samples": 1129,
+        "matched_treatments": 0,
+        "unconfirmed_control_mapping": 1129
+      },
+      "test_time": {
+        "all_samples": 151,
+        "matched_treatments": 0,
+        "unconfirmed_control_mapping": 135,
+        "sample_is_control": 14,
+        "quality_control_excluded": 2
+      }
+    }
+  },
+  "test_label_access": "sample_ID column only; no test protein values loaded"
+}

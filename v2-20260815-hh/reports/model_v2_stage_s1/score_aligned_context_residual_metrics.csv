@@ -1,0 +1,7 @@
+model,scenario,subset,n_samples,n_valid_positions,pcc,rmse,direction_accuracy,coverage,reference_fit_scope
+Matched Control,val_chem_only,common_intersection,979,3564377,0.1879954878497815,0.3808304071426391,0.5635969483587174,0.9964312301744715,split_final=train only
+V2 batch-enabled Huber,val_chem_only,common_intersection,979,3564377,0.1977574477784114,0.6187735199928284,0.5565794527346574,0.9964312301744715,split_final=train only
+V2 no-batch Morgan-only,val_chem_only,common_intersection,979,3564377,0.1155229423223651,0.9526463150978088,0.5346426598533208,0.9964312301744715,split_final=train only
+V2 experimental parity FC Morgan no-batch,val_chem_only,common_intersection,979,3564377,0.1142908462583232,0.988502562046051,0.5290627226020144,0.9964312301744715,split_final=train only
+S1 B anchor Morgan Huber,val_chem_only,common_intersection,979,3564377,0.20241763453216424,0.5954423546791077,0.5671518472933699,0.9964312301744717,split_final=train only
+S1 C anchor Morgan Huber plus experimental FC,val_chem_only,common_intersection,979,3564377,0.19731915094184965,0.6132054328918457,0.5638791856192541,0.9964312301744717,split_final=train only

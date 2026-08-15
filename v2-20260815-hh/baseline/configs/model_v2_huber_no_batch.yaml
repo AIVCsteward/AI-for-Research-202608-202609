@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.1",
+  "experiment_name": "model_v2_huber_no_batch_seed_20260814",
+  "status": "stage2_1_authorized_no_batch_control",
+  "control_mapping": {
+    "mode": "disabled_for_fc",
+    "official": false,
+    "validation_score_selection_forbidden": true,
+    "pooled_water_dmso_comparator_for_model_selection": false
+  },
+  "model": {
+    "latent_dim": 32,
+    "protein_rank": 16,
+    "dropout": 0.05,
+    "chemical_mode": "correct",
+    "chemical_feature_components": "full",
+    "genome_mode": "correct",
+    "similarity_enabled": false,
+    "batch_enabled": false,
+    "batch_output_zero_init": true
+  },
+  "loss": {
+    "absolute": "huber",
+    "absolute_weight": 1.0,
+    "fc_weight": 0.0,
+    "dep_weight": 0.0,
+    "pathway_weight": 0.0,
+    "batch_reg_weight": 0.0001,
+    "batch_center_strength": 1.0,
+    "batch_center_effective_coefficient": 0.0001
+  },
+  "training": {
+    "seed": 20260814,
+    "batch_size": 64,
+    "weight_decay": 0.0001,
+    "device": "auto",
+    "num_workers": 0,
+    "stage_a": {
+      "name": "control_first",
+      "early_stopping_monitor": "control_only_validation_huber",
+      "epochs": 30,
+      "patience": 6,
+      "parameter_groups": {
+        "baseline_branch": {"trainable": true, "lr": 0.001},
+        "genome_encoder": {"trainable": true, "lr": 0.0005},
+        "chemical_encoder": {"trainable": false, "lr": 0.0},
+        "response_branch": {"trainable": false, "lr": 0.0},
+        "batch_branch": {"trainable": true, "lr": 0.0001}
+      }
+    },
+    "stage_b": {
+      "name": "treatment_huber_only",
+      "early_stopping_monitor": "macro_huber_equal_four_scenarios",
+      "epochs": 100,
+      "patience": 12,
+      "parameter_groups": {
+        "baseline_branch": {"trainable": false, "lr": 0.0},
+        "genome_encoder": {"trainable": false, "lr": 0.0},
+        "chemical_encoder": {"trainable": true, "lr": 0.001},
+        "response_branch": {"trainable": true, "lr": 0.001},
+        "batch_branch": {"trainable": true, "lr": 0.0001}
+      }
+    },
+    "smoke": {
+      "n_treatment": 16,
+      "stage_a_epochs": 1,
+      "stage_b_epochs": 2
+    }
+  }
+}

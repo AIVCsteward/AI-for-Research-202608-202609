@@ -1,0 +1,7 @@
+row_index,strain_id,external_isolate_id,external_matrix_id,external_assembly_id,mapping_type,mapping_confidence,proxy_flag,feature_valid,seen_splits,first_seen_split
+0,BAH,SX3,BAH,,supported,high,False,True,train|val_chem_only|val_time|test_chem_only|test_time,train
+1,BAI,BJ6,BAI,,supported,high,False,True,val_strain_only|val_both|test_both,val_strain_only
+2,CEK,JCM_2985-4B,CEK,,supported,medium,False,True,train|val_chem_only|val_time|test_chem_only|test_time,train
+3,CGD,UCD_09-448,CGD,,supported,medium,False,True,train|val_chem_only|val_time|test_chem_only|test_time,train
+4,CRD,FIMA_3,CRD,,supported,medium,False,True,test_strain_only|test_both,test_strain_only
+5,DHY210,S288C,,GCF_000146045.2,proxy,low,True,True,train|val_chem_only|val_time|test_chem_only|test_time,train

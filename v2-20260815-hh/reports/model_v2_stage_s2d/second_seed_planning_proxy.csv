@@ -1,0 +1,37 @@
+scheme,model,planning_proxy,rank,official_score,control_mapping
+bounded_quality,S2C two-seed mean,0.6646966209461465,1,False,pert_id_parity_v1
+bounded_quality,S2C seed1,0.663062808128811,2,False,pert_id_parity_v1
+bounded_quality,S2C seed2,0.6606147523149218,3,False,pert_id_parity_v1
+bounded_quality,D2 seed2,0.6598094788673697,4,False,pert_id_parity_v1
+bounded_quality,D2 seed1,0.6581474555765255,5,False,pert_id_parity_v1
+bounded_quality,S1 C seed2,0.6575874807939309,6,False,pert_id_parity_v1
+bounded_quality,S1 C seed1,0.6568313944577655,7,False,pert_id_parity_v1
+bounded_quality,S1 B anchor Morgan Huber,0.6545081603846747,8,False,pert_id_parity_v1
+bounded_quality,D0 seed1,0.6541841141230179,9,False,pert_id_parity_v1
+bounded_quality,D0 seed2,0.6539960943037658,10,False,pert_id_parity_v1
+bounded_quality,V2 batch-enabled Huber,0.6519592939916207,11,False,pert_id_parity_v1
+bounded_quality,Matched Control,0.4999799646685842,12,False,pert_id_parity_v1
+correlation_priority,S2C two-seed mean,0.6973638912473309,1,False,pert_id_parity_v1
+correlation_priority,S2C seed1,0.6957837349327733,2,False,pert_id_parity_v1
+correlation_priority,S2C seed2,0.693691892204472,3,False,pert_id_parity_v1
+correlation_priority,D2 seed2,0.6927971066438645,4,False,pert_id_parity_v1
+correlation_priority,S1 C seed2,0.6925267291567976,5,False,pert_id_parity_v1
+correlation_priority,D2 seed1,0.691440676869367,6,False,pert_id_parity_v1
+correlation_priority,S1 C seed1,0.6907678052736931,7,False,pert_id_parity_v1
+correlation_priority,S1 B anchor Morgan Huber,0.6878079512049132,8,False,pert_id_parity_v1
+correlation_priority,D0 seed1,0.6871729948486293,9,False,pert_id_parity_v1
+correlation_priority,D0 seed2,0.6869629441796797,10,False,pert_id_parity_v1
+correlation_priority,V2 batch-enabled Huber,0.6860018117354779,11,False,pert_id_parity_v1
+correlation_priority,Matched Control,0.4831808285696191,12,False,pert_id_parity_v1
+weighted_module_rank,S2C two-seed mean,0.9181818181818183,1,False,pert_id_parity_v1
+weighted_module_rank,S2C seed1,0.8,2,False,pert_id_parity_v1
+weighted_module_rank,S2C seed2,0.6318181818181817,3,False,pert_id_parity_v1
+weighted_module_rank,D2 seed2,0.6045454545454545,4,False,pert_id_parity_v1
+weighted_module_rank,Matched Control,0.5090909090909091,5,False,pert_id_parity_v1
+weighted_module_rank,S1 C seed1,0.4727272727272727,6,False,pert_id_parity_v1
+weighted_module_rank,D2 seed1,0.4318181818181818,7,False,pert_id_parity_v1
+weighted_module_rank,S1 C seed2,0.4136363636363637,8,False,pert_id_parity_v1
+weighted_module_rank,D0 seed1,0.3681818181818182,9,False,pert_id_parity_v1
+weighted_module_rank,S1 B anchor Morgan Huber,0.36363636363636365,10,False,pert_id_parity_v1
+weighted_module_rank,D0 seed2,0.32272727272727275,11,False,pert_id_parity_v1
+weighted_module_rank,V2 batch-enabled Huber,0.16363636363636366,12,False,pert_id_parity_v1

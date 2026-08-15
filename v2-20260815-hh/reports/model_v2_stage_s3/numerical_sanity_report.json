@@ -1,0 +1,267 @@
+{
+  "schema_version": "1.0",
+  "reference_scope": "split_final=train_labels_only",
+  "prediction": {
+    "min": 11.084402084350586,
+    "max": 33.47431182861328,
+    "mean": 21.060693740844727,
+    "std": 2.853480339050293,
+    "p0_1": 14.080093383789062,
+    "p1": 15.386377334594727,
+    "p50": 20.896968841552734,
+    "p99": 28.569481639862055,
+    "p99_9": 30.382497703552218
+  },
+  "by_expert": {
+    "S1 C anchor Morgan Huber plus experimental FC": {
+      "n_samples": 1322,
+      "min": 12.479948043823242,
+      "max": 32.27310562133789,
+      "mean": 21.07962989807129,
+      "std": 2.8409905433654785
+    },
+    "S2B D0 hierarchical none Huber": {
+      "n_samples": 2997,
+      "min": 12.680747985839844,
+      "max": 32.52433776855469,
+      "mean": 21.051477432250977,
+      "std": 2.8584394454956055
+    },
+    "S2B D2 hierarchical Morgan experimental FC": {
+      "n_samples": 135,
+      "min": 11.084402084350586,
+      "max": 33.47431182861328,
+      "mean": 21.07988739013672,
+      "std": 2.864298105239868
+    }
+  },
+  "by_test_scenario": {
+    "test_both": {
+      "n_samples": 1129,
+      "min": 12.706377983093262,
+      "max": 32.394126892089844,
+      "mean": 21.015642166137695,
+      "std": 2.866774082183838
+    },
+    "test_chem_only": {
+      "n_samples": 1640,
+      "min": 12.680747985839844,
+      "max": 32.52433776855469,
+      "mean": 21.07694435119629,
+      "std": 2.855027437210083
+    },
+    "test_strain_only": {
+      "n_samples": 1534,
+      "min": 12.479948043823242,
+      "max": 32.27310562133789,
+      "mean": 21.074962615966797,
+      "std": 2.8406169414520264
+    },
+    "test_time": {
+      "n_samples": 151,
+      "min": 11.084402084350586,
+      "max": 33.47431182861328,
+      "mean": 21.076099395751953,
+      "std": 2.863842725753784
+    }
+  },
+  "per_protein_variance": {
+    "min": 0.008447898547094457,
+    "median": 0.361158860447786,
+    "max": 5.979467308182566
+  },
+  "constant_protein_count": 0,
+  "very_low_variance_threshold": 1e-06,
+  "very_low_variance_protein_count": 0,
+  "outside_per_protein_train_observed_range_cell_count": 11,
+  "outside_fraction": 5.585007159979179e-07,
+  "extreme_samples": [
+    {
+      "sample_ID": "B1-569",
+      "max_abs_train_z": 3.2110637380003255
+    },
+    {
+      "sample_ID": "B1-521",
+      "max_abs_train_z": 3.2110637380003255
+    },
+    {
+      "sample_ID": "B1-509",
+      "max_abs_train_z": 3.2110637380003255
+    },
+    {
+      "sample_ID": "C3326",
+      "max_abs_train_z": 3.191922544566703
+    },
+    {
+      "sample_ID": "B1-533",
+      "max_abs_train_z": 3.156747807017083
+    },
+    {
+      "sample_ID": "B1-523",
+      "max_abs_train_z": 3.151669962794362
+    },
+    {
+      "sample_ID": "B1-511",
+      "max_abs_train_z": 3.151669962794362
+    },
+    {
+      "sample_ID": "B1-571",
+      "max_abs_train_z": 3.151669962794362
+    },
+    {
+      "sample_ID": "B1-1625",
+      "max_abs_train_z": 3.133745115181428
+    },
+    {
+      "sample_ID": "B1-1577",
+      "max_abs_train_z": 3.133745115181428
+    },
+    {
+      "sample_ID": "B1-1565",
+      "max_abs_train_z": 3.133745115181428
+    },
+    {
+      "sample_ID": "C4004",
+      "max_abs_train_z": 3.1279760401823204
+    },
+    {
+      "sample_ID": "B1-425",
+      "max_abs_train_z": 3.1167357924517174
+    },
+    {
+      "sample_ID": "B1-413",
+      "max_abs_train_z": 3.1167357924517174
+    },
+    {
+      "sample_ID": "B1-473",
+      "max_abs_train_z": 3.1167357924517174
+    },
+    {
+      "sample_ID": "B2-413",
+      "max_abs_train_z": 3.11022066113866
+    },
+    {
+      "sample_ID": "B2-425",
+      "max_abs_train_z": 3.11022066113866
+    },
+    {
+      "sample_ID": "B2-473",
+      "max_abs_train_z": 3.11022066113866
+    },
+    {
+      "sample_ID": "B2-415",
+      "max_abs_train_z": 3.1055059210395664
+    },
+    {
+      "sample_ID": "B2-427",
+      "max_abs_train_z": 3.1055059210395664
+    }
+  ],
+  "extreme_proteins": [
+    {
+      "protein": "YKL107W",
+      "outside_cell_count": 6,
+      "test_variance": 1.371784552687304
+    },
+    {
+      "protein": "BBC1",
+      "outside_cell_count": 3,
+      "test_variance": 0.5161435319876333
+    },
+    {
+      "protein": "SIP18",
+      "outside_cell_count": 1,
+      "test_variance": 5.831314514020892
+    },
+    {
+      "protein": "ATF1",
+      "outside_cell_count": 1,
+      "test_variance": 0.7598102693181813
+    },
+    {
+      "protein": "ZTA1",
+      "outside_cell_count": 0,
+      "test_variance": 0.9752442740581105
+    },
+    {
+      "protein": "ZRT3",
+      "outside_cell_count": 0,
+      "test_variance": 0.8348969410202218
+    },
+    {
+      "protein": "ZRT1",
+      "outside_cell_count": 0,
+      "test_variance": 1.8645175524101518
+    },
+    {
+      "protein": "ZRG17",
+      "outside_cell_count": 0,
+      "test_variance": 0.04298135721270737
+    },
+    {
+      "protein": "ZRC1",
+      "outside_cell_count": 0,
+      "test_variance": 0.5295373473294657
+    },
+    {
+      "protein": "ZPS1",
+      "outside_cell_count": 0,
+      "test_variance": 0.7659778950611166
+    },
+    {
+      "protein": "ZPR1",
+      "outside_cell_count": 0,
+      "test_variance": 0.3533517934739735
+    },
+    {
+      "protein": "ZNG1",
+      "outside_cell_count": 0,
+      "test_variance": 0.5278556967993786
+    },
+    {
+      "protein": "ZIM17",
+      "outside_cell_count": 0,
+      "test_variance": 0.2682902592713337
+    },
+    {
+      "protein": "ZEO1",
+      "outside_cell_count": 0,
+      "test_variance": 0.22870964592194754
+    },
+    {
+      "protein": "ZDS2",
+      "outside_cell_count": 0,
+      "test_variance": 0.8329736540718353
+    },
+    {
+      "protein": "ZDS1",
+      "outside_cell_count": 0,
+      "test_variance": 0.21944993737873653
+    },
+    {
+      "protein": "YVH1",
+      "outside_cell_count": 0,
+      "test_variance": 1.112026768688307
+    },
+    {
+      "protein": "YVC1",
+      "outside_cell_count": 0,
+      "test_variance": 0.5272097591030444
+    },
+    {
+      "protein": "YUR1",
+      "outside_cell_count": 0,
+      "test_variance": 0.12290984538857742
+    },
+    {
+      "protein": "YUH1",
+      "outside_cell_count": 0,
+      "test_variance": 0.1984922594564256
+    }
+  ],
+  "postprocessing_applied": false,
+  "clipping": false,
+  "winsorization": false,
+  "rescaling": false,
+  "calibration": false
+}

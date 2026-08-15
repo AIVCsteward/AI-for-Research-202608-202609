@@ -1,0 +1,5 @@
+scenario,d2_routed_sample_count,d2_routed_oov_batch_count,d2_code_fallback_applied_count
+val_chem_only,0,0,0
+val_strain_only,0,0,0
+val_both,0,0,0
+val_time,139,0,0

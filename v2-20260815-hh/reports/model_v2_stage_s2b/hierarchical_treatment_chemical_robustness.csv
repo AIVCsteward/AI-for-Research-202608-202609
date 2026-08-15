@@ -1,0 +1,25 @@
+model,scenario,chemical_mode,absolute_rmse,raw_fc_global_pcc,raw_fc_rmse
+S2B D1 hierarchical Morgan Huber,val_chem_only,correct,0.607900857925415,0.30602826498535685,0.607900857925415
+S2B D1 hierarchical Morgan Huber,val_chem_only,shuffle,0.5731656551361084,0.3150394948902831,0.5731656551361084
+S2B D1 hierarchical Morgan Huber,val_chem_only,zero,0.5486921668052673,0.32405778569619254,0.5486921668052673
+S2B D2 hierarchical Morgan experimental FC,val_chem_only,correct,0.5794022083282471,0.32354836080570115,0.5794022083282471
+S2B D2 hierarchical Morgan experimental FC,val_chem_only,shuffle,0.5722715854644775,0.32360211167356334,0.5722715854644775
+S2B D2 hierarchical Morgan experimental FC,val_chem_only,zero,0.5436414480209351,0.3325511500500618,0.5436414480209351
+S2B D1 hierarchical Morgan Huber,val_strain_only,correct,0.7499248385429382,0.2426899662722357,0.7499248385429382
+S2B D1 hierarchical Morgan Huber,val_strain_only,shuffle,0.8182380795478821,0.21483141643875542,0.8182380795478821
+S2B D1 hierarchical Morgan Huber,val_strain_only,zero,0.7912131547927856,0.2116678353282278,0.7912131547927856
+S2B D2 hierarchical Morgan experimental FC,val_strain_only,correct,0.7529476881027222,0.24950275254927404,0.7529476881027222
+S2B D2 hierarchical Morgan experimental FC,val_strain_only,shuffle,0.8135778307914734,0.21386743185202553,0.8135778307914734
+S2B D2 hierarchical Morgan experimental FC,val_strain_only,zero,0.766794741153717,0.2244711511504171,0.766794741153717
+S2B D1 hierarchical Morgan Huber,val_both,correct,0.8402326107025146,0.2108283604329187,0.8402326107025146
+S2B D1 hierarchical Morgan Huber,val_both,shuffle,0.8178932666778564,0.20698483302656548,0.8178932666778564
+S2B D1 hierarchical Morgan Huber,val_both,zero,0.7750688195228577,0.21100947605825768,0.7750688195228577
+S2B D2 hierarchical Morgan experimental FC,val_both,correct,0.8114367127418518,0.21890899129063207,0.8114367127418518
+S2B D2 hierarchical Morgan experimental FC,val_both,shuffle,0.8194125890731812,0.2118844685533484,0.8194125890731812
+S2B D2 hierarchical Morgan experimental FC,val_both,zero,0.7626707553863525,0.22041955859187998,0.7626707553863525
+S2B D1 hierarchical Morgan Huber,val_time,correct,0.510549783706665,0.3789217453486592,0.510549783706665
+S2B D1 hierarchical Morgan Huber,val_time,shuffle,0.6111210584640503,0.2887843393747801,0.6111210584640503
+S2B D1 hierarchical Morgan Huber,val_time,zero,0.6440412998199463,0.26208370721600016,0.6440412998199463
+S2B D2 hierarchical Morgan experimental FC,val_time,correct,0.5093175172805786,0.39801113526405063,0.5093175172805786
+S2B D2 hierarchical Morgan experimental FC,val_time,shuffle,0.60193932056427,0.293793791272482,0.60193932056427
+S2B D2 hierarchical Morgan experimental FC,val_time,zero,0.6188685894012451,0.2772965236361231,0.6188685894012451

@@ -1,0 +1,131 @@
+{
+  "schema_version": "2.0",
+  "task_stage": "S1_score_aligned",
+  "experiment_name": "stage_s2d_s1c_flat_morgan_fc_seed_20260815",
+  "planning_proxy": true,
+  "official_score": false,
+  "experimental_nonofficial_parity_fc": true,
+  "official_fc_result": false,
+  "control_mapping": {
+    "name": "pert_id_parity_v1",
+    "status": "experimental_inferred_mapping",
+    "official": false,
+    "fit_scope": "split_final=train_only",
+    "source": "project_v2/data_contract/control_matching_spec.json:inferred_mapping_for_experimental_fc_loss",
+    "exact_match_only": true,
+    "fallback_forbidden": true,
+    "validation_score_selection_forbidden": true
+  },
+  "model": {
+    "latent_dim": 32,
+    "protein_rank": 16,
+    "dropout": 0.05,
+    "chemical_mode": "correct",
+    "chemical_feature_components": "morgan_only",
+    "genome_mode": "correct",
+    "similarity_enabled": false,
+    "batch_enabled": true,
+    "batch_output_zero_init": true,
+    "batch_field_dropout": 0.25,
+    "response_gate_enabled": true,
+    "response_gate_initial": 0.25,
+    "response_rms_cap": 0.75
+  },
+  "loss": {
+    "absolute": "mask_aware_huber",
+    "absolute_weight": 1.0,
+    "fc_absolute": "mask_aware_huber",
+    "fc_absolute_weight": 0.05,
+    "fc_correlation": "mask_aware_rowwise_pearson",
+    "fc_weight": 0.05,
+    "fc_combined_weight_note": "predeclared_equal_split_total_0.1_not_searched",
+    "dep_weight": 0.0,
+    "pathway_weight": 0.0,
+    "response_magnitude_weight": 0.01,
+    "batch_reg_weight": 0.001,
+    "batch_center_strength": 2.0,
+    "batch_center_effective_coefficient": 0.002
+  },
+  "training": {
+    "seed": 20260815,
+    "batch_size": 64,
+    "weight_decay": 0.0001,
+    "device": "auto",
+    "num_workers": 0,
+    "fixed_stage_a_checkpoint": {
+      "path": "D:/\u865a\u62df\u7ec6\u80de/reports/model_v2_stage_s2d/stage_a_flat_seed_20260815/stage_a_best.pt",
+      "sha256": "0805b9abcd6812e7e384a0abd59b4c7e2bdebbdc5bf07bc5cd48784ddaa2562e"
+    },
+    "train_internal_batch_holdout": {
+      "enabled": true,
+      "fraction": 0.2,
+      "selection_seed": 20260814,
+      "group_columns": [
+        "data_source",
+        "instrument",
+        "Yeast_cell_plate"
+      ]
+    },
+    "stage_a": {
+      "name": "frozen_seed2_control_first",
+      "early_stopping_monitor": "control_only_validation_huber",
+      "epochs": 30,
+      "patience": 6,
+      "parameter_groups": {
+        "baseline_branch": {
+          "trainable": true,
+          "lr": 0.001
+        },
+        "genome_encoder": {
+          "trainable": true,
+          "lr": 0.0005
+        },
+        "chemical_encoder": {
+          "trainable": false,
+          "lr": 0.0
+        },
+        "response_branch": {
+          "trainable": false,
+          "lr": 0.0
+        },
+        "batch_branch": {
+          "trainable": true,
+          "lr": 0.0001
+        }
+      }
+    },
+    "stage_b": {
+      "name": "score_aligned_anchor_morgan_huber_plus_nonofficial_parity_fc_correlation",
+      "early_stopping_monitor": "macro_huber_equal_four_scenarios",
+      "epochs": 100,
+      "patience": 12,
+      "parameter_groups": {
+        "baseline_branch": {
+          "trainable": false,
+          "lr": 0.0
+        },
+        "genome_encoder": {
+          "trainable": false,
+          "lr": 0.0
+        },
+        "chemical_encoder": {
+          "trainable": true,
+          "lr": 0.001
+        },
+        "response_branch": {
+          "trainable": true,
+          "lr": 0.001
+        },
+        "batch_branch": {
+          "trainable": true,
+          "lr": 2.5e-05
+        }
+      }
+    },
+    "smoke": {
+      "n_treatment": 32,
+      "stage_a_epochs": 1,
+      "stage_b_epochs": 2
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "checks": {
+    "route_rows_identical": true,
+    "route_hash_identical": true,
+    "seen_set_hashes_identical": true,
+    "prediction_arrays_within_tolerance": true,
+    "prediction_arrays_bitwise_equal": true
+  },
+  "passed": true,
+  "pass1_csv_sha256": "9739f087788bfd37f57750564c9d351bbf37bd867ab7e87820294eec52c8dbe9",
+  "pass2_csv_sha256": "9739f087788bfd37f57750564c9d351bbf37bd867ab7e87820294eec52c8dbe9",
+  "pass1_prediction_npy_sha256": "b41f1693169afddc8160431d960fb28383238f3c32d09db9eb2dbef3ec36a8f8",
+  "pass2_prediction_npy_sha256": "b41f1693169afddc8160431d960fb28383238f3c32d09db9eb2dbef3ec36a8f8",
+  "max_absolute_numerical_difference": 0.0,
+  "inconsistent_cell_count": 0,
+  "precision_reduction_or_rounding_used": false
+}

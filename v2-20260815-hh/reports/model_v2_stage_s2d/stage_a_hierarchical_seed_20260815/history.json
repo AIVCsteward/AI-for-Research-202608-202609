@@ -1,0 +1,392 @@
+[
+  {
+    "epoch": 0,
+    "train_loss": 0.3871073325475057,
+    "monitor": null,
+    "bad_epochs": 0,
+    "learning_rates": {
+      "genome_encoder": 0.0005,
+      "baseline_branch": 0.001,
+      "hierarchical_source": 0.0001,
+      "hierarchical_instrument": 0.0001,
+      "hierarchical_plate": 0.0001
+    }
+  },
+  {
+    "epoch": 1,
+    "train_loss": 0.38389009485642117,
+    "monitor": null,
+    "bad_epochs": 0,
+    "learning_rates": {
+      "genome_encoder": 0.0005,
+      "baseline_branch": 0.001,
+      "hierarchical_source": 0.0001,
+      "hierarchical_instrument": 0.0001,
+      "hierarchical_plate": 0.0001
+    }
+  },
+  {
+    "epoch": 2,
+    "train_loss": 0.3800838018457095,
+    "monitor": null,
+    "bad_epochs": 0,
+    "learning_rates": {
+      "genome_encoder": 0.0005,
+      "baseline_branch": 0.001,
+      "hierarchical_source": 0.0001,
+      "hierarchical_instrument": 0.0001,
+      "hierarchical_plate": 0.0001
+    }
+  },
+  {
+    "epoch": 3,
+    "train_loss": 0.3735110859076182,
+    "monitor": null,
+    "bad_epochs": 0,
+    "learning_rates": {
+      "genome_encoder": 0.0005,
+      "baseline_branch": 0.001,
+      "hierarchical_source": 0.0001,
+      "hierarchical_instrument": 0.0001,
+      "hierarchical_plate": 0.0001
+    }
+  },
+  {
+    "epoch": 4,
+    "train_loss": 0.36491191883881885,
+    "monitor": null,
+    "bad_epochs": 0,
+    "learning_rates": {
+      "genome_encoder": 0.0005,
+      "baseline_branch": 0.001,
+      "hierarchical_source": 0.0001,
+      "hierarchical_instrument": 0.0001,
+      "hierarchical_plate": 0.0001
+    }
+  },
+  {
+    "epoch": 5,
+    "train_loss": 0.35690806806087494,
+    "monitor": null,
+    "bad_epochs": 0,
+    "learning_rates": {
+      "genome_encoder": 0.0005,
+      "baseline_branch": 0.001,
+      "hierarchical_source": 0.0001,
+      "hierarchical_instrument": 0.0001,
+      "hierarchical_plate": 0.0001
+    }
+  },
+  {
+    "epoch": 6,
+    "train_loss": 0.3490736136833827,
+    "monitor": null,
+    "bad_epochs": 0,
+    "learning_rates": {
+      "genome_encoder": 0.0005,
+      "baseline_branch": 0.001,
+      "hierarchical_source": 0.0001,
+      "hierarchical_instrument": 0.0001,
+      "hierarchical_plate": 0.0001
+    }
+  },
+  {
+    "epoch": 7,
+    "train_loss": 0.34185973803202313,
+    "monitor": null,
+    "bad_epochs": 0,
+    "learning_rates": {
+      "genome_encoder": 0.0005,
+      "baseline_branch": 0.001,
+      "hierarchical_source": 0.0001,
+      "hierarchical_instrument": 0.0001,
+      "hierarchical_plate": 0.0001
+    }
+  },
+  {
+    "epoch": 8,
+    "train_loss": 0.3346295778950055,
+    "monitor": null,
+    "bad_epochs": 0,
+    "learning_rates": {
+      "genome_encoder": 0.0005,
+      "baseline_branch": 0.001,
+      "hierarchical_source": 0.0001,
+      "hierarchical_instrument": 0.0001,
+      "hierarchical_plate": 0.0001
+    }
+  },
+  {
+    "epoch": 9,
+    "train_loss": 0.3281850243608157,
+    "monitor": null,
+    "bad_epochs": 0,
+    "learning_rates": {
+      "genome_encoder": 0.0005,
+      "baseline_branch": 0.001,
+      "hierarchical_source": 0.0001,
+      "hierarchical_instrument": 0.0001,
+      "hierarchical_plate": 0.0001
+    }
+  },
+  {
+    "epoch": 10,
+    "train_loss": 0.3200506841142972,
+    "monitor": null,
+    "bad_epochs": 0,
+    "learning_rates": {
+      "genome_encoder": 0.0005,
+      "baseline_branch": 0.001,
+      "hierarchical_source": 0.0001,
+      "hierarchical_instrument": 0.0001,
+      "hierarchical_plate": 0.0001
+    }
+  },
+  {
+    "epoch": 11,
+    "train_loss": 0.3106096436580022,
+    "monitor": null,
+    "bad_epochs": 0,
+    "learning_rates": {
+      "genome_encoder": 0.0005,
+      "baseline_branch": 0.001,
+      "hierarchical_source": 0.0001,
+      "hierarchical_instrument": 0.0001,
+      "hierarchical_plate": 0.0001
+    }
+  },
+  {
+    "epoch": 12,
+    "train_loss": 0.3005301704009374,
+    "monitor": null,
+    "bad_epochs": 0,
+    "learning_rates": {
+      "genome_encoder": 0.0005,
+      "baseline_branch": 0.001,
+      "hierarchical_source": 0.0001,
+      "hierarchical_instrument": 0.0001,
+      "hierarchical_plate": 0.0001
+    }
+  },
+  {
+    "epoch": 13,
+    "train_loss": 0.28883304943641025,
+    "monitor": null,
+    "bad_epochs": 0,
+    "learning_rates": {
+      "genome_encoder": 0.0005,
+      "baseline_branch": 0.001,
+      "hierarchical_source": 0.0001,
+      "hierarchical_instrument": 0.0001,
+      "hierarchical_plate": 0.0001
+    }
+  },
+  {
+    "epoch": 14,
+    "train_loss": 0.2765533650914828,
+    "monitor": null,
+    "bad_epochs": 0,
+    "learning_rates": {
+      "genome_encoder": 0.0005,
+      "baseline_branch": 0.001,
+      "hierarchical_source": 0.0001,
+      "hierarchical_instrument": 0.0001,
+      "hierarchical_plate": 0.0001
+    }
+  },
+  {
+    "epoch": 15,
+    "train_loss": 0.26263142625490826,
+    "monitor": null,
+    "bad_epochs": 0,
+    "learning_rates": {
+      "genome_encoder": 0.0005,
+      "baseline_branch": 0.001,
+      "hierarchical_source": 0.0001,
+      "hierarchical_instrument": 0.0001,
+      "hierarchical_plate": 0.0001
+    }
+  },
+  {
+    "epoch": 16,
+    "train_loss": 0.2492822508017222,
+    "monitor": null,
+    "bad_epochs": 0,
+    "learning_rates": {
+      "genome_encoder": 0.0005,
+      "baseline_branch": 0.001,
+      "hierarchical_source": 0.0001,
+      "hierarchical_instrument": 0.0001,
+      "hierarchical_plate": 0.0001
+    }
+  },
+  {
+    "epoch": 17,
+    "train_loss": 0.23631025105714798,
+    "monitor": null,
+    "bad_epochs": 0,
+    "learning_rates": {
+      "genome_encoder": 0.0005,
+      "baseline_branch": 0.001,
+      "hierarchical_source": 0.0001,
+      "hierarchical_instrument": 0.0001,
+      "hierarchical_plate": 0.0001
+    }
+  },
+  {
+    "epoch": 18,
+    "train_loss": 0.22340329363942146,
+    "monitor": null,
+    "bad_epochs": 0,
+    "learning_rates": {
+      "genome_encoder": 0.0005,
+      "baseline_branch": 0.001,
+      "hierarchical_source": 0.0001,
+      "hierarchical_instrument": 0.0001,
+      "hierarchical_plate": 0.0001
+    }
+  },
+  {
+    "epoch": 19,
+    "train_loss": 0.2111793520549933,
+    "monitor": null,
+    "bad_epochs": 0,
+    "learning_rates": {
+      "genome_encoder": 0.0005,
+      "baseline_branch": 0.001,
+      "hierarchical_source": 0.0001,
+      "hierarchical_instrument": 0.0001,
+      "hierarchical_plate": 0.0001
+    }
+  },
+  {
+    "epoch": 20,
+    "train_loss": 0.19887680684526762,
+    "monitor": null,
+    "bad_epochs": 0,
+    "learning_rates": {
+      "genome_encoder": 0.0005,
+      "baseline_branch": 0.001,
+      "hierarchical_source": 0.0001,
+      "hierarchical_instrument": 0.0001,
+      "hierarchical_plate": 0.0001
+    }
+  },
+  {
+    "epoch": 21,
+    "train_loss": 0.1898541214565436,
+    "monitor": null,
+    "bad_epochs": 0,
+    "learning_rates": {
+      "genome_encoder": 0.0005,
+      "baseline_branch": 0.001,
+      "hierarchical_source": 0.0001,
+      "hierarchical_instrument": 0.0001,
+      "hierarchical_plate": 0.0001
+    }
+  },
+  {
+    "epoch": 22,
+    "train_loss": 0.18166256695985794,
+    "monitor": null,
+    "bad_epochs": 0,
+    "learning_rates": {
+      "genome_encoder": 0.0005,
+      "baseline_branch": 0.001,
+      "hierarchical_source": 0.0001,
+      "hierarchical_instrument": 0.0001,
+      "hierarchical_plate": 0.0001
+    }
+  },
+  {
+    "epoch": 23,
+    "train_loss": 0.17294897511601448,
+    "monitor": null,
+    "bad_epochs": 0,
+    "learning_rates": {
+      "genome_encoder": 0.0005,
+      "baseline_branch": 0.001,
+      "hierarchical_source": 0.0001,
+      "hierarchical_instrument": 0.0001,
+      "hierarchical_plate": 0.0001
+    }
+  },
+  {
+    "epoch": 24,
+    "train_loss": 0.16626188158988953,
+    "monitor": null,
+    "bad_epochs": 0,
+    "learning_rates": {
+      "genome_encoder": 0.0005,
+      "baseline_branch": 0.001,
+      "hierarchical_source": 0.0001,
+      "hierarchical_instrument": 0.0001,
+      "hierarchical_plate": 0.0001
+    }
+  },
+  {
+    "epoch": 25,
+    "train_loss": 0.16058347498377165,
+    "monitor": null,
+    "bad_epochs": 0,
+    "learning_rates": {
+      "genome_encoder": 0.0005,
+      "baseline_branch": 0.001,
+      "hierarchical_source": 0.0001,
+      "hierarchical_instrument": 0.0001,
+      "hierarchical_plate": 0.0001
+    }
+  },
+  {
+    "epoch": 26,
+    "train_loss": 0.155226219445467,
+    "monitor": null,
+    "bad_epochs": 0,
+    "learning_rates": {
+      "genome_encoder": 0.0005,
+      "baseline_branch": 0.001,
+      "hierarchical_source": 0.0001,
+      "hierarchical_instrument": 0.0001,
+      "hierarchical_plate": 0.0001
+    }
+  },
+  {
+    "epoch": 27,
+    "train_loss": 0.1500522680580616,
+    "monitor": null,
+    "bad_epochs": 0,
+    "learning_rates": {
+      "genome_encoder": 0.0005,
+      "baseline_branch": 0.001,
+      "hierarchical_source": 0.0001,
+      "hierarchical_instrument": 0.0001,
+      "hierarchical_plate": 0.0001
+    }
+  },
+  {
+    "epoch": 28,
+    "train_loss": 0.14612363030513129,
+    "monitor": null,
+    "bad_epochs": 0,
+    "learning_rates": {
+      "genome_encoder": 0.0005,
+      "baseline_branch": 0.001,
+      "hierarchical_source": 0.0001,
+      "hierarchical_instrument": 0.0001,
+      "hierarchical_plate": 0.0001
+    }
+  },
+  {
+    "epoch": 29,
+    "train_loss": 0.14336312686403593,
+    "monitor": null,
+    "bad_epochs": 0,
+    "learning_rates": {
+      "genome_encoder": 0.0005,
+      "baseline_branch": 0.001,
+      "hierarchical_source": 0.0001,
+      "hierarchical_instrument": 0.0001,
+      "hierarchical_plate": 0.0001
+    }
+  }
+]

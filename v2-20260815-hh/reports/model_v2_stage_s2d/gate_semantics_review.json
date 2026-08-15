@@ -1,0 +1,305 @@
+{
+  "schema_version": "1.0",
+  "task": "Stage S2D-R gate comparison-pool semantics review",
+  "review_only": true,
+  "training_performed": false,
+  "inference_performed": false,
+  "predictions_modified": false,
+  "checkpoints_modified": false,
+  "routing_modified": false,
+  "protocol_clarification": true,
+  "legacy_global_rank": {
+    "pool_semantics": "seed1 + seed2 + two-seed mean + historical baselines",
+    "legacy_gate_1_global_rank_first": false,
+    "s2c_seed2_rows": [
+      {
+        "scheme": "bounded_quality",
+        "rank": 3,
+        "planning_proxy": 0.6606147523149218
+      },
+      {
+        "scheme": "correlation_priority",
+        "rank": 3,
+        "planning_proxy": 0.693691892204472
+      },
+      {
+        "scheme": "weighted_module_rank",
+        "rank": 3,
+        "planning_proxy": 0.6318181818181817
+      }
+    ],
+    "top_deployable_by_proxy": {
+      "bounded_quality": "S2C two-seed mean",
+      "correlation_priority": "S2C two-seed mean",
+      "weighted_module_rank": "S2C two-seed mean"
+    },
+    "interpretation": "retained historical global rank; it does not isolate replication against seed2-matched experts"
+  },
+  "seed2_replication_pool": {
+    "included_models": [
+      "S2C seed2",
+      "D0 seed2",
+      "D2 seed2",
+      "S1 C seed2"
+    ],
+    "excluded_models": [
+      "S2C seed1",
+      "D0 seed1",
+      "D2 seed1",
+      "S1 C seed1",
+      "S2C two-seed mean"
+    ],
+    "fixed_nonseed_baselines": "reference_only_not_ranked_in_replication_pool",
+    "underlying_metrics_recomputed": false,
+    "ranking": [
+      {
+        "scheme": "bounded_quality",
+        "model": "S2C seed2",
+        "planning_proxy": 0.6606147523149218,
+        "rank": 1,
+        "official_score": false,
+        "control_mapping": "pert_id_parity_v1"
+      },
+      {
+        "scheme": "bounded_quality",
+        "model": "D2 seed2",
+        "planning_proxy": 0.6598094788673697,
+        "rank": 2,
+        "official_score": false,
+        "control_mapping": "pert_id_parity_v1"
+      },
+      {
+        "scheme": "bounded_quality",
+        "model": "S1 C seed2",
+        "planning_proxy": 0.6575874807939309,
+        "rank": 3,
+        "official_score": false,
+        "control_mapping": "pert_id_parity_v1"
+      },
+      {
+        "scheme": "bounded_quality",
+        "model": "D0 seed2",
+        "planning_proxy": 0.6539960943037658,
+        "rank": 4,
+        "official_score": false,
+        "control_mapping": "pert_id_parity_v1"
+      },
+      {
+        "scheme": "correlation_priority",
+        "model": "S2C seed2",
+        "planning_proxy": 0.693691892204472,
+        "rank": 1,
+        "official_score": false,
+        "control_mapping": "pert_id_parity_v1"
+      },
+      {
+        "scheme": "correlation_priority",
+        "model": "D2 seed2",
+        "planning_proxy": 0.6927971066438645,
+        "rank": 2,
+        "official_score": false,
+        "control_mapping": "pert_id_parity_v1"
+      },
+      {
+        "scheme": "correlation_priority",
+        "model": "S1 C seed2",
+        "planning_proxy": 0.6925267291567976,
+        "rank": 3,
+        "official_score": false,
+        "control_mapping": "pert_id_parity_v1"
+      },
+      {
+        "scheme": "correlation_priority",
+        "model": "D0 seed2",
+        "planning_proxy": 0.6869629441796797,
+        "rank": 4,
+        "official_score": false,
+        "control_mapping": "pert_id_parity_v1"
+      },
+      {
+        "scheme": "weighted_module_rank",
+        "model": "S2C seed2",
+        "planning_proxy": 0.8666666666666666,
+        "rank": 1,
+        "official_score": false,
+        "control_mapping": "pert_id_parity_v1"
+      },
+      {
+        "scheme": "weighted_module_rank",
+        "model": "D2 seed2",
+        "planning_proxy": 0.6666666666666667,
+        "rank": 2,
+        "official_score": false,
+        "control_mapping": "pert_id_parity_v1"
+      },
+      {
+        "scheme": "weighted_module_rank",
+        "model": "S1 C seed2",
+        "planning_proxy": 0.2666666666666667,
+        "rank": 3,
+        "official_score": false,
+        "control_mapping": "pert_id_parity_v1"
+      },
+      {
+        "scheme": "weighted_module_rank",
+        "model": "D0 seed2",
+        "planning_proxy": 0.20000000000000004,
+        "rank": 4,
+        "official_score": false,
+        "control_mapping": "pert_id_parity_v1"
+      }
+    ],
+    "s2c_seed2_ranks": {
+      "bounded_quality": 1,
+      "correlation_priority": 1,
+      "weighted_module_rank": 1
+    },
+    "proxy_differences": [
+      {
+        "scheme": "bounded_quality",
+        "s2c_seed2_rank": 1,
+        "s2c_seed2_planning_proxy": 0.6606147523149218,
+        "absolute_difference_vs_d2_seed2": 0.0008052734475521017,
+        "absolute_difference_vs_s1_c_seed2": 0.003027271520990915,
+        "absolute_difference_vs_d0_seed2": 0.00661865801115602
+      },
+      {
+        "scheme": "correlation_priority",
+        "s2c_seed2_rank": 1,
+        "s2c_seed2_planning_proxy": 0.693691892204472,
+        "absolute_difference_vs_d2_seed2": 0.0008947855606075139,
+        "absolute_difference_vs_s1_c_seed2": 0.0011651630476744446,
+        "absolute_difference_vs_d0_seed2": 0.006728948024792292
+      },
+      {
+        "scheme": "weighted_module_rank",
+        "s2c_seed2_rank": 1,
+        "s2c_seed2_planning_proxy": 0.8666666666666666,
+        "absolute_difference_vs_d2_seed2": 0.19999999999999984,
+        "absolute_difference_vs_s1_c_seed2": 0.5999999999999999,
+        "absolute_difference_vs_d0_seed2": 0.6666666666666665
+      }
+    ]
+  },
+  "corrected_gate_1": {
+    "name": "gate_1_seed2_s2c_first_among_seed2_candidates_in_at_least_two_proxies",
+    "passed": true,
+    "number_of_first_place_proxies": 3
+  },
+  "original_gates_2_to_10": {
+    "gate_2_seed2_s2c_mean_rmse_better_than_seed2_d2": true,
+    "gate_3_seed2_s2c_mean_raw_fc_drop_vs_seed2_d2_at_most_0_005": true,
+    "gate_4_seed_routes_rowwise_identical": true,
+    "gate_5_all_three_experts_finite_without_training_collapse": true,
+    "gate_6_two_seed_mean_first_in_all_three_planning_proxies": true,
+    "gate_7_mean_rmse_degradation_vs_better_single_at_most_1_percent": true,
+    "gate_8_mean_raw_fc_drop_vs_better_single_at_most_0_005": true,
+    "gate_9_improvement_not_single_drug_or_small_scenario_dominated": true,
+    "gate_10_test_proteome_not_read": true
+  },
+  "original_gates_2_to_10_unchanged_and_true": true,
+  "two_seed_mean_global_first_in_all_three_proxies": true,
+  "literal_legacy_conclusion": {
+    "legacy_gate_1": false,
+    "eligible_under_legacy_literal_all-gates_rule": false
+  },
+  "corrected_replication_conclusion": {
+    "corrected_gate_1": true,
+    "eligible_for_final_presubmission_audit": true,
+    "eligibility_basis": "corrected_seed_matched_replication_gate",
+    "protocol_clarification": true,
+    "threshold_changed": false,
+    "mixture_weight_searched": false,
+    "model_or_prediction_changed": false
+  },
+  "consistency_checks": {
+    "s2c_seed2_mean_rmse": 0.6513849049806595,
+    "d2_seed2_mean_rmse": 0.6556155979633331,
+    "s2c_seed2_rmse_better_than_d2_seed2": true,
+    "s2c_seed2_mean_raw_fc_pcc": 0.2999436616852593,
+    "d2_seed2_mean_raw_fc_pcc": 0.3039584893926805,
+    "raw_fc_pcc_difference_s2c_minus_d2": -0.004014827707421176,
+    "raw_fc_pcc_within_original_tolerance": true,
+    "routing_manifest_sha256": "f9b26cd669b13329ce7e86517b950c7289ecebd011f6b11d1f94527dad15b4d4",
+    "routing_hash_unchanged": true,
+    "two_seed_mean_metrics_artifact_sha256": "06fd9a77369e6df0e94c4f8ae547af09aa85de994f15aca04da0e2e37724d8d5",
+    "two_seed_mean_metrics_hash_unchanged": true,
+    "raw_prediction_tensor_hash_status": "NOT_MATERIALIZED_BY_ORIGINAL_S2D",
+    "raw_prediction_tensor_hash": null,
+    "raw_prediction_tensor_hash_note": "cannot create a tensor hash without prohibited re-inference; no prediction artifact was read or written in this review",
+    "prediction_definition_and_prediction_derived_metrics_unchanged": true,
+    "metric_file_hashes_before": {
+      "absolute": "7b95d82f4366c35465ec74aebb196e30d2f93a1ac79cc5f857499ba81233776a",
+      "fc": "4a0cde6ef273e04dd12c113c5d4cab083f8cc5e25cdc2ead48a9e00fcd378898",
+      "context": "dbdc0204c3ef28cf87dbeb59a173c3cc6f9498ac62b9468257f41b5a9e654470",
+      "drug": "4e11d1eeabf559cac70347ebb36dc0c471529c987ba78606c2c653e9b879164d",
+      "high": "e46c2062c57832cb4a5c3858bae8b39c9f19ec7f03e81e217a8b33cf95738bc4"
+    },
+    "test_proteome_opened": false,
+    "test_prediction_generated": false
+  },
+  "original_s2d_hash_audit": {
+    "files": {
+      "reports/MODEL_V2_STAGE_S2D_SECOND_SEED_REPORT.md": {
+        "expected_sha256": "bddf613fa57197d44b05fe88f7ade25f97d46c2394fcf2d2e9831a728bfc4e9e",
+        "actual_sha256": "bddf613fa57197d44b05fe88f7ade25f97d46c2394fcf2d2e9831a728bfc4e9e",
+        "unchanged": true
+      },
+      "reports/model_v2_stage_s2d/second_seed_comparison.json": {
+        "expected_sha256": "35170fbca9497c5f151b1b4d68d4a89cfd7f54f88a39dca11dc1cff1b1a09197",
+        "actual_sha256": "35170fbca9497c5f151b1b4d68d4a89cfd7f54f88a39dca11dc1cff1b1a09197",
+        "unchanged": true
+      },
+      "reports/model_v2_stage_s2d/two_seed_ensemble_metrics.json": {
+        "expected_sha256": "06fd9a77369e6df0e94c4f8ae547af09aa85de994f15aca04da0e2e37724d8d5",
+        "actual_sha256": "06fd9a77369e6df0e94c4f8ae547af09aa85de994f15aca04da0e2e37724d8d5",
+        "unchanged": true
+      },
+      "reports/model_v2_stage_s2d/second_seed_absolute_metrics.csv": {
+        "expected_sha256": "7b95d82f4366c35465ec74aebb196e30d2f93a1ac79cc5f857499ba81233776a",
+        "actual_sha256": "7b95d82f4366c35465ec74aebb196e30d2f93a1ac79cc5f857499ba81233776a",
+        "unchanged": true
+      },
+      "reports/model_v2_stage_s2d/second_seed_fc_metrics.csv": {
+        "expected_sha256": "4a0cde6ef273e04dd12c113c5d4cab083f8cc5e25cdc2ead48a9e00fcd378898",
+        "actual_sha256": "4a0cde6ef273e04dd12c113c5d4cab083f8cc5e25cdc2ead48a9e00fcd378898",
+        "unchanged": true
+      },
+      "reports/model_v2_stage_s2d/second_seed_context_metrics.csv": {
+        "expected_sha256": "dbdc0204c3ef28cf87dbeb59a173c3cc6f9498ac62b9468257f41b5a9e654470",
+        "actual_sha256": "dbdc0204c3ef28cf87dbeb59a173c3cc6f9498ac62b9468257f41b5a9e654470",
+        "unchanged": true
+      },
+      "reports/model_v2_stage_s2d/second_seed_drug_metrics.csv": {
+        "expected_sha256": "4e11d1eeabf559cac70347ebb36dc0c471529c987ba78606c2c653e9b879164d",
+        "actual_sha256": "4e11d1eeabf559cac70347ebb36dc0c471529c987ba78606c2c653e9b879164d",
+        "unchanged": true
+      },
+      "reports/model_v2_stage_s2d/second_seed_high_metrics.csv": {
+        "expected_sha256": "e46c2062c57832cb4a5c3858bae8b39c9f19ec7f03e81e217a8b33cf95738bc4",
+        "actual_sha256": "e46c2062c57832cb4a5c3858bae8b39c9f19ec7f03e81e217a8b33cf95738bc4",
+        "unchanged": true
+      },
+      "reports/model_v2_stage_s2d/second_seed_planning_proxy.csv": {
+        "expected_sha256": "0d9637909a00fecb6db511c0596f7fa37fa87fcec1e3111d6a0aa7e69f2b8e48",
+        "actual_sha256": "0d9637909a00fecb6db511c0596f7fa37fa87fcec1e3111d6a0aa7e69f2b8e48",
+        "unchanged": true
+      },
+      "reports/model_v2_stage_s2d/routing_identity_audit.json": {
+        "expected_sha256": "92710e03fe6453d37cb1013a4d752a53aaf4703c4ebbfc772f48e9a000a3a8e2",
+        "actual_sha256": "92710e03fe6453d37cb1013a4d752a53aaf4703c4ebbfc772f48e9a000a3a8e2",
+        "unchanged": true
+      }
+    },
+    "all_original_s2d_files_unchanged": true
+  },
+  "verification": {
+    "gate_semantics_tests": "6 passed in 4.42s",
+    "all_v2_tests_excluding_person_c": "115 passed in 68.83s",
+    "person_c_regression": "6 passed in 3.95s"
+  },
+  "eligible_for_final_presubmission_audit": true,
+  "eligibility_basis": "corrected_seed_matched_replication_gate",
+  "test_proteome_opened": false,
+  "test_prediction_generated": false
+}

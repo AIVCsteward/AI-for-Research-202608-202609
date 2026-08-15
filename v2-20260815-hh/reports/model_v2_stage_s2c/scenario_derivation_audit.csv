@@ -1,0 +1,5 @@
+scenario,n_treatment,chemical_seen_expected,strain_seen_expected,chemical_seen_mismatch_count,strain_seen_mismatch_count,time_seen_count,culture_context_seen_count,full_entity_context_seen_count
+val_chem_only,1065,False,True,0,0,1065,1065,0
+val_strain_only,1333,True,False,0,0,1333,1333,0
+val_both,269,False,False,0,0,269,269,0
+val_time,139,True,True,0,0,139,139,52

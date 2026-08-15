@@ -1,0 +1,4 @@
+model,device,elapsed_seconds,peak_reserved_mib,stage_b_actual_epochs,stage_b_best_epoch,stage_b_best_macro_huber,stop_reason
+S2B D0 hierarchical none Huber,cuda,103.67360270000063,90.0,33,20,0.19474220441921256,early_stopping_patience_exhausted
+S2B D1 hierarchical Morgan Huber,cuda,75.30762130001676,90.0,24,11,0.2011896010573173,early_stopping_patience_exhausted
+S2B D2 hierarchical Morgan experimental FC,cuda,99.0270462000044,90.0,25,12,0.19409347416086387,early_stopping_patience_exhausted

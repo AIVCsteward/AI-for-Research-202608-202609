@@ -1,0 +1,479 @@
+{
+  "status": "PASS",
+  "mode": "formal",
+  "config": "D:\\\u865a\u62df\u7ec6\u80de\\baseline\\configs\\model_v2_stage_s2d_s1c_flat_morgan_fc_seed_20260815.yaml",
+  "device": "cuda",
+  "elapsed_seconds": 177.58220679999795,
+  "peak_gpu_memory_allocated_bytes": 62139904,
+  "peak_gpu_memory_reserved_bytes": 90177536,
+  "resolved_config_path": "D:\\\u865a\u62df\u7ec6\u80de\\reports\\model_v2_stage_s2d\\formal_s1c_flat_morgan_fc_seed_20260815\\resolved_config.json",
+  "stage_a": {
+    "best_epoch": 4,
+    "best_monitor": 0.3810989888216823,
+    "actual_epochs": 0,
+    "stopped_epoch": 4,
+    "stop_reason": "loaded_fixed_stage_a_checkpoint_no_retraining",
+    "monitor_name": "control_only_validation_huber",
+    "train_control_sample_count": 751,
+    "validation_control_sample_count": 205,
+    "validation_control_scenarios": {
+      "val_strain_only": 190,
+      "val_time": 15
+    },
+    "fixed_checkpoint": {
+      "path": "D:\\\u865a\u62df\u7ec6\u80de\\reports\\model_v2_stage_s2d\\stage_a_flat_seed_20260815\\stage_a_best.pt",
+      "sha256": "0805b9abcd6812e7e384a0abd59b4c7e2bdebbdc5bf07bc5cd48784ddaa2562e",
+      "checkpoint_epoch": 4,
+      "checkpoint_monitor": 0.3810989888216823
+    }
+  },
+  "stage_b": {
+    "best_epoch": 47,
+    "best_monitor": 0.20228793180752996,
+    "actual_epochs": 60,
+    "stopped_epoch": 59,
+    "stop_reason": "early_stopping_patience_exhausted",
+    "monitor_name": "macro_huber_equal_four_scenarios"
+  },
+  "validation_macro": "equal_weight_mean_of_exact_valid_position_scenario_huber",
+  "final_validation_macro_huber": 0.20228793180752996,
+  "validation_scenario_huber": {
+    "val_chem_only": 0.18012953309580035,
+    "val_strain_only": 0.22365984646162118,
+    "val_both": 0.28804741339081824,
+    "val_time": 0.11731493428187995
+  },
+  "validation_scenarios": {
+    "val_chem_only": {
+      "rmse": 0.6535663604736328,
+      "mae": 0.45066532492637634,
+      "global_r2": 0.9449935555458069,
+      "median_per_sample_pcc": 0.9752659201622009,
+      "median_per_sample_r2": 0.949127197265625,
+      "median_per_protein_pcc": 0.811919629573822,
+      "median_per_protein_r2": 0.6115319728851318,
+      "n_valid_positions": 4021051
+    },
+    "val_strain_only": {
+      "rmse": 0.7500275373458862,
+      "mae": 0.5154447555541992,
+      "global_r2": 0.9263942241668701,
+      "median_per_sample_pcc": 0.9634783864021301,
+      "median_per_sample_r2": 0.9242892265319824,
+      "median_per_protein_pcc": 0.7672824263572693,
+      "median_per_protein_r2": 0.39078855514526367,
+      "n_valid_positions": 5902748
+    },
+    "val_both": {
+      "rmse": 0.8694787621498108,
+      "mae": 0.6016872525215149,
+      "global_r2": 0.9027467966079712,
+      "median_per_sample_pcc": 0.9513360261917114,
+      "median_per_sample_r2": 0.8997958898544312,
+      "median_per_protein_pcc": 0.7792996764183044,
+      "median_per_protein_r2": 0.3770201802253723,
+      "n_valid_positions": 1008739
+    },
+    "val_time": {
+      "rmse": 0.5168625712394714,
+      "mae": 0.35341334342956543,
+      "global_r2": 0.9653704762458801,
+      "median_per_sample_pcc": 0.9855071902275085,
+      "median_per_sample_r2": 0.9699609279632568,
+      "median_per_protein_pcc": 0.809281200170517,
+      "median_per_protein_r2": 0.6443495154380798,
+      "n_valid_positions": 589198
+    }
+  },
+  "validation_component_norms": {
+    "val_chem_only": {
+      "y_baseline": 43504.783407667484,
+      "delta_response": 1078.2690111871345,
+      "delta_batch": 1328.1874033953036
+    },
+    "val_strain_only": {
+      "y_baseline": 52609.93538307726,
+      "delta_response": 1247.1590242996574,
+      "delta_batch": 1206.419242504283
+    },
+    "val_both": {
+      "y_baseline": 21806.970772641038,
+      "delta_response": 554.7176212457763,
+      "delta_batch": 661.9962554804845
+    },
+    "val_time": {
+      "y_baseline": 16651.456567678408,
+      "delta_response": 394.7402128520419,
+      "delta_batch": 348.93540645724124
+    }
+  },
+  "stage_b_initial_chemical_response_sha256": "ae6cabcfcb83a41d50438d9f928a9e31caac18737d885620f8136a839c63b625",
+  "chemical_encoder_parameter_change_l2": 22.63956532304835,
+  "chemical_variant": {
+    "mode": "correct",
+    "seed": 20260815,
+    "n_entities": 57,
+    "fixed_point_count": 57,
+    "permutation_sha256": "43f1a99a51253ac97d3a08db808b056d3f62b42ae4b6b1aa4c7c6ef36a4df3f4",
+    "interface": "scripts/build_chemical_features.py::apply_feature_variant"
+  },
+  "chemical_permutation_file": "chemical_entity_permutation.csv",
+  "chemical_feature_components": "morgan_only",
+  "chemical_component_manifest_file": "chemical_component_manifest.json",
+  "anchor_source": "train_controls_only",
+  "control_sample_count": 751,
+  "min_observations_per_protein": 94,
+  "n_control": 751,
+  "n_treatment": 4121,
+  "n_treatment_full": 5078,
+  "train_internal_batch_holdout": {
+    "enabled": true,
+    "train_sample_count": 4121,
+    "holdout_sample_count": 957,
+    "holdout_sample_ids_sha256": "7cfd2fc2c8877425c98f845ffc9275cd023cee7da31aa677437aaa65ffd11734",
+    "group_columns": [
+      "data_source",
+      "instrument",
+      "Yeast_cell_plate"
+    ],
+    "labels_used_for_training_or_early_stopping": false,
+    "selection_seed": 20260814
+  },
+  "stage_b_training_ids_sha256": "b7dc844ac46b110eef05b56b5be8002d3a8bd566edf4677d9f2409db6303ee89",
+  "stage_b_full_treatment_ids_sha256": "11ef0420b7f1af6c638edb8fa5bec1491529e659e6db17eabdc6f151e195fb70",
+  "stage_b_dataloader_shuffle_seed": 20260815,
+  "n_validation": {
+    "val_chem_only": 1065,
+    "val_strain_only": 1547,
+    "val_both": 269,
+    "val_time": 157
+  },
+  "n_proteins": 4422,
+  "batch_enabled": true,
+  "batch_structure": "flat_batch",
+  "effective_batch_reg_weight": 0.001,
+  "batch_source_reg_weight": 0.0,
+  "batch_instrument_reg_weight": 0.0,
+  "batch_plate_reg_weight": 0.0,
+  "fc_loss_enabled": true,
+  "similarity_enabled": false,
+  "experimental_nonofficial_parity_fc": true,
+  "control_mapping": "pert_id_parity_v1",
+  "official_fc_result": false,
+  "experimental_parity": "RUN_NONOFFICIAL_DIAGNOSTIC",
+  "fc_weight": 0.05,
+  "fc_absolute_weight": 0.05,
+  "response_magnitude_weight": 0.01,
+  "response_gate_enabled": true,
+  "response_rms_cap": 0.75,
+  "batch_field_dropout": 0.25,
+  "planning_proxy": true,
+  "official_score": false,
+  "fc_early_stopping_used": false,
+  "pairing_audit": {
+    "experimental_nonofficial_parity_fc": true,
+    "control_mapping": "pert_id_parity_v1",
+    "official_fc_result": false,
+    "fit_scope": "split_final=train only",
+    "train_treatment_total": 4121,
+    "matched_treatment_count": 3912,
+    "matched_coverage": 0.949284154331473,
+    "requested_control_counts": {
+      "Water": 2091,
+      "DMSO": 2030
+    },
+    "matched_treatment_counts_by_control": {
+      "Water": 1948,
+      "DMSO": 1964
+    },
+    "unmatched_reason_counts": {
+      "no_exact_requested_solvent_control": 209
+    },
+    "matched_control_replicate_count_min": 1,
+    "matched_control_replicate_count_median": 1.0,
+    "matched_control_replicate_count_max": 2,
+    "per_protein_fc_valid_count_min": 353,
+    "per_protein_fc_valid_count_median": 3754.5,
+    "per_protein_fc_valid_count_max": 3912,
+    "exact_match_keys": [
+      "data_source",
+      "Strains",
+      "Medium",
+      "Temperature",
+      "pert_time",
+      "pert_time_unit",
+      "instrument",
+      "Yeast_cell_plate"
+    ],
+    "multiple_controls": "protein_wise_mean_over_observed_controls",
+    "fallback_used": false,
+    "control_matching_spec_path": "D:\\\u865a\u62df\u7ec6\u80de\\project_v2\\data_contract\\control_matching_spec.json",
+    "control_matching_spec_sha256": "8edd8f77971a3eacedca1e36307d4e8f8b1602fc1c2ea7ecbac8b88490a72d16",
+    "test_proteome_opened": false
+  },
+  "pairing_file": "experimental_parity_fc_pairing.csv",
+  "pairing_audit_file": "experimental_parity_fc_pairing_audit.json",
+  "predicted_fc_identity_audit": {
+    "treatment_sample_ID": "B15",
+    "control_sample_ID": "B40",
+    "max_abs_identity_error": 9.5367431640625e-07,
+    "baseline_max_abs_difference": 0.0,
+    "float_tolerance_atol_rtol": 1e-05,
+    "control_delta_response_max_abs": 0.0,
+    "identity": "predicted_treatment_minus_predicted_control_equals_delta_response_treatment"
+  },
+  "stage_b_fc_loss_by_epoch": [
+    {
+      "epoch": 0,
+      "loss_fc": 0.9636176017614512
+    },
+    {
+      "epoch": 1,
+      "loss_fc": 0.9469945614154522
+    },
+    {
+      "epoch": 2,
+      "loss_fc": 0.9588468340726999
+    },
+    {
+      "epoch": 3,
+      "loss_fc": 0.9604753980269799
+    },
+    {
+      "epoch": 4,
+      "loss_fc": 0.9751955582545354
+    },
+    {
+      "epoch": 5,
+      "loss_fc": 0.9844946191861079
+    },
+    {
+      "epoch": 6,
+      "loss_fc": 0.9839553411190326
+    },
+    {
+      "epoch": 7,
+      "loss_fc": 0.9803887009620667
+    },
+    {
+      "epoch": 8,
+      "loss_fc": 0.9787593933252188
+    },
+    {
+      "epoch": 9,
+      "loss_fc": 0.9771799270923321
+    },
+    {
+      "epoch": 10,
+      "loss_fc": 0.9766209079669073
+    },
+    {
+      "epoch": 11,
+      "loss_fc": 0.976619526056143
+    },
+    {
+      "epoch": 12,
+      "loss_fc": 0.9759733906159034
+    },
+    {
+      "epoch": 13,
+      "loss_fc": 0.9752417463522691
+    },
+    {
+      "epoch": 14,
+      "loss_fc": 0.9752493353990408
+    },
+    {
+      "epoch": 15,
+      "loss_fc": 0.9751195614154522
+    },
+    {
+      "epoch": 16,
+      "loss_fc": 0.9741113195052513
+    },
+    {
+      "epoch": 17,
+      "loss_fc": 0.9742409320978018
+    },
+    {
+      "epoch": 18,
+      "loss_fc": 0.9729524988394517
+    },
+    {
+      "epoch": 19,
+      "loss_fc": 0.972591943007249
+    },
+    {
+      "epoch": 20,
+      "loss_fc": 0.9719157659090483
+    },
+    {
+      "epoch": 21,
+      "loss_fc": 0.9711776852607727
+    },
+    {
+      "epoch": 22,
+      "loss_fc": 0.9699977728036734
+    },
+    {
+      "epoch": 23,
+      "loss_fc": 0.9711266343410199
+    },
+    {
+      "epoch": 24,
+      "loss_fc": 0.9687803928668682
+    },
+    {
+      "epoch": 25,
+      "loss_fc": 0.9678584236365099
+    },
+    {
+      "epoch": 26,
+      "loss_fc": 0.9670990329522353
+    },
+    {
+      "epoch": 27,
+      "loss_fc": 0.9658121200708243
+    },
+    {
+      "epoch": 28,
+      "loss_fc": 0.9650276560049791
+    },
+    {
+      "epoch": 29,
+      "loss_fc": 0.9630689547612117
+    },
+    {
+      "epoch": 30,
+      "loss_fc": 0.9629603184186495
+    },
+    {
+      "epoch": 31,
+      "loss_fc": 0.9601899009484511
+    },
+    {
+      "epoch": 32,
+      "loss_fc": 0.9607807086064265
+    },
+    {
+      "epoch": 33,
+      "loss_fc": 0.9580616171543415
+    },
+    {
+      "epoch": 34,
+      "loss_fc": 0.9565602935277498
+    },
+    {
+      "epoch": 35,
+      "loss_fc": 0.9565098505753737
+    },
+    {
+      "epoch": 36,
+      "loss_fc": 0.9541067481040955
+    },
+    {
+      "epoch": 37,
+      "loss_fc": 0.9522108619029706
+    },
+    {
+      "epoch": 38,
+      "loss_fc": 0.951878731067364
+    },
+    {
+      "epoch": 39,
+      "loss_fc": 0.9522108912467957
+    },
+    {
+      "epoch": 40,
+      "loss_fc": 0.9506432340695308
+    },
+    {
+      "epoch": 41,
+      "loss_fc": 0.9487886337133554
+    },
+    {
+      "epoch": 42,
+      "loss_fc": 0.9492616424193749
+    },
+    {
+      "epoch": 43,
+      "loss_fc": 0.9477612889730014
+    },
+    {
+      "epoch": 44,
+      "loss_fc": 0.948277627504789
+    },
+    {
+      "epoch": 45,
+      "loss_fc": 0.947979998588562
+    },
+    {
+      "epoch": 46,
+      "loss_fc": 0.947932428580064
+    },
+    {
+      "epoch": 47,
+      "loss_fc": 0.9475986985059884
+    },
+    {
+      "epoch": 48,
+      "loss_fc": 0.9472503827168391
+    },
+    {
+      "epoch": 49,
+      "loss_fc": 0.9454959236658537
+    },
+    {
+      "epoch": 50,
+      "loss_fc": 0.9452596169251662
+    },
+    {
+      "epoch": 51,
+      "loss_fc": 0.9444911672518803
+    },
+    {
+      "epoch": 52,
+      "loss_fc": 0.9441585302352905
+    },
+    {
+      "epoch": 53,
+      "loss_fc": 0.9448566189179054
+    },
+    {
+      "epoch": 54,
+      "loss_fc": 0.9459923102305485
+    },
+    {
+      "epoch": 55,
+      "loss_fc": 0.944460602907034
+    },
+    {
+      "epoch": 56,
+      "loss_fc": 0.9429652479978708
+    },
+    {
+      "epoch": 57,
+      "loss_fc": 0.94363630093061
+    },
+    {
+      "epoch": 58,
+      "loss_fc": 0.9426187817866986
+    },
+    {
+      "epoch": 59,
+      "loss_fc": 0.9435927932079021
+    }
+  ],
+  "batch_diagnostic_scope": "all_selected_train_treatments",
+  "batch_diagnostic_sample_count": 5078,
+  "training_history_file": "training_history.json",
+  "stage_b_checkpoint": "D:\\\u865a\u62df\u7ec6\u80de\\reports\\model_v2_stage_s2d\\formal_s1c_flat_morgan_fc_seed_20260815\\stage_b_best.pt",
+  "stage_b_checkpoint_sha256": "1dd79ca80091c5dd3ca20bb78d3e47445e67f710e2a2cb096e27c6f5049f4aa4",
+  "stage_b_freeze_audit_file": null,
+  "stage_b_freeze_audit": null,
+  "test_proteome_opened": false,
+  "delta_batch_mean": -0.025119357045299103,
+  "delta_batch_std": 0.49417603520926373,
+  "delta_batch_max_abs": 2.601543664932251,
+  "delta_batch_to_response_norm": 0.8473496060173897
+}

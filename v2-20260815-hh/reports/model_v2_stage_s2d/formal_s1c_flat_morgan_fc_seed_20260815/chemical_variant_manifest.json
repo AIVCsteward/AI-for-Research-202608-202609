@@ -1,0 +1,8 @@
+{
+  "mode": "correct",
+  "seed": 20260815,
+  "n_entities": 57,
+  "fixed_point_count": 57,
+  "permutation_sha256": "43f1a99a51253ac97d3a08db808b056d3f62b42ae4b6b1aa4c7c6ef36a4df3f4",
+  "interface": "scripts/build_chemical_features.py::apply_feature_variant"
+}

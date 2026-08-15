@@ -1,0 +1,85 @@
+scenario,scheme,model,planning_proxy,rank,official_score,control_mapping
+val_chem_only,bounded_quality,S2B D0 hierarchical none Huber,0.48476872242928915,1,False,pert_id_parity_v1
+val_chem_only,bounded_quality,S2C novelty-gated ensemble,0.48476872242928915,1,False,pert_id_parity_v1
+val_chem_only,bounded_quality,S2B D2 hierarchical Morgan experimental FC,0.4812049765443564,3,False,pert_id_parity_v1
+val_chem_only,bounded_quality,S1 B anchor Morgan Huber,0.477344081236813,4,False,pert_id_parity_v1
+val_chem_only,bounded_quality,S1 C anchor Morgan Huber plus experimental FC,0.47683734815277845,5,False,pert_id_parity_v1
+val_chem_only,bounded_quality,V2 batch-enabled Huber,0.4752005554814911,6,False,pert_id_parity_v1
+val_chem_only,bounded_quality,Matched Control,0.34540677761021116,7,False,pert_id_parity_v1
+val_chem_only,correlation_priority,S2C novelty-gated ensemble,0.4925706343374304,1,False,pert_id_parity_v1
+val_chem_only,correlation_priority,S2B D0 hierarchical none Huber,0.49257063433743037,2,False,pert_id_parity_v1
+val_chem_only,correlation_priority,S2B D2 hierarchical Morgan experimental FC,0.49023660238970945,3,False,pert_id_parity_v1
+val_chem_only,correlation_priority,S1 C anchor Morgan Huber plus experimental FC,0.48685835637204483,4,False,pert_id_parity_v1
+val_chem_only,correlation_priority,S1 B anchor Morgan Huber,0.48670338527612117,5,False,pert_id_parity_v1
+val_chem_only,correlation_priority,V2 batch-enabled Huber,0.48434860821552783,6,False,pert_id_parity_v1
+val_chem_only,correlation_priority,Matched Control,0.3101172599476473,7,False,pert_id_parity_v1
+val_chem_only,weighted_module_rank,Matched Control,0.7000000000000001,1,False,pert_id_parity_v1
+val_chem_only,weighted_module_rank,S2B D0 hierarchical none Huber,0.6916666666666668,2,False,pert_id_parity_v1
+val_chem_only,weighted_module_rank,S2C novelty-gated ensemble,0.5583333333333333,3,False,pert_id_parity_v1
+val_chem_only,weighted_module_rank,S2B D2 hierarchical Morgan experimental FC,0.45,4,False,pert_id_parity_v1
+val_chem_only,weighted_module_rank,S1 B anchor Morgan Huber,0.4333333333333334,5,False,pert_id_parity_v1
+val_chem_only,weighted_module_rank,V2 batch-enabled Huber,0.33333333333333337,6,False,pert_id_parity_v1
+val_chem_only,weighted_module_rank,S1 C anchor Morgan Huber plus experimental FC,0.3333333333333333,7,False,pert_id_parity_v1
+val_strain_only,bounded_quality,S1 C anchor Morgan Huber plus experimental FC,0.47178484901334994,1,False,pert_id_parity_v1
+val_strain_only,bounded_quality,S2C novelty-gated ensemble,0.47178484901334994,1,False,pert_id_parity_v1
+val_strain_only,bounded_quality,S1 B anchor Morgan Huber,0.46910250146818494,3,False,pert_id_parity_v1
+val_strain_only,bounded_quality,V2 batch-enabled Huber,0.4682695357356279,4,False,pert_id_parity_v1
+val_strain_only,bounded_quality,S2B D2 hierarchical Morgan experimental FC,0.46709912787714436,5,False,pert_id_parity_v1
+val_strain_only,bounded_quality,S2B D0 hierarchical none Huber,0.4626229851810223,6,False,pert_id_parity_v1
+val_strain_only,bounded_quality,Matched Control,0.33796604039585676,7,False,pert_id_parity_v1
+val_strain_only,correlation_priority,S1 C anchor Morgan Huber plus experimental FC,0.48606990746211903,1,False,pert_id_parity_v1
+val_strain_only,correlation_priority,S2C novelty-gated ensemble,0.48606990746211903,1,False,pert_id_parity_v1
+val_strain_only,correlation_priority,S1 B anchor Morgan Huber,0.48319063740298984,3,False,pert_id_parity_v1
+val_strain_only,correlation_priority,V2 batch-enabled Huber,0.48243658986597887,4,False,pert_id_parity_v1
+val_strain_only,correlation_priority,S2B D2 hierarchical Morgan experimental FC,0.4819885993694867,5,False,pert_id_parity_v1
+val_strain_only,correlation_priority,S2B D0 hierarchical none Huber,0.47681578231592814,6,False,pert_id_parity_v1
+val_strain_only,correlation_priority,Matched Control,0.3011961580875079,7,False,pert_id_parity_v1
+val_strain_only,weighted_module_rank,S1 C anchor Morgan Huber plus experimental FC,0.8083333333333335,1,False,pert_id_parity_v1
+val_strain_only,weighted_module_rank,S1 B anchor Morgan Huber,0.5833333333333335,2,False,pert_id_parity_v1
+val_strain_only,weighted_module_rank,Matched Control,0.5666666666666667,3,False,pert_id_parity_v1
+val_strain_only,weighted_module_rank,S2C novelty-gated ensemble,0.5583333333333333,4,False,pert_id_parity_v1
+val_strain_only,weighted_module_rank,V2 batch-enabled Huber,0.5166666666666668,5,False,pert_id_parity_v1
+val_strain_only,weighted_module_rank,S2B D2 hierarchical Morgan experimental FC,0.2833333333333333,6,False,pert_id_parity_v1
+val_strain_only,weighted_module_rank,S2B D0 hierarchical none Huber,0.18333333333333332,7,False,pert_id_parity_v1
+val_both,bounded_quality,S1 C anchor Morgan Huber plus experimental FC,0.4016385340491543,1,False,pert_id_parity_v1
+val_both,bounded_quality,S1 B anchor Morgan Huber,0.40017550553029685,2,False,pert_id_parity_v1
+val_both,bounded_quality,S2B D2 hierarchical Morgan experimental FC,0.39987670169936024,3,False,pert_id_parity_v1
+val_both,bounded_quality,S2B D0 hierarchical none Huber,0.3995971620722401,4,False,pert_id_parity_v1
+val_both,bounded_quality,S2C novelty-gated ensemble,0.3995971620722401,4,False,pert_id_parity_v1
+val_both,bounded_quality,V2 batch-enabled Huber,0.39948915564063303,6,False,pert_id_parity_v1
+val_both,bounded_quality,Matched Control,0.25558238742535205,7,False,pert_id_parity_v1
+val_both,correlation_priority,S1 C anchor Morgan Huber plus experimental FC,0.4399820928199009,1,False,pert_id_parity_v1
+val_both,correlation_priority,S2C novelty-gated ensemble,0.43903403107360045,2,False,pert_id_parity_v1
+val_both,correlation_priority,S2B D0 hierarchical none Huber,0.4390340310736004,3,False,pert_id_parity_v1
+val_both,correlation_priority,S2B D2 hierarchical Morgan experimental FC,0.43871969941500605,4,False,pert_id_parity_v1
+val_both,correlation_priority,V2 batch-enabled Huber,0.43775145907482216,5,False,pert_id_parity_v1
+val_both,correlation_priority,S1 B anchor Morgan Huber,0.4376268826299716,6,False,pert_id_parity_v1
+val_both,correlation_priority,Matched Control,0.25856310985462705,7,False,pert_id_parity_v1
+val_both,weighted_module_rank,S1 C anchor Morgan Huber plus experimental FC,0.7,1,False,pert_id_parity_v1
+val_both,weighted_module_rank,S1 B anchor Morgan Huber,0.6333333333333333,2,False,pert_id_parity_v1
+val_both,weighted_module_rank,Matched Control,0.6000000000000001,3,False,pert_id_parity_v1
+val_both,weighted_module_rank,V2 batch-enabled Huber,0.5750000000000001,4,False,pert_id_parity_v1
+val_both,weighted_module_rank,S2B D0 hierarchical none Huber,0.42499999999999993,5,False,pert_id_parity_v1
+val_both,weighted_module_rank,S2B D2 hierarchical Morgan experimental FC,0.3583333333333333,6,False,pert_id_parity_v1
+val_both,weighted_module_rank,S2C novelty-gated ensemble,0.20833333333333334,7,False,pert_id_parity_v1
+val_time,bounded_quality,S2B D2 hierarchical Morgan experimental FC,0.44017588267985386,1,False,pert_id_parity_v1
+val_time,bounded_quality,S2C novelty-gated ensemble,0.44017588267985386,1,False,pert_id_parity_v1
+val_time,bounded_quality,S1 C anchor Morgan Huber plus experimental FC,0.4302662198455307,3,False,pert_id_parity_v1
+val_time,bounded_quality,S1 B anchor Morgan Huber,0.42492894646913915,4,False,pert_id_parity_v1
+val_time,bounded_quality,S2B D0 hierarchical none Huber,0.4247395138560762,5,False,pert_id_parity_v1
+val_time,bounded_quality,V2 batch-enabled Huber,0.4242044024251046,6,False,pert_id_parity_v1
+val_time,bounded_quality,Matched Control,0.2506888271006194,7,False,pert_id_parity_v1
+val_time,correlation_priority,S2B D2 hierarchical Morgan experimental FC,0.46940912016990044,1,False,pert_id_parity_v1
+val_time,correlation_priority,S2C novelty-gated ensemble,0.46940912016990044,1,False,pert_id_parity_v1
+val_time,correlation_priority,S1 C anchor Morgan Huber plus experimental FC,0.4592803250138062,3,False,pert_id_parity_v1
+val_time,correlation_priority,S1 B anchor Morgan Huber,0.45386576508125065,4,False,pert_id_parity_v1
+val_time,correlation_priority,S2B D0 hierarchical none Huber,0.4536052760888648,5,False,pert_id_parity_v1
+val_time,correlation_priority,V2 batch-enabled Huber,0.45334233174390887,6,False,pert_id_parity_v1
+val_time,correlation_priority,Matched Control,0.254822998400998,7,False,pert_id_parity_v1
+val_time,weighted_module_rank,S2B D2 hierarchical Morgan experimental FC,0.625,1,False,pert_id_parity_v1
+val_time,weighted_module_rank,Matched Control,0.6000000000000001,2,False,pert_id_parity_v1
+val_time,weighted_module_rank,S1 C anchor Morgan Huber plus experimental FC,0.5666666666666667,3,False,pert_id_parity_v1
+val_time,weighted_module_rank,S1 B anchor Morgan Huber,0.5,4,False,pert_id_parity_v1
+val_time,weighted_module_rank,S2C novelty-gated ensemble,0.47500000000000003,5,False,pert_id_parity_v1
+val_time,weighted_module_rank,V2 batch-enabled Huber,0.4,6,False,pert_id_parity_v1
+val_time,weighted_module_rank,S2B D0 hierarchical none Huber,0.33333333333333337,7,False,pert_id_parity_v1

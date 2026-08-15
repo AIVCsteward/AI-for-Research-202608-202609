@@ -1,0 +1,127 @@
+{
+  "status": "PASS",
+  "analysis_type": "posthoc_component_attribution_not_a_formal_model_result",
+  "checkpoint": "D:\\\u865a\u62df\u7ec6\u80de\\reports\\model_v2_stage2\\formal_huber_seed_20260814\\stage_b_best.pt",
+  "checkpoint_epoch": 0,
+  "config": "D:\\\u865a\u62df\u7ec6\u80de\\baseline\\configs\\model_v2_huber.yaml",
+  "device": "cuda",
+  "test_proteome_opened": false,
+  "scenarios": {
+    "val_chem_only": {
+      "outputs": {
+        "full": {
+          "rmse": 0.6392194032669067,
+          "global_r2": 0.9473819732666016,
+          "median_per_protein_r2": 0.5543884634971619
+        },
+        "no_batch_posthoc": {
+          "rmse": 0.9493982791900635,
+          "global_r2": 0.8839269876480103,
+          "median_per_protein_r2": 0.0013470351696014404
+        },
+        "batch_only": {
+          "rmse": 0.5805691480636597,
+          "global_r2": 0.9565947651863098,
+          "median_per_protein_r2": 0.6399479508399963
+        },
+        "baseline_only": {
+          "rmse": 0.9082211852073669,
+          "global_r2": 0.8937772512435913,
+          "median_per_protein_r2": 0.06126224994659424
+        }
+      },
+      "valid_position_l2_norms": {
+        "y_baseline": 43422.54835390493,
+        "delta_response": 506.82663281306446,
+        "delta_batch": 1347.6882517347642
+      }
+    },
+    "val_strain_only": {
+      "outputs": {
+        "full": {
+          "rmse": 0.75037682056427,
+          "global_r2": 0.9263256788253784,
+          "median_per_protein_r2": 0.36640721559524536
+        },
+        "no_batch_posthoc": {
+          "rmse": 1.0091379880905151,
+          "global_r2": 0.8667526245117188,
+          "median_per_protein_r2": -0.20311427116394043
+        },
+        "batch_only": {
+          "rmse": 0.7720779180526733,
+          "global_r2": 0.9220026731491089,
+          "median_per_protein_r2": 0.2819722294807434
+        },
+        "baseline_only": {
+          "rmse": 1.0092270374298096,
+          "global_r2": 0.8667291402816772,
+          "median_per_protein_r2": -0.1372302770614624
+        }
+      },
+      "valid_position_l2_norms": {
+        "y_baseline": 52356.2139433607,
+        "delta_response": 465.96903532391224,
+        "delta_batch": 1497.7576679473468
+      }
+    },
+    "val_both": {
+      "outputs": {
+        "full": {
+          "rmse": 0.8369648456573486,
+          "global_r2": 0.9098843336105347,
+          "median_per_protein_r2": 0.3612715005874634
+        },
+        "no_batch_posthoc": {
+          "rmse": 1.085546612739563,
+          "global_r2": 0.8484057188034058,
+          "median_per_protein_r2": -0.13231408596038818
+        },
+        "batch_only": {
+          "rmse": 0.7829517722129822,
+          "global_r2": 0.9211401343345642,
+          "median_per_protein_r2": 0.4364835023880005
+        },
+        "baseline_only": {
+          "rmse": 1.0422310829162598,
+          "global_r2": 0.8602621555328369,
+          "median_per_protein_r2": -0.05507040023803711
+        }
+      },
+      "valid_position_l2_norms": {
+        "y_baseline": 21705.021015837487,
+        "delta_response": 227.46922466505228,
+        "delta_batch": 673.2783613245866
+      }
+    },
+    "val_time": {
+      "outputs": {
+        "full": {
+          "rmse": 0.578361451625824,
+          "global_r2": 0.9566394686698914,
+          "median_per_protein_r2": 0.5634928345680237
+        },
+        "no_batch_posthoc": {
+          "rmse": 0.8506648540496826,
+          "global_r2": 0.9061977863311768,
+          "median_per_protein_r2": -0.0017246603965759277
+        },
+        "batch_only": {
+          "rmse": 0.624028205871582,
+          "global_r2": 0.9495217204093933,
+          "median_per_protein_r2": 0.4682772755622864
+        },
+        "baseline_only": {
+          "rmse": 0.8613970875740051,
+          "global_r2": 0.9038159847259521,
+          "median_per_protein_r2": -0.005966365337371826
+        }
+      },
+      "valid_position_l2_norms": {
+        "y_baseline": 16616.1968767589,
+        "delta_response": 159.33237566941273,
+        "delta_batch": 465.3024279474848
+      }
+    }
+  }
+}

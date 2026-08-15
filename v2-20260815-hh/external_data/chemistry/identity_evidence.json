@@ -1,0 +1,63 @@
+{
+  "access_date": "2026-08-13",
+  "records": [
+    {
+      "raw_name": "U-73122",
+      "decision": "confirmed",
+      "cas_number": "112648-68-7",
+      "pubchem_cid": "104794",
+      "inchikey": "LUFAORPFSVMJIW-ZRJUGLEFSA-N",
+      "evidence": [
+        {
+          "source": "NLM MeSH Browser, Supplementary Concept C060229",
+          "url": "https://meshb.nlm.nih.gov/record/ui?name=U+73122",
+          "observed_claims": "U-73122/U73122 entry terms; Registry Number 112648-68-7; CAS Type 1 chemical name includes the 17beta stereochemical specification.",
+          "version": "MeSH Supplementary Concept Data 2026",
+          "license_or_terms": "NLM web resource; see https://www.nlm.nih.gov/web_policies.html"
+        },
+        {
+          "source": "PubChem Compound",
+          "url": "https://pubchem.ncbi.nlm.nih.gov/compound/104794",
+          "observed_claims": "CID 104794; formula C29H40N2O3; cached PUG-REST properties preserve stereochemical SMILES and InChIKey LUFAORPFSVMJIW-ZRJUGLEFSA-N.",
+          "version": "dynamic database record; PUG-REST response cached 2026-08-13",
+          "license_or_terms": "PubChem/NCBI; see https://pubchem.ncbi.nlm.nih.gov/docs/copyright"
+        },
+        {
+          "source": "Tocris Bioscience product 1268",
+          "url": "https://www.tocris.com/products/u-73122_1268",
+          "observed_claims": "U 73122; CAS 112648-68-7; PubChem ID 104794; formula C29H40N2O3; stereochemical SMILES; InChIKey LUFAORPFSVMJIW-ZRJUGLEFSA-N.",
+          "version": "dynamic public product page accessed 2026-08-13",
+          "license_or_terms": "Copyright R&D Systems/Bio-Techne; evidence citation only; see site Terms & Conditions"
+        }
+      ]
+    },
+    {
+      "raw_name": "Cisplatin",
+      "decision": "identity confirmed; features not applicable",
+      "pubchem_cid": "5460033",
+      "evidence": [
+        {
+          "source": "PubChem Compound Cisplatin",
+          "url": "https://pubchem.ncbi.nlm.nih.gov/compound/cisplatin",
+          "observed_claims": "Official PubChem Cisplatin page resolves to CID 5460033; cached PUG-REST properties retain the intact N.N.Cl[Pt]Cl representation.",
+          "version": "dynamic database record; PUG-REST response cached 2026-08-13",
+          "license_or_terms": "PubChem/NCBI; see https://pubchem.ncbi.nlm.nih.gov/docs/copyright"
+        }
+      ]
+    },
+    {
+      "raw_name": "NaCl",
+      "decision": "identity confirmed; features not applicable",
+      "pubchem_cid": "5234",
+      "evidence": [
+        {
+          "source": "PubChem Compound Sodium Chloride",
+          "url": "https://pubchem.ncbi.nlm.nih.gov/compound/Sodium-Chloride",
+          "observed_claims": "Official PubChem Sodium Chloride page identifies CID 5234; cached PUG-REST properties retain the complete ionic structure [Na+].[Cl-].",
+          "version": "dynamic database record; PUG-REST response cached 2026-08-13",
+          "license_or_terms": "PubChem/NCBI; see https://pubchem.ncbi.nlm.nih.gov/docs/copyright"
+        }
+      ]
+    }
+  ]
+}

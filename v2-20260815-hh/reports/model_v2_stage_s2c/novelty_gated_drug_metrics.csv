@@ -1,0 +1,8 @@
+model,scenario,subset,n_samples,n_valid_positions,pcc,rmse,direction_accuracy,coverage,reference_fit_scope
+Matched Control,val_strain_only,common_intersection,1313,4824118,0.13722252204552,0.4101248383522033,0.536958258483727,0.9999759547318808,split_final=train only
+V2 batch-enabled Huber,val_strain_only,common_intersection,1313,4824118,0.2838547257556766,0.7367890477180481,0.597862241346501,0.9999759547318808,split_final=train only
+S1 B anchor Morgan Huber,val_strain_only,common_intersection,1313,4824118,0.2864364578563692,0.7275146245956421,0.5973921035928226,0.9999759547318808,split_final=train only
+S1 C anchor Morgan Huber plus experimental FC,val_strain_only,common_intersection,1313,4824118,0.2913852951390191,0.7180259823799133,0.6005290500771333,0.9999759547318808,split_final=train only
+S2B D0 hierarchical none Huber,val_strain_only,common_intersection,1313,4824118,0.2653692704073876,0.7653154134750366,0.5892500971161982,0.9999759547318808,split_final=train only
+S2B D2 hierarchical Morgan experimental FC,val_strain_only,common_intersection,1313,4824118,0.2553566700252119,0.7529435753822327,0.5890181376160367,0.9999759547318808,split_final=train only
+S2C novelty-gated ensemble,val_strain_only,common_intersection,1313,4824118,0.2913852951390191,0.7180259823799133,0.6005290500771333,0.9999759547318807,split_final=train only

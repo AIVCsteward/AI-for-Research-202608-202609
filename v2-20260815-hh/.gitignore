@@ -1,0 +1,18 @@
+/.venv/
+/outputs/
+/submissions/
+/**/__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Competition files must never be committed.
+/WAYB_WAYC/*
+!/WAYB_WAYC/README.md
+*proteome_raw*.csv
+*metadata_train_val*.csv
+*metadata_test*.csv
+
+# Generated large predictions.
+prediction.csv
+prediction_float32.npy
+response_float32.npy

@@ -1,0 +1,9 @@
+candidate,reference,scenario,absolute_rmse_change_candidate_minus_reference,raw_fc_pcc_gain_candidate_minus_reference
+S2B D1 hierarchical Morgan Huber,S2B D0 hierarchical none Huber,val_chem_only,0.06014823913574219,-0.021355103491002725
+S2B D1 hierarchical Morgan Huber,S2B D0 hierarchical none Huber,val_strain_only,-0.015396833419799805,0.018678119143946875
+S2B D1 hierarchical Morgan Huber,S2B D0 hierarchical none Huber,val_both,0.03197199106216431,0.0017925829347138766
+S2B D1 hierarchical Morgan Huber,S2B D0 hierarchical none Huber,val_time,-0.039092957973480225,0.06405551598330467
+S2B D2 hierarchical Morgan experimental FC,S2B D1 hierarchical Morgan Huber,val_chem_only,-0.02849864959716797,0.017520095820344306
+S2B D2 hierarchical Morgan experimental FC,S2B D1 hierarchical Morgan Huber,val_strain_only,0.0030228495597839355,0.006812786277038324
+S2B D2 hierarchical Morgan experimental FC,S2B D1 hierarchical Morgan Huber,val_both,-0.028795897960662842,0.008080630857713378
+S2B D2 hierarchical Morgan experimental FC,S2B D1 hierarchical Morgan Huber,val_time,-0.0012322664260864258,0.01908938991539144
