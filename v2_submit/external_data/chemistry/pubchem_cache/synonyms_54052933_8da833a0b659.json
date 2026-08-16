@@ -1,0 +1,1 @@
+{"http_status":200,"payload":{"InformationList":{"Information":[{"CID":54052933,"Synonym":["U-73122","SCHEMBL15263313"]}]}},"response_body_sha256":"ba73d6816b24a3b7f96153bee8cfe2fa3a52121a7115a964d412a93f5e6f03b3","retrieved_date":"2026-08-13","url":"https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/54052933/synonyms/JSON"}

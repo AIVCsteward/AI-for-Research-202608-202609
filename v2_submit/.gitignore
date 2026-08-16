@@ -1,0 +1,21 @@
+/.venv/
+/outputs/
+/submissions/
+/**/__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Competition data must never be committed.
+/WAYB_WAYC/*
+!/WAYB_WAYC/README.md
+*proteome_raw*.csv
+*metadata_train_val*.csv
+*metadata_test*.csv
+
+# Generated predictions and sample-level diagnostics stay local.
+prediction.csv
+prediction_float32.npy
+response_float32.npy
+routing_manifest.csv
+experimental_parity_fc_pairing.csv
+*holdout_ids.csv

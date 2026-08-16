@@ -1,0 +1,1575 @@
+{
+  "schema_version": "1.0",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 416,
+      "sha256": "709749a07bc871b38a6afdb0305f3dc4a63c1ab30656cf1c8152b9bd7ed5799f"
+    },
+    {
+      "path": "baseline/__init__.py",
+      "bytes": 36,
+      "sha256": "78d8850001bb8e624e6a3d8e2fba951f5fb4727edb945c3cfa8e368566352d9c"
+    },
+    {
+      "path": "baseline/baseline/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "baseline/baseline/attribution_v2.py",
+      "bytes": 3923,
+      "sha256": "c3dccb76acf15937f300f5e5e78d032e39bcda0b2145d9ad3d8ca6eda5ff48fc"
+    },
+    {
+      "path": "baseline/baseline/chemical_comparison_v2.py",
+      "bytes": 6175,
+      "sha256": "ee90751cd2033f036b6551bd27d233f9fbe27365562169bab27db1ea9dd00a81"
+    },
+    {
+      "path": "baseline/baseline/chemical_component_analysis_v2.py",
+      "bytes": 27078,
+      "sha256": "a52cb2bf3ae90537736049779d205f1e1fd71fac5d7442cc26d1f9f0c64de4d5"
+    },
+    {
+      "path": "baseline/baseline/chemical_ood_analysis_v2.py",
+      "bytes": 30446,
+      "sha256": "a606a33f2e05383ffcd17a18297420164db2b7e6a0c0a0d7bdb61692cae4f69b"
+    },
+    {
+      "path": "baseline/baseline/data.py",
+      "bytes": 3986,
+      "sha256": "2962991903eef8f3ec9cc0d84194be7fa02a199dcca05d60014d71c0461a2054"
+    },
+    {
+      "path": "baseline/baseline/drug_group_cv_second_seed_v2.py",
+      "bytes": 19472,
+      "sha256": "9c769ae45c91c9407e29d90273b8ce7892eec4a8553ebe57fa1b1acbde4381b4"
+    },
+    {
+      "path": "baseline/baseline/drug_group_cv_v2.py",
+      "bytes": 49887,
+      "sha256": "603fb648bf12f188d1d3f25e0d2a9614bf16ba3144991f361737ae50e040f3f9"
+    },
+    {
+      "path": "baseline/baseline/evaluation.py",
+      "bytes": 20269,
+      "sha256": "d5e967c40d21e149b5348c86eb58cbf99109e4e1e10508118cbb228b21aee27e"
+    },
+    {
+      "path": "baseline/baseline/evaluation_v2.py",
+      "bytes": 9181,
+      "sha256": "e7aa05b2ff0e3e1824fa0ff5d3c4b701ab4091ec56d5851953764afe3241b1df"
+    },
+    {
+      "path": "baseline/baseline/experimental_fc_analysis_v2.py",
+      "bytes": 22788,
+      "sha256": "3d9fbf595e035360ca648878fcb0ed9544980237a4f7a5e8f80516e176176c2b"
+    },
+    {
+      "path": "baseline/baseline/features.py",
+      "bytes": 2416,
+      "sha256": "c6889bfa4a4515da67fa6cdd70e0a167edcc20fa5a433ff274f80325cd4bc520"
+    },
+    {
+      "path": "baseline/baseline/final_submission_v2.py",
+      "bytes": 51320,
+      "sha256": "77cb4460d9d67a236afde1304ae0d1d2dba1c3eddecfe0bca0a390e3cc000ec1"
+    },
+    {
+      "path": "baseline/baseline/hierarchical_batch_analysis_v2.py",
+      "bytes": 11935,
+      "sha256": "4811b63ab798aad168673b25c9068567ae9817e0f91cd22fa9f782768d43ea7e"
+    },
+    {
+      "path": "baseline/baseline/hierarchical_batch_v2.py",
+      "bytes": 30347,
+      "sha256": "ff4e3d421740d402256154983cfb8ba419bc80cdafc6654ad353e1074b29a363"
+    },
+    {
+      "path": "baseline/baseline/hierarchical_treatment_analysis_v2.py",
+      "bytes": 34949,
+      "sha256": "6fc75701aef4b7984299997f566504089e5a0792e49e5f0c49397c351fea3a50"
+    },
+    {
+      "path": "baseline/baseline/losses.py",
+      "bytes": 6195,
+      "sha256": "04a968567468c93968f7967db5f20f3a2da5ff22a33900b0ff9dfbd92766a55c"
+    },
+    {
+      "path": "baseline/baseline/losses_v2.py",
+      "bytes": 6812,
+      "sha256": "41cd1c69c58d9ba5d95dbf341678ab90225dbe96faca350c995b67c5f7bfc32c"
+    },
+    {
+      "path": "baseline/baseline/model.py",
+      "bytes": 1558,
+      "sha256": "ed053632d128a872c8e1ca13d9d2c943b5bca827d6c44334b1d5ea3068aab545"
+    },
+    {
+      "path": "baseline/baseline/model_v2.py",
+      "bytes": 12583,
+      "sha256": "bf651af752eb9e52309464a2946389ba9218911ad88b0a9ac43a9495aae7c62a"
+    },
+    {
+      "path": "baseline/baseline/normalized_response_analysis_v2.py",
+      "bytes": 23081,
+      "sha256": "8b97ebc561b87b3159666e2793c53c01f8eb8977435fe5bffac289dbe55a158a"
+    },
+    {
+      "path": "baseline/baseline/novelty_gated_ensemble_v2.py",
+      "bytes": 31992,
+      "sha256": "0d9fe96362eeba38df793cbabf6517de3df4d36cd513acea38c99c33bd3d7c26"
+    },
+    {
+      "path": "baseline/baseline/preprocess.py",
+      "bytes": 971,
+      "sha256": "cd2e3af866aa503156714fbd0c161956b405fc6cd2ace5d1cf166f28135ad1e3"
+    },
+    {
+      "path": "baseline/baseline/score_aligned_analysis_v2.py",
+      "bytes": 31889,
+      "sha256": "739fbe8703ecf88ce3287d12452d7fc27373c593a60e7561982ff6695b2dc9d8"
+    },
+    {
+      "path": "baseline/baseline/second_seed_ensemble_v2.py",
+      "bytes": 41767,
+      "sha256": "df2b0944c8716c123c2ee75a08bc63eebd501a439c24f6cb8ca3b16639da5f1f"
+    },
+    {
+      "path": "baseline/baseline/stage_s2d_gate_review_v2.py",
+      "bytes": 16107,
+      "sha256": "c6560f2ddad49ffb6b2a774496c458f039a21641e04535b932dbd225fc718348"
+    },
+    {
+      "path": "baseline/baseline/stage_s2d_training_v2.py",
+      "bytes": 9616,
+      "sha256": "cb70cb8257396da4d01eb4a9b37049323bcd0b7f3d545da1188bfa7bbf0bec07"
+    },
+    {
+      "path": "baseline/baseline/training.py",
+      "bytes": 4345,
+      "sha256": "384374e09f2db12cd2b2788f8b1953510b6115fac4bf5bfab0fcd08cff598dec"
+    },
+    {
+      "path": "baseline/baseline/training_v2.py",
+      "bytes": 79610,
+      "sha256": "3fc158b2340df47169ad9015bdd9569b4e5b574f2b266b43117e9ebff43c82cf"
+    },
+    {
+      "path": "baseline/configs/model_v2_stage_s1_c_anchor_morgan_fc.yaml",
+      "bytes": 3291,
+      "sha256": "8f32025eeaa9d4294dd7f56855bcd3269a31b355624962c3966964edfdf24df2"
+    },
+    {
+      "path": "baseline/configs/model_v2_stage_s2a_hierarchical_batch.yaml",
+      "bytes": 1659,
+      "sha256": "b5dd8ecd3d30454d40834bdb83e6d3b2521c36a8b0983d269ccb2e9b7cf38610"
+    },
+    {
+      "path": "baseline/configs/model_v2_stage_s2b_d0_hierarchical_none_huber.yaml",
+      "bytes": 2767,
+      "sha256": "57a01464da410a3d985de6ef5706337e9aae5bfbfd8885d015f9048486074b42"
+    },
+    {
+      "path": "baseline/configs/model_v2_stage_s2b_d2_hierarchical_morgan_fc.yaml",
+      "bytes": 3188,
+      "sha256": "4f66de5574027ae3617a441b8f0eeb101f12642218a87dcbd8fc79876c1c9578"
+    },
+    {
+      "path": "baseline/configs/model_v2_stage_s2d_d0_hierarchical_none_huber_seed_20260815.yaml",
+      "bytes": 2765,
+      "sha256": "4db1f37dd53274ba2e4680c7516c9ddeac93876e64d75cca3a3f58bccadaeb49"
+    },
+    {
+      "path": "baseline/configs/model_v2_stage_s2d_d2_hierarchical_morgan_fc_seed_20260815.yaml",
+      "bytes": 3239,
+      "sha256": "977fe50bbd8d22423bfd4dae7b06ad7f1a1361063d5723e1a0775d410de5ca65"
+    },
+    {
+      "path": "baseline/configs/model_v2_stage_s2d_flat_stage_a_seed_20260815.yaml",
+      "bytes": 1855,
+      "sha256": "67e4f32983d499e089d3e6f10a56c765575354717de4526a375a1828098a8cdf"
+    },
+    {
+      "path": "baseline/configs/model_v2_stage_s2d_hierarchical_stage_a_seed_20260815.yaml",
+      "bytes": 1563,
+      "sha256": "09d657428b23e6e45ad9fea810f623176bb28f1b37a185cc8fcc105c44f883fd"
+    },
+    {
+      "path": "baseline/configs/model_v2_stage_s2d_s1c_flat_morgan_fc_seed_20260815.yaml",
+      "bytes": 3089,
+      "sha256": "b14f77d18136e5651011fdf65fcce2cf402457120d7d3952a40e2f6062db26d7"
+    },
+    {
+      "path": "docs/DATA_USE_NOTICE.md",
+      "bytes": 1026,
+      "sha256": "86874b44ebb0de14c59617a8a5aa0abc51c9f11410f90072bcc186fd84cf9dd4"
+    },
+    {
+      "path": "docs/MODEL_CARD.md",
+      "bytes": 1613,
+      "sha256": "297bf5ee5e32795320a74e90d0d3f7eb98eefba073c4dcf48f915f4b90697298"
+    },
+    {
+      "path": "docs/OPEN_KNOWLEDGE_DISCLOSURE.md",
+      "bytes": 1976,
+      "sha256": "eb582561f33562240586ba61f02404515a6b54a1607f82dcf49cacd447e08333"
+    },
+    {
+      "path": "docs/THIRD_PARTY_SOFTWARE.md",
+      "bytes": 968,
+      "sha256": "e9ccbf9e724976e7b8407828f04ad629d925c2070e21f431b664d3d2f506fb04"
+    },
+    {
+      "path": "external_data/chemistry/chemical_feature_index.csv",
+      "bytes": 4314,
+      "sha256": "91d08ce8eea76dd43236fdfb08972393f99ed4901c3b024eebe9c2a5f3691fde"
+    },
+    {
+      "path": "external_data/chemistry/chemical_features.npz",
+      "bytes": 78810,
+      "sha256": "9b3879ae6f0b20e59028b7a12b464bc4b53a25a2576078453329d7315cf5f702"
+    },
+    {
+      "path": "external_data/chemistry/compound_mapping.csv",
+      "bytes": 71367,
+      "sha256": "f18e7e2217afab61ea8d7b21da7802b393e86ba988604d031a2316d827d41665"
+    },
+    {
+      "path": "external_data/chemistry/feature_schema.json",
+      "bytes": 8552,
+      "sha256": "3bc3eb1266a8b83553cc19bb53a5da163a68c7bcf219ea05d174ec2dab92b25b"
+    },
+    {
+      "path": "external_data/chemistry/identity_evidence.json",
+      "bytes": 3037,
+      "sha256": "bf536173d7e6dbe30772acc001538c6c4401c9592c4c4ae64a19f66067005025"
+    },
+    {
+      "path": "external_data/chemistry/manual_overrides.csv",
+      "bytes": 11525,
+      "sha256": "4a16ae6ea37253420fe10d20450dcc5a576b551f0110844af7b4e47cdfb5ff92"
+    },
+    {
+      "path": "external_data/chemistry/manual_review.csv",
+      "bytes": 38285,
+      "sha256": "cabd15d61504cea0374eb10a7db18b521f91e2ba25ba0ef7ef5c1517ba284413"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_-_-menthol_79dfdac1658d.json",
+      "bytes": 275,
+      "sha256": "cd6d7bc1fffd195014cc24c1ce21ee859e67d55f00357e1d2083976c36332093"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_1-10_Phenanthroline_monohydrate_9ee8a9814894.json",
+      "bytes": 452,
+      "sha256": "63cbcbca3591cff2c9f090e0c78bf5fd6633f757a6f7d2d187badc32b9ffad8b"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_1_10-phenanthroline_2f5068a78ae0.json",
+      "bytes": 280,
+      "sha256": "a106d5219fd1a2cde58e8b98c45b5ef8918ce2f8e00c666008b51a5c78488ef5"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_1_10-phenanthroline_monohydrate_ba10a6226d5b.json",
+      "bytes": 295,
+      "sha256": "107c9352ceb11fd9c8576bfb7be85b08e345b6271c938a61639a353af5ed36b8"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_1R_2S_5R_-_-_-Menthol_49906d20da9b.json",
+      "bytes": 457,
+      "sha256": "b60000acea7d3cbd4966ca15d53bc7e14005823360bc605bec9aa3794b8bff14"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_4-Hydroxytamoxifen_d88469183086.json",
+      "bytes": 279,
+      "sha256": "d2789041552a900f1c30d4f095c3a32355273a4d2c0b42cc07a52cdb20c1ee96"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_Abietic_acid_772cab6f9c25.json",
+      "bytes": 274,
+      "sha256": "3d9baecce36b3da2819be06899b74777dc15752a276a84426be8d7f72d520518"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_Amiodarone_hydrochloride_92ec3dc4571a.json",
+      "bytes": 287,
+      "sha256": "0c381cafd4e446bf0d56e3ba4d53fff20d606602703a513c1d02a05fd3e0ce3d"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_Amphotericin_B_ae156a23c2bd.json",
+      "bytes": 278,
+      "sha256": "3d329d0d8bdef18186107bede211c6fa808e3ab40f644835692a0432d0dd4a86"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_Anisomycin_b8e9d7980851.json",
+      "bytes": 271,
+      "sha256": "bfea7e38feb9b6ec4528faf931ee263a890ec29c964187d2f4df56337f1a51ba"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_Artemisinin_0c4603939195.json",
+      "bytes": 271,
+      "sha256": "890192af80858363502ff8dee691a42bf0eef4d7379e205747e883d9c26877a6"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_Brefeldin_A_2999993c236a.json",
+      "bytes": 275,
+      "sha256": "8d4e56204fbcc1de79f638120f525af24deeb191b804a304b9e225d8a053192a"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_carbonyl_cyanide_4-_trifluoromethoxy_phenylhydrazone_bf0ceb7e422c.json",
+      "bytes": 319,
+      "sha256": "ab7734461ae5c73dd996d1a0678ead7a96da1f4cd4e4a80687930770a695e344"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_CHX_7579344d21e4.json",
+      "bytes": 420,
+      "sha256": "a46f806fc419f513abfc0b4c7a626b43ee52a7942f7085d0708fa0e4fa1858d8"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_Cisplatin_bb7f341e195c.json",
+      "bytes": 271,
+      "sha256": "250931446bd4d8d6121b9d83326ea8ae8893ff210596357852715ac84be73924"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_Clomiphene_citrate_e03134efec6a.json",
+      "bytes": 280,
+      "sha256": "e2c2f25f0a822aa74663873dfc67fc58e8d07e9720fe16483d485ca89887e04e"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_Clotrimazole_caccf13d789b.json",
+      "bytes": 271,
+      "sha256": "3d3d6af9e9a29a034d4e8460378698444d7b0bec65836dad9a48f5187ec6fe57"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_cycloheximide_4914134312d4.json",
+      "bytes": 272,
+      "sha256": "947e9a69aa742edc2f08abdd24db342320f62868f11f0ff1f27b4bedd1534199"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_Cyclopiazonic_acid_54a847d1edf7.json",
+      "bytes": 283,
+      "sha256": "c52b2f8ecc43a747c8e11b47bee1dbf1c1f3829d127f8733e0ef500cb1c08a1b"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_Desipramine_hydrochloride_9deaa0109342.json",
+      "bytes": 287,
+      "sha256": "698e7a340fa2afc1167b548fc8fc8233ee8286214f157e5c98b5e8b1b73a7beb"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_Doxycycline_hyclate_e25f929f58d4.json",
+      "bytes": 357,
+      "sha256": "4aa26722eefc0f062c2df5208ffd74d7c267f327e6f63e6c713a69a28ed39378"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_Dyclonine_hydrochloride_e5b2e12c9118.json",
+      "bytes": 285,
+      "sha256": "942b9cb85e4c71be60c86b4ccaf02e151a1e7a4284c14d82c49cee007abb1c8e"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_EDTA_481bba896f62.json",
+      "bytes": 263,
+      "sha256": "35cda1877b49d3e7723e44a0d69edc0843505c1e534871c93a37c188a442eaa5"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_Emodin_2b9b8f2955fd.json",
+      "bytes": 265,
+      "sha256": "f367922f0e43ccfdea19a9453a530d5d6ed831924d451c90c0189263e85e4ca9"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_FCCP_0f9f616f5026.json",
+      "bytes": 263,
+      "sha256": "8355fb725e1a6f77367e624cb6b60a01247b0ec1b470980cd42e8459e82ff7c7"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_Fluconazole_83c39786d088.json",
+      "bytes": 270,
+      "sha256": "da69c3b492634c30263491ccf90417ffd7d88dc41fb01232bfbe80afb506264f"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_G418_9b70ed8cdf35.json",
+      "bytes": 265,
+      "sha256": "05e4f56b9de3e4b77a71cd624874debe495324e2196183c8f8866cfea057c533"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_Geldanamycin_ad3425d325d2.json",
+      "bytes": 274,
+      "sha256": "27b70db039be065dd44a07726d0c92f1afaaa93c240f815ed25b37774426ccab"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_geneticin_26e09f48f06e.json",
+      "bytes": 270,
+      "sha256": "f5b2b68f6e180f5646900863ad4ac7f889704601144bca0b34197fb8f0f255ad"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_H2O2_ac633e1c9ef4.json",
+      "bytes": 262,
+      "sha256": "95cf1ebf09c86ac135b92a68a2ffd3ab18db9be5b2a514b1ee02688006e479af"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_Haloperidol_6b9791ed283e.json",
+      "bytes": 270,
+      "sha256": "e1c3131ea303424c260c4a145505e98eabeda5842273c94fcdf1cfd9925572cd"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_Harmine_hydrochloride_f4d032f91592.json",
+      "bytes": 285,
+      "sha256": "a3add4dd92ed9a2fc45bfd90dc8281000c392f5097a8a5847220bd17299bca05"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_Hoechst_33258_17cb5f5cbcb5.json",
+      "bytes": 304,
+      "sha256": "82ef2fbb37f5b536db35b4a064917eb97d48ccf146490b88edf46111968a6aa5"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_hydrogen_peroxide_5fe5d42a73c1.json",
+      "bytes": 277,
+      "sha256": "372b31869ec0510a29933a45d72768f733a8cdd20e09cf5ce9599fd3c1780457"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_Hydroxyurea_f28455668d59.json",
+      "bytes": 270,
+      "sha256": "4fa4905ee712d6873262ea8fdbd9dda2fdecf39b1365c9f493b9781115d67ceb"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_Hygromycin_B_c9b7902c51c2.json",
+      "bytes": 277,
+      "sha256": "691903c75e4534c066d78119bd7a2655feabbf5131a9e4d66d727727900e7471"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_L-menthol_8c0ffc716cc8.json",
+      "bytes": 269,
+      "sha256": "bd7ae039fa9a93319277bda375bc25d42069e5d7d4e296e6f9f282010a137d6a"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_LY294002_hydrochloride_9bec2eb30cd0.json",
+      "bytes": 287,
+      "sha256": "7cc0c75831b71df17199f6b465f860179a4cee18f10742962be116ffa03ca34f"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_LY_294002_hydrochloride_1b2960eaee6a.json",
+      "bytes": 290,
+      "sha256": "860db650ba20d2c08b3dc4c5c5274b69add4e660aff604135f63c361580823e9"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_methyl_methanesulfonate_b884dc6ced78.json",
+      "bytes": 284,
+      "sha256": "bee3c322779051e2bbade84892e7e2ade6ec5c9ec5d9095ccdb83cc0a32c7679"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_MMS_94aa9338f6e8.json",
+      "bytes": 262,
+      "sha256": "2de5437c81693d94f098c3252759ea032dabd3045bb534773c744b000a5ec71b"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_NaCl_dbcd6d34e827.json",
+      "bytes": 263,
+      "sha256": "6a3df90a40c10ca0d837193847b18db95a9585cf78aec07b680fcd3b942c0afd"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_Neomycin_B_8bcdf59acee6.json",
+      "bytes": 271,
+      "sha256": "3bc9661ac1b78f1955fd60cd8ebaff615e70ca2ceba0928d31f4a86c067fcb54"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_Nigericin_d1830dcd55c4.json",
+      "bytes": 269,
+      "sha256": "37e59031f4a556a5bf60b9ccdb3972141aa3b793a9fa82b2bf164ce11bd17c29"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_Nocodazole_49009eb1ed58.json",
+      "bytes": 269,
+      "sha256": "3974644eeb77fb10194039f030c6608c6e7fb92e57ea8509800735c14594366f"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_Nystatin_dihydrate_2a54993c9197.json",
+      "bytes": 284,
+      "sha256": "243ede7fdee3d676cd5218ba22c94cee788f9145e6673a7e7e8a68e50e49690e"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_oligomycin_A_88f144514533.json",
+      "bytes": 277,
+      "sha256": "e04d392f87c1b8b4d8459380dd63485e6aa9107ae0a80f62884286554525a28b"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_Oligomycin_c9fc423c6055.json",
+      "bytes": 427,
+      "sha256": "c37424375ac6bf3b73944cec9ff45080f9443fdcc566dfe14f21a99bcbcaddc6"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_Parthenolide_210d6264f63a.json",
+      "bytes": 274,
+      "sha256": "40f376d5f7ffef0a2f88d3f57e4e0395c0853c0e3764c05a3899aebdc212bba7"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_Pentamidine_isethionate_679c69729dc2.json",
+      "bytes": 284,
+      "sha256": "b949404949a6edbc33dd5661e7f0998b38a06f36009b46a9a310d335c3fd9a04"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_Plumbagin_1a06a5a7af95.json",
+      "bytes": 269,
+      "sha256": "ccdf7617af23b75da32bf24b8096fb84b097e47179b606f58d48c180c9306099"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_Raloxifene_hydrochloride_d11daa7f2200.json",
+      "bytes": 286,
+      "sha256": "662a216e557503f899946663d991ad729374f66fd817857a96094a2306688604"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_Rapamycin_4eeadc2f2a65.json",
+      "bytes": 271,
+      "sha256": "8e07ff31bc27e2b0c38a6dc4121ebaf639cab1b22889411bc5bac61eafe662e8"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_S_-_-Camptothecin_a63a5f1ce7cb.json",
+      "bytes": 290,
+      "sha256": "73e35ba5002dc66a54e1478c9b00f034e5ae2b0729042172123c379c3c50775f"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_SDS_54b6b356d70e.json",
+      "bytes": 420,
+      "sha256": "1d2935d4514fafa6a6757b1b1ea7bcb513a407cc29303ad616eb2115544eec21"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_sodium_dodecyl_sulfate_69d8a93ab52a.json",
+      "bytes": 288,
+      "sha256": "3e137d617c6a7daa6526594a8dc3f12cde04626dc668441b4625bb3d311df2d3"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_Sorbitol_7d93eed74be1.json",
+      "bytes": 267,
+      "sha256": "8d80669b70ea0689a61540585762fca18f8091528ccbe3fb9d6ee054d7fcc518"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_Staurosporine_7c3bd682f836.json",
+      "bytes": 273,
+      "sha256": "b6211367d63dd40e96f50f527ac8f2e4ff187448e57ed9c7951844db6ba10ad6"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_Sulfometuron_methyl_74ab12e6c2b8.json",
+      "bytes": 281,
+      "sha256": "a19df724e8507c4f881fb68fe0ab3e4d294d26f6e206738d1afb86c957808fc8"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_Tamoxifen_fcc3737114ed.json",
+      "bytes": 271,
+      "sha256": "9d1e65ab9febb434e75e5ca52cbea7cfa0a29147810fead4147d144e299f12c3"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_Trichostatin_A_d2d49e0cd123.json",
+      "bytes": 277,
+      "sha256": "a6289e525f4fc84ec8106431553905245963bfb63597a0cb02d2158039bed3fd"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_Trifluoperazine_dihydrochloride_0ff05739b99f.json",
+      "bytes": 293,
+      "sha256": "49dd0853b5c2d6390c69dd424ef525c38a8533b28f989828d8dda6610bf18ccd"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_Tunicamycin_dafc7a82b30d.json",
+      "bytes": 428,
+      "sha256": "83107478f8c4827a434193be47372cb7f7a819b9747460c5187f1922b821284f"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_tunicamycin_V_7fc48f023bfa.json",
+      "bytes": 278,
+      "sha256": "607e992da3240aa7c07e8846069d35f98f08a9556c1a55388437a87a26a78643"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_U-73122_5d17fed8daf5.json",
+      "bytes": 320,
+      "sha256": "9cbbc11329d1a4531231eeeceff02c135527100be65f7af8b2e06d20920e3043"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_U73122_34b16b7549ad.json",
+      "bytes": 267,
+      "sha256": "f6fd1b9676cfe77b519b9de9964f57ce6a551f844c8b395721e5f1cdff827eed"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_Valinomycin_9d6467de0768.json",
+      "bytes": 273,
+      "sha256": "989eac21c5b645ae723401f01ac0ed728993af01b498265c1dd5900093651f14"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/name_Wortmannin_4c1421971223.json",
+      "bytes": 271,
+      "sha256": "e74911920ce8e86b4b28e324289c13be92be7a0f95ca1abfaf8debf2e4439b75"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_10205_9e6e0a0f2f12.json",
+      "bytes": 586,
+      "sha256": "469c24f5bccf612cf5f7441422b78138dd7f8d348e713b9c8f335a87730b7242"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_104794_c208cb4811f3.json",
+      "bytes": 848,
+      "sha256": "55e1e0041c78d275b6dd4f5175663144487d3cd0e93f854d1443a76e09566e89"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_10569_9c225a25baf2.json",
+      "bytes": 699,
+      "sha256": "ef9f39fde46dda9b89a8a393b6cfb2337de5f106e07ba144d4826378379e3223"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_11104835_ee9b93d125ca.json",
+      "bytes": 1025,
+      "sha256": "9d048e95f2c29422fb71207513a63898412f2dd1a82bb9d44e3f66802846b380"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_11957589_7327441c1e7a.json",
+      "bytes": 692,
+      "sha256": "8507b08598744c2157c687c911c6c609ef6e4b9ab871c36b567ae458b13a1392"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_11957723_419bac44ca22.json",
+      "bytes": 764,
+      "sha256": "1daa0854f58290fc6f2516399eeb98478bce4044eb5350c4dbb367f4fed2009c"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_123865_5417ee7acd95.json",
+      "bytes": 878,
+      "sha256": "3848f87bafd1f38b8749428a31a8214a5a4b50a113111799777d2a6313de8656"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_131673820_3fad37d4fc92.json",
+      "bytes": 1162,
+      "sha256": "1bdee2f3f25ac49e3c40cb2072ee50df3d8efba41f2774ec47008b7c18e44eb5"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_1318_095eaa09cd36.json",
+      "bytes": 580,
+      "sha256": "375c163323ea401c8caad78ed4da4cb7fcb39fd8499a23a6d301409de4906111"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_135705211_afb71f2a34d9.json",
+      "bytes": 772,
+      "sha256": "1489c4ac3a6e58e4e5859e2aa20dfd4d5e3b8d8717fd5e0ec4b72439f2cf42bd"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_138107731_d5e73c4ac4f3.json",
+      "bytes": 898,
+      "sha256": "c68b548f8ca856e879e429ba761ac69887932236c1a016ef13d194f6bd74b8c9"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_154809619_ddcea98eb3fd.json",
+      "bytes": 1020,
+      "sha256": "f328769ca35014f7cd235d8b6d18f4d631f387003de830fd0a31355b8315e1b5"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_16666_fcf731e2be9a.json",
+      "bytes": 593,
+      "sha256": "e19e005d1b1d5fe33f005c4162f205277e754e065bde45e8fe11f774af536ffe"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_177926704_d085c3ea3984.json",
+      "bytes": 878,
+      "sha256": "2f1f6fa4c578770872f3090d119de07a83d116262475a1da85db6c4124ba92b4"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_182069_d7d7939f5d93.json",
+      "bytes": 816,
+      "sha256": "c48428a5ce7590d557f24f5dac6257f1e27934c9282e8b0104984eda53a09ce0"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_21117951_0a149d117b17.json",
+      "bytes": 835,
+      "sha256": "3e83be73e4eb1337b444076c72c4b07feaa435e8a696289eedd2f35df9b29a52"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_21226_001be51d94db.json",
+      "bytes": 604,
+      "sha256": "cdeb0484eea3acac930e39aa2dece33dafa01902aaf58c9e6d786c197a9f7086"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_2392_4a1b1c59f8ad.json",
+      "bytes": 714,
+      "sha256": "7853785aa0a77dc4c7dac53c690a8adf3f74d8e147b9801be2fa4c57b0750f3d"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_24360_c145d8692cd6.json",
+      "bytes": 735,
+      "sha256": "f7247a0090ada8a1a7ce33d61de559f976616b3f53d60d1e4d5a6c85a39c0736"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_253602_b1c7b60081c5.json",
+      "bytes": 649,
+      "sha256": "bd47d3e4c13bb4e167cb63f61521b51b02210dd9fcd47450b01bfc112e52344b"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_2733526_72367698c7f1.json",
+      "bytes": 669,
+      "sha256": "223f61003d02bf0e5c8810d80bea9cb9d34e9ae0dc94535bd3cb1ee1c4277009"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_2812_45553cb1d7ff.json",
+      "bytes": 641,
+      "sha256": "4d7c0a5f514b9cc74be6a67a357a32d1a39d3858735548dd31deb5bc3193019b"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_3000706_a41779fff323.json",
+      "bytes": 1084,
+      "sha256": "239f690ac1ff2042651561e1958c13024ea204496e47027318e62980d4e812c6"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_312145_4d1a077602dc.json",
+      "bytes": 796,
+      "sha256": "3ae68b21e106c8fcec30be138d3f2d17946c7d2c2ae89efaf95dffb431a11b59"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_31953_1ba305f75e34.json",
+      "bytes": 771,
+      "sha256": "e87e3f261846607d8d3b1e87d36056f8fb5b4b69670cd98d28c6c24e3ae8c229"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_3220_698eddbc91b2.json",
+      "bytes": 621,
+      "sha256": "0c1eecd7596031c494276cc99e5e93cac8f0b61d904f2baee3aa3c67ba839ae1"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_3330_896a19677baf.json",
+      "bytes": 664,
+      "sha256": "41a97f1612a87e4b2e999f7f3148f666a6182f850c6e6eb2d31deb1180020bcb"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_3365_54224175e152.json",
+      "bytes": 642,
+      "sha256": "98961b0f6669ccfffedad0c5af0e3df7ee2f01ea7096e8eae2f604005cd2d351"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_34230_c1fe3fc2ad5f.json",
+      "bytes": 1046,
+      "sha256": "55d0cdfca88435025b92e8bd233a338988200e66629ba3bc5ad441fa888759f9"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_3423265_4aa98b11892a.json",
+      "bytes": 597,
+      "sha256": "955b054324326968ffce354f84f9cc09f1a42cefa0445986b528e858ba43aa68"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_3559_e76a469e135c.json",
+      "bytes": 672,
+      "sha256": "014baab6f65263f688135e64c5f735c17fa67d5e009343c30e339866b42cf806"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_3657_d44ce374513f.json",
+      "bytes": 522,
+      "sha256": "55693dfe8d5bb71df8ea776ff7476de2e995ea7fc8d6c8d10b89cadb38f421e6"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_4122_a21177bddb8e.json",
+      "bytes": 645,
+      "sha256": "d0b1f4daac657c2b7a966a8b9e6ae8d2b363c721d24daabfd67f663acd11e78e"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_4156_2a31dee3cd37.json",
+      "bytes": 550,
+      "sha256": "9f20b531568d3bf91b1e753648ae1d8b2c2e7a6925f3372bcbe89da2afb3b745"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_441325_9951b0519ec1.json",
+      "bytes": 730,
+      "sha256": "35fe31d53106ad60bd9c4467bf8e1f7ec0b442a336f04ded39884b6f51e432a0"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_44259_38679b854e70.json",
+      "bytes": 828,
+      "sha256": "e327dec6e5e1004902a04b7be14b8290b3f0dcd0bf605a4e0092212d3f6622d2"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_444732_4ab738f5cce6.json",
+      "bytes": 682,
+      "sha256": "1497fc343793a3399e0e020583514f391257782f92cc0d2e3ecb7da9430fdf0f"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_448194_ed2c86aca139.json",
+      "bytes": 805,
+      "sha256": "df2c28f7d5c56b7cc91ff7b6ed49d90f8002a5d7de76d060f15dcf888291baf1"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_449459_242a9bbba51e.json",
+      "bytes": 689,
+      "sha256": "85ff4e114cde6b83e2338b9f8278628a6fbf4ac2b0c6fc000c52fb2123aa50fa"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_5234_28cc1ea32612.json",
+      "bytes": 529,
+      "sha256": "5ce4b92f063d5f1d7cb9bd303a0c9bdbc20c45650aca45fd40fc842fa724dd78"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_5280965_cd2cebf0af70.json",
+      "bytes": 1115,
+      "sha256": "39c4ba29149607200c8e983e6b58bad753cc094c43ebfc02ab42920f106d09e1"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_5284616_f1780ecd2cc4.json",
+      "bytes": 1088,
+      "sha256": "31a1e15342006f5eac75fb02fbcdaebcf47360fa14b17aba0ada94777f896328"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_5287620_15e55199ffea.json",
+      "bytes": 685,
+      "sha256": "04170e4fd6ba1b5168604c780dd8627f1ac3ffc539e2488f6b03f8973e6cc6fb"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_5288382_98af31ff9939.json",
+      "bytes": 861,
+      "sha256": "0538bc9585a44f68aca8efdd892168970c9c48900a47cb4a96edd4ca889eb669"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_52947716_0459310fca6e.json",
+      "bytes": 1056,
+      "sha256": "cef97b909aeef19fb8c36069dbd52ab5c8bac7cadddd3dae40fe349358e190a0"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_52997_6217a030d66c.json",
+      "bytes": 672,
+      "sha256": "d879cf1b0fdab7b91c6961d6ec8ea692bc99010fc908fed943007fe075be4529"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_5359389_495de488d127.json",
+      "bytes": 632,
+      "sha256": "dc92567b159d7b20d16777307b289594b9a76b945454a96a47a8972652003ab5"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_54052933_8da833a0b659.json",
+      "bytes": 862,
+      "sha256": "7020cf9b66de5aed0dae022d11d398bfc465afe9cecbf713a6af0d1deedbbfe6"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_5460033_f0be68ded75e.json",
+      "bytes": 543,
+      "sha256": "3f207384657d48b45e1d384effe9e2f80c12b057386ea33fc8f2a0747e0c947f"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_54671203_11069b1ffcda.json",
+      "bytes": 913,
+      "sha256": "5330e97fa1fa96937db2a0f3a6b09bb92e400ac91984afa2876e14e78fde014b"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_54682463_be467d789cfd.json",
+      "bytes": 758,
+      "sha256": "83c0d5d80a6479e719b93890b0e5bf5a8364f93b89211def96ad60e693c2fe47"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_54685920_df56a3e80d46.json",
+      "bytes": 836,
+      "sha256": "47c062329917d054d0d542670f7aab32ccbd6809a9fe91fcaaacf6e0cd689249"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_54686183_3b869f78c695.json",
+      "bytes": 1023,
+      "sha256": "2cffc2bd3fed850adb2f54c1888372d104d248a475269f30ea3c00d48c15b135"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_54686898_b914606a97eb.json",
+      "bytes": 898,
+      "sha256": "ea1d42938e4ee9c89177b3e4c797d18ffa1f4167703581a9b5623da6b1566f0b"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_54705095_5033c0d09a21.json",
+      "bytes": 859,
+      "sha256": "ee4dad7a2195f7f0370a1708257508f74970cbffd968665de7a6df531cb5a1b7"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_54729367_d928643bd4d7.json",
+      "bytes": 1100,
+      "sha256": "ef15588ff20ffbd88c5886f60ca4a1d15850cb2aff3e9cc41e452536a7c28033"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_54900_d21aad94ee9d.json",
+      "bytes": 761,
+      "sha256": "ec786dbc34a7ce8721d8dc5c3aa64867be61f1a2d2b8f35b0f915d866ace194d"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_5631_56ed74d2b06c.json",
+      "bytes": 839,
+      "sha256": "a20ac5c8b17f41b2361ab4643fa83a3896943f52fcfc6981c809df53f774d588"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_56928061_828d1c7a3a69.json",
+      "bytes": 945,
+      "sha256": "45e212cebf4fd75683b8293f1e0cd441294249c8bea68b221b3eb218cf33bd35"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_5702198_697f970059d8.json",
+      "bytes": 556,
+      "sha256": "0c3e0c550b43c76151c014417abff3220ce1acb957ace9c5556f9d9d68b0a50d"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_57514051_e5489d30fa11.json",
+      "bytes": 1227,
+      "sha256": "a64f66c56289f12bb704b8cabcf2ce51f304b308fad7caeb4096496b18ac6442"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_57515985_0c47f9482a2e.json",
+      "bytes": 1010,
+      "sha256": "90c38313f6871b082df1e3ad386ce46a739045226b4cf8186ebdeca6f81473e1"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_5780_6c663502b8bd.json",
+      "bytes": 587,
+      "sha256": "4a5aebb3ba56781a47f37f9e4c13060f71a4b873ff0fbc8f71f03cd2afb50582"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_6049_8a1fbaf0f871.json",
+      "bytes": 658,
+      "sha256": "3a9eb6a9d1ed7eaa3cf508568088fafe96d2def5075649ddf01da5fe809bd174"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_60974_eb7ed4c245c9.json",
+      "bytes": 771,
+      "sha256": "dd120de9b3d3e7a1537ba6dc7501e02f3377d7602a673ca27ca6ccd967060e4f"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_6197_981f122ef83b.json",
+      "bytes": 679,
+      "sha256": "ce4f98af089806b3e3b1624cdf876727dee859cd463d54c49a275e65094ea481"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_6473881_dfe84d349a0f.json",
+      "bytes": 692,
+      "sha256": "eacd326c5344e810d2cf46af12ff23c0d9de58481e363c710c85ec5666461cdc"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_65327_7cb71272bb55.json",
+      "bytes": 659,
+      "sha256": "d60852b8c0266d080b01a96ed53e80abe907a2f3855f1b18e4dbf0a89e38bbbd"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_66064_40b4c51f5a9d.json",
+      "bytes": 716,
+      "sha256": "445fb28a94975ef4882aeef7f2a8e79ac3815ad5a7f497311fc05c133edc2f81"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_68304_31b221854c33.json",
+      "bytes": 642,
+      "sha256": "9814f634ab9ca2114c71908e78c58e7799119418d0932a86e23d6d58c16bc003"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_68827_bcd2d199c409.json",
+      "bytes": 703,
+      "sha256": "f20dea1d0b43ed342af7853bc74ecbcf218d95d3265593799ad532f574ab1b30"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_784_ff108b68b0e9.json",
+      "bytes": 513,
+      "sha256": "4fd832ca4a35f559f0e6c6ad851ee4b66c955b4599238c033e6622cb3a73287f"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_8378_8e54c1a1f0c1.json",
+      "bytes": 980,
+      "sha256": "4a0c2ae32ec6c01b9ceefdd86cbe81349723da3016a7421d0708ebde6990ed94"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/properties_8813_12854f00c38a.json",
+      "bytes": 756,
+      "sha256": "cedc95d9e7280ed36c51cbeeea10f538f09812b3eb8c5dd7a686f29b4575e208"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_10205_9e6e0a0f2f12.json",
+      "bytes": 2251,
+      "sha256": "8451391789ea094db092a8d27343439f6d34df3d33489bb65f4a9e6cb41031cb"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_104794_c208cb4811f3.json",
+      "bytes": 2746,
+      "sha256": "1bee3173f60c6c6249b0a7c119f68bd5c0febedfd21be80c26d9c1e069fbad15"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_10569_9c225a25baf2.json",
+      "bytes": 3036,
+      "sha256": "bcc427ed44f9021a5c197aa5e7fa9746c9dcb7877ef2bc72b131ca820fbb33dd"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_11104835_ee9b93d125ca.json",
+      "bytes": 2112,
+      "sha256": "0540495b100ddeacdafc4179bb8ae59adcdd864aea6d5611fbcdda8a40b42c10"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_11957589_7327441c1e7a.json",
+      "bytes": 1769,
+      "sha256": "b622142572c32c7d7eccfdb8071b1acf46c5aed18e4b3ddbc2a91b25a09d5012"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_11957723_419bac44ca22.json",
+      "bytes": 700,
+      "sha256": "592f7718fa59249779169a30855ad40d25c1914b45448e3ae2a369e458e099c9"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_123865_5417ee7acd95.json",
+      "bytes": 2426,
+      "sha256": "baa27a24490b3d750393f079adefbf5f6f2778ef39e7fb2376447526fd1e2bef"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_131673820_3fad37d4fc92.json",
+      "bytes": 395,
+      "sha256": "1ca2ea582ddc0a5996ec5df94b48231c1a14c898040063612c751c542667e3d1"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_1318_095eaa09cd36.json",
+      "bytes": 2935,
+      "sha256": "56797d38cd4519c2b4d09630ffda343320c9a35f6df58f7ccbf917c6d3058b43"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_135705211_afb71f2a34d9.json",
+      "bytes": 676,
+      "sha256": "51efe43f011448b0a6d882e1ab69a5568edda83236413c6ee96fba0d0e6ccc92"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_138107731_d5e73c4ac4f3.json",
+      "bytes": 315,
+      "sha256": "c915df5e164f48a88c94ab21925e75968d97b4e3cba3b0d5a873a5ed014775f6"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_154809619_ddcea98eb3fd.json",
+      "bytes": 326,
+      "sha256": "eff6ff25f429756ade29b65ff66e1998b5a9d1040922599047aa1369458c748f"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_16666_fcf731e2be9a.json",
+      "bytes": 7470,
+      "sha256": "aff21e0d1ddb0875f0cba9607310edfb0878f11a1459b852d1c9bc5353ccede1"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_177926704_d085c3ea3984.json",
+      "bytes": 315,
+      "sha256": "6a5a9ffc249cb5b8f54e6757248b2ac36eac8dbc6104bb8a98be3092926c30e1"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_182069_d7d7939f5d93.json",
+      "bytes": 1160,
+      "sha256": "9b1c782319d54c3ce56d078c329bf0271dc0414a5315b966ef8746355f392cf2"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_21117951_0a149d117b17.json",
+      "bytes": 552,
+      "sha256": "8e6a0ede7bf8d081200f79476fcaa5fb3d0e5c29c705c068ca8c54feae487269"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_21226_001be51d94db.json",
+      "bytes": 1762,
+      "sha256": "31ce6494bb09f1c1ae335fe8c187ce75c41c90f58b0e106c064699cb288a29b8"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_2392_4a1b1c59f8ad.json",
+      "bytes": 3415,
+      "sha256": "ee3f586218fa5ec71bf27cfbe3e5f3d38ac4406c1abf959e08cc390de6c344ba"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_24360_c145d8692cd6.json",
+      "bytes": 5961,
+      "sha256": "1026de129d088310d1f0e3b8269b04cf41f87610d1f514554a77123f01b589f5"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_253602_b1c7b60081c5.json",
+      "bytes": 3607,
+      "sha256": "4263e8e544a198cd3d59b6c17b8fe252735abb52c712f9fef2c06f0ad484e10c"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_2733526_72367698c7f1.json",
+      "bytes": 5147,
+      "sha256": "954de29fbfa80e00862b5e01fef9519789a59b2be145eb3d42e304fc9fbb4aeb"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_2812_45553cb1d7ff.json",
+      "bytes": 12047,
+      "sha256": "f60a2e9aded3b9eee7e1751ae6fc385f92beea7c6f20bfa742016bfffa8e5074"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_3000706_a41779fff323.json",
+      "bytes": 3448,
+      "sha256": "4c32ad38a29f3af26becb67be3aafa1dda9f6de8889ce5e7528dc58f044fb9f0"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_312145_4d1a077602dc.json",
+      "bytes": 5356,
+      "sha256": "9a6b40414041e0d854012f80d6f4ec660a457d651360dc479133feb0a9fade04"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_31953_1ba305f75e34.json",
+      "bytes": 2898,
+      "sha256": "2cd23b440d892086ddb899905ca034d120f774a186498a27484cb1b4a79381a8"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_3220_698eddbc91b2.json",
+      "bytes": 4271,
+      "sha256": "3cfcc2799e5112fe43a6d05a5a936823e0d1b714d0f6e6ed6e50e76738a94c43"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_3330_896a19677baf.json",
+      "bytes": 3912,
+      "sha256": "9d7caa8276aa7587804f200603ed3458918f7836ff12f2e7109d4c3c45183235"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_3365_54224175e152.json",
+      "bytes": 6435,
+      "sha256": "bb24d5443b6b902b6e9568bffbd4fb6d9fa099796f7efdec9f4d076cc4e096d7"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_34230_c1fe3fc2ad5f.json",
+      "bytes": 3556,
+      "sha256": "726527e4807c93afb23c6934d6a56e877cdd3f35c316c1692d256055c3084d39"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_3423265_4aa98b11892a.json",
+      "bytes": 6404,
+      "sha256": "74543436c7a4001103b176b9f6403f24f0c34286397471ff0e966f815e301d1e"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_3559_e76a469e135c.json",
+      "bytes": 8116,
+      "sha256": "769da3c2e49f350d856613baa0cfc2545ecb8ea6a6269b16aeb70d30638bc330"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_3657_d44ce374513f.json",
+      "bytes": 4593,
+      "sha256": "e13fc970e35b91ff4b0fd208d4e1aebc2220e44f1574005f8b3d0858f980f846"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_4122_a21177bddb8e.json",
+      "bytes": 6125,
+      "sha256": "13665f678a254c3c28560d037c5123517d045f3d324d96e43a5cdddea27bc127"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_4156_2a31dee3cd37.json",
+      "bytes": 2846,
+      "sha256": "18902a178422bf12c8f9eff502359d9ae7a4bbbf54b8560cd941230cac8ff742"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_441325_9951b0519ec1.json",
+      "bytes": 4962,
+      "sha256": "ef54a05087ca8940193f15d2ee4258f7521559f38080de5d519f67394073d58b"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_44259_38679b854e70.json",
+      "bytes": 5236,
+      "sha256": "1037d30f28bb509fd1c7f9f083943f7df766d1d3007c3fe5415c89bbb5acaafb"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_444732_4ab738f5cce6.json",
+      "bytes": 3635,
+      "sha256": "a0178094dd05a81d99be8c7f6ecc26adecf05dfb47d84ceb05cd109261c91027"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_448194_ed2c86aca139.json",
+      "bytes": 315,
+      "sha256": "3c03669c6e9d2e8fa421492c9597f31c8dd527f7b37999408a35d90eae627738"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_449459_242a9bbba51e.json",
+      "bytes": 3799,
+      "sha256": "26546d6f48766a6a1bba57ce26fc19e4049c15246844a395db1e4bfd55e8d3a6"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_5234_28cc1ea32612.json",
+      "bytes": 13746,
+      "sha256": "214706f46f9494aa384d879cd18eb73a11067cf506482142c6531971fe3ec8ba"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_5280965_cd2cebf0af70.json",
+      "bytes": 6660,
+      "sha256": "b1f1a744d23d5c0386b5661447a76276786382681bba1250ead3abd34caaf9ed"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_5284616_f1780ecd2cc4.json",
+      "bytes": 9486,
+      "sha256": "62ae5ea3f17196327147443da0591a319071067aece041753981ad15ecd19fd1"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_5287620_15e55199ffea.json",
+      "bytes": 3817,
+      "sha256": "16cb23ea02aa7302df2d5a533166e11c8882d66dca010c65775583e45895d7f9"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_5288382_98af31ff9939.json",
+      "bytes": 2947,
+      "sha256": "d7cb0aab9069b723b7a3fccb30ca8fba2e1f589071d54ee6953d9f9d7f590f32"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_52947716_0459310fca6e.json",
+      "bytes": 2748,
+      "sha256": "30e66487c50115b7744b8c0a9dde8c3489f988f1cd0e01c04150b257b1153e88"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_52997_6217a030d66c.json",
+      "bytes": 2631,
+      "sha256": "77b227155d9b1cd00e78351507efdd79a826f570cae4d3ef279cf66e438e2340"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_5359389_495de488d127.json",
+      "bytes": 2057,
+      "sha256": "1ce9aa2b94250db6f3eb23f00cf18ad830f0d9f2474dc3f8bcd09bb4f19fad86"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_54052933_8da833a0b659.json",
+      "bytes": 331,
+      "sha256": "93e4289ffb719eba76ded36d2e7c9101c3c8af502f4135b37343971dcf6479c1"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_5460033_f0be68ded75e.json",
+      "bytes": 2168,
+      "sha256": "9893f15a0a0c2f3b00209541a6d323b9bbc3e96b00a3a961a34a443f1ad161e6"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_54671203_11069b1ffcda.json",
+      "bytes": 4595,
+      "sha256": "d3ccba6dae58d9b7f14f77e24a89a0cbd108c11936ad5a86f4937baa5dcee546"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_54682463_be467d789cfd.json",
+      "bytes": 2155,
+      "sha256": "6e3f2d2af5b14ffef8e3d9d51d64ada6200864c56ee0cdf7b4fb8cef0e0f322b"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_54685920_df56a3e80d46.json",
+      "bytes": 4683,
+      "sha256": "44f3686aea60b671f3eb685e502c5dd1856bde717df1108230d617737fb0dd9f"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_54686183_3b869f78c695.json",
+      "bytes": 3049,
+      "sha256": "e7e5412cb35c889d9605f13d28557533ed2ecd4e71fab96270a71830fd0c0698"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_54686898_b914606a97eb.json",
+      "bytes": 817,
+      "sha256": "045708e82c4a4d733961ca7872517d580d179915e477858c69c52a74c6716136"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_54705095_5033c0d09a21.json",
+      "bytes": 862,
+      "sha256": "65dc39b59ba5a04a6403994e45bb56ec73ae28967962651e5eca739ae131b8e4"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_54729367_d928643bd4d7.json",
+      "bytes": 642,
+      "sha256": "ba1e5732274a550583816331c2474e887427ea14d6e7c6318faa96ab498496e4"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_54900_d21aad94ee9d.json",
+      "bytes": 6144,
+      "sha256": "91a8b530fcc68ce4e9303334b0795351c5a9096ff36c7184079fb18a266f4bf5"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_5631_56ed74d2b06c.json",
+      "bytes": 457,
+      "sha256": "3f24894aef3a53916dfdca62f6b59a7971cf67b004ee34d43110704c2cf00d09"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_56928061_828d1c7a3a69.json",
+      "bytes": 2987,
+      "sha256": "12e68d55b9ce5f966cce3b0cd507f1fdb53d4656f95361e439a340449fbd30a1"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_5702198_697f970059d8.json",
+      "bytes": 1500,
+      "sha256": "16bdb481e37827ef4746fda386f0c3e4d01854f75d833262a5e6ba51ca8357f8"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_57514051_e5489d30fa11.json",
+      "bytes": 356,
+      "sha256": "3825105f51de89f36a844f18547a87a00c17ff7de406833f54df2fe734c92426"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_57515985_0c47f9482a2e.json",
+      "bytes": 341,
+      "sha256": "d42caf99cd243c8b54dca474582874d338a04021b4996743f7a62c81c01d156a"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_5780_6c663502b8bd.json",
+      "bytes": 4567,
+      "sha256": "cc788457d590481ac5323a46c9b3b113bb3daf026a75e8f189e7216fc2e8edfe"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_6049_8a1fbaf0f871.json",
+      "bytes": 8714,
+      "sha256": "a8cd78c21244aa112e25ecf3f7db23bc188f7cf31eb1d61c610d65d20ab4dc58"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_60974_eb7ed4c245c9.json",
+      "bytes": 2546,
+      "sha256": "1199e0ad1cc9d20b031f5084ed551487cebebfa89e714158428a7968db95d07d"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_6197_981f122ef83b.json",
+      "bytes": 5863,
+      "sha256": "62ee9a997424a44abcd4bb9d97038cfbd30844eb95ceeac276f41fe61f8c2455"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_6473881_dfe84d349a0f.json",
+      "bytes": 1884,
+      "sha256": "61b99e2953eb5fb2993dae25f43eeb1b60e37685e62be53e8e7206799fadae20"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_65327_7cb71272bb55.json",
+      "bytes": 4938,
+      "sha256": "2caad47f38def248687b8f20b790ffa1b26fd1a7712275c1caa11920111d5099"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_66064_40b4c51f5a9d.json",
+      "bytes": 4276,
+      "sha256": "dd0171d896b78002a5d417caf2bd9c40b9532441f9c159af892b4b96e9d1404a"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_68304_31b221854c33.json",
+      "bytes": 3166,
+      "sha256": "ee2543b090378ba9159c76a37a87ab939342e8de2e00bf093bbeac86a72a40e9"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_68827_bcd2d199c409.json",
+      "bytes": 4667,
+      "sha256": "b11b00b233a3fead55b083776a14d4196601d9870dc85d6fe33ceebcc1edf8ca"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_784_ff108b68b0e9.json",
+      "bytes": 8827,
+      "sha256": "c471f222c35070c7c989f4524620401e43f12fd37dc3e6aede20e11b3a91fc97"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_8378_8e54c1a1f0c1.json",
+      "bytes": 5435,
+      "sha256": "5fca7449b8ca1bae7626a3eaeed6879325d040319f1b79a4210844fb89052fd8"
+    },
+    {
+      "path": "external_data/chemistry/pubchem_cache/synonyms_8813_12854f00c38a.json",
+      "bytes": 4514,
+      "sha256": "2d1be04c11235e5b03ad792ac685438c22179385dffb340b4de1952eccf6a5cb"
+    },
+    {
+      "path": "external_data/chemistry/source_manifest.json",
+      "bytes": 89255,
+      "sha256": "128b63ff38283ecf848ba3875b5f7f2ee19caeb82d260c347cebc21342d768a2"
+    },
+    {
+      "path": "external_data/chemistry/tanimoto_column_index.csv",
+      "bytes": 2961,
+      "sha256": "26bde3d3873c7c9de393112915c1139bbf240b5945ee53e35d8aa809a520900e"
+    },
+    {
+      "path": "external_data/chemistry/tanimoto_row_index.csv",
+      "bytes": 2035,
+      "sha256": "9bcef84c53bc936badd9df28eeb61e961d8cf3e277e814c9a6d583e0f70ebed1"
+    },
+    {
+      "path": "external_data/chemistry/tanimoto_similarity.npz",
+      "bytes": 4161,
+      "sha256": "ecaec7039c15e7c1617b58d42059757cc2d582bdbab855f3ff9823c0aa8ab8f0"
+    },
+    {
+      "path": "external_data/genome/genome_feature_schema.json",
+      "bytes": 7182,
+      "sha256": "244d2baa4c7b190ba4422155089e76a7655b1e17af6eb11fb5bc38c362d16ea1"
+    },
+    {
+      "path": "external_data/genome/GO_OR_PATHWAY_MAPPING.csv",
+      "bytes": 473,
+      "sha256": "db25f9b8a3836f56d9a23216178a824a1062c180b745e79fdd93e2cb51e06063"
+    },
+    {
+      "path": "external_data/genome/mapping_evidence.md",
+      "bytes": 5124,
+      "sha256": "fb7b707b7f73e965847dccdcaf07f4c68fc8d482aa46bf9305b264653412afd4"
+    },
+    {
+      "path": "external_data/genome/raw_resource_manifest.json",
+      "bytes": 6271,
+      "sha256": "b4ad6482ababbb5385740b734ade6e84ce627e21b6ae1031da6a5279111d0eda"
+    },
+    {
+      "path": "external_data/genome/source_manifest.json",
+      "bytes": 3820,
+      "sha256": "703f8289daf0069a6fafba41851bfac4c22be424be2926b9d2536676c692e815"
+    },
+    {
+      "path": "external_data/genome/strain_feature_index.csv",
+      "bytes": 782,
+      "sha256": "33796bbf4073a690880e17f85f4e0c7bf496ecc7bb6c136f97345b80224f5202"
+    },
+    {
+      "path": "external_data/genome/strain_features.npz",
+      "bytes": 7874,
+      "sha256": "11ab741242605577891001dcd931671bd2bebdb0e41098355c76658fee633d42"
+    },
+    {
+      "path": "external_data/genome/strain_mapping.csv",
+      "bytes": 5435,
+      "sha256": "0be547821bd8d5d1c3ad5dc8d1d6f9ac7d772f015a3ee75da8f297ab7396f105"
+    },
+    {
+      "path": "LICENSE_DECISION_REQUIRED.md",
+      "bytes": 572,
+      "sha256": "2a89c7e5c7bfe25a5031a9e8df4c247c3ad30f05226479facd2195aa9a409c54"
+    },
+    {
+      "path": "project_v2/data_contract/control_matching_spec.json",
+      "bytes": 3715,
+      "sha256": "8edd8f77971a3eacedca1e36307d4e8f8b1602fc1c2ea7ecbac8b88490a72d16"
+    },
+    {
+      "path": "project_v2/data_contract/feature_contract.json",
+      "bytes": 60992,
+      "sha256": "9ef3685f16796c949a7ec4b7c2b3f4b1c157ce374970ebcbc77f832dcf26f4f8"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4126,
+      "sha256": "0c0aaefa78917c992c121476b6cf8475697dc0f974ef1285d64b408df2ac456d"
+    },
+    {
+      "path": "reports/model_v2_stage2/formal_huber_seed_20260814/resolved_config.json",
+      "bytes": 2452,
+      "sha256": "ab803003d407662d5f359654e5eae460370b752d2dca5a8437d894f3d6fc0b97"
+    },
+    {
+      "path": "reports/model_v2_stage2/formal_huber_seed_20260814/stage_a_best.pt",
+      "bytes": 2849033,
+      "sha256": "d84aa821a6d39dea876c91dc66314d6eb93cb577890c179687e036761d1a167e"
+    },
+    {
+      "path": "reports/model_v2_stage2/formal_huber_seed_20260814/stage_b_best.pt",
+      "bytes": 4021447,
+      "sha256": "d7661f57a7e1aff15f34a5d7d54156d3fc064be4effe3780eaa864f9a18e72c7"
+    },
+    {
+      "path": "reports/model_v2_stage_s1/formal_c_anchor_morgan_fc_seed_20260814/resolved_config.json",
+      "bytes": 3786,
+      "sha256": "f37824b92e349aebfcede15a3226b2f5bbafe476b5f1b6ddfa1583318f530176"
+    },
+    {
+      "path": "reports/model_v2_stage_s1/formal_c_anchor_morgan_fc_seed_20260814/stage_b_best.pt",
+      "bytes": 4027767,
+      "sha256": "8af52cd79dade3464dae8c46710f104b7d7f0731a2a737bb29f306c9fd92ebc7"
+    },
+    {
+      "path": "reports/model_v2_stage_s2a/final/hierarchical_batch/resolved_config.json",
+      "bytes": 1789,
+      "sha256": "e37bf02daf2daba1202e5c359ed301f6f2f0aa5d9d0484079b335ce5e2a8da97"
+    },
+    {
+      "path": "reports/model_v2_stage_s2a/final/hierarchical_batch/stage_a_final.pt",
+      "bytes": 3694581,
+      "sha256": "99f997f815eec95bde70f78afcc533f649b7519435f04b8ef207da90c60f7e73"
+    },
+    {
+      "path": "reports/model_v2_stage_s2b/formal_d0_hierarchical_none_huber_seed_20260814/resolved_config.json",
+      "bytes": 3414,
+      "sha256": "9b54fdbaa5b59c5c1f6909a9c0fe681403784d827f0785b5477e4da516b89836"
+    },
+    {
+      "path": "reports/model_v2_stage_s2b/formal_d0_hierarchical_none_huber_seed_20260814/stage_b_best.pt",
+      "bytes": 4006811,
+      "sha256": "a216cb68a9dc345a6b1a1a9cb03c033d2e1570bb3d4417e36655d798b36fb56b"
+    },
+    {
+      "path": "reports/model_v2_stage_s2b/formal_d2_hierarchical_morgan_fc_seed_20260814/resolved_config.json",
+      "bytes": 3913,
+      "sha256": "85865ded2321855a7ad54e885499cc85485edcfbbf6fea332b98cd040e13f61a"
+    },
+    {
+      "path": "reports/model_v2_stage_s2b/formal_d2_hierarchical_morgan_fc_seed_20260814/stage_b_best.pt",
+      "bytes": 4009115,
+      "sha256": "e2db629ae549769b996d86b55c101d9dd2cd68e7dfb96887a9ad91e737f2b209"
+    },
+    {
+      "path": "reports/model_v2_stage_s2c/checkpoint_manifest.json",
+      "bytes": 2739,
+      "sha256": "9a917512693e88868cfc70aa100640ffa8e055238aa5771dbecc3c18096ed685"
+    },
+    {
+      "path": "reports/model_v2_stage_s2d/checkpoint_manifest.json",
+      "bytes": 21228,
+      "sha256": "d0e0c75f4e8731623df7d360c3695313111fbf8314840082ae1106b087439abb"
+    },
+    {
+      "path": "reports/model_v2_stage_s2d/formal_d0_hierarchical_none_huber_seed_20260815/resolved_config.json",
+      "bytes": 3477,
+      "sha256": "d9678d3106d723ce5632d9aac218b84ec5d3edb3e035f3d6c91f444fe4fdbc3a"
+    },
+    {
+      "path": "reports/model_v2_stage_s2d/formal_d0_hierarchical_none_huber_seed_20260815/stage_b_best.pt",
+      "bytes": 4006875,
+      "sha256": "1b82d4e0c52683b1bef271e22b66035eda17ea64db0843dd8f913216e7d8df14"
+    },
+    {
+      "path": "reports/model_v2_stage_s2d/formal_d2_hierarchical_morgan_fc_seed_20260815/resolved_config.json",
+      "bytes": 3963,
+      "sha256": "4b64a44d38b5f1bf65f377673b8bd3229fbca18c502c6eae83a0325ddd442c20"
+    },
+    {
+      "path": "reports/model_v2_stage_s2d/formal_d2_hierarchical_morgan_fc_seed_20260815/stage_b_best.pt",
+      "bytes": 4009179,
+      "sha256": "6d089faa863ef1615d4760cfee4f715a3addec46b317fd5040fddd0019475891"
+    },
+    {
+      "path": "reports/model_v2_stage_s2d/formal_s1c_flat_morgan_fc_seed_20260815/resolved_config.json",
+      "bytes": 3801,
+      "sha256": "71f1d5835387957da7e11467cc0aeccbcaf81027ed1da23ba7975025e2400cf5"
+    },
+    {
+      "path": "reports/model_v2_stage_s2d/formal_s1c_flat_morgan_fc_seed_20260815/stage_b_best.pt",
+      "bytes": 4027767,
+      "sha256": "1dd79ca80091c5dd3ca20bb78d3e47445e67f710e2a2cb096e27c6f5049f4aa4"
+    },
+    {
+      "path": "reports/model_v2_stage_s2d/stage_a_flat_seed_20260815/resolved_config.json",
+      "bytes": 2452,
+      "sha256": "b1e824a3a389701daf840fa1abc6b439acdc3035503e71cb5ff2a2bfb2b0623e"
+    },
+    {
+      "path": "reports/model_v2_stage_s2d/stage_a_flat_seed_20260815/stage_a_best.pt",
+      "bytes": 2849289,
+      "sha256": "0805b9abcd6812e7e384a0abd59b4c7e2bdebbdc5bf07bc5cd48784ddaa2562e"
+    },
+    {
+      "path": "reports/model_v2_stage_s2d/stage_a_hierarchical_seed_20260815/resolved_config.json",
+      "bytes": 1789,
+      "sha256": "0cdbfb5e20f478cc589629038bf019645b8fe992eae457158a2eac0efa0ad6e9"
+    },
+    {
+      "path": "reports/model_v2_stage_s2d/stage_a_hierarchical_seed_20260815/stage_a_final.pt",
+      "bytes": 3694581,
+      "sha256": "6e3500d17ae91cd8674ce6629e4dd24bc271c03c5beed1c2b21cc21bac7ba6c7"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 100,
+      "sha256": "975bc1ed5b73ff86c23f204c882a9d64153bed378dc6715f642f9741b5cc7a25"
+    },
+    {
+      "path": "scripts/audit_competition_score_alignment.py",
+      "bytes": 64470,
+      "sha256": "08586e6b741144c854a42935b02f08374f6e4cf1222d559047bd9e5db0c0e573"
+    },
+    {
+      "path": "scripts/build_chemical_features.py",
+      "bytes": 37653,
+      "sha256": "7f9077b1a8f67925c2fc82437e7cd7d85d04fbce164ac1dd907a4acb7b44dc33"
+    },
+    {
+      "path": "scripts/build_genome_features.py",
+      "bytes": 45926,
+      "sha256": "e7fbab7bbc294596b46ecebf9422aecb1dfc4d43961cb7cdc4a6e6dc214e169b"
+    },
+    {
+      "path": "scripts/run_inference.py",
+      "bytes": 1490,
+      "sha256": "042d2f15b55e1cf953fd2dc52941d997a6ad5fd99077ad92c0e46d0c7f953e58"
+    },
+    {
+      "path": "scripts/verify_submit_package.py",
+      "bytes": 4173,
+      "sha256": "707d67e757cdf44797d27941990ff907c274479ee73a53ffe2fbec68a92ff579"
+    },
+    {
+      "path": "tests/test_submit_package.py",
+      "bytes": 3312,
+      "sha256": "b5d5027ec2c04f924e07d0c6168bb82493f1912e5607268562da29db24caf38b"
+    },
+    {
+      "path": "WAYB_WAYC/README.md",
+      "bytes": 386,
+      "sha256": "572e997264d27ba7fff41849bd03d666cadb9f3afe5b76642e135bbdcddb6ab1"
+    }
+  ]
+}

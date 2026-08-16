@@ -1,0 +1,1 @@
+{"http_status":200,"payload":{"InformationList":{"Information":[{"CID":177926704,"Synonym":["U-73122"]}]}},"response_body_sha256":"9913bac92ddba9665cda68b4c845b00b297dd29d610a97e0f49f8f3d0de867b9","retrieved_date":"2026-08-13","url":"https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/177926704/synonyms/JSON"}

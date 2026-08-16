@@ -1,0 +1,1 @@
+{"http_status":200,"payload":{"InformationList":{"Information":[{"CID":57515985,"Synonym":["Doxycycline hyclate","SCHEMBL537059"]}]}},"response_body_sha256":"0eb48dd4452797ea3da427c26027eace2e5c817af7e6278ff94cb4819708243e","retrieved_date":"2026-08-13","url":"https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/57515985/synonyms/JSON"}

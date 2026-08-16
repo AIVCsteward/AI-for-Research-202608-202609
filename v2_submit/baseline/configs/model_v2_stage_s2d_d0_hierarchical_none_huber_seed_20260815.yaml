@@ -1,0 +1,43 @@
+{
+  "schema_version": "2.1", "task_stage": "S2D_second_seed_hierarchical_treatment",
+  "experiment_name": "stage_s2d_d0_hierarchical_none_huber_seed_20260815",
+  "planning_proxy": true, "official_score": false,
+  "experimental_nonofficial_parity_fc": false, "official_fc_result": false,
+  "control_mapping": {"name": "disabled_for_fc", "official": false, "fit_scope": "split_final=train_only"},
+  "model": {
+    "latent_dim": 32, "protein_rank": 16, "dropout": 0.05,
+    "chemical_mode": "correct", "chemical_feature_components": "none", "genome_mode": "correct",
+    "similarity_enabled": false, "batch_enabled": true, "batch_structure": "hierarchical_batch",
+    "batch_output_zero_init": false, "batch_field_dropout": 0.0,
+    "response_gate_enabled": true, "response_gate_initial": 0.25, "response_rms_cap": 0.75
+  },
+  "loss": {
+    "absolute": "mask_aware_huber", "absolute_weight": 1.0,
+    "fc_absolute_weight": 0.0, "fc_weight": 0.0, "dep_weight": 0.0, "pathway_weight": 0.0,
+    "response_magnitude_weight": 0.01, "batch_reg_weight": 0.0, "batch_center_strength": 1.0,
+    "batch_source_reg_weight": 0.0001, "batch_instrument_reg_weight": 0.0005, "batch_plate_reg_weight": 0.002
+  },
+  "training": {
+    "seed": 20260815, "batch_size": 64, "weight_decay": 0.0001, "device": "auto", "num_workers": 0,
+    "fixed_stage_a_checkpoint": {
+      "path": "D:/虚拟细胞/reports/model_v2_stage_s2d/stage_a_hierarchical_seed_20260815/stage_a_final.pt",
+      "sha256": "6e3500d17ae91cd8674ce6629e4dd24bc271c03c5beed1c2b21cc21bac7ba6c7"
+    },
+    "train_internal_batch_holdout": {"enabled": true, "fraction": 0.2, "selection_seed": 20260814, "group_columns": ["data_source", "instrument", "Yeast_cell_plate"]},
+    "stage_a": {
+      "name": "frozen_seed2_s2a_hierarchical_stage_a", "early_stopping_monitor": "not_applicable_fixed_30_epochs_all_train_controls", "epochs": 30, "patience": 0,
+      "parameter_groups": {
+        "baseline_branch": {"trainable": false, "lr": 0.0}, "genome_encoder": {"trainable": false, "lr": 0.0},
+        "chemical_encoder": {"trainable": false, "lr": 0.0}, "response_branch": {"trainable": false, "lr": 0.0}, "batch_branch": {"trainable": false, "lr": 0.0}
+      }
+    },
+    "stage_b": {
+      "name": "hierarchical_anchor_none_huber", "early_stopping_monitor": "macro_huber_equal_four_scenarios", "epochs": 100, "patience": 12,
+      "parameter_groups": {
+        "baseline_branch": {"trainable": false, "lr": 0.0}, "genome_encoder": {"trainable": false, "lr": 0.0},
+        "chemical_encoder": {"trainable": true, "lr": 0.001}, "response_branch": {"trainable": true, "lr": 0.001}, "batch_branch": {"trainable": false, "lr": 0.0}
+      }
+    },
+    "smoke": {"n_treatment": 32, "stage_a_epochs": 0, "stage_b_epochs": 2}
+  }
+}

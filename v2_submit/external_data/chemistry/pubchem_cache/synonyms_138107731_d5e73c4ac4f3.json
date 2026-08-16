@@ -1,0 +1,1 @@
+{"http_status":200,"payload":{"InformationList":{"Information":[{"CID":138107731,"Synonym":["U-73122"]}]}},"response_body_sha256":"3e64c9745c9b5a83ef99549bd4c21352f980c8580d644c46f69ca9938b0cdceb","retrieved_date":"2026-08-13","url":"https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/138107731/synonyms/JSON"}

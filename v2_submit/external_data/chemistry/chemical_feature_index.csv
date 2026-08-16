@@ -1,0 +1,58 @@
+chemical_id,raw_name,mapping_status,mapping_confidence,structure_valid,parent_inchikey
+"(1R, 2S, 5R) - (-) - Menthol","(1R, 2S, 5R) - (-) - Menthol",confirmed,high,True,NOOLISFMXDJSKH-KXUCPTDWSA-N
+(S)-(+)-Camptothecin,(S)-(+)-Camptothecin,confirmed,high,True,VSJKWCGYPAHWDS-FQEVSTJZSA-N
+1-10 Phenanthroline monohydrate,1-10 Phenanthroline monohydrate,confirmed,high,True,DGEZNRSVGBDHLK-UHFFFAOYSA-N
+4-Hydroxytamoxifen,4-Hydroxytamoxifen,confirmed,high,True,TXUZVZSFRXZGTL-QPLCGJKRSA-N
+Abietic acid,Abietic acid,confirmed,high,True,RSWGJHLUYNHPMX-ONCXSQPRSA-N
+Amiodarone hydrochloride,Amiodarone hydrochloride,confirmed,medium,True,IYIKLHRQXLHMJQ-UHFFFAOYSA-N
+Amphotericin B,Amphotericin B,confirmed,high,True,APKFDSVGJQXUKY-INPOYWNPSA-N
+Anisomycin,Anisomycin,confirmed,high,True,YKJYKKNCCRKFSL-RDBSUJKOSA-N
+Artemisinin,Artemisinin,confirmed,high,True,BLUAFEHZUWYNDE-NNWCWBAJSA-N
+Brefeldin A,Brefeldin A,confirmed,high,True,KQNZDYYTLMIZCT-KQPMLPITSA-N
+CHX,CHX,confirmed,high,True,YPHMISFOHDHNIV-FSZOTQKASA-N
+Cisplatin,Cisplatin,confirmed,high,False,
+Clomiphene citrate,Clomiphene citrate,confirmed,medium,True,GKIRPKYJQBWNGO-UHFFFAOYSA-N
+Clotrimazole,Clotrimazole,confirmed,high,True,VNFPBHJOKIVQEB-UHFFFAOYSA-N
+Cyclopiazonic acid,Cyclopiazonic acid,confirmed,high,True,SZINUGQCTHLQAZ-DQYPLSBCSA-N
+DMSO,DMSO,special_control,none,False,
+Desipramine hydrochloride,Desipramine hydrochloride,confirmed,medium,True,HCYAFALTSJYZDH-UHFFFAOYSA-N
+Doxycycline hyclate,Doxycycline hyclate,confirmed,medium,True,SGKRLCUYIXIAHR-AKNGSSGZSA-N
+Dyclonine hydrochloride,Dyclonine hydrochloride,confirmed,medium,True,BZEWSEKUUPWQDQ-UHFFFAOYSA-N
+EDTA,EDTA,confirmed,high,True,KCXVZYZYPLLWCC-UHFFFAOYSA-N
+Emodin,Emodin,confirmed,high,True,RHMXXJGYXNZAPX-UHFFFAOYSA-N
+FCCP,FCCP,confirmed,high,True,BMZRVOVNUMQTIN-UHFFFAOYSA-N
+Fluconazole,Fluconazole,confirmed,high,True,RFHAOTPXVQNOHP-UHFFFAOYSA-N
+G418,G418,confirmed,high,True,BRZYSWJRSDMWLG-DJWUNRQOSA-N
+Geldanamycin,Geldanamycin,confirmed,high,True,QTQAWLPCGQOSGP-KSRBKZBZSA-N
+H2O2,H2O2,confirmed,high,True,MHAJPDPJQMAIIY-UHFFFAOYSA-N
+Haloperidol,Haloperidol,confirmed,high,True,LNEPOXFFQSENCJ-UHFFFAOYSA-N
+Harmine hydrochloride,Harmine hydrochloride,confirmed,medium,True,BXNJHAXVSOCGBA-UHFFFAOYSA-N
+Hoechst 33258,Hoechst 33258,confirmed,medium,True,INAAIJLSXJJHOZ-UHFFFAOYSA-N
+Hydroxyurea,Hydroxyurea,confirmed,high,True,VSNHCAURESNICA-UHFFFAOYSA-N
+Hygromycin B,Hygromycin B,confirmed,high,True,GRRNUXAQVGOGFE-HUCHGKBZSA-N
+LY 294002 hydrochloride,LY 294002 hydrochloride,confirmed,medium,True,CZQHHVNHHHRRDU-UHFFFAOYSA-N
+MMS,MMS,confirmed,high,True,MBABOKRGFJTBAE-UHFFFAOYSA-N
+NaCl,NaCl,confirmed,high,False,
+Neomycin B,Neomycin B,confirmed,high,True,PGBHMTALBVVCIT-VCIWKGPPSA-N
+Nigericin,Nigericin,confirmed,high,True,DANUORFCFTYTSZ-SJSJOXFOSA-N
+Nocodazole,Nocodazole,confirmed,high,True,KYRVNWMVYQXFEU-UHFFFAOYSA-N
+Nystatin dihydrate,Nystatin dihydrate,confirmed,medium,True,VQOXZBDYSJBXMA-LRUFXKSPSA-N
+Oligomycin,Oligomycin,proxy,medium,True,MNULEGDCPYONBU-AWJDAWNUSA-N
+Parthenolide,Parthenolide,confirmed,high,True,KTEXNACQROZXEV-SLXBATTESA-N
+Pentamidine isethionate,Pentamidine isethionate,confirmed,medium,True,XDRYMKDFEDOLFX-UHFFFAOYSA-N
+Plumbagin,Plumbagin,confirmed,high,True,VCMMXZQDRFWYSE-UHFFFAOYSA-N
+Quality Control,Quality Control,special_control,none,False,
+Raloxifene hydrochloride,Raloxifene hydrochloride,confirmed,medium,True,GZUITABIAKMVPG-UHFFFAOYSA-N
+Rapamycin,Rapamycin,confirmed,high,True,QFJCIRLUMZQUOT-HPLJOQBZSA-N
+SDS,SDS,confirmed,medium,True,MOTZDAYCYVMXPC-UHFFFAOYSA-M
+Sorbitol,Sorbitol,confirmed,high,True,FBPFZTCFMRRESA-JGWLITMVSA-N
+Staurosporine,Staurosporine,confirmed,high,True,HKSZLNNOFSGOKW-FYTWVXJKSA-N
+Sulfometuron methyl,Sulfometuron methyl,confirmed,high,True,ZDXMLEQEMNLCQG-UHFFFAOYSA-N
+Tamoxifen,Tamoxifen,confirmed,high,True,NKANXQFJJICGDU-QPLCGJKRSA-N
+Trichostatin A,Trichostatin A,confirmed,high,True,RTKIYFITIVXBLE-QEQCGCAPSA-N
+Trifluoperazine dihydrochloride,Trifluoperazine dihydrochloride,confirmed,medium,True,ZEWQUBUPAILYHI-UHFFFAOYSA-N
+Tunicamycin,Tunicamycin,unresolved,none,False,
+U-73122,U-73122,confirmed,high,True,LUFAORPFSVMJIW-ZRJUGLEFSA-N
+Valinomycin,Valinomycin,confirmed,high,True,FCFNRCROJUBPLU-DNDCDFAISA-N
+Water,Water,special_control,none,False,
+Wortmannin,Wortmannin,confirmed,high,True,QDLHCMPXEPAAMD-QAIWCSMKSA-N
