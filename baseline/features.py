@@ -22,6 +22,7 @@ from aivc.entity_representations import (
     ChemicalAnchorEncoder,
     CrossFeatureEncoder,
     HashEncoder,
+    StrainGenomeEncoder,
     StrainPriorEncoder,
 )
 from aivc.external_chemical import ChemicalStructureEncoder
@@ -164,6 +165,12 @@ def build_raw_condition_features(meta_df, encoders) -> np.ndarray:
         chunks.append(chunk)
         slices["chemical_structure"] = (start, start + chunk.shape[1])
 
+    if cfg.get("use_genome_features", False):
+        start = sum(chunk.shape[1] for chunk in chunks)
+        chunk = encoders["strain_genome"].transform(meta_df)
+        chunks.append(chunk)
+        slices["strain_genome"] = (start, start + chunk.shape[1])
+
     if cfg.get("use_temperature", True):
         start = sum(chunk.shape[1] for chunk in chunks)
         temperature = pd.to_numeric(meta_df["Temperature"], errors="coerce").fillna(0)
@@ -245,6 +252,8 @@ def fit_feature_encoders(
             morgan_radius=encoder_cfg.get("morgan_radius", 2),
             morgan_pca_dim=encoder_cfg.get("morgan_pca_dim", 64),
         ).fit(train_meta)
+    if encoder_cfg.get("use_genome_features", False):
+        encoders["strain_genome"] = StrainGenomeEncoder()
 
     raw_train = build_raw_condition_features(train_meta, encoders)
     projector = FixedDimProjector(encoder_cfg.get("d_emb", 256)).fit(raw_train)

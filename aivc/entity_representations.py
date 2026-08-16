@@ -14,6 +14,7 @@ responsible for passing only ``split_final == 'train'`` rows.
 from __future__ import annotations
 
 import hashlib
+from pathlib import Path
 from typing import Dict, Iterable, Mapping, Optional, Sequence
 
 import numpy as np
@@ -337,4 +338,72 @@ class CrossFeatureEncoder:
             ],
             axis=1,
         )
+
+
+def compute_strain_bias(meta, y_log2, mask_matrix, train_mask):
+    """算菌株 δ 偏置（只用 train 的 Water/DMSO 对照样本），返回 (strain_bias, mu_0)。
+
+    strain_bias: {strain: (n_protein,) float32}，δ_s = μ_s − μ_0；未见菌株查不到即 0。
+    mu_0:        全局对照均值 (n_protein,) float32，可并进 head bias。
+    """
+    pert = meta["perturbation_no_concentration"].astype(str).str.strip().str.lower()
+    is_ctrl = pert.isin(CONTROL_NAMES).values
+    train_ctrl = train_mask.values & is_ctrl
+    ctrl_meta = meta.loc[train_ctrl]
+    ctrl_y = y_log2.loc[ctrl_meta.index].to_numpy(dtype=np.float64)
+    ctrl_m = mask_matrix.loc[ctrl_meta.index].to_numpy(dtype=bool)
+
+    cnt = ctrl_m.sum(axis=0)
+    mu_0 = np.divide(
+        np.where(ctrl_m, ctrl_y, 0.0).sum(axis=0), cnt,
+        out=np.full(y_log2.shape[1], np.nan, dtype=np.float64), where=cnt > 0,
+    )
+
+    strain_bias = {}
+    for strain, grp in ctrl_meta.groupby("Strains"):
+        y = y_log2.loc[grp.index].to_numpy(dtype=np.float64)
+        m = mask_matrix.loc[grp.index].to_numpy(dtype=bool)
+        c = m.sum(axis=0)
+        mu_s = np.divide(
+            np.where(m, y, 0.0).sum(axis=0), c,
+            out=np.full(y_log2.shape[1], np.nan, dtype=np.float64), where=c > 0,
+        )
+        delta = np.nan_to_num(mu_s - mu_0, nan=0.0)
+        strain_bias[strain] = delta.astype(np.float32)
+
+    mu_0 = np.nan_to_num(mu_0, nan=0.0).astype(np.float32)
+    return strain_bias, mu_0
+
+
+class StrainGenomeEncoder:
+    """读 strain_features.npz，提供菌株 genome 身份特征（24 维，标准化）。"""
+
+    def __init__(self, genome_npz_path=None):
+        if genome_npz_path is None:
+            genome_npz_path = (
+                Path(__file__).resolve().parents[1]
+                / "genome_mapping_package"
+                / "genome_mapping_package"
+                / "external_data"
+                / "genome"
+                / "strain_features.npz"
+            )
+        z = np.load(genome_npz_path, allow_pickle=False)
+        self.strain_ids_ = [str(s) for s in z["strain_ids"]]
+        self.features_ = z["genome_features"].astype(np.float32)  # (6, 24)
+        self.index_ = {s: i for i, s in enumerate(self.strain_ids_)}
+
+    @property
+    def dim(self) -> int:
+        return self.features_.shape[1]
+
+    def transform(self, meta_df, column="Strains") -> np.ndarray:
+        rows = []
+        for v in meta_df[column].astype(str):
+            idx = self.index_.get(v)
+            if idx is not None:
+                rows.append(self.features_[idx])
+            else:
+                rows.append(np.zeros(self.dim, dtype=np.float32))
+        return np.stack(rows)
 

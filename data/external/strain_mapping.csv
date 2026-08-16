@@ -1,0 +1,7 @@
+raw_name,std_name,role,genome_file,genome_version,source,source_version,is_proxy,review_status,notes
+BAH,,seen_in_train,,,,,,,unresolved,身份未知：竞赛匿名代码，需确定对应真实菌株后方可挂 genome 文件
+BAI,,unseen_val,,,,,,,unresolved,身份未知：val_strain_only/val_both 的未见菌株，是 genome→prior 外推的目标
+CEK,,seen_in_train,,,,,,,unresolved,身份未知：竞赛匿名代码
+CGD,,seen_in_train,,,,,,,unresolved,身份未知：竞赛匿名代码
+CRD,,unseen_test,,,,,,,unresolved,身份未知：test 集新增菌株（strain_role=test，train/val 均未出现）
+DHY210,,seen_in_train,,R64-3-1,SGD,https://www.yeastgenome.org,yes,proxy,PDF 明确：DHY210 用 S288C 参考基因组作公开可说明代理（建模假设，非认为两者等价）

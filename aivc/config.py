@@ -24,6 +24,7 @@ EXPERIMENT_CONFIG = {
         "use_temperature": True,
         "use_time_features": True,
         "use_chemical_structure": True,
+        "use_genome_features": False,
         "morgan_bits": 2048,
         "morgan_radius": 2,
         "morgan_pca_dim": 64,

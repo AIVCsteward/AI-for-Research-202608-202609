@@ -26,9 +26,10 @@ class ConditionMLP(nn.Module):
         dropout:  Dropout 比例（默认 0.1）
     """
 
-    def __init__(self, dim_in, dim_out, hidden=256, dropout=0.1):
+    def __init__(self, dim_in, dim_out, hidden=256, dropout=0.1,
+                 protein_prior=None, use_bias=False):
         super().__init__()
-        self.net = nn.Sequential(
+        self.trunk = nn.Sequential(
             nn.Linear(dim_in, hidden),
             nn.ReLU(),
             nn.BatchNorm1d(hidden),
@@ -37,11 +38,66 @@ class ConditionMLP(nn.Module):
             nn.ReLU(),
             nn.BatchNorm1d(hidden),
             nn.Dropout(dropout),
-            nn.Linear(hidden, dim_out),
         )
+        self.head = nn.Linear(hidden, dim_out)
+        self.use_bias = use_bias
+        if use_bias:
+            self.b_p = nn.Parameter(torch.zeros(dim_out))
+        if protein_prior is not None:
+            # (dim_out, d) 蛋白先验矩阵，冻结；W_a 零初始化 → 第 0 步等价无先验
+            self.register_buffer(
+                "E", torch.as_tensor(protein_prior, dtype=torch.float32)
+            )
+            self.W_a = nn.Linear(hidden, self.E.shape[1])
+            nn.init.zeros_(self.W_a.weight)
+            nn.init.zeros_(self.W_a.bias)
 
     def forward(self, x):
-        return self.net(x)
+        h = self.trunk(x)
+        y = self.head(h)
+        if hasattr(self, "E"):
+            y = y + self.W_a(h) @ self.E.T
+        if self.use_bias:
+            y = y + self.b_p
+        return y
+
+
+class SplitConditionMLP(nn.Module):
+    """拆分方案 A：输入端按语义拆成「上下文」和「化药+菌株」两个子网络，输出相加。
+
+    forward 接收拼接输入 x = [x_ctx | x_bio]，内部拆成两半分别过子网络再相加：
+        y = f_ctx(x[:, :ctx_dim]) + f_bio(x[:, ctx_dim:])
+    """
+
+    def __init__(self, ctx_dim, bio_dim, dim_out, hidden=256, dropout=0.1):
+        super().__init__()
+        self.ctx_dim = ctx_dim
+        self.ctx_net = ConditionMLP(ctx_dim, dim_out, hidden, dropout)
+        self.bio_net = ConditionMLP(bio_dim, dim_out, hidden, dropout)
+
+    def forward(self, x):
+        x_ctx = x[:, : self.ctx_dim]
+        x_bio = x[:, self.ctx_dim :]
+        return self.ctx_net(x_ctx) + self.bio_net(x_bio)
+
+
+class ControlTreatSplitModel(nn.Module):
+    """拆分方案 B：对照模型学基线 + 扰动模型学 Δ。
+
+    y_control  = ctrl_net(x)
+    y_treatment = ctrl_net(x) + treat_net(x)
+    """
+
+    def __init__(self, dim_in, dim_out, hidden=256, dropout=0.1):
+        super().__init__()
+        self.ctrl_net = ConditionMLP(dim_in, dim_out, hidden, dropout)
+        self.treat_net = ConditionMLP(dim_in, dim_out, hidden, dropout)
+
+    def forward_ctrl(self, x):
+        return self.ctrl_net(x)
+
+    def forward_treat(self, x):
+        return self.ctrl_net(x) + self.treat_net(x)
 
 
 # ══════════════════════════════════════════════════════════════════════════════

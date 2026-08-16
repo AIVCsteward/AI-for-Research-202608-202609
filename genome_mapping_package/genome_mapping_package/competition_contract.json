@@ -1,0 +1,40 @@
+{
+  "competition": "GOAI AI for Research - Track 3 Virtual Cell",
+  "task": "conditional response prediction from yeast perturbation proteomics",
+  "schema_version": "1.0",
+  "metadata_files": {
+    "train_val": "WAYB_WAYC_metadata_train_val(1).csv",
+    "test": "WAYB_WAYC_metadata_test(1).csv"
+  },
+  "required_columns": [
+    "sample_ID",
+    "Strains",
+    "split_final"
+  ],
+  "supported_strains": [
+    "BAH",
+    "BAI",
+    "CEK",
+    "CGD",
+    "CRD",
+    "DHY210"
+  ],
+  "official_snapshot": {
+    "train_val_rows": 8958,
+    "test_rows": 4454,
+    "split_counts": {
+      "train": 5920,
+      "val_chem_only": 1065,
+      "val_strain_only": 1547,
+      "val_both": 269,
+      "val_time": 157,
+      "test_chem_only": 1640,
+      "test_strain_only": 1534,
+      "test_both": 1129,
+      "test_time": 151
+    }
+  },
+  "label_policy": "This adapter reads metadata only and never opens proteome files.",
+  "feature_fit_policy": "All normalization is frozen from eligible training strains; validation and test strains never refit statistics."
+}
+
