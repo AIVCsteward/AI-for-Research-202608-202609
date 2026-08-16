@@ -10,12 +10,15 @@ from aivc.losses import (
     correlation_consistency_loss,
     fc_pearson_loss,
     residual_l2_loss,
+    residual_pearson_loss,
 )
 
 
 DEFAULT_LOSS_WEIGHTS = {
     "mse": 1.0,
     "fc": 0.3,
+    "ctx": 0.2,
+    "drug": 0.2,
     "l2": 0.01,
     "corr": 0.1,
 }
@@ -121,6 +124,36 @@ def prepare_fold_change_index(train_sample_ids: Sequence, pairs, device="cpu"):
     return control_index
 
 
+def build_residual_mean_tensors(meta, y_log2, mask_matrix, train_mask, device="cpu"):
+    """Build per-train-row μ_ctx and μ_drug tensors for the residual loss.
+
+    Row ``i`` corresponds to train row ``i`` (the same order used by
+    ``prepare_training_data``).  Rows that are not a matched treatment — or
+    whose context / drug has no train statistic — hold NaN, which
+    ``residual_pearson_loss`` excludes via its finite check.
+    """
+    from baseline.evaluation import MATCH_KEYS, build_train_residual_means
+
+    train_sample_ids = list(meta.index[train_mask])
+    n_train = len(train_sample_ids)
+    n_proteins = y_log2.shape[1]
+
+    stats = build_train_residual_means(meta, y_log2, mask_matrix, train_mask)
+    ctx_mean = stats["ctx_mean"]
+    drug_mean = stats["drug_mean"]
+
+    ctx_t = torch.full((n_train, n_proteins), float("nan"), device=device)
+    drug_t = torch.full((n_train, n_proteins), float("nan"), device=device)
+    for i, sid in enumerate(train_sample_ids):
+        ctx = tuple(meta.loc[sid, k] for k in MATCH_KEYS)
+        drug = str(meta.loc[sid, "perturbation_no_concentration"])
+        if ctx in ctx_mean:
+            ctx_t[i] = torch.as_tensor(ctx_mean[ctx], dtype=torch.float32, device=device)
+        if drug in drug_mean:
+            drug_t[i] = torch.as_tensor(drug_mean[drug], dtype=torch.float32, device=device)
+    return ctx_t, drug_t
+
+
 def _as_pred_dict(model_output):
     if isinstance(model_output, Mapping):
         if "y_pred" not in model_output:
@@ -178,6 +211,10 @@ def compute_multitask_batch_loss(
     edge_index=None,
     target_edge_corr=None,
     loss_weights=None,
+    ctx_mean_t=None,
+    drug_mean_t=None,
+    denoised_fc_target=None,
+    snr_mask=None,
 ):
     """Compute C4 losses; FC uses treatment/control ``y_raw`` difference."""
     weights = dict(DEFAULT_LOSS_WEIGHTS)
@@ -202,6 +239,8 @@ def compute_multitask_batch_loss(
         loss_l2 = pred_dict["y_pred"].sum() * 0.0
 
     loss_fc = pred_dict["y_raw"].sum() * 0.0
+    loss_ctx = pred_dict["y_raw"].sum() * 0.0
+    loss_drug = pred_dict["y_raw"].sum() * 0.0
     if fc_control_index is not None and fc_eligible is not None and fc_eligible.any():
         eligible_primary_indices = batch_indices[fc_eligible]
         eligible_controls = fc_control_index[eligible_primary_indices]
@@ -222,7 +261,22 @@ def compute_multitask_batch_loss(
         fc_true = treatment_true - control_true_mean
         fc_mask = treatment_mask & control_counts.gt(0)
         fc_pred = pred_dict["y_raw"][fc_eligible] - control_pred_mean
-        loss_fc = fc_pearson_loss(fc_pred, fc_true, fc_mask)
+        # fc loss 目标：默认原始 FC；可选低秩去噪目标 + 高 SNR 蛋白掩码
+        fc_target = fc_true
+        fc_loss_mask = fc_mask
+        if denoised_fc_target is not None:
+            fc_target = denoised_fc_target[eligible_primary_indices]
+        if snr_mask is not None:
+            fc_loss_mask = fc_mask & snr_mask.unsqueeze(0)
+        loss_fc = fc_pearson_loss(fc_pred, fc_target, fc_loss_mask)
+        if ctx_mean_t is not None:
+            loss_ctx = residual_pearson_loss(
+                fc_pred, fc_true, fc_mask, ctx_mean_t[eligible_primary_indices]
+            )
+        if drug_mean_t is not None:
+            loss_drug = residual_pearson_loss(
+                fc_pred, fc_true, fc_mask, drug_mean_t[eligible_primary_indices]
+            )
 
     loss_corr = pred_dict["y_raw"].sum() * 0.0
     corr_weight = float(weights["corr"])
@@ -240,6 +294,8 @@ def compute_multitask_batch_loss(
     loss_total = (
         float(weights["mse"]) * loss_mse
         + float(weights["fc"]) * loss_fc
+        + float(weights["ctx"]) * loss_ctx
+        + float(weights["drug"]) * loss_drug
         + float(weights["l2"]) * loss_l2
         + float(weights["corr"]) * loss_corr
     )
@@ -248,12 +304,16 @@ def compute_multitask_batch_loss(
         loss_total = pred_dict["y_raw"].sum() * 0.0
         loss_mse = pred_dict["y_raw"].sum() * 0.0
         loss_fc = pred_dict["y_raw"].sum() * 0.0
+        loss_ctx = pred_dict["y_raw"].sum() * 0.0
+        loss_drug = pred_dict["y_raw"].sum() * 0.0
         loss_l2 = pred_dict["y_raw"].sum() * 0.0
         loss_corr = pred_dict["y_raw"].sum() * 0.0
     components = {
         "loss_total": loss_total,
         "loss_mse": loss_mse,
         "loss_fc": loss_fc,
+        "loss_ctx": loss_ctx,
+        "loss_drug": loss_drug,
         "loss_l2": loss_l2,
         "loss_corr": loss_corr,
     }
@@ -276,6 +336,11 @@ def train(
     edge_index=None,
     target_edge_corr=None,
     loss_weights=None,
+    ctx_mean_t=None,
+    drug_mean_t=None,
+    denoised_fc_target=None,
+    snr_mask=None,
+    monitor_fn=None,
     early_stopping_patience=20,
     early_stopping_split="val_both",
 ):
@@ -295,6 +360,8 @@ def train(
         "loss_total": [],
         "loss_mse": [],
         "loss_fc": [],
+        "loss_ctx": [],
+        "loss_drug": [],
         "loss_l2": [],
         "loss_corr": [],
         "val_loss": {split: [] for split in val_data},
@@ -306,7 +373,7 @@ def train(
         model.train()
         permutation = torch.randperm(n_train, device=X_train_t.device)
         component_sums = {key: 0.0 for key in (
-            "loss_total", "loss_mse", "loss_fc", "loss_l2", "loss_corr"
+            "loss_total", "loss_mse", "loss_fc", "loss_ctx", "loss_drug", "loss_l2", "loss_corr"
         )}
         n_batches = 0
 
@@ -323,6 +390,10 @@ def train(
                 edge_index=edge_index,
                 target_edge_corr=target_edge_corr,
                 loss_weights=loss_weights,
+                ctx_mean_t=ctx_mean_t,
+                drug_mean_t=drug_mean_t,
+                denoised_fc_target=denoised_fc_target,
+                snr_mask=snr_mask,
             )
             loss.backward()
             optimizer.step()
@@ -351,7 +422,10 @@ def train(
                 history["val_per_protein_r2"][split_name].append(val_r2_value)
                 val_losses.append(val_loss_value)
 
-        if early_stopping_split in history["val_per_protein_r2"]:
+        if monitor_fn is not None:
+            with torch.no_grad():
+                monitor = float(monitor_fn(model))
+        elif early_stopping_split in history["val_per_protein_r2"]:
             monitor = history["val_per_protein_r2"][early_stopping_split][-1]
         else:
             monitor = -float(np.mean(val_losses))
@@ -371,6 +445,7 @@ def train(
             print(
                 f"  Epoch {epoch + 1:3d}/{epochs} | total={history['loss_total'][-1]:.4f} "
                 f"mse={history['loss_mse'][-1]:.4f} fc={history['loss_fc'][-1]:.4f} "
+                f"ctx={history['loss_ctx'][-1]:.4f} drug={history['loss_drug'][-1]:.4f} "
                 f"l2={history['loss_l2'][-1]:.4f} corr={history['loss_corr'][-1]:.4f} "
                 f"monitor={monitor:.4f}"
             )

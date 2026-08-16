@@ -27,6 +27,7 @@ ABLATION_OVERRIDES = {
     "no_chem_anchor": {"encoder": {"use_chem_anchor": False}},
     "no_hash": {"encoder": {"use_hash_features": False}},
     "no_cross_features": {"encoder": {"use_cross_features": False}},
+    "no_chemical_structure": {"encoder": {"use_chemical_structure": False}},
 }
 
 

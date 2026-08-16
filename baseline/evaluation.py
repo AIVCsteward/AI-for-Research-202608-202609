@@ -16,6 +16,9 @@ MATCH_KEYS = [
     "Strains", "Medium", "Temperature", "pert_time",
 ]
 
+# 溶剂对照（Water / DMSO）
+CONTROL_NAMES = {"water", "dmso"}
+
 # 评估 split 顺序
 VAL_SPLITS = ["val_strain_only", "val_chem_only", "val_both", "val_time"]
 TEST_SPLITS = ["test_strain_only", "test_chem_only", "test_both", "test_time"]
@@ -24,47 +27,6 @@ TEST_SPLITS = ["test_strain_only", "test_chem_only", "test_both", "test_time"]
 # ============================================================================
 # 指标函数
 # ============================================================================
-
-def evaluate_global_r2(y_true, y_pred, mask):
-    """
-    Global R²: 把所有蛋白-样本对摊平计算（mask-aware）
-
-    参数:
-        y_true:  真实值 DataFrame/ndarray（含 NA）
-        y_pred:  预测值 ndarray
-        mask:    布尔 mask DataFrame（True=有观测值）
-    """
-    y_t = y_true.fillna(0).values
-    m = mask.values.astype(float)
-    y_p = y_pred
-
-    ss_res = ((y_t - y_p) ** 2 * m).sum()
-    grand_mean = (y_t * m).sum() / m.sum()
-    ss_tot = ((y_t - grand_mean) ** 2 * m).sum()
-    return 1.0 - ss_res / ss_tot
-
-
-def evaluate_per_protein_r2(y_true, y_pred, mask):
-    """
-    逐蛋白 R²: 每个蛋白单独算 R²，返回中位数
-    只在有 ≥3 个观测值的蛋白上计算
-    """
-    r2s = []
-    y_t = y_true.values
-    m = mask.values
-    y_p = y_pred
-
-    for j in range(y_t.shape[1]):
-        valid = m[:, j] > 0
-        if valid.sum() < 3:
-            continue
-        ss_res = ((y_t[valid, j] - y_p[valid, j]) ** 2).sum()
-        ss_tot = ((y_t[valid, j] - y_t[valid, j].mean()) ** 2).sum()
-        if ss_tot > 0:
-            r2s.append(1.0 - ss_res / ss_tot)
-
-    return np.median(r2s) if r2s else np.nan
-
 
 # ============================================================================
 # Phase 0 基线一：蛋白均值基线
@@ -78,7 +40,7 @@ def compute_protein_mean(y_log2, train_mask):
 
 
 def evaluate_protein_mean_baseline(y_log2, mask_matrix, protein_mean, split_masks):
-    """在所有 val+test split 上评估蛋白均值基线"""
+    """在所有 val+test split 上评估蛋白均值基线（逐样本 corr）。"""
     all_splits = VAL_SPLITS + TEST_SPLITS
     print("\n蛋白均值基线 — 验证集+测试集评估:")
     for split_name in all_splits:
@@ -90,10 +52,8 @@ def evaluate_protein_mean_baseline(y_log2, mask_matrix, protein_mean, split_mask
         n_samples = m.sum()
         pred = np.tile(protein_mean.values, (n_samples, 1))
 
-        global_r2 = evaluate_global_r2(y_true, pred, mask)
-        pp_r2 = evaluate_per_protein_r2(y_true, pred, mask)
-        print(f"  {split_name:20s} | n={n_samples:4d} | "
-              f"Global R²={global_r2:.4f} | Per-Protein R²(median)={pp_r2:.4f}")
+        per_corr = per_sample_corr(y_true, pred, mask)
+        print(f"  {split_name:20s} | n={n_samples:4d} | per-sample corr={per_corr:.4f}")
     return True
 
 
@@ -205,10 +165,8 @@ def evaluate_matched_control_baseline(
             control_lookup, protein_mean, control_mean
         )
 
-        global_r2 = evaluate_global_r2(y_true, pred, mask)
-        pp_r2 = evaluate_per_protein_r2(y_true, pred, mask)
-        print(f"  {split_name:20s} | n={m.sum():4d} | "
-              f"Global R²={global_r2:.4f} | Per-Protein R²(median)={pp_r2:.4f}")
+        per_corr = per_sample_corr(y_true, pred, mask)
+        print(f"  {split_name:20s} | n={m.sum():4d} | per-sample corr={per_corr:.4f}")
     return True
 
 
@@ -233,10 +191,10 @@ def evaluate_all_splits(
     encoders, build_features_fn, device,
     protein_mean, control_lookup, control_mean,
 ):
-    """三方案（Protein Mean / Matched Control / MLP）全场景对比"""
+    """三方案（Protein Mean / Matched Control / MLP）全场景对比（逐样本 corr）。"""
     all_splits = VAL_SPLITS + TEST_SPLITS
-    print(f"\n{'Split':<20s} {'方法':<18s} {'Global R²':>10s} {'Per-Protein R²':>16s}")
-    print("-" * 68)
+    print(f"\n{'Split':<20s} {'方法':<18s} {'per-sample corr':>15s}")
+    print("-" * 58)
 
     for split_name in all_splits:
         m = split_masks[split_name]
@@ -249,29 +207,26 @@ def evaluate_all_splits(
 
         # Protein Mean
         pred_pm = np.tile(protein_mean.values, (n, 1))
-        gr2_pm = evaluate_global_r2(y_true, pred_pm, mask)
-        ppr2_pm = evaluate_per_protein_r2(y_true, pred_pm, mask)
+        corr_pm = per_sample_corr(y_true, pred_pm, mask)
 
         # Matched Control
         pred_mc = matched_control_predict(
             meta_sub, y_log2, control_lookup, protein_mean, control_mean
         )
-        gr2_mc = evaluate_global_r2(y_true, pred_mc, mask)
-        ppr2_mc = evaluate_per_protein_r2(y_true, pred_mc, mask)
+        corr_mc = per_sample_corr(y_true, pred_mc, mask)
 
         # MLP
         pred_mlp = mlp_predict(model, meta_sub, encoders, build_features_fn, device)
-        gr2_mlp = evaluate_global_r2(y_true, pred_mlp, mask)
-        ppr2_mlp = evaluate_per_protein_r2(y_true, pred_mlp, mask)
+        corr_mlp = per_sample_corr(y_true, pred_mlp, mask)
 
-        for method, gr2, ppr2 in [
-            ("Protein Mean", gr2_pm, ppr2_pm),
-            ("Matched Control", gr2_mc, ppr2_mc),
-            ("MLP (ours)", gr2_mlp, ppr2_mlp),
+        for method, corr in [
+            ("Protein Mean", corr_pm),
+            ("Matched Control", corr_mc),
+            ("MLP (ours)", corr_mlp),
         ]:
             prefix = split_name if method == "Protein Mean" else ""
-            print(f"{prefix:<20s} {method:<18s} {gr2:>10.4f} {ppr2:>16.4f}")
-        print("-" * 68)
+            print(f"{prefix:<20s} {method:<18s} {corr:>15.4f}")
+        print("-" * 58)
 
 
 # ============================================================================
@@ -509,3 +464,288 @@ def compute_fold_change(
     fc_mask_df = pd.DataFrame(fc_mask, index=treatment_ids, columns=y_log2.columns)
     fc_mask_df.index.name = "sample_ID"
     return {"pairs": pairs, "fc_true": fc_true_df, "fc_mask": fc_mask_df}
+
+
+# ============================================================================
+# 官方评测指标（GOAI 虚拟细胞统一开放榜六模块）
+# ============================================================================
+# 1. 绝对保真度（20%）——逐样本 corr/R²
+# 2. 匹配对照原始 FC（25%）——PCC(Δ_pred, Δ_true)
+# 3. 上下文均值残差（20%）——新化合物特异响应
+# 4. 药物均值残差（20%）——新菌株背景调制
+# 5. 双重未知 / 时间插值（10%）——由 1+2 组合
+# 6. 高效应蛋白 DEP 检出（5%）——方向准确率 / 高效应 PCC
+#
+# 这些取代了旧封闭榜的「摊平 Global R²」和「逐蛋白 R² 中位数」两个自定诊断指标。
+
+def pcc(a, b):
+    """两个等长一维数组的 Pearson 相关；忽略非有限值，未定义返回 NaN。"""
+    a = np.asarray(a, dtype=np.float64)
+    b = np.asarray(b, dtype=np.float64)
+    valid = np.isfinite(a) & np.isfinite(b)
+    if int(valid.sum()) < 2:
+        return float("nan")
+    a = a[valid]
+    b = b[valid]
+    a = a - a.mean()
+    b = b - b.mean()
+    denom = np.sqrt((a * a).sum() * (b * b).sum())
+    if not np.isfinite(denom) or denom <= 1e-12:
+        return float("nan")
+    return float((a * b).sum() / denom)
+
+
+def per_sample_corr(y_true, y_pred, mask, min_obs=3):
+    """绝对保真度：逐样本 Pearson 相关，返回跨样本均值。
+
+    ``y_true``/``mask`` 为 DataFrame（样本×蛋白，含 NaN），``y_pred`` 为
+    等形 ndarray。每个样本只在 ≥``min_obs`` 个观测蛋白上计算。
+    """
+    y_t = y_true.to_numpy(dtype=np.float64)
+    m = mask.to_numpy(dtype=bool)
+    y_p = np.asarray(y_pred, dtype=np.float64)
+    corrs = []
+    for i in range(y_t.shape[0]):
+        valid = m[i]
+        if int(valid.sum()) < min_obs:
+            continue
+        c = pcc(y_t[i][valid], y_p[i][valid])
+        if np.isfinite(c):
+            corrs.append(c)
+    return float(np.mean(corrs)) if corrs else float("nan")
+
+
+def per_protein_r2(y_true, y_pred, mask, min_obs=3):
+    """逐蛋白 R² 中位数（诊断指标，非官方评分模块）。
+
+    与 ``per_sample_corr`` 正交：这里沿「蛋白」轴看单个蛋白在样本间的预测
+    准确度，用于暴露「模型是否只对高丰度蛋白准」。官方逐样本 corr 和高效应
+    DEP 都看不到这个信息。只在 ≥``min_obs`` 个观测的蛋白上计算。
+    """
+    y_t = y_true.to_numpy(dtype=np.float64)
+    m = mask.to_numpy(dtype=bool)
+    y_p = np.asarray(y_pred, dtype=np.float64)
+    scores = []
+    for j in range(y_t.shape[1]):
+        valid = m[:, j]
+        if int(valid.sum()) < min_obs:
+            continue
+        obs = y_t[valid, j]
+        ss_tot = ((obs - obs.mean()) ** 2).sum()
+        if ss_tot > 1e-12:
+            ss_res = ((obs - y_p[valid, j]) ** 2).sum()
+            scores.append(1.0 - ss_res / ss_tot)
+    return float(np.median(scores)) if scores else float("nan")
+
+
+def masked_rmse(y_true, y_pred, mask):
+    """Mask-aware RMSE（log2 单位）—— 只在观测位置计算，与训练 MSE 同口径。
+
+    官方六模块不含 RMSE；此为诊断指标，用于对齐赛题解读基线表的
+    「log2 RMSE」（蛋白均值 ≈0.87~1.0，matched control ≈0.38~0.43）。
+    """
+    y_t = y_true.to_numpy(dtype=np.float64)
+    m = mask.to_numpy(dtype=bool)
+    y_p = np.asarray(y_pred, dtype=np.float64)
+    diff2 = (y_p - y_t) ** 2
+    if int(m.sum()) == 0:
+        return float("nan")
+    return float(np.sqrt(diff2[m].mean()))
+
+
+def fold_change_pcc(fc_pred, fc_true, fc_mask):
+    """匹配对照原始 FC：PCC(Δ_pred, Δ_true)，在全部有效条目上摊平计算。"""
+    return pcc(
+        np.asarray(fc_pred, dtype=np.float64)[np.asarray(fc_mask, dtype=bool)],
+        np.asarray(fc_true, dtype=np.float64)[np.asarray(fc_mask, dtype=bool)],
+    )
+
+
+def residual_pcc(fc_pred, fc_true, fc_mask, subtract):
+    """残差 PCC：PCC(Δ_pred − μ, Δ_true − μ)，``subtract`` 为逐蛋白均值向量。"""
+    valid = np.asarray(fc_mask, dtype=bool)
+    sub = np.asarray(subtract, dtype=np.float64)
+    return pcc(
+        (np.asarray(fc_pred, dtype=np.float64) - sub)[valid],
+        (np.asarray(fc_true, dtype=np.float64) - sub)[valid],
+    )
+
+
+def high_effect_direction_accuracy(fc_pred, fc_true, fc_mask, threshold=1.0):
+    """高效应蛋白 DEP：对 |Δ_true|>threshold 的条目，方向一致的占比。"""
+    valid = np.asarray(fc_mask, dtype=bool)
+    fp = np.asarray(fc_pred, dtype=np.float64)
+    ft = np.asarray(fc_true, dtype=np.float64)
+    high = valid & np.isfinite(fp) & np.isfinite(ft) & (np.abs(ft) > threshold)
+    if int(high.sum()) == 0:
+        return float("nan")
+    return float((np.sign(fp[high]) == np.sign(ft[high])).mean())
+
+
+def compute_split_fold_change(meta, y_log2, mask_matrix, y_pred_df, split_mask, control_lookup):
+    """为某一 split 的 treatment 样本计算 Δ_true 与 Δ_pred。
+
+    ``control_lookup`` 应对全量数据构建（matched control 是真实测量，不限于 train）。
+    ``y_pred_df`` 为 DataFrame（index=sample_ID）。返回 ``(fc_true, fc_pred, fc_mask,
+    treat_meta)``，其中三个 FC 矩阵为 ndarray（treatment×蛋白），``treat_meta`` 为
+    保留样本的元数据（用于查找 context/drug）。
+    """
+    sub = meta.loc[split_mask]
+    pert = sub["perturbation_no_concentration"].astype(str).str.strip().str.lower()
+    is_ctrl = pert.isin(CONTROL_NAMES)
+    is_qc = pert.str.contains("quality|qc", regex=True, na=False)
+    treat = sub[~is_ctrl & ~is_qc]
+    if treat.empty:
+        return None
+
+    y_t = y_log2.to_numpy(dtype=np.float64)
+    m_t = mask_matrix.to_numpy(dtype=bool)
+    # y_pred_df 对齐到 meta.index（可能仅含 split 子集，用 reindex 补齐为 NaN）
+    y_pred_full = y_pred_df.reindex(meta.index).to_numpy(dtype=np.float64)
+
+    fc_true_rows, fc_pred_rows, fc_mask_rows = [], [], []
+    kept = []
+    for sid in treat.index:
+        key = tuple(meta.loc[sid, k] for k in MATCH_KEYS)
+        ctrl_ids = control_lookup.get(key, [])
+        if not ctrl_ids:
+            continue
+        pos = meta.index.get_indexer(ctrl_ids)
+        pos = pos[pos >= 0]
+        if len(pos) == 0:
+            continue
+
+        ctrl_true = y_t[pos]
+        ctrl_mask = m_t[pos]
+        ctrl_count = ctrl_mask.sum(axis=0)
+        ctrl_true_mean = np.divide(
+            np.where(ctrl_mask, ctrl_true, 0.0).sum(axis=0),
+            ctrl_count,
+            out=np.full(y_t.shape[1], np.nan, dtype=np.float64),
+            where=ctrl_count > 0,
+        )
+        ctrl_pred_mean = np.nanmean(y_pred_full[pos], axis=0)
+
+        t_pos = meta.index.get_loc(sid)
+        treat_true = y_t[t_pos]
+        treat_mask = m_t[t_pos]
+        treat_pred = y_pred_full[t_pos]
+
+        fc_true_rows.append(treat_true - ctrl_true_mean)
+        fc_pred_rows.append(treat_pred - ctrl_pred_mean)
+        fc_mask_rows.append(treat_mask & (ctrl_count > 0) & np.isfinite(ctrl_true_mean))
+        kept.append(sid)
+
+    if not kept:
+        return None
+    return (
+        np.vstack(fc_true_rows),
+        np.vstack(fc_pred_rows),
+        np.vstack(fc_mask_rows).astype(bool),
+        meta.loc[kept],
+    )
+
+
+def build_train_residual_means(meta, y_log2, mask_matrix, train_mask):
+    """从训练集构建上下文均值 μ_ctx 与药物均值 μ_drug（仅用 train）。
+
+    返回 ``{"ctx_mean": {7元组: 蛋白向量}, "drug_mean": {药物: 蛋白向量}}``。
+    均值按蛋白独立 mask-aware 计算（仅用有观测值的 treatment 累加）。
+    """
+    fc = compute_fold_change(meta, y_log2, mask_matrix, train_mask)
+    fc_true = fc["fc_true"]
+    fc_mask = fc["fc_mask"]
+    v = fc_true.to_numpy(dtype=np.float64)
+    m = fc_mask.to_numpy(dtype=bool)
+    n_protein = v.shape[1]
+
+    ctx_sum: dict = {}
+    ctx_cnt: dict = {}
+    drug_sum: dict = {}
+    drug_cnt: dict = {}
+    for i, sid in enumerate(fc_true.index):
+        ctx = tuple(meta.loc[sid, k] for k in MATCH_KEYS)
+        drug = str(meta.loc[sid, "perturbation_no_concentration"])
+        row = np.where(m[i], v[i], 0.0)
+        row_mask = m[i].astype(np.float64)
+        ctx_sum[ctx] = ctx_sum.get(ctx, np.zeros(n_protein, dtype=np.float64)) + row
+        ctx_cnt[ctx] = ctx_cnt.get(ctx, np.zeros(n_protein, dtype=np.float64)) + row_mask
+        drug_sum[drug] = drug_sum.get(drug, np.zeros(n_protein, dtype=np.float64)) + row
+        drug_cnt[drug] = drug_cnt.get(drug, np.zeros(n_protein, dtype=np.float64)) + row_mask
+
+    ctx_mean = {
+        key: np.divide(ctx_sum[key], ctx_cnt[key], out=np.full(n_protein, np.nan),
+                       where=ctx_cnt[key] > 0)
+        for key in ctx_sum
+    }
+    drug_mean = {
+        key: np.divide(drug_sum[key], drug_cnt[key], out=np.full(n_protein, np.nan),
+                       where=drug_cnt[key] > 0)
+        for key in drug_sum
+    }
+    return {"ctx_mean": ctx_mean, "drug_mean": drug_mean}
+
+
+def evaluate_official_metrics(
+    meta, y_log2, mask_matrix, y_pred_df, split_mask, control_lookup, train_stats
+):
+    """为一个 split 计算全部官方指标，返回 dict。
+
+    ``y_pred_df``：DataFrame（index=sample_ID）。
+    """
+    fc = compute_split_fold_change(meta, y_log2, mask_matrix, y_pred_df, split_mask, control_lookup)
+    y_true_split = y_log2.loc[split_mask]
+    mask_split = mask_matrix.loc[split_mask]
+    pred_split = y_pred_df.reindex(meta.loc[split_mask].index).to_numpy(dtype=np.float64)
+    metrics = {
+        "n_samples": int(split_mask.sum()),
+        "per_sample_corr": per_sample_corr(y_true_split, pred_split, mask_split),
+        "per_protein_r2_median": per_protein_r2(y_true_split, pred_split, mask_split),
+        "rmse": masked_rmse(y_true_split, pred_split, mask_split),
+    }
+    if fc is None:
+        for key in ("fc_pcc", "context_residual_pcc", "drug_residual_pcc", "high_effect_dir_acc"):
+            metrics[key] = float("nan")
+        return metrics
+
+    fc_true, fc_pred, fc_mask, treat_meta = fc
+    metrics["fc_pcc"] = fold_change_pcc(fc_pred, fc_true, fc_mask)
+    metrics["high_effect_dir_acc"] = high_effect_direction_accuracy(fc_pred, fc_true, fc_mask)
+
+    # 上下文均值残差：逐 treatment 减去其 context 的训练药物均值
+    ctx_vals_true, ctx_vals_pred, ctx_valid = [], [], []
+    for i, sid in enumerate(treat_meta.index):
+        key = tuple(meta.loc[sid, k] for k in MATCH_KEYS)
+        mu = train_stats["ctx_mean"].get(key)
+        if mu is None:
+            continue
+        ctx_vals_pred.append(fc_pred[i] - mu)
+        ctx_vals_true.append(fc_true[i] - mu)
+        ctx_valid.append(fc_mask[i])
+    if ctx_valid:
+        ctx_vals_pred = np.vstack(ctx_vals_pred)
+        ctx_vals_true = np.vstack(ctx_vals_true)
+        ctx_valid = np.vstack(ctx_valid).astype(bool)
+        metrics["context_residual_pcc"] = fold_change_pcc(ctx_vals_pred, ctx_vals_true, ctx_valid)
+    else:
+        metrics["context_residual_pcc"] = float("nan")
+
+    # 药物均值残差：逐 treatment 减去其药物的训练上下文均值
+    drug_vals_true, drug_vals_pred, drug_valid = [], [], []
+    for i, sid in enumerate(treat_meta.index):
+        drug = meta.loc[sid, "perturbation_no_concentration"]
+        mu = train_stats["drug_mean"].get(drug)
+        if mu is None:
+            continue
+        drug_vals_pred.append(fc_pred[i] - mu)
+        drug_vals_true.append(fc_true[i] - mu)
+        drug_valid.append(fc_mask[i])
+    if drug_valid:
+        drug_vals_pred = np.vstack(drug_vals_pred)
+        drug_vals_true = np.vstack(drug_vals_true)
+        drug_valid = np.vstack(drug_valid).astype(bool)
+        metrics["drug_residual_pcc"] = fold_change_pcc(drug_vals_pred, drug_vals_true, drug_valid)
+    else:
+        metrics["drug_residual_pcc"] = float("nan")
+
+    return metrics

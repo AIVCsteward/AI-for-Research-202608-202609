@@ -8,6 +8,7 @@ prediction.csv
 
 # Model files (too large for GitHub)
 baseline_models.zip
+data/external/cache/esm2_t12_35M_UR50D.pt
 
 # Python
 __pycache__/

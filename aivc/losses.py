@@ -41,6 +41,22 @@ def fc_pearson_loss(fc_pred, fc_true, fc_mask, eps=1e-8, min_count=2):
     return 1.0 - correlation
 
 
+def residual_pearson_loss(fc_pred, fc_true, fc_mask, subtract, eps=1e-8, min_count=2):
+    """Return ``1 - Pearson(fc_pred - subtract, fc_true - subtract)``.
+
+    ``subtract`` is a per-row mean vector (e.g. the context-mean μ_ctx or the
+    drug-mean μ_drug) broadcastable against ``fc_pred``.  Entries where
+    ``subtract`` is non-finite are excluded by the finite check inside
+    :func:`fc_pearson_loss`.  Passing ``subtract=None`` reduces to the plain
+    fold-change correlation.
+    """
+    if subtract is None:
+        return fc_pearson_loss(fc_pred, fc_true, fc_mask, eps=eps, min_count=min_count)
+    return fc_pearson_loss(
+        fc_pred - subtract, fc_true - subtract, fc_mask, eps=eps, min_count=min_count
+    )
+
+
 def residual_l2_loss(
     pred_dict: Mapping[str, torch.Tensor],
     keys=("delta_drug", "delta_strain", "delta_context"),

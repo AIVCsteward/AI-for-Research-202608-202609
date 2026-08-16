@@ -46,8 +46,7 @@ from baseline.evaluation import (
     evaluate_matched_control_baseline,
     build_matched_control_pairs,
     compute_fold_change,
-    evaluate_global_r2,
-    evaluate_per_protein_r2,
+    per_sample_corr,
     print_diagnostics,
 )
 from baseline.features import fit_feature_encoders, build_condition_features
@@ -116,20 +115,18 @@ def evaluate_model_on_splits(model, X_all, meta, y_log2, mask_matrix, split_mask
             continue
         rows = m.to_numpy(dtype=bool)
         pred = predict_batch(model, X_all[rows], device)
-        global_r2 = evaluate_global_r2(y_log2.loc[m], pred, mask_matrix.loc[m])
-        pp_r2 = evaluate_per_protein_r2(y_log2.loc[m], pred, mask_matrix.loc[m])
+        corr = per_sample_corr(y_log2.loc[m], pred, mask_matrix.loc[m])
         metrics[split_name] = {
             "n_samples": int(rows.sum()),
-            "global_r2": float(global_r2),
-            "per_protein_r2_median": float(pp_r2),
+            "per_sample_corr": float(corr),
         }
     return metrics
 
 
 def compare_with_baseline(model_metrics, baseline_metrics, split_name):
     """对比模型与 Matched Control 基线。"""
-    model_val = model_metrics.get(split_name, {}).get("per_protein_r2_median")
-    baseline_val = baseline_metrics.get(split_name, {}).get("per_protein_r2_median")
+    model_val = model_metrics.get(split_name, {}).get("per_sample_corr")
+    baseline_val = baseline_metrics.get(split_name, {}).get("per_sample_corr")
     if model_val is None or baseline_val is None:
         return None
     return float(model_val - baseline_val)
@@ -420,7 +417,7 @@ def run_encoder_ablation(ctx, config, device, output_dir):
             "best_monitor": float(history["best_monitor"]) if history.get("best_monitor") is not None else None,
             "metrics": metrics,
         })
-        print(f"  val_both per-protein R²: {metrics.get('val_both', {}).get('per_protein_r2_median', 'N/A')}")
+        print(f"  val_both per-protein R²: {metrics.get('val_both', {}).get('per_sample_corr', 'N/A')}")
 
     return results
 
@@ -522,7 +519,7 @@ def run_architecture_ablation(ctx, config, device, output_dir):
             "best_monitor": float(history["best_monitor"]) if history.get("best_monitor") is not None else None,
             "metrics": metrics,
         })
-        print(f"  val_both per-protein R²: {metrics.get('val_both', {}).get('per_protein_r2_median', 'N/A')}")
+        print(f"  val_both per-protein R²: {metrics.get('val_both', {}).get('per_sample_corr', 'N/A')}")
 
     return results
 
@@ -600,7 +597,7 @@ def run_loss_ablation(ctx, config, device, output_dir):
             "best_monitor": float(history["best_monitor"]) if history.get("best_monitor") is not None else None,
             "metrics": metrics,
         })
-        print(f"  val_both per-protein R²: {metrics.get('val_both', {}).get('per_protein_r2_median', 'N/A')}")
+        print(f"  val_both per-protein R²: {metrics.get('val_both', {}).get('per_sample_corr', 'N/A')}")
 
     return results
 
@@ -658,8 +655,7 @@ def prepare_context(data_dir, config, device):
         from baseline.evaluation import matched_control_predict
         pred_mc = matched_control_predict(meta.loc[m], y_log2, control_lookup, protein_mean, control_mean)
         baseline_metrics[sn] = {
-            "global_r2": float(evaluate_global_r2(y_log2.loc[m], pred_mc, mask_matrix.loc[m])),
-            "per_protein_r2_median": float(evaluate_per_protein_r2(y_log2.loc[m], pred_mc, mask_matrix.loc[m])),
+            "per_sample_corr": float(per_sample_corr(y_log2.loc[m], pred_mc, mask_matrix.loc[m])),
         }
 
     elapsed = time.perf_counter() - t0
@@ -702,7 +698,7 @@ def _build_conclusions(all_results, ctx):
     def _ablation_val(name, abl_list):
         for item in abl_list:
             if item.get("name") == name:
-                return item.get("metrics", {}).get("val_both", {}).get("per_protein_r2_median")
+                return item.get("metrics", {}).get("val_both", {}).get("per_sample_corr")
         return None
 
     # ── 辅助：格式化一条发现 ──
@@ -714,16 +710,16 @@ def _build_conclusions(all_results, ctx):
     # ── 1. 化学扰动场景是当前的致命短板 ──
     if main:
         main_metrics = main.get("metrics", {})
-        strain_ppr2 = main_metrics.get("val_strain_only", {}).get("per_protein_r2_median")
-        chem_ppr2 = main_metrics.get("val_chem_only", {}).get("per_protein_r2_median")
-        both_ppr2 = main_metrics.get("val_both", {}).get("per_protein_r2_median")
-        time_ppr2 = main_metrics.get("val_time", {}).get("per_protein_r2_median")
+        strain_ppr2 = main_metrics.get("val_strain_only", {}).get("per_sample_corr")
+        chem_ppr2 = main_metrics.get("val_chem_only", {}).get("per_sample_corr")
+        both_ppr2 = main_metrics.get("val_both", {}).get("per_sample_corr")
+        time_ppr2 = main_metrics.get("val_time", {}).get("per_sample_corr")
 
         if strain_ppr2 is not None and chem_ppr2 is not None:
             lines.append(_finding(
                 f"**场景分化严重**：模型在纯菌株变化 (`val_strain_only`) 上 Per-Protein R² = **{strain_ppr2:.4f}**，"
-                f"远超 Matched Control ({_fmt(baseline.get('val_strain_only', {}).get('per_protein_r2_median'))})；"
-                f"但一旦涉及化学扰动，`val_chem_only` = **{chem_ppr2:.4f}**（Matched Control = {_fmt(baseline.get('val_chem_only', {}).get('per_protein_r2_median'))}），"
+                f"远超 Matched Control ({_fmt(baseline.get('val_strain_only', {}).get('per_sample_corr'))})；"
+                f"但一旦涉及化学扰动，`val_chem_only` = **{chem_ppr2:.4f}**（Matched Control = {_fmt(baseline.get('val_chem_only', {}).get('per_sample_corr'))}），"
                 f"`val_both` = **{both_ppr2:.4f}**。"
                 f"**模型完全没有学到化学→蛋白表达的映射关系，化学特征编码是当前最高优先级问题。**"
             ))
@@ -754,8 +750,8 @@ def _build_conclusions(all_results, ctx):
     # ── 3. GNN 的增量（如果有对比数据） ──
     # 注意：实验 2（独立 run）和架构消融内的 with_gnn 是同一配置但不同 run，
     # 由于 GNN 信号弱（±0.15 量级），两次结果可能相反。这里同时引用两个来源。
-    main_both = main.get("metrics", {}).get("val_both", {}).get("per_protein_r2_median") if main else None
-    gnn_both = gnn.get("metrics", {}).get("val_both", {}).get("per_protein_r2_median") if gnn else None
+    main_both = main.get("metrics", {}).get("val_both", {}).get("per_sample_corr") if main else None
+    gnn_both = gnn.get("metrics", {}).get("val_both", {}).get("per_sample_corr") if gnn else None
     if main and gnn:
         if main_both is not None and gnn_both is not None:
             delta = gnn_both - main_both
@@ -822,9 +818,9 @@ def _build_conclusions(all_results, ctx):
 
     # ── 6. 编码器消融 ──
     if enc_abl:
-        best = max(enc_abl, key=lambda x: x.get("metrics", {}).get("val_both", {}).get("per_protein_r2_median", -999))
+        best = max(enc_abl, key=lambda x: x.get("metrics", {}).get("val_both", {}).get("per_sample_corr", -999))
         best_name = best.get("name", "?")
-        best_val = best.get("metrics", {}).get("val_both", {}).get("per_protein_r2_median")
+        best_val = best.get("metrics", {}).get("val_both", {}).get("per_sample_corr")
         lines.append(_finding(
             f"**最优编码器配置**：{len(enc_abl)} 组消融中，`{best_name}` 在 `val_both` 上表现最佳 "
             f"(Per-Protein R² = **{_fmt(best_val)}**)。"
@@ -843,7 +839,7 @@ def _build_conclusions(all_results, ctx):
     # 从已有数据推断推荐
     next_steps = []
     if main:
-        main_chem = main.get("metrics", {}).get("val_chem_only", {}).get("per_protein_r2_median", -999)
+        main_chem = main.get("metrics", {}).get("val_chem_only", {}).get("per_sample_corr", -999)
         if main_chem < -0.5:
             next_steps.append(
                 "1. **【最高优先级】排查化学特征编码**：当前化学场景 Per-Protein R² 远低于 Matched Control，"
@@ -908,7 +904,7 @@ def generate_report(all_results, ctx, config, output_dir, total_time_min):
     ]
     for sn in VAL_SPLITS:
         bm = ctx["baseline_metrics"].get(sn, {})
-        lines.append(f"| {sn} | {_fmt(bm.get('global_r2'))} | {_fmt(bm.get('per_protein_r2_median'))} |")
+        lines.append(f"| {sn} | {_fmt(bm.get('per_sample_corr'))} | {_fmt(bm.get('per_sample_corr'))} |")
 
     lines.extend([
         "",
@@ -953,8 +949,8 @@ def generate_report(all_results, ctx, config, output_dir, total_time_min):
                 continue
             delta = compare_with_baseline(exp.get("metrics", {}), ctx["baseline_metrics"], sn) if sn in VAL_SPLITS else None
             lines.append(
-                f"| {sn} | {m.get('n_samples', '—')} | {_fmt(m.get('global_r2'))} | "
-                f"{_fmt(m.get('per_protein_r2_median'))} | {_fmt(delta) if delta is not None else '—'} |"
+                f"| {sn} | {m.get('n_samples', '—')} | {_fmt(m.get('per_sample_corr'))} | "
+                f"{_fmt(m.get('per_sample_corr'))} | {_fmt(delta) if delta is not None else '—'} |"
             )
         lines.append("")
 
@@ -978,14 +974,14 @@ def generate_report(all_results, ctx, config, output_dir, total_time_min):
             metrics = item.get("metrics", {})
             row = f"| {item['name']} ({item['desc']}) |"
             for sn in VAL_SPLITS:
-                row += f" {_fmt(metrics.get(sn, {}).get('per_protein_r2_median'))} |"
+                row += f" {_fmt(metrics.get(sn, {}).get('per_sample_corr'))} |"
             lines.append(row)
 
         # Best performer
-        best = max(items, key=lambda x: x.get("metrics", {}).get("val_both", {}).get("per_protein_r2_median", -999))
+        best = max(items, key=lambda x: x.get("metrics", {}).get("val_both", {}).get("per_sample_corr", -999))
         lines.extend([
             "",
-            f"> **{title}最佳**: `{best['name']}` — val_both Per-Protein R² = {_fmt(best.get('metrics', {}).get('val_both', {}).get('per_protein_r2_median'))}",
+            f"> **{title}最佳**: `{best['name']}` — val_both Per-Protein R² = {_fmt(best.get('metrics', {}).get('val_both', {}).get('per_sample_corr'))}",
             "",
             "---",
             "",

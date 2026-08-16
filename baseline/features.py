@@ -24,6 +24,7 @@ from aivc.entity_representations import (
     HashEncoder,
     StrainPriorEncoder,
 )
+from aivc.external_chemical import ChemicalStructureEncoder
 
 
 CAT_COLS = {
@@ -157,6 +158,12 @@ def build_raw_condition_features(meta_df, encoders) -> np.ndarray:
         chunks.append(chunk)
         slices["cross_features"] = (start, start + chunk.shape[1])
 
+    if cfg.get("use_chemical_structure", True):
+        start = sum(chunk.shape[1] for chunk in chunks)
+        chunk = encoders["chemical_structure"].transform(meta_df)
+        chunks.append(chunk)
+        slices["chemical_structure"] = (start, start + chunk.shape[1])
+
     if cfg.get("use_temperature", True):
         start = sum(chunk.shape[1] for chunk in chunks)
         temperature = pd.to_numeric(meta_df["Temperature"], errors="coerce").fillna(0)
@@ -231,6 +238,12 @@ def fit_feature_encoders(
         encoders["cross_features"] = CrossFeatureEncoder(
             encoder_cfg.get("cross_dim_strain_medium", 10),
             encoder_cfg.get("cross_dim_chemical_temperature", 92),
+        ).fit(train_meta)
+    if encoder_cfg.get("use_chemical_structure", True):
+        encoders["chemical_structure"] = ChemicalStructureEncoder(
+            morgan_bits=encoder_cfg.get("morgan_bits", 2048),
+            morgan_radius=encoder_cfg.get("morgan_radius", 2),
+            morgan_pca_dim=encoder_cfg.get("morgan_pca_dim", 64),
         ).fit(train_meta)
 
     raw_train = build_raw_condition_features(train_meta, encoders)

@@ -23,6 +23,10 @@ EXPERIMENT_CONFIG = {
         "use_categorical_features": True,
         "use_temperature": True,
         "use_time_features": True,
+        "use_chemical_structure": True,
+        "morgan_bits": 2048,
+        "morgan_radius": 2,
+        "morgan_pca_dim": 64,
         "d_emb": 256,
     },
     "decoder": {
@@ -38,7 +42,9 @@ EXPERIMENT_CONFIG = {
     },
     "loss": {
         "mse_weight": 1.0,
-        "fc_pearson_weight": 0.3,
+        "fc_pearson_weight": 1.0,
+        "ctx_residual_weight": 0.5,
+        "drug_residual_weight": 0.5,
         "residual_l2_weight": 0.01,
         "correlation_consistency_weight": 0.1,
     },

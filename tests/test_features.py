@@ -115,7 +115,8 @@ class FeaturePipelineTest(unittest.TestCase):
         results = prepare_ablation_features(meta, y)
         self.assertEqual(
             set(results),
-            {"full", "no_strain_prior", "no_chem_anchor", "no_hash", "no_cross_features"},
+            {"full", "no_strain_prior", "no_chem_anchor", "no_hash",
+             "no_cross_features", "no_chemical_structure"},
         )
         for bundle in results.values():
             self.assertEqual(bundle["X"].shape, (len(meta), 256))
