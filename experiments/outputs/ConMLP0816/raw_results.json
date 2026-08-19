@@ -1,0 +1,3200 @@
+{
+  "condmlp_original_seed42": {
+    "val_strain_only": {
+      "n_samples": 1547,
+      "per_sample_corr": 0.9792789078068065,
+      "per_protein_r2_median": 0.465843191652605,
+      "rmse": 0.595852862866312,
+      "fc_pcc": 0.07241287262008214,
+      "high_effect_dir_acc": 0.5562988008075698,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": 0.05279330940358437
+    },
+    "val_chem_only": {
+      "n_samples": 1065,
+      "per_sample_corr": 0.9831260854215474,
+      "per_protein_r2_median": 0.5935846657844144,
+      "rmse": 0.5906388753977334,
+      "fc_pcc": 0.022930414090772684,
+      "high_effect_dir_acc": 0.5613238319867516,
+      "context_residual_pcc": 0.11094520392063233,
+      "drug_residual_pcc": NaN
+    },
+    "val_both": {
+      "n_samples": 269,
+      "per_sample_corr": 0.9769417520255373,
+      "per_protein_r2_median": 0.5046759548651452,
+      "rmse": 0.6481798082748638,
+      "fc_pcc": 0.004922538928860554,
+      "high_effect_dir_acc": 0.5483839468801874,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "val_time": {
+      "n_samples": 157,
+      "per_sample_corr": 0.985993267673154,
+      "per_protein_r2_median": 0.6248649143885874,
+      "rmse": 0.4950720471883626,
+      "fc_pcc": 0.12975700443759264,
+      "high_effect_dir_acc": 0.5983958934873276,
+      "context_residual_pcc": 0.17077674454463077,
+      "drug_residual_pcc": 0.06487990737420879
+    },
+    "test_strain_only": {
+      "n_samples": 1534,
+      "per_sample_corr": 0.9747443120139158,
+      "per_protein_r2_median": 0.45845667442868676,
+      "rmse": 0.654440641599647,
+      "fc_pcc": 0.05914906515644147,
+      "high_effect_dir_acc": 0.5765328661170885,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": 0.05461203737871123
+    },
+    "test_chem_only": {
+      "n_samples": 1640,
+      "per_sample_corr": 0.98320450458596,
+      "per_protein_r2_median": 0.5534712102737124,
+      "rmse": 0.5746061397582335,
+      "fc_pcc": 0.013435194936150854,
+      "high_effect_dir_acc": 0.5130730316569024,
+      "context_residual_pcc": 0.12130042749127172,
+      "drug_residual_pcc": NaN
+    },
+    "test_both": {
+      "n_samples": 1129,
+      "per_sample_corr": 0.9745648546311508,
+      "per_protein_r2_median": 0.40651143272526247,
+      "rmse": 0.6810171979367974,
+      "fc_pcc": 0.01109266650837705,
+      "high_effect_dir_acc": 0.5245976957331009,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "test_time": {
+      "n_samples": 151,
+      "per_sample_corr": 0.985624942083809,
+      "per_protein_r2_median": 0.6568801358645975,
+      "rmse": 0.49613262779054856,
+      "fc_pcc": 0.0829290321570284,
+      "high_effect_dir_acc": 0.5833821805392732,
+      "context_residual_pcc": 0.17465971394160423,
+      "drug_residual_pcc": 0.026882521077013635
+    }
+  },
+  "condmlp_original_seed123": {
+    "val_strain_only": {
+      "n_samples": 1547,
+      "per_sample_corr": 0.9780558219661178,
+      "per_protein_r2_median": 0.41332147692071897,
+      "rmse": 0.6316436459519135,
+      "fc_pcc": 0.06051287972625078,
+      "high_effect_dir_acc": 0.5677150478785078,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": 0.029373617555766875
+    },
+    "val_chem_only": {
+      "n_samples": 1065,
+      "per_sample_corr": 0.9832229569213063,
+      "per_protein_r2_median": 0.5793605477235295,
+      "rmse": 0.592079420303795,
+      "fc_pcc": 0.029813495383008738,
+      "high_effect_dir_acc": 0.5563933356752145,
+      "context_residual_pcc": 0.11859062290398427,
+      "drug_residual_pcc": NaN
+    },
+    "val_both": {
+      "n_samples": 269,
+      "per_sample_corr": 0.9771488199608568,
+      "per_protein_r2_median": 0.5422550927135471,
+      "rmse": 0.6325246244696431,
+      "fc_pcc": 0.02137353577063477,
+      "high_effect_dir_acc": 0.53183282882531,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "val_time": {
+      "n_samples": 157,
+      "per_sample_corr": 0.9845295625084722,
+      "per_protein_r2_median": 0.5662888844741917,
+      "rmse": 0.5303323496883696,
+      "fc_pcc": 0.12762323350383165,
+      "high_effect_dir_acc": 0.6117420596727623,
+      "context_residual_pcc": 0.1576528422419928,
+      "drug_residual_pcc": 0.06353915268537691
+    },
+    "test_strain_only": {
+      "n_samples": 1534,
+      "per_sample_corr": 0.9728597865186285,
+      "per_protein_r2_median": 0.393914248125162,
+      "rmse": 0.6928059329716156,
+      "fc_pcc": 0.043621772200333093,
+      "high_effect_dir_acc": 0.5554557230246262,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": 0.02780916503011557
+    },
+    "test_chem_only": {
+      "n_samples": 1640,
+      "per_sample_corr": 0.9821533406263926,
+      "per_protein_r2_median": 0.48416988681156825,
+      "rmse": 0.6120622092994076,
+      "fc_pcc": 0.02461823500262126,
+      "high_effect_dir_acc": 0.513255567338282,
+      "context_residual_pcc": 0.11703485353011424,
+      "drug_residual_pcc": NaN
+    },
+    "test_both": {
+      "n_samples": 1129,
+      "per_sample_corr": 0.973282293969,
+      "per_protein_r2_median": 0.39074234354946547,
+      "rmse": 0.6954567005436393,
+      "fc_pcc": 0.006467329562898234,
+      "high_effect_dir_acc": 0.5055957401691681,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "test_time": {
+      "n_samples": 151,
+      "per_sample_corr": 0.9842467492058913,
+      "per_protein_r2_median": 0.5474375897687161,
+      "rmse": 0.5573819050916361,
+      "fc_pcc": 0.116268308284015,
+      "high_effect_dir_acc": 0.6142291910902696,
+      "context_residual_pcc": 0.18643483035197367,
+      "drug_residual_pcc": 0.06143380953807522
+    }
+  },
+  "condmlp_original_seed2024": {
+    "val_strain_only": {
+      "n_samples": 1547,
+      "per_sample_corr": 0.9781556239739765,
+      "per_protein_r2_median": 0.29430383727027976,
+      "rmse": 0.6739982262081442,
+      "fc_pcc": 0.064729437421363,
+      "high_effect_dir_acc": 0.5655177446425531,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": 0.022382726207085778
+    },
+    "val_chem_only": {
+      "n_samples": 1065,
+      "per_sample_corr": 0.9834541704348194,
+      "per_protein_r2_median": 0.6192556202036723,
+      "rmse": 0.5710738493091017,
+      "fc_pcc": 0.020050408875146412,
+      "high_effect_dir_acc": 0.5322677773874642,
+      "context_residual_pcc": 0.13112305739100008,
+      "drug_residual_pcc": NaN
+    },
+    "val_both": {
+      "n_samples": 269,
+      "per_sample_corr": 0.9765287847925873,
+      "per_protein_r2_median": 0.4933840451832273,
+      "rmse": 0.6645758584196997,
+      "fc_pcc": 0.023580831850395795,
+      "high_effect_dir_acc": 0.5175764085538521,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "val_time": {
+      "n_samples": 157,
+      "per_sample_corr": 0.9853147210704208,
+      "per_protein_r2_median": 0.47037195476186033,
+      "rmse": 0.5763749226993171,
+      "fc_pcc": 0.1082472321002837,
+      "high_effect_dir_acc": 0.564902149502727,
+      "context_residual_pcc": 0.13041534169001795,
+      "drug_residual_pcc": 0.027388520473600436
+    },
+    "test_strain_only": {
+      "n_samples": 1534,
+      "per_sample_corr": 0.9729338369119704,
+      "per_protein_r2_median": 0.2841414035505455,
+      "rmse": 0.7470849727811117,
+      "fc_pcc": 0.04140260218975308,
+      "high_effect_dir_acc": 0.5705429142613266,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": 0.015230878553582438
+    },
+    "test_chem_only": {
+      "n_samples": 1640,
+      "per_sample_corr": 0.9834907615188361,
+      "per_protein_r2_median": 0.5515023190576667,
+      "rmse": 0.5727213112245662,
+      "fc_pcc": 0.027953330134018413,
+      "high_effect_dir_acc": 0.5293187072996888,
+      "context_residual_pcc": 0.12788016985807488,
+      "drug_residual_pcc": NaN
+    },
+    "test_both": {
+      "n_samples": 1129,
+      "per_sample_corr": 0.973467675104569,
+      "per_protein_r2_median": 0.3932278435895199,
+      "rmse": 0.7061190257243267,
+      "fc_pcc": 0.010527257937689683,
+      "high_effect_dir_acc": 0.5136418255071508,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "test_time": {
+      "n_samples": 151,
+      "per_sample_corr": 0.985010901956165,
+      "per_protein_r2_median": 0.5387842387195884,
+      "rmse": 0.5565479261268997,
+      "fc_pcc": 0.10048193550949858,
+      "high_effect_dir_acc": 0.6032385697538101,
+      "context_residual_pcc": 0.16219762901554158,
+      "drug_residual_pcc": 0.04036545936901228
+    }
+  },
+  "condmlp_full_seed42": {
+    "val_strain_only": {
+      "n_samples": 1547,
+      "per_sample_corr": 0.9727292216984692,
+      "per_protein_r2_median": 0.23022508550224952,
+      "rmse": 0.7063373304946636,
+      "fc_pcc": 0.14556322591478368,
+      "high_effect_dir_acc": 0.6369990189162673,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.028073392947339532
+    },
+    "val_chem_only": {
+      "n_samples": 1065,
+      "per_sample_corr": 0.9626266399636687,
+      "per_protein_r2_median": -1.2262778258905083,
+      "rmse": 1.366530610201796,
+      "fc_pcc": 0.043886898570061735,
+      "high_effect_dir_acc": 0.563243338184373,
+      "context_residual_pcc": 0.021973518413522505,
+      "drug_residual_pcc": NaN
+    },
+    "val_both": {
+      "n_samples": 269,
+      "per_sample_corr": 0.9570581274815083,
+      "per_protein_r2_median": -1.5568644977775365,
+      "rmse": 1.414612182028987,
+      "fc_pcc": 0.025163080987872836,
+      "high_effect_dir_acc": 0.5530221658041207,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "val_time": {
+      "n_samples": 157,
+      "per_sample_corr": 0.9752704975889808,
+      "per_protein_r2_median": 0.32368790735664604,
+      "rmse": 0.6671175695558629,
+      "fc_pcc": 0.24697120062086395,
+      "high_effect_dir_acc": 0.7035611164581328,
+      "context_residual_pcc": 0.13518700026406255,
+      "drug_residual_pcc": 0.06931062379717597
+    },
+    "test_strain_only": {
+      "n_samples": 1534,
+      "per_sample_corr": 0.9676221758933333,
+      "per_protein_r2_median": 0.23100609658953536,
+      "rmse": 0.7650192703779394,
+      "fc_pcc": 0.07832494130507413,
+      "high_effect_dir_acc": 0.6218917765448461,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.0781238975719726
+    },
+    "test_chem_only": {
+      "n_samples": 1640,
+      "per_sample_corr": 0.9603431532590432,
+      "per_protein_r2_median": -2.5001699965344932,
+      "rmse": 1.585189077881186,
+      "fc_pcc": 0.0640146410581561,
+      "high_effect_dir_acc": 0.5797072475357683,
+      "context_residual_pcc": 0.010679845771626487,
+      "drug_residual_pcc": NaN
+    },
+    "test_both": {
+      "n_samples": 1129,
+      "per_sample_corr": 0.9516157524350931,
+      "per_protein_r2_median": -2.567011096061628,
+      "rmse": 1.6378282091250653,
+      "fc_pcc": 0.007822239179848738,
+      "high_effect_dir_acc": 0.5377800815210989,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "test_time": {
+      "n_samples": 151,
+      "per_sample_corr": 0.9742278856424335,
+      "per_protein_r2_median": 0.3846988253062475,
+      "rmse": 0.6684606109306388,
+      "fc_pcc": 0.2526239382253178,
+      "high_effect_dir_acc": 0.7126318874560376,
+      "context_residual_pcc": 0.1433149035796509,
+      "drug_residual_pcc": 0.09083019432395462
+    }
+  },
+  "condmlp_full_seed123": {
+    "val_strain_only": {
+      "n_samples": 1547,
+      "per_sample_corr": 0.9674525398814052,
+      "per_protein_r2_median": 0.20253181676183318,
+      "rmse": 0.7416018517840338,
+      "fc_pcc": 0.11681355858167121,
+      "high_effect_dir_acc": 0.6051016354098254,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.04367016775307895
+    },
+    "val_chem_only": {
+      "n_samples": 1065,
+      "per_sample_corr": 0.9549317631358728,
+      "per_protein_r2_median": -0.5299918489372317,
+      "rmse": 1.2217892592718678,
+      "fc_pcc": 0.0549733494753237,
+      "high_effect_dir_acc": 0.554862749033974,
+      "context_residual_pcc": 0.031286294848255986,
+      "drug_residual_pcc": NaN
+    },
+    "val_both": {
+      "n_samples": 269,
+      "per_sample_corr": 0.9518495586201828,
+      "per_protein_r2_median": -0.7969446748280768,
+      "rmse": 1.285941273453073,
+      "fc_pcc": 0.028285663210958583,
+      "high_effect_dir_acc": 0.5340787032516355,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "val_time": {
+      "n_samples": 157,
+      "per_sample_corr": 0.9683458263812693,
+      "per_protein_r2_median": 0.19474313455890668,
+      "rmse": 0.7521737033323714,
+      "fc_pcc": 0.1786269099693117,
+      "high_effect_dir_acc": 0.6233557908245108,
+      "context_residual_pcc": 0.06817043620269755,
+      "drug_residual_pcc": 0.022074213702442964
+    },
+    "test_strain_only": {
+      "n_samples": 1534,
+      "per_sample_corr": 0.9618022583843767,
+      "per_protein_r2_median": 0.18450819405627483,
+      "rmse": 0.806323217256905,
+      "fc_pcc": 0.04950225895647181,
+      "high_effect_dir_acc": 0.5438951159430057,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.07810790784300287
+    },
+    "test_chem_only": {
+      "n_samples": 1640,
+      "per_sample_corr": 0.957500590983823,
+      "per_protein_r2_median": -0.6216843749845128,
+      "rmse": 1.149537291953462,
+      "fc_pcc": 0.06763664186517818,
+      "high_effect_dir_acc": 0.5736053404725067,
+      "context_residual_pcc": 0.004539789816046146,
+      "drug_residual_pcc": NaN
+    },
+    "test_both": {
+      "n_samples": 1129,
+      "per_sample_corr": 0.9515317760483991,
+      "per_protein_r2_median": -0.7386341583680636,
+      "rmse": 1.2166267940676592,
+      "fc_pcc": 0.0037088260953804957,
+      "high_effect_dir_acc": 0.5306882171382796,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "test_time": {
+      "n_samples": 151,
+      "per_sample_corr": 0.9669109248951513,
+      "per_protein_r2_median": 0.25419738794133956,
+      "rmse": 0.7608305212224528,
+      "fc_pcc": 0.18212144169594033,
+      "high_effect_dir_acc": 0.6200175849941383,
+      "context_residual_pcc": 0.07931521473890536,
+      "drug_residual_pcc": 0.031171853544005566
+    }
+  },
+  "condmlp_full_seed2024": {
+    "val_strain_only": {
+      "n_samples": 1547,
+      "per_sample_corr": 0.9715809060601093,
+      "per_protein_r2_median": 0.2921755685279428,
+      "rmse": 0.6879407678799094,
+      "fc_pcc": 0.15610134666819422,
+      "high_effect_dir_acc": 0.6420666001800005,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.046237489669385366
+    },
+    "val_chem_only": {
+      "n_samples": 1065,
+      "per_sample_corr": 0.9610249610016937,
+      "per_protein_r2_median": -0.38450054187752114,
+      "rmse": 1.106948465260281,
+      "fc_pcc": 0.053032877287559115,
+      "high_effect_dir_acc": 0.5362949766648266,
+      "context_residual_pcc": 0.028263536641175813,
+      "drug_residual_pcc": NaN
+    },
+    "val_both": {
+      "n_samples": 269,
+      "per_sample_corr": 0.9554532573773725,
+      "per_protein_r2_median": -0.5826000461920575,
+      "rmse": 1.148294408184066,
+      "fc_pcc": 0.035951955349076276,
+      "high_effect_dir_acc": 0.5244116785470169,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "val_time": {
+      "n_samples": 157,
+      "per_sample_corr": 0.9732852003046291,
+      "per_protein_r2_median": 0.32197132289700015,
+      "rmse": 0.6762961105192119,
+      "fc_pcc": 0.250991674443482,
+      "high_effect_dir_acc": 0.6725697786333013,
+      "context_residual_pcc": 0.13468206664632767,
+      "drug_residual_pcc": 0.059603077954131174
+    },
+    "test_strain_only": {
+      "n_samples": 1534,
+      "per_sample_corr": 0.9665739800221419,
+      "per_protein_r2_median": 0.2849001955728968,
+      "rmse": 0.7431943172448691,
+      "fc_pcc": 0.08397872355521664,
+      "high_effect_dir_acc": 0.5888571920603188,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.08468955110661208
+    },
+    "test_chem_only": {
+      "n_samples": 1640,
+      "per_sample_corr": 0.9638985620836688,
+      "per_protein_r2_median": -0.7795804661705388,
+      "rmse": 1.162297091455142,
+      "fc_pcc": 0.08453117155225034,
+      "high_effect_dir_acc": 0.5897119413104324,
+      "context_residual_pcc": 0.013121482999726637,
+      "drug_residual_pcc": NaN
+    },
+    "test_both": {
+      "n_samples": 1129,
+      "per_sample_corr": 0.9553767601533931,
+      "per_protein_r2_median": -0.8595481539006464,
+      "rmse": 1.2255196352912863,
+      "fc_pcc": 0.007923776408067554,
+      "high_effect_dir_acc": 0.5313832669698183,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "test_time": {
+      "n_samples": 151,
+      "per_sample_corr": 0.9719548363516394,
+      "per_protein_r2_median": 0.3826418835606375,
+      "rmse": 0.6785983799330682,
+      "fc_pcc": 0.24501280360959216,
+      "high_effect_dir_acc": 0.664932590855803,
+      "context_residual_pcc": 0.13663063625037986,
+      "drug_residual_pcc": 0.06423647990334559
+    }
+  },
+  "condmlp_lowrank_seed42": {
+    "val_strain_only": {
+      "n_samples": 1547,
+      "per_sample_corr": 0.9720593754733307,
+      "per_protein_r2_median": 0.23509787636303792,
+      "rmse": 0.7114878928986313,
+      "fc_pcc": 0.15506877414108444,
+      "high_effect_dir_acc": 0.6476612098951618,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.036849051644854934
+    },
+    "val_chem_only": {
+      "n_samples": 1065,
+      "per_sample_corr": 0.9627146225412558,
+      "per_protein_r2_median": -1.0863363530197259,
+      "rmse": 1.3331493447606693,
+      "fc_pcc": 0.048429803610484545,
+      "high_effect_dir_acc": 0.5560671450795404,
+      "context_residual_pcc": 0.017518207674325336,
+      "drug_residual_pcc": NaN
+    },
+    "val_both": {
+      "n_samples": 269,
+      "per_sample_corr": 0.9562669475436987,
+      "per_protein_r2_median": -1.4316621391357724,
+      "rmse": 1.391447956644719,
+      "fc_pcc": 0.023666304096243887,
+      "high_effect_dir_acc": 0.5499462943071965,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "val_time": {
+      "n_samples": 157,
+      "per_sample_corr": 0.9745978156272491,
+      "per_protein_r2_median": 0.32850967924972974,
+      "rmse": 0.6704153634705919,
+      "fc_pcc": 0.25924843493923705,
+      "high_effect_dir_acc": 0.6980429900545396,
+      "context_residual_pcc": 0.13692774290977414,
+      "drug_residual_pcc": 0.07255087419449799
+    },
+    "test_strain_only": {
+      "n_samples": 1534,
+      "per_sample_corr": 0.9665740690156404,
+      "per_protein_r2_median": 0.22805163164151637,
+      "rmse": 0.7743433885252229,
+      "fc_pcc": 0.08554847115592512,
+      "high_effect_dir_acc": 0.6109376520886214,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.09422491142693663
+    },
+    "test_chem_only": {
+      "n_samples": 1640,
+      "per_sample_corr": 0.9599233920281479,
+      "per_protein_r2_median": -2.36621364846579,
+      "rmse": 1.5648234813440798,
+      "fc_pcc": 0.07006805369452332,
+      "high_effect_dir_acc": 0.5815847574013873,
+      "context_residual_pcc": 0.005445432614322596,
+      "drug_residual_pcc": NaN
+    },
+    "test_both": {
+      "n_samples": 1129,
+      "per_sample_corr": 0.9504942098495444,
+      "per_protein_r2_median": -2.4412814906184916,
+      "rmse": 1.6181255280343758,
+      "fc_pcc": 0.010883314495018672,
+      "high_effect_dir_acc": 0.5357302735433405,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "test_time": {
+      "n_samples": 151,
+      "per_sample_corr": 0.9736600245358632,
+      "per_protein_r2_median": 0.3768796135467681,
+      "rmse": 0.6756122316646194,
+      "fc_pcc": 0.26330596098965015,
+      "high_effect_dir_acc": 0.7073563892145369,
+      "context_residual_pcc": 0.14334948094474917,
+      "drug_residual_pcc": 0.09607571928580075
+    }
+  },
+  "condmlp_lowrank_seed123": {
+    "val_strain_only": {
+      "n_samples": 1547,
+      "per_sample_corr": 0.9689620142268494,
+      "per_protein_r2_median": 0.2565098260208256,
+      "rmse": 0.7154028905265998,
+      "fc_pcc": 0.1322179061608487,
+      "high_effect_dir_acc": 0.6334557660966651,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.05736081058863437
+    },
+    "val_chem_only": {
+      "n_samples": 1065,
+      "per_sample_corr": 0.9574370498735815,
+      "per_protein_r2_median": -0.34616211496823235,
+      "rmse": 1.1390243224431564,
+      "fc_pcc": 0.07125133674128453,
+      "high_effect_dir_acc": 0.571347919907663,
+      "context_residual_pcc": 0.025882883343779736,
+      "drug_residual_pcc": NaN
+    },
+    "val_both": {
+      "n_samples": 269,
+      "per_sample_corr": 0.9537274200808531,
+      "per_protein_r2_median": -0.5373987431226677,
+      "rmse": 1.1934599055520037,
+      "fc_pcc": 0.03322343845064205,
+      "high_effect_dir_acc": 0.5464798359535201,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "val_time": {
+      "n_samples": 157,
+      "per_sample_corr": 0.9699628619688409,
+      "per_protein_r2_median": 0.2791413683608826,
+      "rmse": 0.7082269414686442,
+      "fc_pcc": 0.22033160208638627,
+      "high_effect_dir_acc": 0.6676291305742701,
+      "context_residual_pcc": 0.09308203588838256,
+      "drug_residual_pcc": 0.04293866926363456
+    },
+    "test_strain_only": {
+      "n_samples": 1534,
+      "per_sample_corr": 0.9635203508795246,
+      "per_protein_r2_median": 0.2578890690999424,
+      "rmse": 0.7746436842952712,
+      "fc_pcc": 0.0635788394833806,
+      "high_effect_dir_acc": 0.5786068869471461,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.09778147686616998
+    },
+    "test_chem_only": {
+      "n_samples": 1640,
+      "per_sample_corr": 0.961378706398411,
+      "per_protein_r2_median": -0.47291598547349334,
+      "rmse": 1.0834459290050553,
+      "fc_pcc": 0.08807689801424123,
+      "high_effect_dir_acc": 0.5828625071710446,
+      "context_residual_pcc": -0.0013911418285650287,
+      "drug_residual_pcc": NaN
+    },
+    "test_both": {
+      "n_samples": 1129,
+      "per_sample_corr": 0.9544347237438019,
+      "per_protein_r2_median": -0.5488412280765305,
+      "rmse": 1.1468102834375888,
+      "fc_pcc": 0.005850550850824574,
+      "high_effect_dir_acc": 0.5327498056216573,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "test_time": {
+      "n_samples": 151,
+      "per_sample_corr": 0.9688515595057151,
+      "per_protein_r2_median": 0.3461495762290382,
+      "rmse": 0.7143279317539935,
+      "fc_pcc": 0.22262215208783256,
+      "high_effect_dir_acc": 0.6650058616647128,
+      "context_residual_pcc": 0.10062398050693507,
+      "drug_residual_pcc": 0.05675066353765087
+    }
+  },
+  "condmlp_lowrank_seed2024": {
+    "val_strain_only": {
+      "n_samples": 1547,
+      "per_sample_corr": 0.9693775021427411,
+      "per_protein_r2_median": 0.2151211303789029,
+      "rmse": 0.7237369318555246,
+      "fc_pcc": 0.13698629470387053,
+      "high_effect_dir_acc": 0.6293530523055467,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.049992593664454375
+    },
+    "val_chem_only": {
+      "n_samples": 1065,
+      "per_sample_corr": 0.9573278278535828,
+      "per_protein_r2_median": -0.7397497539166838,
+      "rmse": 1.2749610221943253,
+      "fc_pcc": 0.05525688453197919,
+      "high_effect_dir_acc": 0.5652757565112662,
+      "context_residual_pcc": 0.0231713669835136,
+      "drug_residual_pcc": NaN
+    },
+    "val_both": {
+      "n_samples": 269,
+      "per_sample_corr": 0.9525358914746709,
+      "per_protein_r2_median": -0.9932517322548307,
+      "rmse": 1.328965455960046,
+      "fc_pcc": 0.04005676252325635,
+      "high_effect_dir_acc": 0.5523874621618983,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "val_time": {
+      "n_samples": 157,
+      "per_sample_corr": 0.9706389359759469,
+      "per_protein_r2_median": 0.2540986497502354,
+      "rmse": 0.715999089179,
+      "fc_pcc": 0.22796280458319218,
+      "high_effect_dir_acc": 0.6710298363811357,
+      "context_residual_pcc": 0.10773171354085126,
+      "drug_residual_pcc": 0.05073013879441848
+    },
+    "test_strain_only": {
+      "n_samples": 1534,
+      "per_sample_corr": 0.9641125880839612,
+      "per_protein_r2_median": 0.22314693668688856,
+      "rmse": 0.7803988304783678,
+      "fc_pcc": 0.05714338449014957,
+      "high_effect_dir_acc": 0.5770944241035663,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.10060279518275798
+    },
+    "test_chem_only": {
+      "n_samples": 1640,
+      "per_sample_corr": 0.9600804819521652,
+      "per_protein_r2_median": -0.9946479122381271,
+      "rmse": 1.261523047675285,
+      "fc_pcc": 0.08095143940876515,
+      "high_effect_dir_acc": 0.5887818785529266,
+      "context_residual_pcc": -0.0013053747211738335,
+      "drug_residual_pcc": NaN
+    },
+    "test_both": {
+      "n_samples": 1129,
+      "per_sample_corr": 0.9528377847506033,
+      "per_protein_r2_median": -1.1066996908625,
+      "rmse": 1.3337180061106193,
+      "fc_pcc": 0.0049091299849661,
+      "high_effect_dir_acc": 0.534929199161228,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "test_time": {
+      "n_samples": 151,
+      "per_sample_corr": 0.9689295857286772,
+      "per_protein_r2_median": 0.31787948692407525,
+      "rmse": 0.7190540676527916,
+      "fc_pcc": 0.2236317636933472,
+      "high_effect_dir_acc": 0.6510111371629543,
+      "context_residual_pcc": 0.11247194949922501,
+      "drug_residual_pcc": 0.05696160303165101
+    }
+  },
+  "protein_bias_seed42": {
+    "val_strain_only": {
+      "n_samples": 1547,
+      "per_sample_corr": 0.9722213188357363,
+      "per_protein_r2_median": 0.2507671855093837,
+      "rmse": 0.7026659975628107,
+      "fc_pcc": 0.1557795808493193,
+      "high_effect_dir_acc": 0.6477990481055355,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.035392046809069676
+    },
+    "val_chem_only": {
+      "n_samples": 1065,
+      "per_sample_corr": 0.9626520082652267,
+      "per_protein_r2_median": -1.2383383168264193,
+      "rmse": 1.3774205567231388,
+      "fc_pcc": 0.045229579698629216,
+      "high_effect_dir_acc": 0.53575550760275,
+      "context_residual_pcc": 0.01733025274379207,
+      "drug_residual_pcc": NaN
+    },
+    "val_both": {
+      "n_samples": 269,
+      "per_sample_corr": 0.9561170332179415,
+      "per_protein_r2_median": -1.6015788991774813,
+      "rmse": 1.4335026549615872,
+      "fc_pcc": 0.022183889330935794,
+      "high_effect_dir_acc": 0.5319304755394981,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "val_time": {
+      "n_samples": 157,
+      "per_sample_corr": 0.9743826008361055,
+      "per_protein_r2_median": 0.3329987462109756,
+      "rmse": 0.6683451887292623,
+      "fc_pcc": 0.2550603649968756,
+      "high_effect_dir_acc": 0.6901507860121913,
+      "context_residual_pcc": 0.13250290009182258,
+      "drug_residual_pcc": 0.07265078196590485
+    },
+    "test_strain_only": {
+      "n_samples": 1534,
+      "per_sample_corr": 0.9667035172644345,
+      "per_protein_r2_median": 0.2465417625092413,
+      "rmse": 0.7644157098223903,
+      "fc_pcc": 0.08353651282430657,
+      "high_effect_dir_acc": 0.6129667482797607,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.09365308449541225
+    },
+    "test_chem_only": {
+      "n_samples": 1640,
+      "per_sample_corr": 0.9592997513673059,
+      "per_protein_r2_median": -2.3271100818479917,
+      "rmse": 1.562852401074884,
+      "fc_pcc": 0.06872933382674438,
+      "high_effect_dir_acc": 0.5738139526797976,
+      "context_residual_pcc": 0.006767278917551815,
+      "drug_residual_pcc": NaN
+    },
+    "test_both": {
+      "n_samples": 1129,
+      "per_sample_corr": 0.9496840647339525,
+      "per_protein_r2_median": -2.452748873535903,
+      "rmse": 1.627993460828922,
+      "fc_pcc": 0.0088971494521416,
+      "high_effect_dir_acc": 0.5296397521381617,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "test_time": {
+      "n_samples": 151,
+      "per_sample_corr": 0.9735604566035233,
+      "per_protein_r2_median": 0.3817049878965437,
+      "rmse": 0.6734890072814952,
+      "fc_pcc": 0.25843570616795486,
+      "high_effect_dir_acc": 0.7061107854630715,
+      "context_residual_pcc": 0.13880888117227946,
+      "drug_residual_pcc": 0.0928219667143283
+    }
+  },
+  "protein_bias_seed123": {
+    "val_strain_only": {
+      "n_samples": 1547,
+      "per_sample_corr": 0.9671434487439563,
+      "per_protein_r2_median": 0.18393999309958198,
+      "rmse": 0.7489479113828144,
+      "fc_pcc": 0.12142371572850742,
+      "high_effect_dir_acc": 0.6174503174332904,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.0534828806794219
+    },
+    "val_chem_only": {
+      "n_samples": 1065,
+      "per_sample_corr": 0.9544607261576509,
+      "per_protein_r2_median": -0.3159544647660827,
+      "rmse": 1.1375164245097347,
+      "fc_pcc": 0.06096401719018926,
+      "high_effect_dir_acc": 0.5449515732423346,
+      "context_residual_pcc": 0.024768184932809904,
+      "drug_residual_pcc": NaN
+    },
+    "val_both": {
+      "n_samples": 269,
+      "per_sample_corr": 0.9508008993695575,
+      "per_protein_r2_median": -0.5193717643004663,
+      "rmse": 1.1882834864522853,
+      "fc_pcc": 0.03219324299259287,
+      "high_effect_dir_acc": 0.5321745923249682,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "val_time": {
+      "n_samples": 157,
+      "per_sample_corr": 0.9681189507237543,
+      "per_protein_r2_median": 0.17847333198051146,
+      "rmse": 0.7575378379290039,
+      "fc_pcc": 0.18857995361305926,
+      "high_effect_dir_acc": 0.6393326916907283,
+      "context_residual_pcc": 0.06707725154807075,
+      "drug_residual_pcc": 0.0257448205754074
+    },
+    "test_strain_only": {
+      "n_samples": 1534,
+      "per_sample_corr": 0.9614965970195614,
+      "per_protein_r2_median": 0.17263670331979059,
+      "rmse": 0.8118520747052445,
+      "fc_pcc": 0.056683225084556414,
+      "high_effect_dir_acc": 0.5565863264374012,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.08798671837334464
+    },
+    "test_chem_only": {
+      "n_samples": 1640,
+      "per_sample_corr": 0.9583575708601441,
+      "per_protein_r2_median": -0.5320720334377997,
+      "rmse": 1.1104254438978198,
+      "fc_pcc": 0.07696458606127819,
+      "high_effect_dir_acc": 0.5702153921040279,
+      "context_residual_pcc": -0.0038200364049872605,
+      "drug_residual_pcc": NaN
+    },
+    "test_both": {
+      "n_samples": 1129,
+      "per_sample_corr": 0.9516913983452496,
+      "per_protein_r2_median": -0.5935268544029277,
+      "rmse": 1.1626667306438163,
+      "fc_pcc": 0.005703692962163268,
+      "high_effect_dir_acc": 0.526482576632189,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "test_time": {
+      "n_samples": 151,
+      "per_sample_corr": 0.9668502642458385,
+      "per_protein_r2_median": 0.23889069766584614,
+      "rmse": 0.7646049572773836,
+      "fc_pcc": 0.1966875308183139,
+      "high_effect_dir_acc": 0.6366500586166471,
+      "context_residual_pcc": 0.07786065686812267,
+      "drug_residual_pcc": 0.03814057190568226
+    }
+  },
+  "protein_bias_seed2024": {
+    "val_strain_only": {
+      "n_samples": 1547,
+      "per_sample_corr": 0.969172251674279,
+      "per_protein_r2_median": 0.22765513400511928,
+      "rmse": 0.721472926609443,
+      "fc_pcc": 0.13998521895603316,
+      "high_effect_dir_acc": 0.6284449417430857,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.04869342399395428
+    },
+    "val_chem_only": {
+      "n_samples": 1065,
+      "per_sample_corr": 0.9581082793723891,
+      "per_protein_r2_median": -0.5380039673178313,
+      "rmse": 1.2113037568635465,
+      "fc_pcc": 0.05952039301829242,
+      "high_effect_dir_acc": 0.5592161389070106,
+      "context_residual_pcc": 0.027822597297461518,
+      "drug_residual_pcc": NaN
+    },
+    "val_both": {
+      "n_samples": 269,
+      "per_sample_corr": 0.9533232033153274,
+      "per_protein_r2_median": -0.7921053219920218,
+      "rmse": 1.2702985927850583,
+      "fc_pcc": 0.038515407389698074,
+      "high_effect_dir_acc": 0.5422810272434333,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "val_time": {
+      "n_samples": 157,
+      "per_sample_corr": 0.9705119412801825,
+      "per_protein_r2_median": 0.2619936676147015,
+      "rmse": 0.7136346338676668,
+      "fc_pcc": 0.2326422623988389,
+      "high_effect_dir_acc": 0.6729547641963426,
+      "context_residual_pcc": 0.11419784090878271,
+      "drug_residual_pcc": 0.04755980542643187
+    },
+    "test_strain_only": {
+      "n_samples": 1534,
+      "per_sample_corr": 0.9639319691472173,
+      "per_protein_r2_median": 0.21939217150013235,
+      "rmse": 0.7817738958077886,
+      "fc_pcc": 0.06289634312080866,
+      "high_effect_dir_acc": 0.5802241739482019,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.09588519623033333
+    },
+    "test_chem_only": {
+      "n_samples": 1640,
+      "per_sample_corr": 0.9610953901597823,
+      "per_protein_r2_median": -0.6368584420850677,
+      "rmse": 1.1476952409068208,
+      "fc_pcc": 0.08473368713474914,
+      "high_effect_dir_acc": 0.5859221528779792,
+      "context_residual_pcc": -0.00048798736444419086,
+      "drug_residual_pcc": NaN
+    },
+    "test_both": {
+      "n_samples": 1129,
+      "per_sample_corr": 0.9539081965781054,
+      "per_protein_r2_median": -0.779178847283682,
+      "rmse": 1.2333839208071518,
+      "fc_pcc": 0.00488042366069591,
+      "high_effect_dir_acc": 0.5320665362957379,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "test_time": {
+      "n_samples": 151,
+      "per_sample_corr": 0.9688434891080578,
+      "per_protein_r2_median": 0.32307465001315055,
+      "rmse": 0.7184378388476159,
+      "fc_pcc": 0.22361193852784003,
+      "high_effect_dir_acc": 0.650571512309496,
+      "context_residual_pcc": 0.11662471931189348,
+      "drug_residual_pcc": 0.05205340426096269
+    }
+  },
+  "protein_esm_seed42": {
+    "val_strain_only": {
+      "n_samples": 1547,
+      "per_sample_corr": 0.9714610896652119,
+      "per_protein_r2_median": 0.1383424872460347,
+      "rmse": 0.7512323852786655,
+      "fc_pcc": 0.1525836820447611,
+      "high_effect_dir_acc": 0.6288098075940746,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.04877344657051604
+    },
+    "val_chem_only": {
+      "n_samples": 1065,
+      "per_sample_corr": 0.9692849678105285,
+      "per_protein_r2_median": -0.2824243797885363,
+      "rmse": 1.0898810132439307,
+      "fc_pcc": 0.050637466677646875,
+      "high_effect_dir_acc": 0.5207758317860189,
+      "context_residual_pcc": 0.00954249062266686,
+      "drug_residual_pcc": NaN
+    },
+    "val_both": {
+      "n_samples": 269,
+      "per_sample_corr": 0.9655732999550108,
+      "per_protein_r2_median": -0.4771914269788722,
+      "rmse": 1.0991713957908482,
+      "fc_pcc": 0.04060517937574714,
+      "high_effect_dir_acc": 0.5201640464798359,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "val_time": {
+      "n_samples": 157,
+      "per_sample_corr": 0.9752905404714965,
+      "per_protein_r2_median": 0.21904705262643487,
+      "rmse": 0.7179207004785929,
+      "fc_pcc": 0.2338554671873545,
+      "high_effect_dir_acc": 0.6550529355149182,
+      "context_residual_pcc": 0.12994537022797686,
+      "drug_residual_pcc": 0.04202101578136372
+    },
+    "test_strain_only": {
+      "n_samples": 1534,
+      "per_sample_corr": 0.966446028894697,
+      "per_protein_r2_median": 0.14667191046195205,
+      "rmse": 0.8098438840579989,
+      "fc_pcc": 0.08896890126972341,
+      "high_effect_dir_acc": 0.56014286035176,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.09247330364585879
+    },
+    "test_chem_only": {
+      "n_samples": 1640,
+      "per_sample_corr": 0.971665162611995,
+      "per_protein_r2_median": -0.8334286931318267,
+      "rmse": 1.2371921345655619,
+      "fc_pcc": 0.0693914376584063,
+      "high_effect_dir_acc": 0.5698242442153574,
+      "context_residual_pcc": -0.008069078856626909,
+      "drug_residual_pcc": NaN
+    },
+    "test_both": {
+      "n_samples": 1129,
+      "per_sample_corr": 0.9637629532797982,
+      "per_protein_r2_median": -0.838611663750588,
+      "rmse": 1.2636827765106597,
+      "fc_pcc": 0.007398501610355404,
+      "high_effect_dir_acc": 0.5132295078104753,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "test_time": {
+      "n_samples": 151,
+      "per_sample_corr": 0.9739341866553405,
+      "per_protein_r2_median": 0.24907226105786423,
+      "rmse": 0.7348979010032619,
+      "fc_pcc": 0.2332253824871372,
+      "high_effect_dir_acc": 0.644563305978898,
+      "context_residual_pcc": 0.14097342764253992,
+      "drug_residual_pcc": 0.05999654550052465
+    }
+  },
+  "protein_esm_seed123": {
+    "val_strain_only": {
+      "n_samples": 1547,
+      "per_sample_corr": 0.9744093078686579,
+      "per_protein_r2_median": 0.2915742233908689,
+      "rmse": 0.6887023067358459,
+      "fc_pcc": 0.18727422130193327,
+      "high_effect_dir_acc": 0.6609747593912416,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.033043207798561354
+    },
+    "val_chem_only": {
+      "n_samples": 1065,
+      "per_sample_corr": 0.9681248178376016,
+      "per_protein_r2_median": -0.10014605494081663,
+      "rmse": 0.9839838752102015,
+      "fc_pcc": 0.06506322062603269,
+      "high_effect_dir_acc": 0.519985446881116,
+      "context_residual_pcc": 0.014244725255224676,
+      "drug_residual_pcc": NaN
+    },
+    "val_both": {
+      "n_samples": 269,
+      "per_sample_corr": 0.9640943544265731,
+      "per_protein_r2_median": -0.24675175795825544,
+      "rmse": 0.9936918289430998,
+      "fc_pcc": 0.06200504860999064,
+      "high_effect_dir_acc": 0.5175275851967581,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "val_time": {
+      "n_samples": 157,
+      "per_sample_corr": 0.9785681977773091,
+      "per_protein_r2_median": 0.3987260052677313,
+      "rmse": 0.6333044433354498,
+      "fc_pcc": 0.2814599888211039,
+      "high_effect_dir_acc": 0.7039461020211742,
+      "context_residual_pcc": 0.1530745650747135,
+      "drug_residual_pcc": 0.08116290672964598
+    },
+    "test_strain_only": {
+      "n_samples": 1534,
+      "per_sample_corr": 0.9689673427057779,
+      "per_protein_r2_median": 0.28094644766487925,
+      "rmse": 0.750674586780298,
+      "fc_pcc": 0.11175693936288755,
+      "high_effect_dir_acc": 0.5959253352501179,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.08829997811994245
+    },
+    "test_chem_only": {
+      "n_samples": 1640,
+      "per_sample_corr": 0.9742709962866639,
+      "per_protein_r2_median": -0.10378412689962868,
+      "rmse": 0.9394247475219374,
+      "fc_pcc": 0.09632373502843297,
+      "high_effect_dir_acc": 0.5912069954626845,
+      "context_residual_pcc": -0.015510240346752715,
+      "drug_residual_pcc": NaN
+    },
+    "test_both": {
+      "n_samples": 1129,
+      "per_sample_corr": 0.9647968806358498,
+      "per_protein_r2_median": -0.2781259654216035,
+      "rmse": 1.0170622796670927,
+      "fc_pcc": 0.0240692867538495,
+      "high_effect_dir_acc": 0.5245741347218623,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "test_time": {
+      "n_samples": 151,
+      "per_sample_corr": 0.9779766854974136,
+      "per_protein_r2_median": 0.42184936533965844,
+      "rmse": 0.6472312006270963,
+      "fc_pcc": 0.27080532848513744,
+      "high_effect_dir_acc": 0.6882327080890973,
+      "context_residual_pcc": 0.15066260554012634,
+      "drug_residual_pcc": 0.08160405824843946
+    }
+  },
+  "protein_esm_seed2024": {
+    "val_strain_only": {
+      "n_samples": 1547,
+      "per_sample_corr": 0.9756981705675982,
+      "per_protein_r2_median": 0.26705153572488893,
+      "rmse": 0.7101670031627941,
+      "fc_pcc": 0.20691910547404924,
+      "high_effect_dir_acc": 0.6850640136865235,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.024788815523571567
+    },
+    "val_chem_only": {
+      "n_samples": 1065,
+      "per_sample_corr": 0.971735668885868,
+      "per_protein_r2_median": -0.10945949289855517,
+      "rmse": 0.9874271434808639,
+      "fc_pcc": 0.09139163808277471,
+      "high_effect_dir_acc": 0.586365233100818,
+      "context_residual_pcc": 0.011239952923975111,
+      "drug_residual_pcc": NaN
+    },
+    "val_both": {
+      "n_samples": 269,
+      "per_sample_corr": 0.9650502787521323,
+      "per_protein_r2_median": -0.4738444864385676,
+      "rmse": 1.1001499795357885,
+      "fc_pcc": 0.04299826395742882,
+      "high_effect_dir_acc": 0.54042573967386,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "val_time": {
+      "n_samples": 157,
+      "per_sample_corr": 0.9816273193892933,
+      "per_protein_r2_median": 0.458138144361079,
+      "rmse": 0.5952843170488141,
+      "fc_pcc": 0.316645823773129,
+      "high_effect_dir_acc": 0.756753288418351,
+      "context_residual_pcc": 0.17885210818311145,
+      "drug_residual_pcc": 0.11705046398567784
+    },
+    "test_strain_only": {
+      "n_samples": 1534,
+      "per_sample_corr": 0.971237876671383,
+      "per_protein_r2_median": 0.2930131451565407,
+      "rmse": 0.7537025788609311,
+      "fc_pcc": 0.12355672322059269,
+      "high_effect_dir_acc": 0.6361703242810186,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.08499511839257223
+    },
+    "test_chem_only": {
+      "n_samples": 1640,
+      "per_sample_corr": 0.9790120666471556,
+      "per_protein_r2_median": -0.059353075999630134,
+      "rmse": 0.8942228603478867,
+      "fc_pcc": 0.1118431279336875,
+      "high_effect_dir_acc": 0.6210124645793856,
+      "context_residual_pcc": -0.025147165161648704,
+      "drug_residual_pcc": NaN
+    },
+    "test_both": {
+      "n_samples": 1129,
+      "per_sample_corr": 0.9681422834081761,
+      "per_protein_r2_median": -0.3839413708953612,
+      "rmse": 1.046722796425852,
+      "fc_pcc": 0.013576664154646674,
+      "high_effect_dir_acc": 0.5386989609594044,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "test_time": {
+      "n_samples": 151,
+      "per_sample_corr": 0.9812028732071418,
+      "per_protein_r2_median": 0.5064857085107297,
+      "rmse": 0.5929803231461713,
+      "fc_pcc": 0.30765592382356266,
+      "high_effect_dir_acc": 0.7449443141852286,
+      "context_residual_pcc": 0.16708572980559544,
+      "drug_residual_pcc": 0.12286787884028955
+    }
+  },
+  "protein_shuffle_seed42": {
+    "val_strain_only": {
+      "n_samples": 1547,
+      "per_sample_corr": 0.9737120804326808,
+      "per_protein_r2_median": 0.2651805004560841,
+      "rmse": 0.7038895010207473,
+      "fc_pcc": 0.18808634904581845,
+      "high_effect_dir_acc": 0.6733558739347945,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.05006009767198919
+    },
+    "val_chem_only": {
+      "n_samples": 1065,
+      "per_sample_corr": 0.9727506936127704,
+      "per_protein_r2_median": 0.02066221629380377,
+      "rmse": 0.9471488974213239,
+      "fc_pcc": 0.07801026071509204,
+      "high_effect_dir_acc": 0.5754253023535906,
+      "context_residual_pcc": 0.01871332268375678,
+      "drug_residual_pcc": NaN
+    },
+    "val_both": {
+      "n_samples": 269,
+      "per_sample_corr": 0.9674065150323594,
+      "per_protein_r2_median": -0.18340713122759755,
+      "rmse": 0.9978137331210329,
+      "fc_pcc": 0.052396716651828275,
+      "high_effect_dir_acc": 0.5576603847280539,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "val_time": {
+      "n_samples": 157,
+      "per_sample_corr": 0.9791930395837517,
+      "per_protein_r2_median": 0.3892798184378939,
+      "rmse": 0.6340157652876978,
+      "fc_pcc": 0.28194347180361873,
+      "high_effect_dir_acc": 0.7262752646775746,
+      "context_residual_pcc": 0.1641415752530335,
+      "drug_residual_pcc": 0.06491337749470558
+    },
+    "test_strain_only": {
+      "n_samples": 1534,
+      "per_sample_corr": 0.9694937403304862,
+      "per_protein_r2_median": 0.27892607487690624,
+      "rmse": 0.7537860563688663,
+      "fc_pcc": 0.12115166292872176,
+      "high_effect_dir_acc": 0.6340364039324033,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.09224140605846688
+    },
+    "test_chem_only": {
+      "n_samples": 1640,
+      "per_sample_corr": 0.9777570695081267,
+      "per_protein_r2_median": -0.035403986565734624,
+      "rmse": 0.9204189797976987,
+      "fc_pcc": 0.10394270621251396,
+      "high_effect_dir_acc": 0.6108339272986457,
+      "context_residual_pcc": -0.009766656928793152,
+      "drug_residual_pcc": NaN
+    },
+    "test_both": {
+      "n_samples": 1129,
+      "per_sample_corr": 0.9683529731207856,
+      "per_protein_r2_median": -0.2169646705365793,
+      "rmse": 1.01167084113229,
+      "fc_pcc": 0.013889283128977076,
+      "high_effect_dir_acc": 0.5386282779256886,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "test_time": {
+      "n_samples": 151,
+      "per_sample_corr": 0.9783466840739552,
+      "per_protein_r2_median": 0.41862402747355665,
+      "rmse": 0.6409060304749613,
+      "fc_pcc": 0.2788443938213873,
+      "high_effect_dir_acc": 0.7206916764361079,
+      "context_residual_pcc": 0.16575353102504342,
+      "drug_residual_pcc": 0.07471159831546534
+    }
+  },
+  "protein_shuffle_seed123": {
+    "val_strain_only": {
+      "n_samples": 1547,
+      "per_sample_corr": 0.9751003091841893,
+      "per_protein_r2_median": 0.2750505268671819,
+      "rmse": 0.7011011309190516,
+      "fc_pcc": 0.19149327665722307,
+      "high_effect_dir_acc": 0.6769802080546163,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.04758235480688309
+    },
+    "val_chem_only": {
+      "n_samples": 1065,
+      "per_sample_corr": 0.9704999336725092,
+      "per_protein_r2_median": 0.053953670771693885,
+      "rmse": 0.924317382029932,
+      "fc_pcc": 0.08690309498863588,
+      "high_effect_dir_acc": 0.5641591810106891,
+      "context_residual_pcc": 0.017636238804378018,
+      "drug_residual_pcc": NaN
+    },
+    "val_both": {
+      "n_samples": 269,
+      "per_sample_corr": 0.9649367392448804,
+      "per_protein_r2_median": -0.15617684255603126,
+      "rmse": 0.989300002256928,
+      "fc_pcc": 0.058075087134005755,
+      "high_effect_dir_acc": 0.5380333951762524,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "val_time": {
+      "n_samples": 157,
+      "per_sample_corr": 0.9798094087247989,
+      "per_protein_r2_median": 0.38304223988244107,
+      "rmse": 0.6372489596933621,
+      "fc_pcc": 0.29184079579990624,
+      "high_effect_dir_acc": 0.7290984921398781,
+      "context_residual_pcc": 0.15552387860441505,
+      "drug_residual_pcc": 0.08127749825404214
+    },
+    "test_strain_only": {
+      "n_samples": 1534,
+      "per_sample_corr": 0.9699778916156991,
+      "per_protein_r2_median": 0.2737037337010457,
+      "rmse": 0.7594006249462005,
+      "fc_pcc": 0.1158707682963177,
+      "high_effect_dir_acc": 0.6247669534356117,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.08984634505502927
+    },
+    "test_chem_only": {
+      "n_samples": 1640,
+      "per_sample_corr": 0.977355319320176,
+      "per_protein_r2_median": -0.0017980345386148233,
+      "rmse": 0.897881092688575,
+      "fc_pcc": 0.10857026541007248,
+      "high_effect_dir_acc": 0.6143629504719851,
+      "context_residual_pcc": -0.014754233421199041,
+      "drug_residual_pcc": NaN
+    },
+    "test_both": {
+      "n_samples": 1129,
+      "per_sample_corr": 0.9667415549237295,
+      "per_protein_r2_median": -0.22473067748583042,
+      "rmse": 1.0025195408346217,
+      "fc_pcc": 0.015341605147665248,
+      "high_effect_dir_acc": 0.5340810027566383,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "test_time": {
+      "n_samples": 151,
+      "per_sample_corr": 0.9793473983221657,
+      "per_protein_r2_median": 0.43980276723091516,
+      "rmse": 0.6307959432308818,
+      "fc_pcc": 0.28959413516622906,
+      "high_effect_dir_acc": 0.7283118405627198,
+      "context_residual_pcc": 0.1606911971273358,
+      "drug_residual_pcc": 0.09397409758401788
+    }
+  },
+  "protein_shuffle_seed2024": {
+    "val_strain_only": {
+      "n_samples": 1547,
+      "per_sample_corr": 0.9756134053058506,
+      "per_protein_r2_median": 0.2840186832025158,
+      "rmse": 0.7024046429560366,
+      "fc_pcc": 0.19688802788888146,
+      "high_effect_dir_acc": 0.6590855650961219,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.038561763512201225
+    },
+    "val_chem_only": {
+      "n_samples": 1065,
+      "per_sample_corr": 0.9712812956347079,
+      "per_protein_r2_median": -0.16170123834476813,
+      "rmse": 0.9973473650423977,
+      "fc_pcc": 0.0883864874538039,
+      "high_effect_dir_acc": 0.5479249259798263,
+      "context_residual_pcc": 0.007850319293158237,
+      "drug_residual_pcc": NaN
+    },
+    "val_both": {
+      "n_samples": 269,
+      "per_sample_corr": 0.9651609108015049,
+      "per_protein_r2_median": -0.46233440113455027,
+      "rmse": 1.0769710983439047,
+      "fc_pcc": 0.04269565931534353,
+      "high_effect_dir_acc": 0.507274680207011,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "val_time": {
+      "n_samples": 157,
+      "per_sample_corr": 0.9814691813541621,
+      "per_protein_r2_median": 0.4655030319545464,
+      "rmse": 0.5950540026872926,
+      "fc_pcc": 0.30501703177651474,
+      "high_effect_dir_acc": 0.7128007699711261,
+      "context_residual_pcc": 0.17206165469307577,
+      "drug_residual_pcc": 0.09570066155903738
+    },
+    "test_strain_only": {
+      "n_samples": 1534,
+      "per_sample_corr": 0.9710195108117653,
+      "per_protein_r2_median": 0.32060321631636435,
+      "rmse": 0.7400825561102826,
+      "fc_pcc": 0.11362245170866275,
+      "high_effect_dir_acc": 0.58882724230104,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.09091104157141727
+    },
+    "test_chem_only": {
+      "n_samples": 1640,
+      "per_sample_corr": 0.9788697191344418,
+      "per_protein_r2_median": -0.12792597202468958,
+      "rmse": 0.9197092134475553,
+      "fc_pcc": 0.10027447752666292,
+      "high_effect_dir_acc": 0.5929628148740503,
+      "context_residual_pcc": -0.027842038907034166,
+      "drug_residual_pcc": NaN
+    },
+    "test_both": {
+      "n_samples": 1129,
+      "per_sample_corr": 0.9687785866481776,
+      "per_protein_r2_median": -0.43151009305350607,
+      "rmse": 1.0493214367685,
+      "fc_pcc": 0.009847652676067412,
+      "high_effect_dir_acc": 0.5091887943830549,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "test_time": {
+      "n_samples": 151,
+      "per_sample_corr": 0.9809475919162132,
+      "per_protein_r2_median": 0.5056337540301203,
+      "rmse": 0.5961066404846321,
+      "fc_pcc": 0.3010659333939847,
+      "high_effect_dir_acc": 0.7026670574443142,
+      "context_residual_pcc": 0.16420762546479756,
+      "drug_residual_pcc": 0.10603282601891514
+    }
+  },
+  "protein_go_seed42": {
+    "val_strain_only": {
+      "n_samples": 1547,
+      "per_sample_corr": 0.9755616193054093,
+      "per_protein_r2_median": 0.2967663102169119,
+      "rmse": 0.694621265446789,
+      "fc_pcc": 0.2012751835748105,
+      "high_effect_dir_acc": 0.6798504860823948,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.022517448641977036
+    },
+    "val_chem_only": {
+      "n_samples": 1065,
+      "per_sample_corr": 0.973314789369765,
+      "per_protein_r2_median": -0.03566830632468454,
+      "rmse": 0.9275590740840997,
+      "fc_pcc": 0.07410422420471596,
+      "high_effect_dir_acc": 0.5545992873990063,
+      "context_residual_pcc": 0.02720765417400797,
+      "drug_residual_pcc": NaN
+    },
+    "val_both": {
+      "n_samples": 269,
+      "per_sample_corr": 0.9653243503193524,
+      "per_protein_r2_median": -0.25033480574465705,
+      "rmse": 0.9941426544133072,
+      "fc_pcc": 0.04261438345499633,
+      "high_effect_dir_acc": 0.5340787032516355,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "val_time": {
+      "n_samples": 157,
+      "per_sample_corr": 0.9805130104420976,
+      "per_protein_r2_median": 0.42608095138366714,
+      "rmse": 0.6151349280807121,
+      "fc_pcc": 0.30213217034679135,
+      "high_effect_dir_acc": 0.7343599615014437,
+      "context_residual_pcc": 0.17346759705670023,
+      "drug_residual_pcc": 0.0954347157700932
+    },
+    "test_strain_only": {
+      "n_samples": 1534,
+      "per_sample_corr": 0.9705912202101878,
+      "per_protein_r2_median": 0.2738249572440866,
+      "rmse": 0.7584498302890766,
+      "fc_pcc": 0.10767770329404143,
+      "high_effect_dir_acc": 0.6212778064796304,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.09798456249061387
+    },
+    "test_chem_only": {
+      "n_samples": 1640,
+      "per_sample_corr": 0.9766431492476164,
+      "per_protein_r2_median": -0.2890858004259429,
+      "rmse": 0.9655825324158932,
+      "fc_pcc": 0.10756161627360136,
+      "high_effect_dir_acc": 0.6084261947394956,
+      "context_residual_pcc": -0.002005902094574184,
+      "drug_residual_pcc": NaN
+    },
+    "test_both": {
+      "n_samples": 1129,
+      "per_sample_corr": 0.9646398342795264,
+      "per_protein_r2_median": -0.4391467534426836,
+      "rmse": 1.0611016928469599,
+      "fc_pcc": 0.011611250832836479,
+      "high_effect_dir_acc": 0.5289800438234808,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "test_time": {
+      "n_samples": 151,
+      "per_sample_corr": 0.9805125080123029,
+      "per_protein_r2_median": 0.4731813162573835,
+      "rmse": 0.6118843051637483,
+      "fc_pcc": 0.3065460210023897,
+      "high_effect_dir_acc": 0.7364449003516998,
+      "context_residual_pcc": 0.18652607877207356,
+      "drug_residual_pcc": 0.1283818705894259
+    }
+  },
+  "protein_go_seed123": {
+    "val_strain_only": {
+      "n_samples": 1547,
+      "per_sample_corr": 0.9734940923666807,
+      "per_protein_r2_median": 0.27416247662972226,
+      "rmse": 0.7002615204662546,
+      "fc_pcc": 0.18430826118524257,
+      "high_effect_dir_acc": 0.6626288179157241,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.04473326844717624
+    },
+    "val_chem_only": {
+      "n_samples": 1065,
+      "per_sample_corr": 0.9653442800790697,
+      "per_protein_r2_median": 0.06565498835809852,
+      "rmse": 0.9272364455320012,
+      "fc_pcc": 0.0704948380041852,
+      "high_effect_dir_acc": 0.5447257489837909,
+      "context_residual_pcc": 0.02513019631309512,
+      "drug_residual_pcc": NaN
+    },
+    "val_both": {
+      "n_samples": 269,
+      "per_sample_corr": 0.9574888694638718,
+      "per_protein_r2_median": -0.16105059623469686,
+      "rmse": 1.020579140847407,
+      "fc_pcc": 0.029217035120716797,
+      "high_effect_dir_acc": 0.521579923835563,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "val_time": {
+      "n_samples": 157,
+      "per_sample_corr": 0.9770150140237789,
+      "per_protein_r2_median": 0.38932419329010265,
+      "rmse": 0.642600155351939,
+      "fc_pcc": 0.28618815482194765,
+      "high_effect_dir_acc": 0.7205004812319538,
+      "context_residual_pcc": 0.1638007625943264,
+      "drug_residual_pcc": 0.07874764144792097
+    },
+    "test_strain_only": {
+      "n_samples": 1534,
+      "per_sample_corr": 0.9683280400479896,
+      "per_protein_r2_median": 0.2673218407835145,
+      "rmse": 0.7564745239217269,
+      "fc_pcc": 0.09846169681482994,
+      "high_effect_dir_acc": 0.6103611192225042,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.09576938493425942
+    },
+    "test_chem_only": {
+      "n_samples": 1640,
+      "per_sample_corr": 0.9702033708593315,
+      "per_protein_r2_median": -0.19670966711519544,
+      "rmse": 0.9629786252319953,
+      "fc_pcc": 0.0975503944717813,
+      "high_effect_dir_acc": 0.5991603358656538,
+      "context_residual_pcc": -0.0003803654690584487,
+      "drug_residual_pcc": NaN
+    },
+    "test_both": {
+      "n_samples": 1129,
+      "per_sample_corr": 0.9585447494792942,
+      "per_protein_r2_median": -0.35606803484261795,
+      "rmse": 1.0630532066048026,
+      "fc_pcc": 0.0033026515652554425,
+      "high_effect_dir_acc": 0.5254105506208326,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "test_time": {
+      "n_samples": 151,
+      "per_sample_corr": 0.9771972972055526,
+      "per_protein_r2_median": 0.42832134354946344,
+      "rmse": 0.6403959203451632,
+      "fc_pcc": 0.2764304575822564,
+      "high_effect_dir_acc": 0.7118259085580305,
+      "context_residual_pcc": 0.16337741283275548,
+      "drug_residual_pcc": 0.0852390278807235
+    }
+  },
+  "protein_go_seed2024": {
+    "val_strain_only": {
+      "n_samples": 1547,
+      "per_sample_corr": 0.973411177258397,
+      "per_protein_r2_median": 0.248878539544663,
+      "rmse": 0.7115631945478822,
+      "fc_pcc": 0.18533062690190305,
+      "high_effect_dir_acc": 0.6703153251765546,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.04190776574758044
+    },
+    "val_chem_only": {
+      "n_samples": 1065,
+      "per_sample_corr": 0.9692608528663752,
+      "per_protein_r2_median": -0.04148642789693613,
+      "rmse": 0.9306561630673159,
+      "fc_pcc": 0.07627043473191031,
+      "high_effect_dir_acc": 0.5420409494655493,
+      "context_residual_pcc": 0.015133374667723737,
+      "drug_residual_pcc": NaN
+    },
+    "val_both": {
+      "n_samples": 269,
+      "per_sample_corr": 0.9634052915985978,
+      "per_protein_r2_median": -0.3479289432418471,
+      "rmse": 1.0138119046777487,
+      "fc_pcc": 0.040969422785662186,
+      "high_effect_dir_acc": 0.5248022654037692,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "val_time": {
+      "n_samples": 157,
+      "per_sample_corr": 0.9775662308885467,
+      "per_protein_r2_median": 0.39619288746676956,
+      "rmse": 0.6339472862793016,
+      "fc_pcc": 0.2790395265910826,
+      "high_effect_dir_acc": 0.7224895733076676,
+      "context_residual_pcc": 0.16383188543432955,
+      "drug_residual_pcc": 0.07302602372661686
+    },
+    "test_strain_only": {
+      "n_samples": 1534,
+      "per_sample_corr": 0.9683740160172488,
+      "per_protein_r2_median": 0.24619157796990665,
+      "rmse": 0.7652148599720409,
+      "fc_pcc": 0.09014521755074603,
+      "high_effect_dir_acc": 0.6110499636859169,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.08512948567485835
+    },
+    "test_chem_only": {
+      "n_samples": 1640,
+      "per_sample_corr": 0.9718637230157089,
+      "per_protein_r2_median": -0.3056166567370613,
+      "rmse": 0.9798058016737355,
+      "fc_pcc": 0.0994670457475855,
+      "high_effect_dir_acc": 0.5998383255393495,
+      "context_residual_pcc": -0.00964494594988789,
+      "drug_residual_pcc": NaN
+    },
+    "test_both": {
+      "n_samples": 1129,
+      "per_sample_corr": 0.9637475385753982,
+      "per_protein_r2_median": -0.47999962552636055,
+      "rmse": 1.0582302181884935,
+      "fc_pcc": 0.006467897295130424,
+      "high_effect_dir_acc": 0.5218763989350423,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "test_time": {
+      "n_samples": 151,
+      "per_sample_corr": 0.9772495159268436,
+      "per_protein_r2_median": 0.398668239043138,
+      "rmse": 0.653889653491724,
+      "fc_pcc": 0.2812855790377295,
+      "high_effect_dir_acc": 0.7299237983587339,
+      "context_residual_pcc": 0.1789771647280153,
+      "drug_residual_pcc": 0.07825544299129449
+    }
+  },
+  "protein_esm_go_seed42": {
+    "val_strain_only": {
+      "n_samples": 1547,
+      "per_sample_corr": 0.9730242294521615,
+      "per_protein_r2_median": -0.0628515323187997,
+      "rmse": 0.8197336678631767,
+      "fc_pcc": 0.16337053009311045,
+      "high_effect_dir_acc": 0.6588585374555066,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.047334139325444655
+    },
+    "val_chem_only": {
+      "n_samples": 1065,
+      "per_sample_corr": 0.9712612501957077,
+      "per_protein_r2_median": 0.1004087276370727,
+      "rmse": 0.8823784901537991,
+      "fc_pcc": 0.08887807605521732,
+      "high_effect_dir_acc": 0.5485396697947509,
+      "context_residual_pcc": 0.02809238359458006,
+      "drug_residual_pcc": NaN
+    },
+    "val_both": {
+      "n_samples": 269,
+      "per_sample_corr": 0.9670080415021299,
+      "per_protein_r2_median": -0.04762979004935208,
+      "rmse": 0.9186342455694394,
+      "fc_pcc": 0.03982118616432217,
+      "high_effect_dir_acc": 0.5198711063372717,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "val_time": {
+      "n_samples": 157,
+      "per_sample_corr": 0.9781307079511474,
+      "per_protein_r2_median": 0.14075025822192377,
+      "rmse": 0.731854352042153,
+      "fc_pcc": 0.2524514806854407,
+      "high_effect_dir_acc": 0.7111324991979467,
+      "context_residual_pcc": 0.1351825133556456,
+      "drug_residual_pcc": 0.05473310715979603
+    },
+    "test_strain_only": {
+      "n_samples": 1534,
+      "per_sample_corr": 0.9681848691812914,
+      "per_protein_r2_median": -0.011248596869529504,
+      "rmse": 0.8734752289470913,
+      "fc_pcc": 0.10932349754207417,
+      "high_effect_dir_acc": 0.6072388568176883,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.07804338358921545
+    },
+    "test_chem_only": {
+      "n_samples": 1640,
+      "per_sample_corr": 0.9745634426878997,
+      "per_protein_r2_median": -0.24801804406712336,
+      "rmse": 0.9728885425294204,
+      "fc_pcc": 0.0929484946318352,
+      "high_effect_dir_acc": 0.5889209533577873,
+      "context_residual_pcc": -0.01262823656708634,
+      "drug_residual_pcc": NaN
+    },
+    "test_both": {
+      "n_samples": 1129,
+      "per_sample_corr": 0.9653712778238305,
+      "per_protein_r2_median": -0.3426229290777121,
+      "rmse": 1.0344633719347331,
+      "fc_pcc": 0.014767322324881451,
+      "high_effect_dir_acc": 0.5216761303395142,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "test_time": {
+      "n_samples": 151,
+      "per_sample_corr": 0.9770206330030838,
+      "per_protein_r2_median": 0.1412072456170519,
+      "rmse": 0.7736457500859376,
+      "fc_pcc": 0.2450951853980009,
+      "high_effect_dir_acc": 0.7060375146541618,
+      "context_residual_pcc": 0.1401992456643295,
+      "drug_residual_pcc": 0.05188037025632734
+    }
+  },
+  "protein_esm_go_seed123": {
+    "val_strain_only": {
+      "n_samples": 1547,
+      "per_sample_corr": 0.9759102798056045,
+      "per_protein_r2_median": 0.30550845502092294,
+      "rmse": 0.6930613508478111,
+      "fc_pcc": 0.1997836424003972,
+      "high_effect_dir_acc": 0.6811234624958445,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.03772650078748232
+    },
+    "val_chem_only": {
+      "n_samples": 1065,
+      "per_sample_corr": 0.972221357942699,
+      "per_protein_r2_median": 0.24303499713851257,
+      "rmse": 0.8081752293566082,
+      "fc_pcc": 0.10460881775564011,
+      "high_effect_dir_acc": 0.5765418778541677,
+      "context_residual_pcc": 0.01963905993548223,
+      "drug_residual_pcc": NaN
+    },
+    "val_both": {
+      "n_samples": 269,
+      "per_sample_corr": 0.9662406142634471,
+      "per_protein_r2_median": 0.11621744972951065,
+      "rmse": 0.8577668767696078,
+      "fc_pcc": 0.047117051813485696,
+      "high_effect_dir_acc": 0.5350063470364222,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "val_time": {
+      "n_samples": 157,
+      "per_sample_corr": 0.9816616339564873,
+      "per_protein_r2_median": 0.4516446603806404,
+      "rmse": 0.5979045223421632,
+      "fc_pcc": 0.31930549127718805,
+      "high_effect_dir_acc": 0.750529355149182,
+      "context_residual_pcc": 0.1842687887316564,
+      "drug_residual_pcc": 0.11607498485619248
+    },
+    "test_strain_only": {
+      "n_samples": 1534,
+      "per_sample_corr": 0.970941170018876,
+      "per_protein_r2_median": 0.2981690417913948,
+      "rmse": 0.7478468473359362,
+      "fc_pcc": 0.12576156721519294,
+      "high_effect_dir_acc": 0.627125496978818,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.07702498831253396
+    },
+    "test_chem_only": {
+      "n_samples": 1640,
+      "per_sample_corr": 0.9775279858074973,
+      "per_protein_r2_median": 0.19254259349043457,
+      "rmse": 0.7837507401914429,
+      "fc_pcc": 0.12681905155529072,
+      "high_effect_dir_acc": 0.6246457938563705,
+      "context_residual_pcc": -0.023533646529952146,
+      "drug_residual_pcc": NaN
+    },
+    "test_both": {
+      "n_samples": 1129,
+      "per_sample_corr": 0.9668589945799855,
+      "per_protein_r2_median": 0.022757923833857996,
+      "rmse": 0.8864997216633358,
+      "fc_pcc": 0.019450412470635576,
+      "high_effect_dir_acc": 0.5308413637113305,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "test_time": {
+      "n_samples": 151,
+      "per_sample_corr": 0.9813098765830209,
+      "per_protein_r2_median": 0.48431506548395975,
+      "rmse": 0.6029139260188847,
+      "fc_pcc": 0.3000230832140921,
+      "high_effect_dir_acc": 0.7351260257913247,
+      "context_residual_pcc": 0.16749354091797658,
+      "drug_residual_pcc": 0.10940406259120894
+    }
+  },
+  "protein_esm_go_seed2024": {
+    "val_strain_only": {
+      "n_samples": 1547,
+      "per_sample_corr": 0.975567149245092,
+      "per_protein_r2_median": 0.3469694694583726,
+      "rmse": 0.6903081581900138,
+      "fc_pcc": 0.2038269881015548,
+      "high_effect_dir_acc": 0.667185586988073,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.039911412051737295
+    },
+    "val_chem_only": {
+      "n_samples": 1065,
+      "per_sample_corr": 0.9717219403666918,
+      "per_protein_r2_median": 0.08619464197794774,
+      "rmse": 0.8946070824079283,
+      "fc_pcc": 0.09872702883313696,
+      "high_effect_dir_acc": 0.5777337281075927,
+      "context_residual_pcc": 0.010230274342336662,
+      "drug_residual_pcc": NaN
+    },
+    "val_both": {
+      "n_samples": 269,
+      "per_sample_corr": 0.9635653558938232,
+      "per_protein_r2_median": -0.21168889120631862,
+      "rmse": 1.0153862567757153,
+      "fc_pcc": 0.026918920680251094,
+      "high_effect_dir_acc": 0.5209940435504345,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "val_time": {
+      "n_samples": 157,
+      "per_sample_corr": 0.9823470064283094,
+      "per_protein_r2_median": 0.4856342652720559,
+      "rmse": 0.5876486489542687,
+      "fc_pcc": 0.3329871724860879,
+      "high_effect_dir_acc": 0.7441129290984921,
+      "context_residual_pcc": 0.19590910221301486,
+      "drug_residual_pcc": 0.13819263869080226
+    },
+    "test_strain_only": {
+      "n_samples": 1534,
+      "per_sample_corr": 0.9708385687276616,
+      "per_protein_r2_median": 0.33507968583190384,
+      "rmse": 0.7413003987461791,
+      "fc_pcc": 0.11558263251978051,
+      "high_effect_dir_acc": 0.6018479001475026,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.09913876757214225
+    },
+    "test_chem_only": {
+      "n_samples": 1640,
+      "per_sample_corr": 0.9788815493560575,
+      "per_protein_r2_median": 0.1652936812242205,
+      "rmse": 0.7862168539275509,
+      "fc_pcc": 0.12047982616792657,
+      "high_effect_dir_acc": 0.6176051318602993,
+      "context_residual_pcc": -0.037859040202286025,
+      "drug_residual_pcc": NaN
+    },
+    "test_both": {
+      "n_samples": 1129,
+      "per_sample_corr": 0.9674110140247075,
+      "per_protein_r2_median": -0.112177751132021,
+      "rmse": 0.948359707945495,
+      "fc_pcc": 0.005979376620699152,
+      "high_effect_dir_acc": 0.5187310039346889,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "test_time": {
+      "n_samples": 151,
+      "per_sample_corr": 0.981683021494997,
+      "per_protein_r2_median": 0.5414870810728265,
+      "rmse": 0.5771974430710143,
+      "fc_pcc": 0.31450257331144016,
+      "high_effect_dir_acc": 0.7256008206330598,
+      "context_residual_pcc": 0.1684599170219427,
+      "drug_residual_pcc": 0.1357615927881416
+    }
+  },
+  "strain_in_seed42": {
+    "val_strain_only": {
+      "n_samples": 1547,
+      "per_sample_corr": 0.9730242294521615,
+      "per_protein_r2_median": -0.0628515323187997,
+      "rmse": 0.8197336678631767,
+      "fc_pcc": 0.16337053009311045,
+      "high_effect_dir_acc": 0.6588585374555066,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.047334139325444655
+    },
+    "val_chem_only": {
+      "n_samples": 1065,
+      "per_sample_corr": 0.9712612501957077,
+      "per_protein_r2_median": 0.1004087276370727,
+      "rmse": 0.8823784901537991,
+      "fc_pcc": 0.08887807605521732,
+      "high_effect_dir_acc": 0.5485396697947509,
+      "context_residual_pcc": 0.02809238359458006,
+      "drug_residual_pcc": NaN
+    },
+    "val_both": {
+      "n_samples": 269,
+      "per_sample_corr": 0.9670080415021299,
+      "per_protein_r2_median": -0.04762979004935208,
+      "rmse": 0.9186342455694394,
+      "fc_pcc": 0.03982118616432217,
+      "high_effect_dir_acc": 0.5198711063372717,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "val_time": {
+      "n_samples": 157,
+      "per_sample_corr": 0.9781307079511474,
+      "per_protein_r2_median": 0.14075025822192377,
+      "rmse": 0.731854352042153,
+      "fc_pcc": 0.2524514806854407,
+      "high_effect_dir_acc": 0.7111324991979467,
+      "context_residual_pcc": 0.1351825133556456,
+      "drug_residual_pcc": 0.05473310715979603
+    },
+    "test_strain_only": {
+      "n_samples": 1534,
+      "per_sample_corr": 0.9681848691812914,
+      "per_protein_r2_median": -0.011248596869529504,
+      "rmse": 0.8734752289470913,
+      "fc_pcc": 0.10932349754207417,
+      "high_effect_dir_acc": 0.6072388568176883,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.07804338358921545
+    },
+    "test_chem_only": {
+      "n_samples": 1640,
+      "per_sample_corr": 0.9745634426878997,
+      "per_protein_r2_median": -0.24801804406712336,
+      "rmse": 0.9728885425294204,
+      "fc_pcc": 0.0929484946318352,
+      "high_effect_dir_acc": 0.5889209533577873,
+      "context_residual_pcc": -0.01262823656708634,
+      "drug_residual_pcc": NaN
+    },
+    "test_both": {
+      "n_samples": 1129,
+      "per_sample_corr": 0.9653712778238305,
+      "per_protein_r2_median": -0.3426229290777121,
+      "rmse": 1.0344633719347331,
+      "fc_pcc": 0.014767322324881451,
+      "high_effect_dir_acc": 0.5216761303395142,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "test_time": {
+      "n_samples": 151,
+      "per_sample_corr": 0.9770206330030838,
+      "per_protein_r2_median": 0.1412072456170519,
+      "rmse": 0.7736457500859376,
+      "fc_pcc": 0.2450951853980009,
+      "high_effect_dir_acc": 0.7060375146541618,
+      "context_residual_pcc": 0.1401992456643295,
+      "drug_residual_pcc": 0.05188037025632734
+    }
+  },
+  "strain_in_seed123": {
+    "val_strain_only": {
+      "n_samples": 1547,
+      "per_sample_corr": 0.9759102798056045,
+      "per_protein_r2_median": 0.30550845502092294,
+      "rmse": 0.6930613508478111,
+      "fc_pcc": 0.1997836424003972,
+      "high_effect_dir_acc": 0.6811234624958445,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.03772650078748232
+    },
+    "val_chem_only": {
+      "n_samples": 1065,
+      "per_sample_corr": 0.972221357942699,
+      "per_protein_r2_median": 0.24303499713851257,
+      "rmse": 0.8081752293566082,
+      "fc_pcc": 0.10460881775564011,
+      "high_effect_dir_acc": 0.5765418778541677,
+      "context_residual_pcc": 0.01963905993548223,
+      "drug_residual_pcc": NaN
+    },
+    "val_both": {
+      "n_samples": 269,
+      "per_sample_corr": 0.9662406142634471,
+      "per_protein_r2_median": 0.11621744972951065,
+      "rmse": 0.8577668767696078,
+      "fc_pcc": 0.047117051813485696,
+      "high_effect_dir_acc": 0.5350063470364222,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "val_time": {
+      "n_samples": 157,
+      "per_sample_corr": 0.9816616339564873,
+      "per_protein_r2_median": 0.4516446603806404,
+      "rmse": 0.5979045223421632,
+      "fc_pcc": 0.31930549127718805,
+      "high_effect_dir_acc": 0.750529355149182,
+      "context_residual_pcc": 0.1842687887316564,
+      "drug_residual_pcc": 0.11607498485619248
+    },
+    "test_strain_only": {
+      "n_samples": 1534,
+      "per_sample_corr": 0.970941170018876,
+      "per_protein_r2_median": 0.2981690417913948,
+      "rmse": 0.7478468473359362,
+      "fc_pcc": 0.12576156721519294,
+      "high_effect_dir_acc": 0.627125496978818,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.07702498831253396
+    },
+    "test_chem_only": {
+      "n_samples": 1640,
+      "per_sample_corr": 0.9775279858074973,
+      "per_protein_r2_median": 0.19254259349043457,
+      "rmse": 0.7837507401914429,
+      "fc_pcc": 0.12681905155529072,
+      "high_effect_dir_acc": 0.6246457938563705,
+      "context_residual_pcc": -0.023533646529952146,
+      "drug_residual_pcc": NaN
+    },
+    "test_both": {
+      "n_samples": 1129,
+      "per_sample_corr": 0.9668589945799855,
+      "per_protein_r2_median": 0.022757923833857996,
+      "rmse": 0.8864997216633358,
+      "fc_pcc": 0.019450412470635576,
+      "high_effect_dir_acc": 0.5308413637113305,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "test_time": {
+      "n_samples": 151,
+      "per_sample_corr": 0.9813098765830209,
+      "per_protein_r2_median": 0.48431506548395975,
+      "rmse": 0.6029139260188847,
+      "fc_pcc": 0.3000230832140921,
+      "high_effect_dir_acc": 0.7351260257913247,
+      "context_residual_pcc": 0.16749354091797658,
+      "drug_residual_pcc": 0.10940406259120894
+    }
+  },
+  "strain_in_seed2024": {
+    "val_strain_only": {
+      "n_samples": 1547,
+      "per_sample_corr": 0.975567149245092,
+      "per_protein_r2_median": 0.3469694694583726,
+      "rmse": 0.6903081581900138,
+      "fc_pcc": 0.2038269881015548,
+      "high_effect_dir_acc": 0.667185586988073,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.039911412051737295
+    },
+    "val_chem_only": {
+      "n_samples": 1065,
+      "per_sample_corr": 0.9717219403666918,
+      "per_protein_r2_median": 0.08619464197794774,
+      "rmse": 0.8946070824079283,
+      "fc_pcc": 0.09872702883313696,
+      "high_effect_dir_acc": 0.5777337281075927,
+      "context_residual_pcc": 0.010230274342336662,
+      "drug_residual_pcc": NaN
+    },
+    "val_both": {
+      "n_samples": 269,
+      "per_sample_corr": 0.9635653558938232,
+      "per_protein_r2_median": -0.21168889120631862,
+      "rmse": 1.0153862567757153,
+      "fc_pcc": 0.026918920680251094,
+      "high_effect_dir_acc": 0.5209940435504345,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "val_time": {
+      "n_samples": 157,
+      "per_sample_corr": 0.9823470064283094,
+      "per_protein_r2_median": 0.4856342652720559,
+      "rmse": 0.5876486489542687,
+      "fc_pcc": 0.3329871724860879,
+      "high_effect_dir_acc": 0.7441129290984921,
+      "context_residual_pcc": 0.19590910221301486,
+      "drug_residual_pcc": 0.13819263869080226
+    },
+    "test_strain_only": {
+      "n_samples": 1534,
+      "per_sample_corr": 0.9708385687276616,
+      "per_protein_r2_median": 0.33507968583190384,
+      "rmse": 0.7413003987461791,
+      "fc_pcc": 0.11558263251978051,
+      "high_effect_dir_acc": 0.6018479001475026,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.09913876757214225
+    },
+    "test_chem_only": {
+      "n_samples": 1640,
+      "per_sample_corr": 0.9788815493560575,
+      "per_protein_r2_median": 0.1652936812242205,
+      "rmse": 0.7862168539275509,
+      "fc_pcc": 0.12047982616792657,
+      "high_effect_dir_acc": 0.6176051318602993,
+      "context_residual_pcc": -0.037859040202286025,
+      "drug_residual_pcc": NaN
+    },
+    "test_both": {
+      "n_samples": 1129,
+      "per_sample_corr": 0.9674110140247075,
+      "per_protein_r2_median": -0.112177751132021,
+      "rmse": 0.948359707945495,
+      "fc_pcc": 0.005979376620699152,
+      "high_effect_dir_acc": 0.5187310039346889,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "test_time": {
+      "n_samples": 151,
+      "per_sample_corr": 0.981683021494997,
+      "per_protein_r2_median": 0.5414870810728265,
+      "rmse": 0.5771974430710143,
+      "fc_pcc": 0.31450257331144016,
+      "high_effect_dir_acc": 0.7256008206330598,
+      "context_residual_pcc": 0.1684599170219427,
+      "drug_residual_pcc": 0.1357615927881416
+    }
+  },
+  "strain_out_seed42": {
+    "val_strain_only": {
+      "n_samples": 1547,
+      "per_sample_corr": 0.9749519226267354,
+      "per_protein_r2_median": 0.3640831292278144,
+      "rmse": 0.6697232856445936,
+      "fc_pcc": 0.1992499644030843,
+      "high_effect_dir_acc": 0.6722207357317181,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.041604538812186
+    },
+    "val_chem_only": {
+      "n_samples": 1065,
+      "per_sample_corr": 0.9601766143487208,
+      "per_protein_r2_median": 0.14293815571435953,
+      "rmse": 0.9553945780523885,
+      "fc_pcc": 0.0846395061132863,
+      "high_effect_dir_acc": 0.5586515782606514,
+      "context_residual_pcc": 0.01562739540339661,
+      "drug_residual_pcc": NaN
+    },
+    "val_both": {
+      "n_samples": 269,
+      "per_sample_corr": 0.9535207890409682,
+      "per_protein_r2_median": -0.04395011346960187,
+      "rmse": 1.0025773621825698,
+      "fc_pcc": 0.044709491126438954,
+      "high_effect_dir_acc": 0.5346645835367639,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "val_time": {
+      "n_samples": 157,
+      "per_sample_corr": 0.9815052284663502,
+      "per_protein_r2_median": 0.4754081839913469,
+      "rmse": 0.5896545819968003,
+      "fc_pcc": 0.295642699691032,
+      "high_effect_dir_acc": 0.7225537375681745,
+      "context_residual_pcc": 0.17372924711783064,
+      "drug_residual_pcc": 0.07830168222780194
+    },
+    "test_strain_only": {
+      "n_samples": 1534,
+      "per_sample_corr": 0.9704423643406506,
+      "per_protein_r2_median": 0.3412537707570491,
+      "rmse": 0.7290335503250661,
+      "fc_pcc": 0.11765852191924282,
+      "high_effect_dir_acc": 0.609410214365402,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.08907699432581491
+    },
+    "test_chem_only": {
+      "n_samples": 1640,
+      "per_sample_corr": 0.9784288252959489,
+      "per_protein_r2_median": 0.11766928076165423,
+      "rmse": 0.8282673662151565,
+      "fc_pcc": 0.1013121964390644,
+      "high_effect_dir_acc": 0.5956747735688334,
+      "context_residual_pcc": -0.025748619154221036,
+      "drug_residual_pcc": NaN
+    },
+    "test_both": {
+      "n_samples": 1129,
+      "per_sample_corr": 0.9641901304542206,
+      "per_protein_r2_median": -0.09786202856403947,
+      "rmse": 0.949740340020625,
+      "fc_pcc": 0.016781288374873332,
+      "high_effect_dir_acc": 0.5281671889357491,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "test_time": {
+      "n_samples": 151,
+      "per_sample_corr": 0.9813315504098988,
+      "per_protein_r2_median": 0.5290299454162866,
+      "rmse": 0.5851496107548544,
+      "fc_pcc": 0.2975379120369798,
+      "high_effect_dir_acc": 0.724428487690504,
+      "context_residual_pcc": 0.17581730145235439,
+      "drug_residual_pcc": 0.09919552324558298
+    }
+  },
+  "strain_out_seed123": {
+    "val_strain_only": {
+      "n_samples": 1547,
+      "per_sample_corr": 0.9752163128351677,
+      "per_protein_r2_median": 0.3091887376024238,
+      "rmse": 0.6938483187391185,
+      "fc_pcc": 0.20637656457854534,
+      "high_effect_dir_acc": 0.6792423763307468,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.042855492490470555
+    },
+    "val_chem_only": {
+      "n_samples": 1065,
+      "per_sample_corr": 0.9767102488254601,
+      "per_protein_r2_median": 0.19224933911579017,
+      "rmse": 0.8310754989863953,
+      "fc_pcc": 0.10673845136976563,
+      "high_effect_dir_acc": 0.5805816229236714,
+      "context_residual_pcc": 0.014889951616523425,
+      "drug_residual_pcc": NaN
+    },
+    "val_both": {
+      "n_samples": 269,
+      "per_sample_corr": 0.970331665168281,
+      "per_protein_r2_median": -0.0004695715284708246,
+      "rmse": 0.8886749247727725,
+      "fc_pcc": 0.06283570597855109,
+      "high_effect_dir_acc": 0.5423786739576213,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "val_time": {
+      "n_samples": 157,
+      "per_sample_corr": 0.9815798735747687,
+      "per_protein_r2_median": 0.43040590218189745,
+      "rmse": 0.613211927155427,
+      "fc_pcc": 0.3073253317389211,
+      "high_effect_dir_acc": 0.7412897016361887,
+      "context_residual_pcc": 0.1844733118638916,
+      "drug_residual_pcc": 0.08661283259701573
+    },
+    "test_strain_only": {
+      "n_samples": 1534,
+      "per_sample_corr": 0.9706397126536259,
+      "per_protein_r2_median": 0.31332209774503644,
+      "rmse": 0.7453064367541736,
+      "fc_pcc": 0.12076573197291418,
+      "high_effect_dir_acc": 0.6206488615347754,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.09262729183423887
+    },
+    "test_chem_only": {
+      "n_samples": 1640,
+      "per_sample_corr": 0.9774918513340306,
+      "per_protein_r2_median": 0.06120127012554455,
+      "rmse": 0.8527459659142714,
+      "fc_pcc": 0.11891441659307836,
+      "high_effect_dir_acc": 0.6157276219946803,
+      "context_residual_pcc": -0.01850622412270594,
+      "drug_residual_pcc": NaN
+    },
+    "test_both": {
+      "n_samples": 1129,
+      "per_sample_corr": 0.9680917347697177,
+      "per_protein_r2_median": -0.1034479735127336,
+      "rmse": 0.9458464154267584,
+      "fc_pcc": 0.01991421245576447,
+      "high_effect_dir_acc": 0.535553565959051,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "test_time": {
+      "n_samples": 151,
+      "per_sample_corr": 0.9815498826923761,
+      "per_protein_r2_median": 0.4771491841747782,
+      "rmse": 0.6069771530890271,
+      "fc_pcc": 0.3071771454113693,
+      "high_effect_dir_acc": 0.7313159437280188,
+      "context_residual_pcc": 0.18068408584372278,
+      "drug_residual_pcc": 0.10614558044332591
+    }
+  },
+  "strain_out_seed2024": {
+    "val_strain_only": {
+      "n_samples": 1547,
+      "per_sample_corr": 0.9748240543506757,
+      "per_protein_r2_median": 0.2506529977041133,
+      "rmse": 0.711465289763787,
+      "fc_pcc": 0.19033466187485987,
+      "high_effect_dir_acc": 0.666277476425612,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.03239750386160541
+    },
+    "val_chem_only": {
+      "n_samples": 1065,
+      "per_sample_corr": 0.9677745184200871,
+      "per_protein_r2_median": 0.03738755690461493,
+      "rmse": 0.9654321118648744,
+      "fc_pcc": 0.0982304302731416,
+      "high_effect_dir_acc": 0.5785868419732022,
+      "context_residual_pcc": 0.02212475581417857,
+      "drug_residual_pcc": NaN
+    },
+    "val_both": {
+      "n_samples": 269,
+      "per_sample_corr": 0.9573549370364891,
+      "per_protein_r2_median": -0.16428886253699537,
+      "rmse": 1.057436570454051,
+      "fc_pcc": 0.04281224978561316,
+      "high_effect_dir_acc": 0.5363245776779612,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "val_time": {
+      "n_samples": 157,
+      "per_sample_corr": 0.9810808725139055,
+      "per_protein_r2_median": 0.41474570001190725,
+      "rmse": 0.6132429497535072,
+      "fc_pcc": 0.2996859253378717,
+      "high_effect_dir_acc": 0.7326916907282643,
+      "context_residual_pcc": 0.16964164226050724,
+      "drug_residual_pcc": 0.08559034348319981
+    },
+    "test_strain_only": {
+      "n_samples": 1534,
+      "per_sample_corr": 0.970359560360595,
+      "per_protein_r2_median": 0.28120235125657994,
+      "rmse": 0.7526989489586622,
+      "fc_pcc": 0.11239788624654105,
+      "high_effect_dir_acc": 0.6204467006596435,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.09452389108878032
+    },
+    "test_chem_only": {
+      "n_samples": 1640,
+      "per_sample_corr": 0.9784767328526419,
+      "per_protein_r2_median": 0.15883142459306393,
+      "rmse": 0.8037145778283559,
+      "fc_pcc": 0.11955100666803019,
+      "high_effect_dir_acc": 0.6152495523529719,
+      "context_residual_pcc": -0.018156295352588586,
+      "drug_residual_pcc": NaN
+    },
+    "test_both": {
+      "n_samples": 1129,
+      "per_sample_corr": 0.9645136354582735,
+      "per_protein_r2_median": -0.12472500438586365,
+      "rmse": 0.9759444557805865,
+      "fc_pcc": 0.007455669370241347,
+      "high_effect_dir_acc": 0.5254812336545485,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "test_time": {
+      "n_samples": 151,
+      "per_sample_corr": 0.9812380842418801,
+      "per_protein_r2_median": 0.4436114259315406,
+      "rmse": 0.6222474834797492,
+      "fc_pcc": 0.29179522905512745,
+      "high_effect_dir_acc": 0.7331477139507621,
+      "context_residual_pcc": 0.1653929634947782,
+      "drug_residual_pcc": 0.10052027100385771
+    }
+  },
+  "strain_genome_seed42": {
+    "val_strain_only": {
+      "n_samples": 1547,
+      "per_sample_corr": 0.9731640179409535,
+      "per_protein_r2_median": 0.22914584125794446,
+      "rmse": 0.7225845382039873,
+      "fc_pcc": 0.1516402244721591,
+      "high_effect_dir_acc": 0.6357503668928834,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.06135192874672499
+    },
+    "val_chem_only": {
+      "n_samples": 1065,
+      "per_sample_corr": 0.9690903279541789,
+      "per_protein_r2_median": 0.10816300682317403,
+      "rmse": 0.913919148735882,
+      "fc_pcc": 0.09283330616992475,
+      "high_effect_dir_acc": 0.5631555176393838,
+      "context_residual_pcc": 0.009573982555143166,
+      "drug_residual_pcc": NaN
+    },
+    "val_both": {
+      "n_samples": 269,
+      "per_sample_corr": 0.9640388030957195,
+      "per_protein_r2_median": 0.06131763630241471,
+      "rmse": 0.9117699920257545,
+      "fc_pcc": 0.041058294609925945,
+      "high_effect_dir_acc": 0.5451127819548872,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "val_time": {
+      "n_samples": 157,
+      "per_sample_corr": 0.979813451895449,
+      "per_protein_r2_median": 0.4067763548807739,
+      "rmse": 0.6196327006454351,
+      "fc_pcc": 0.29021639866437754,
+      "high_effect_dir_acc": 0.6877125441129291,
+      "context_residual_pcc": 0.1619311466435002,
+      "drug_residual_pcc": 0.10253509003108983
+    },
+    "test_strain_only": {
+      "n_samples": 1534,
+      "per_sample_corr": 0.967036254722064,
+      "per_protein_r2_median": 0.09846952941493031,
+      "rmse": 0.8327802104038506,
+      "fc_pcc": 0.10516028367725297,
+      "high_effect_dir_acc": 0.5484175295941058,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.08992886860922944
+    },
+    "test_chem_only": {
+      "n_samples": 1640,
+      "per_sample_corr": 0.9762457511577763,
+      "per_protein_r2_median": 0.09659256040387226,
+      "rmse": 0.8160934901946335,
+      "fc_pcc": 0.10576500258263692,
+      "high_effect_dir_acc": 0.5951010899987831,
+      "context_residual_pcc": -0.038151681384477595,
+      "drug_residual_pcc": NaN
+    },
+    "test_both": {
+      "n_samples": 1129,
+      "per_sample_corr": 0.9658879574544679,
+      "per_protein_r2_median": -0.11408682706735562,
+      "rmse": 0.945774406141341,
+      "fc_pcc": 0.00940737252861932,
+      "high_effect_dir_acc": 0.5049124708432486,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "test_time": {
+      "n_samples": 151,
+      "per_sample_corr": 0.9794502941718831,
+      "per_protein_r2_median": 0.44557887282791925,
+      "rmse": 0.631398953799009,
+      "fc_pcc": 0.2645161692071729,
+      "high_effect_dir_acc": 0.675263774912075,
+      "context_residual_pcc": 0.12648413068382353,
+      "drug_residual_pcc": 0.08737369277135797
+    }
+  },
+  "strain_genome_seed123": {
+    "val_strain_only": {
+      "n_samples": 1547,
+      "per_sample_corr": 0.9739210762520718,
+      "per_protein_r2_median": 0.19525950461869523,
+      "rmse": 0.7488228789595668,
+      "fc_pcc": 0.1536977141943281,
+      "high_effect_dir_acc": 0.6388557806912991,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.06351937882311275
+    },
+    "val_chem_only": {
+      "n_samples": 1065,
+      "per_sample_corr": 0.973017686056858,
+      "per_protein_r2_median": 0.14702039394190053,
+      "rmse": 0.8522749920284306,
+      "fc_pcc": 0.10666437225097052,
+      "high_effect_dir_acc": 0.5644853716063633,
+      "context_residual_pcc": 0.01980416470505763,
+      "drug_residual_pcc": NaN
+    },
+    "val_both": {
+      "n_samples": 269,
+      "per_sample_corr": 0.964050010159081,
+      "per_protein_r2_median": 0.07458826783848893,
+      "rmse": 0.8757190164944919,
+      "fc_pcc": 0.032397126766614895,
+      "high_effect_dir_acc": 0.5150864173420564,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "val_time": {
+      "n_samples": 157,
+      "per_sample_corr": 0.9811862282734328,
+      "per_protein_r2_median": 0.4469167800420926,
+      "rmse": 0.6029830540565843,
+      "fc_pcc": 0.3189936069444731,
+      "high_effect_dir_acc": 0.7414821944177094,
+      "context_residual_pcc": 0.17836720147007742,
+      "drug_residual_pcc": 0.12865851868703929
+    },
+    "test_strain_only": {
+      "n_samples": 1534,
+      "per_sample_corr": 0.9657068190481205,
+      "per_protein_r2_median": -0.060419270914595535,
+      "rmse": 0.9329056298446147,
+      "fc_pcc": 0.09915954030243353,
+      "high_effect_dir_acc": 0.5588250709434923,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.10342122692655308
+    },
+    "test_chem_only": {
+      "n_samples": 1640,
+      "per_sample_corr": 0.9790752934191596,
+      "per_protein_r2_median": 0.17470335664657277,
+      "rmse": 0.7920044451737294,
+      "fc_pcc": 0.13500308015972637,
+      "high_effect_dir_acc": 0.6225335952575491,
+      "context_residual_pcc": -0.01849880013862716,
+      "drug_residual_pcc": NaN
+    },
+    "test_both": {
+      "n_samples": 1129,
+      "per_sample_corr": 0.9644536164096404,
+      "per_protein_r2_median": -0.21154694303567023,
+      "rmse": 1.0382035142027484,
+      "fc_pcc": 0.004633362285989479,
+      "high_effect_dir_acc": 0.5031336144947341,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "test_time": {
+      "n_samples": 151,
+      "per_sample_corr": 0.9806384389991845,
+      "per_protein_r2_median": 0.5139657697852162,
+      "rmse": 0.592018201335273,
+      "fc_pcc": 0.30339896811107686,
+      "high_effect_dir_acc": 0.737763774912075,
+      "context_residual_pcc": 0.16741297854487325,
+      "drug_residual_pcc": 0.12144330483735918
+    }
+  },
+  "strain_genome_seed2024": {
+    "val_strain_only": {
+      "n_samples": 1547,
+      "per_sample_corr": 0.9713232626967062,
+      "per_protein_r2_median": 0.10983934044355426,
+      "rmse": 0.771585907786972,
+      "fc_pcc": 0.13890455192170653,
+      "high_effect_dir_acc": 0.6464612066519099,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.058549355278392064
+    },
+    "val_chem_only": {
+      "n_samples": 1065,
+      "per_sample_corr": 0.9696802340571137,
+      "per_protein_r2_median": -0.20521807849872253,
+      "rmse": 1.047872064769548,
+      "fc_pcc": 0.09729686184295137,
+      "high_effect_dir_acc": 0.5889747578662117,
+      "context_residual_pcc": 0.015334854974759017,
+      "drug_residual_pcc": NaN
+    },
+    "val_both": {
+      "n_samples": 269,
+      "per_sample_corr": 0.9639236056178173,
+      "per_protein_r2_median": -0.003460772541219681,
+      "rmse": 0.940667204067825,
+      "fc_pcc": 0.07185253083533406,
+      "high_effect_dir_acc": 0.5785079582072064,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "val_time": {
+      "n_samples": 157,
+      "per_sample_corr": 0.9797056082671026,
+      "per_protein_r2_median": 0.3898304267804887,
+      "rmse": 0.6308531603368721,
+      "fc_pcc": 0.260000409402499,
+      "high_effect_dir_acc": 0.6981713185755534,
+      "context_residual_pcc": 0.125794380058393,
+      "drug_residual_pcc": 0.0783344670422221
+    },
+    "test_strain_only": {
+      "n_samples": 1534,
+      "per_sample_corr": 0.9644106166776655,
+      "per_protein_r2_median": 0.07417743323438258,
+      "rmse": 0.8553689441429173,
+      "fc_pcc": 0.08736824736999459,
+      "high_effect_dir_acc": 0.6012788547212051,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.10026175820884788
+    },
+    "test_chem_only": {
+      "n_samples": 1640,
+      "per_sample_corr": 0.9765882713033084,
+      "per_protein_r2_median": 0.10998926776145518,
+      "rmse": 0.8305915840759229,
+      "fc_pcc": 0.11961321409382553,
+      "high_effect_dir_acc": 0.6162665368635155,
+      "context_residual_pcc": -0.020605423639782017,
+      "drug_residual_pcc": NaN
+    },
+    "test_both": {
+      "n_samples": 1129,
+      "per_sample_corr": 0.9639115537074295,
+      "per_protein_r2_median": -0.2723826672910925,
+      "rmse": 1.0377311330140946,
+      "fc_pcc": 0.023867505709057872,
+      "high_effect_dir_acc": 0.536378201352402,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "test_time": {
+      "n_samples": 151,
+      "per_sample_corr": 0.9786524903491313,
+      "per_protein_r2_median": 0.37301128209296575,
+      "rmse": 0.6643891861784995,
+      "fc_pcc": 0.26092076808639714,
+      "high_effect_dir_acc": 0.7033997655334114,
+      "context_residual_pcc": 0.13004282375232565,
+      "drug_residual_pcc": 0.0894798893341186
+    }
+  },
+  "split_a_seed42": {
+    "val_strain_only": {
+      "n_samples": 1547,
+      "per_sample_corr": 0.9788320972654764,
+      "per_protein_r2_median": 0.47012892934226425,
+      "rmse": 0.6207311181765056,
+      "fc_pcc": 0.15710454413956118,
+      "high_effect_dir_acc": 0.6532233870902354,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.10028918598374907
+    },
+    "val_chem_only": {
+      "n_samples": 1065,
+      "per_sample_corr": 0.9860393462376928,
+      "per_protein_r2_median": 0.6788414454360661,
+      "rmse": 0.5231973418519591,
+      "fc_pcc": 0.088764897183755,
+      "high_effect_dir_acc": 0.5669568926582025,
+      "context_residual_pcc": 0.03798306948888098,
+      "drug_residual_pcc": NaN
+    },
+    "val_both": {
+      "n_samples": 269,
+      "per_sample_corr": 0.9799567914776642,
+      "per_protein_r2_median": 0.5964188116366611,
+      "rmse": 0.5932546136439367,
+      "fc_pcc": 0.095372156936436,
+      "high_effect_dir_acc": 0.6048725710379845,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "val_time": {
+      "n_samples": 157,
+      "per_sample_corr": 0.9844090176466521,
+      "per_protein_r2_median": 0.6089606480854144,
+      "rmse": 0.5501898304233541,
+      "fc_pcc": 0.302103098086041,
+      "high_effect_dir_acc": 0.7077317933910812,
+      "context_residual_pcc": 0.1928240333268288,
+      "drug_residual_pcc": 0.10186845359875753
+    },
+    "test_strain_only": {
+      "n_samples": 1534,
+      "per_sample_corr": 0.9755944441398892,
+      "per_protein_r2_median": 0.4999469497711736,
+      "rmse": 0.648969456917997,
+      "fc_pcc": 0.11434423679159088,
+      "high_effect_dir_acc": 0.6192786600477699,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.13015395096452537
+    },
+    "test_chem_only": {
+      "n_samples": 1640,
+      "per_sample_corr": 0.9871939242682434,
+      "per_protein_r2_median": 0.5378457880644102,
+      "rmse": 0.5707738195147337,
+      "fc_pcc": 0.09348765508593625,
+      "high_effect_dir_acc": 0.604236566243068,
+      "context_residual_pcc": -0.02469297060336733,
+      "drug_residual_pcc": NaN
+    },
+    "test_both": {
+      "n_samples": 1129,
+      "per_sample_corr": 0.9789034297533658,
+      "per_protein_r2_median": 0.5328628863370377,
+      "rmse": 0.6255598950349696,
+      "fc_pcc": 0.051837849448834,
+      "high_effect_dir_acc": 0.5817802700091887,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "test_time": {
+      "n_samples": 151,
+      "per_sample_corr": 0.984604953568585,
+      "per_protein_r2_median": 0.647291102870926,
+      "rmse": 0.5276653883660911,
+      "fc_pcc": 0.25670109188758866,
+      "high_effect_dir_acc": 0.6740914419695193,
+      "context_residual_pcc": 0.1396150465156603,
+      "drug_residual_pcc": 0.07694860254111241
+    }
+  },
+  "split_a_seed123": {
+    "val_strain_only": {
+      "n_samples": 1547,
+      "per_sample_corr": 0.9797225409001886,
+      "per_protein_r2_median": 0.40715198977985,
+      "rmse": 0.6258259054818378,
+      "fc_pcc": 0.15383681447449502,
+      "high_effect_dir_acc": 0.6271638571996141,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.08916810254087722
+    },
+    "val_chem_only": {
+      "n_samples": 1065,
+      "per_sample_corr": 0.9855722341621324,
+      "per_protein_r2_median": 0.6768049099334963,
+      "rmse": 0.5317318668642886,
+      "fc_pcc": 0.08738523448931292,
+      "high_effect_dir_acc": 0.5727906860039143,
+      "context_residual_pcc": 0.03352110303376869,
+      "drug_residual_pcc": NaN
+    },
+    "val_both": {
+      "n_samples": 269,
+      "per_sample_corr": 0.9799757839435248,
+      "per_protein_r2_median": 0.6128828482646158,
+      "rmse": 0.5851152362376517,
+      "fc_pcc": 0.09587470308568886,
+      "high_effect_dir_acc": 0.595303193047554,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "val_time": {
+      "n_samples": 157,
+      "per_sample_corr": 0.9846133699255255,
+      "per_protein_r2_median": 0.6190965097264849,
+      "rmse": 0.5356731992420175,
+      "fc_pcc": 0.2837454806882192,
+      "high_effect_dir_acc": 0.70279114533205,
+      "context_residual_pcc": 0.16816739772295253,
+      "drug_residual_pcc": 0.09039492446758061
+    },
+    "test_strain_only": {
+      "n_samples": 1534,
+      "per_sample_corr": 0.9763297689237183,
+      "per_protein_r2_median": 0.42214668035690284,
+      "rmse": 0.6688395379113221,
+      "fc_pcc": 0.1054676289252509,
+      "high_effect_dir_acc": 0.6133560951503852,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.1248803877927167
+    },
+    "test_chem_only": {
+      "n_samples": 1640,
+      "per_sample_corr": 0.9868616144145892,
+      "per_protein_r2_median": 0.6207233366755796,
+      "rmse": 0.5198877037488404,
+      "fc_pcc": 0.10067356881681629,
+      "high_effect_dir_acc": 0.6044277940997514,
+      "context_residual_pcc": -0.030745421162170074,
+      "drug_residual_pcc": NaN
+    },
+    "test_both": {
+      "n_samples": 1129,
+      "per_sample_corr": 0.9790593847956369,
+      "per_protein_r2_median": 0.5566116117264341,
+      "rmse": 0.6099590234981227,
+      "fc_pcc": 0.05813178223203837,
+      "high_effect_dir_acc": 0.5723087434912707,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "test_time": {
+      "n_samples": 151,
+      "per_sample_corr": 0.9851438336808753,
+      "per_protein_r2_median": 0.6675870309282781,
+      "rmse": 0.510735208894576,
+      "fc_pcc": 0.2484575187854787,
+      "high_effect_dir_acc": 0.6795134818288394,
+      "context_residual_pcc": 0.1256083150337158,
+      "drug_residual_pcc": 0.07390272957796323
+    }
+  },
+  "split_a_seed2024": {
+    "val_strain_only": {
+      "n_samples": 1547,
+      "per_sample_corr": 0.9797200519955392,
+      "per_protein_r2_median": 0.3163530558082662,
+      "rmse": 0.6555273780685458,
+      "fc_pcc": 0.15380129295825865,
+      "high_effect_dir_acc": 0.6022718980321569,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.0683511257133336
+    },
+    "val_chem_only": {
+      "n_samples": 1065,
+      "per_sample_corr": 0.9857716250662042,
+      "per_protein_r2_median": 0.6978391457055839,
+      "rmse": 0.5133456248863021,
+      "fc_pcc": 0.08759509822253872,
+      "high_effect_dir_acc": 0.5693280473729111,
+      "context_residual_pcc": 0.03371415935840577,
+      "drug_residual_pcc": NaN
+    },
+    "val_both": {
+      "n_samples": 269,
+      "per_sample_corr": 0.9800667243240198,
+      "per_protein_r2_median": 0.6204781049449016,
+      "rmse": 0.5809662464056714,
+      "fc_pcc": 0.08899879935129881,
+      "high_effect_dir_acc": 0.5782150180646422,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "val_time": {
+      "n_samples": 157,
+      "per_sample_corr": 0.9843684073970126,
+      "per_protein_r2_median": 0.634134614426852,
+      "rmse": 0.521897679135581,
+      "fc_pcc": 0.2787389163077687,
+      "high_effect_dir_acc": 0.6971446904074431,
+      "context_residual_pcc": 0.1634700300475237,
+      "drug_residual_pcc": 0.09473736321616696
+    },
+    "test_strain_only": {
+      "n_samples": 1534,
+      "per_sample_corr": 0.9762019748926879,
+      "per_protein_r2_median": 0.34628464320947633,
+      "rmse": 0.6906415098063435,
+      "fc_pcc": 0.10353688746312752,
+      "high_effect_dir_acc": 0.6038620214590025,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": -0.10769086315287046
+    },
+    "test_chem_only": {
+      "n_samples": 1640,
+      "per_sample_corr": 0.986943640229955,
+      "per_protein_r2_median": 0.6654977064135094,
+      "rmse": 0.49518699649160497,
+      "fc_pcc": 0.10204966456865121,
+      "high_effect_dir_acc": 0.6028458181944614,
+      "context_residual_pcc": -0.026740512057030416,
+      "drug_residual_pcc": NaN
+    },
+    "test_both": {
+      "n_samples": 1129,
+      "per_sample_corr": 0.9789845476648655,
+      "per_protein_r2_median": 0.5562866927424184,
+      "rmse": 0.608250028662465,
+      "fc_pcc": 0.06121107410914141,
+      "high_effect_dir_acc": 0.5640034870296633,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "test_time": {
+      "n_samples": 151,
+      "per_sample_corr": 0.9842752565086447,
+      "per_protein_r2_median": 0.6715718576251378,
+      "rmse": 0.5110619276852615,
+      "fc_pcc": 0.23942558705619202,
+      "high_effect_dir_acc": 0.6706477139507621,
+      "context_residual_pcc": 0.12086348094860612,
+      "drug_residual_pcc": 0.07412033521428048
+    }
+  },
+  "split_b_seed42": {
+    "val_strain_only": {
+      "n_samples": 1547,
+      "per_sample_corr": 0.970439126906744,
+      "per_protein_r2_median": 0.2936432685445045,
+      "rmse": 0.7476263041840491,
+      "fc_pcc": 0.134334294568997,
+      "high_effect_dir_acc": 0.6376638855780691,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": 0.05576399464168919
+    },
+    "val_chem_only": {
+      "n_samples": 1065,
+      "per_sample_corr": 0.9745749008565608,
+      "per_protein_r2_median": 0.4449434468470617,
+      "rmse": 0.7168398134187954,
+      "fc_pcc": 0.08176111774983177,
+      "high_effect_dir_acc": 0.6062879510212275,
+      "context_residual_pcc": 0.07080944001171982,
+      "drug_residual_pcc": NaN
+    },
+    "val_both": {
+      "n_samples": 269,
+      "per_sample_corr": 0.960524921856626,
+      "per_protein_r2_median": 0.24548754541135243,
+      "rmse": 0.8652914160978514,
+      "fc_pcc": 0.0010235068798508558,
+      "high_effect_dir_acc": 0.5062982130651303,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "val_time": {
+      "n_samples": 157,
+      "per_sample_corr": 0.9849810331918456,
+      "per_protein_r2_median": 0.5644343010978711,
+      "rmse": 0.5295393399483181,
+      "fc_pcc": 0.375845048434338,
+      "high_effect_dir_acc": 0.8266923323708695,
+      "context_residual_pcc": 0.3097590655991417,
+      "drug_residual_pcc": 0.2965691372737447
+    },
+    "test_strain_only": {
+      "n_samples": 1534,
+      "per_sample_corr": 0.9740199676366452,
+      "per_protein_r2_median": 0.43567711922421354,
+      "rmse": 0.6594130213950595,
+      "fc_pcc": 0.13449466137524893,
+      "high_effect_dir_acc": 0.659433799800834,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": 0.0934233336828106
+    },
+    "test_chem_only": {
+      "n_samples": 1640,
+      "per_sample_corr": 0.981215124627546,
+      "per_protein_r2_median": 0.5518976547368246,
+      "rmse": 0.5783827627082104,
+      "fc_pcc": 0.17445672798569242,
+      "high_effect_dir_acc": 0.6922187646680458,
+      "context_residual_pcc": 0.05850405788420578,
+      "drug_residual_pcc": NaN
+    },
+    "test_both": {
+      "n_samples": 1129,
+      "per_sample_corr": 0.9693780427795778,
+      "per_protein_r2_median": 0.2805326236838933,
+      "rmse": 0.756813153143434,
+      "fc_pcc": 0.02887618393320955,
+      "high_effect_dir_acc": 0.5299107037674057,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "test_time": {
+      "n_samples": 151,
+      "per_sample_corr": 0.9841240459575255,
+      "per_protein_r2_median": 0.5977813499993002,
+      "rmse": 0.534381549731333,
+      "fc_pcc": 0.361731065330476,
+      "high_effect_dir_acc": 0.8197538100820633,
+      "context_residual_pcc": 0.3102839616302985,
+      "drug_residual_pcc": 0.2871108687891527
+    }
+  },
+  "split_b_seed123": {
+    "val_strain_only": {
+      "n_samples": 1547,
+      "per_sample_corr": 0.9720933415591682,
+      "per_protein_r2_median": 0.2950237753108731,
+      "rmse": 0.7067291816208711,
+      "fc_pcc": 0.12460081183318837,
+      "high_effect_dir_acc": 0.6314692742412817,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": 0.08845273202823409
+    },
+    "val_chem_only": {
+      "n_samples": 1065,
+      "per_sample_corr": 0.969722759104265,
+      "per_protein_r2_median": 0.3681651208743516,
+      "rmse": 0.7772235881391059,
+      "fc_pcc": 0.0789949787809308,
+      "high_effect_dir_acc": 0.6127741255582877,
+      "context_residual_pcc": 0.06165954948671089,
+      "drug_residual_pcc": NaN
+    },
+    "val_both": {
+      "n_samples": 269,
+      "per_sample_corr": 0.9580655793210389,
+      "per_protein_r2_median": 0.22980224184149234,
+      "rmse": 0.8602237619803229,
+      "fc_pcc": 0.0026478088102791257,
+      "high_effect_dir_acc": 0.5057123327800019,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "val_time": {
+      "n_samples": 157,
+      "per_sample_corr": 0.9843945816609123,
+      "per_protein_r2_median": 0.5046524015997715,
+      "rmse": 0.5602579886010964,
+      "fc_pcc": 0.2655424414116066,
+      "high_effect_dir_acc": 0.7274302213666988,
+      "context_residual_pcc": 0.1965281144031027,
+      "drug_residual_pcc": 0.22243670887452122
+    },
+    "test_strain_only": {
+      "n_samples": 1534,
+      "per_sample_corr": 0.973636870480343,
+      "per_protein_r2_median": 0.3485120950759049,
+      "rmse": 0.6892442101905025,
+      "fc_pcc": 0.12483059180419198,
+      "high_effect_dir_acc": 0.6347551981550948,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": 0.09307248389150134
+    },
+    "test_chem_only": {
+      "n_samples": 1640,
+      "per_sample_corr": 0.9796465666881551,
+      "per_protein_r2_median": 0.4402428911076407,
+      "rmse": 0.6388132492816355,
+      "fc_pcc": 0.12987627491304643,
+      "high_effect_dir_acc": 0.6599273334144603,
+      "context_residual_pcc": 0.05462468318580544,
+      "drug_residual_pcc": NaN
+    },
+    "test_both": {
+      "n_samples": 1129,
+      "per_sample_corr": 0.9673677344310128,
+      "per_protein_r2_median": 0.2586174065472938,
+      "rmse": 0.7712485634480221,
+      "fc_pcc": 0.01898163625642082,
+      "high_effect_dir_acc": 0.5276724076997384,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "test_time": {
+      "n_samples": 151,
+      "per_sample_corr": 0.9840762999249902,
+      "per_protein_r2_median": 0.5515086660366668,
+      "rmse": 0.5513942421656073,
+      "fc_pcc": 0.29461140749995646,
+      "high_effect_dir_acc": 0.7409144196951934,
+      "context_residual_pcc": 0.22320497797322933,
+      "drug_residual_pcc": 0.23588851549868062
+    }
+  },
+  "split_b_seed2024": {
+    "val_strain_only": {
+      "n_samples": 1547,
+      "per_sample_corr": 0.9714194664932102,
+      "per_protein_r2_median": 0.17761174170821836,
+      "rmse": 0.7743495394301059,
+      "fc_pcc": 0.11071271186340237,
+      "high_effect_dir_acc": 0.6192665385582123,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": 0.02453765473056828
+    },
+    "val_chem_only": {
+      "n_samples": 1065,
+      "per_sample_corr": 0.9723316489845915,
+      "per_protein_r2_median": 0.4683638626780554,
+      "rmse": 0.7281167482669728,
+      "fc_pcc": 0.08577731496273908,
+      "high_effect_dir_acc": 0.6043057158628996,
+      "context_residual_pcc": 0.07110101033775279,
+      "drug_residual_pcc": NaN
+    },
+    "val_both": {
+      "n_samples": 269,
+      "per_sample_corr": 0.9576276097155076,
+      "per_protein_r2_median": 0.23774123949344705,
+      "rmse": 0.8736420235908489,
+      "fc_pcc": 0.014535327046496162,
+      "high_effect_dir_acc": 0.5125964261302607,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "val_time": {
+      "n_samples": 157,
+      "per_sample_corr": 0.9855400726343339,
+      "per_protein_r2_median": 0.5135985282140598,
+      "rmse": 0.5508836909407097,
+      "fc_pcc": 0.3587552933438331,
+      "high_effect_dir_acc": 0.7902470324029516,
+      "context_residual_pcc": 0.28625486308220294,
+      "drug_residual_pcc": 0.2724864114136876
+    },
+    "test_strain_only": {
+      "n_samples": 1534,
+      "per_sample_corr": 0.9741574513433243,
+      "per_protein_r2_median": 0.2868053349643582,
+      "rmse": 0.7252609629522132,
+      "fc_pcc": 0.09031766586268984,
+      "high_effect_dir_acc": 0.5995043314839357,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": 0.016189869921654287
+    },
+    "test_chem_only": {
+      "n_samples": 1640,
+      "per_sample_corr": 0.981492219381058,
+      "per_protein_r2_median": 0.5198573550417183,
+      "rmse": 0.5916067653248062,
+      "fc_pcc": 0.17798804827988535,
+      "high_effect_dir_acc": 0.6822140708933818,
+      "context_residual_pcc": 0.06506959415408159,
+      "drug_residual_pcc": NaN
+    },
+    "test_both": {
+      "n_samples": 1129,
+      "per_sample_corr": 0.9684240741790033,
+      "per_protein_r2_median": 0.3141213696420032,
+      "rmse": 0.7514746971101713,
+      "fc_pcc": 0.024518775865731878,
+      "high_effect_dir_acc": 0.5198148104516646,
+      "context_residual_pcc": NaN,
+      "drug_residual_pcc": NaN
+    },
+    "test_time": {
+      "n_samples": 151,
+      "per_sample_corr": 0.9847000900106146,
+      "per_protein_r2_median": 0.5565255845597793,
+      "rmse": 0.5478675778670545,
+      "fc_pcc": 0.3562395496216356,
+      "high_effect_dir_acc": 0.793742672919109,
+      "context_residual_pcc": 0.3021125956125122,
+      "drug_residual_pcc": 0.2797100737358344
+    }
+  }
+}
